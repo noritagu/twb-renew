@@ -1,0 +1,79 @@
+/* ===== RESET & BASIC SETUP ===== */
+/* ブラウザが元々持っている余白などをリセットし、
+  私たちのデザインを正確に反映させるための下準備です。
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', 'Arial', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', sans-serif;
+    line-height: 1.8;
+    color: #333; /* 基本の文字色を少し柔らかい黒に */
+    background-color: #fdfdfd; /* 背景を真っ白から少しだけオフホワイトに */
+}
+
+/* ===== LAYOUT ===== */
+/* サイト全体のコンテンツを中央に配置し、
+  読みやすい幅に設定します。
+*/
+body > * {
+    max-width: 800px; /* コンテンツの最大幅 */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px; /* コンテンツエリアの左右に余白を設ける */
+}
+
+
+/* ===== TYPOGRAPHY (見出しや文字のスタイル) ===== */
+h1, h2, h3, h4 {
+    margin-top: 1.5em; /* 見出しの上に余白を設ける */
+    margin-bottom: 0.8em; /* 見出しの下に余白を設ける */
+    line-height: 1.4;
+    color: #111; /* 見出しの文字色を少し濃く */
+}
+
+h1 {
+    font-size: 2.2em; /* 大見出し */
+    border-bottom: 2px solid #eee; /* 下線を入れる */
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.8em; /* 中見出し */
+}
+
+h3 {
+    font-size: 1.4em; /* 小見出し */
+}
+
+p, ul, ol, table, blockquote {
+    margin-bottom: 1em; /* 段落やリストの下に余白 */
+}
+
+ul, ol {
+    padding-left: 2em; /* リストの字下げ */
+}
+
+a {
+    color: #007bff; /* リンクの色を青に */
+    text-decoration: none; /* 下線を消す */
+}
+
+a:hover {
+    text-decoration: underline; /* マウスを乗せたら下線を出す */
+}
+
+blockquote {
+    border-left: 4px solid #eee;
+    padding-left: 1em;
+    color: #666;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 2em 0;
+}
