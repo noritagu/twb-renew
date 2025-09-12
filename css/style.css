@@ -26,6 +26,11 @@ body > * {
     padding: 20px; /* コンテンツエリアの左右に余白を設ける */
 }
 
+.main-visual {
+    width: 100%;
+    height: auto;
+    max-width: none; /* body > * の影響を打ち消す */
+}
 
 /* ===== TYPOGRAPHY (見出しや文字のスタイル) ===== */
 h1, h2, h3, h4 {
