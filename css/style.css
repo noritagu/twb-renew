@@ -77,3 +77,56 @@ hr {
     border-top: 1px solid #eee;
     margin: 2em 0;
 }
+
+/* ===== HEADER ===== */
+header {
+    max-width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 10px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 40px;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+header ul li a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s;
+}
+
+header ul li a:hover {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    max-width: 100%;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #eee;
+    font-size: 0.9em;
+    color: #6c757d;
+}
