@@ -10,56 +10,60 @@
 
 body {
     font-family: 'Helvetica Neue', 'Arial', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', sans-serif;
-    line-height: 1.8;
-    color: #333; /* 基本の文字色を少し柔らかい黒に */
-    background-color: #fdfdfd; /* 背景を真っ白から少しだけオフホワイトに */
+    line-height: 1.7; /* 行間を少し広げる */
+    color: #333; 
+    background-color: #fff; /* 背景を白に戻す */
 }
 
 /* ===== LAYOUT ===== */
-/* サイト全体のコンテンツを中央に配置し、
-  読みやすい幅に設定します。
-*/
-body > * {
+main {
+    display: block; /* mainタグがブロック要素であることを明示 */
     max-width: 800px; /* コンテンツの最大幅 */
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px; /* コンテンツエリアの左右に余白を設ける */
+    margin: 2rem auto; /* 上下に余白、左右は自動で中央揃え */
+    padding: 0 1rem; /* 左右に内側の余白 */
 }
 
 .main-visual {
     width: 100%;
     height: auto;
-    max-width: none; /* body > * の影響を打ち消す */
+    max-width: none; /* mainのmax-width設定を上書き */
+    margin: 0;
+    padding: 0;
 }
 
 /* ===== TYPOGRAPHY (見出しや文字のスタイル) ===== */
 h1, h2, h3, h4 {
-    margin-top: 1.5em; /* 見出しの上に余白を設ける */
-    margin-bottom: 0.8em; /* 見出しの下に余白を設ける */
+    margin-top: 2.5rem; /* 見出しの上に余白を設ける */
+    margin-bottom: 1rem; /* 見出しの下に余白を設ける */
     line-height: 1.4;
-    color: #111; /* 見出しの文字色を少し濃く */
+    font-weight: 600;
+    color: #222; /* 見出しの文字色を少し濃く */
 }
 
 h1 {
-    font-size: 2.2em; /* 大見出し */
-    border-bottom: 2px solid #eee; /* 下線を入れる */
-    padding-bottom: 10px;
+    font-size: 2.2rem; /* 大見出し */
+    border-bottom: 2px solid #f0f0f0; /* 下線を入れる */
+    padding-bottom: 0.5rem;
 }
 
 h2 {
-    font-size: 1.8em; /* 中見出し */
+    font-size: 1.8rem; /* 中見出し */
 }
 
 h3 {
-    font-size: 1.4em; /* 小見出し */
+    font-size: 1.5rem; /* 小見出し */
 }
 
 p, ul, ol, table, blockquote {
-    margin-bottom: 1em; /* 段落やリストの下に余白 */
+    margin-bottom: 1.25rem; /* 段落やリストの下に余白 */
 }
 
 ul, ol {
-    padding-left: 2em; /* リストの字下げ */
+    padding-left: 1.5em; /* リストの字下げ */
+}
+
+li {
+    margin-bottom: 0.5rem;
 }
 
 a {
@@ -73,7 +77,8 @@ a:hover {
 
 blockquote {
     border-left: 4px solid #eee;
-    padding-left: 1em;
+    padding-left: 1.5em;
+    margin: 1.5em 0;
     color: #666;
 }
 
