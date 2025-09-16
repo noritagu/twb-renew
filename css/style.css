@@ -156,157 +156,78 @@ header ul a {
     text-decoration: none;
     color: var(--text-color);
     font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+header ul a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary-color);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
 }
 
 header ul a:hover {
     color: var(--primary-color);
-}
-
-/* ===== FOOTER ===== */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: 4rem;
-    max-width: none;
-}
-
-
-/* ===== LAYOUT ===== */
-main {
-    display: block; /* mainタグがブロック要素であることを明示 */
-    max-width: 800px; /* コンテンツの最大幅 */
-    margin: 2rem auto; /* 上下に余白、左右は自動で中央揃え */
-    padding: 0 1rem; /* 左右に内側の余白 */
-}
-
-.highlight-section {
-    background-color: var(--light-gray-bg);
-    padding: 2rem;
-    margin-left: -1rem;
-    margin-right: -1rem;
-    border-radius: 8px;
-}
-
-.main-visual {
-    width: 100%;
-    height: auto;
-    max-width: none; /* mainのmax-width設定を上書き */
-    margin: 0;
-    padding: 0;
-}
-
-/* ===== TYPOGRAPHY (見出しや文字のスタイル) ===== */
-h1, h2, h3, h4 {
-    margin-top: 2.5rem; /* 見出しの上に余白を設ける */
-    margin-bottom: 1rem; /* 見出しの下に余白を設ける */
-    line-height: 1.4;
-    font-weight: 600;
-    color: #222; /* 見出しの文字色を少し濃く */
-}
-
-h1 {
-    font-size: 2.2rem; /* 大見出し */
-    border-bottom: 2px solid #f0f0f0; /* 下線を入れる */
-    padding-bottom: 0.5rem;
-}
-
-h2 {
-    font-size: 1.8rem; /* 中見出し */
-}
-
-h3 {
-    font-size: 1.5rem; /* 小見出し */
-}
-
-p, ul, ol, table, blockquote {
-    margin-bottom: 1.25rem; /* 段落やリストの下に余白 */
-}
-
-ul, ol {
-    padding-left: 1.5em; /* リストの字下げ */
-}
-
-li {
-    margin-bottom: 0.5rem;
-}
-
-a {
-    color: #007bff; /* リンクの色を青に */
-    text-decoration: none; /* 下線を消す */
-}
-
-a:hover {
-    text-decoration: underline; /* マウスを乗せたら下線を出す */
-}
-
-blockquote {
-    border-left: 4px solid #eee;
-    padding-left: 1.5em;
-    margin: 1.5em 0;
-    color: #666;
-}
-
-.message-container {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-}
-
-.message-container img {
-    width: 150px;
-    height: auto;
-    flex-shrink: 0;
-}
-
-.message-container blockquote {
-    margin: 0;
-    border: none;
-    padding: 0;
-}
-
-hr {
-    border: none;
-    border-top: 1px solid #eee;
-    margin: 2em 0;
-}
-
-/* ===== HEADER & NAVIGATION ===== */
-header {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 1rem 2rem;
-    max-width: none;
-}
-
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-header .logo {
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
-header ul {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
-}
-
-header ul a {
     text-decoration: none;
-    color: #333;
-    font-weight: 500;
 }
 
-header ul a:hover {
-    color: #007bff;
+header ul a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.btn:hover {
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    color: var(--background-color);
+}
+
+
+/* ===== CARDS ===== */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
 }
 
 /* ===== FOOTER ===== */
