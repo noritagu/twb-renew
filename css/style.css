@@ -1,6 +1,6 @@
 /* =================================================================
     TWB Official Website Stylesheet
-    Last Updated: 2025-09-17 (Policy Page Added)
+    Last Updated: 2025-09-17 (Service Page Added)
     ================================================================= */
 
 /* ===== 1. 基本設定 (Variables & Reset) ===== */
@@ -65,16 +65,6 @@ h1 {
 h2 {
     font-size: 1.6rem;
     margin-bottom: 1.5rem;
-}
-
-h2 + p {
-    max-width: none;
-    margin-left: 0;
-    margin-right: 0;
-    text-align: left;
-    margin-bottom: 2.5rem;
-    color: #555;
-    font-size: 1rem;
 }
 
 h3 {
@@ -275,12 +265,6 @@ header ul a:hover {
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
 }
-.feature-card p {
-    font-size: 1rem;
-    font-weight: normal;
-    margin-bottom: 0;
-    line-height: 1.6;
-}
 
 .card-container {
     display: grid;
@@ -414,7 +398,7 @@ header ul a:hover {
 .policy-intro-text {
     flex: 1 1 60%;
 }
-.policy-intro-text h2 {
+.policy-intro-text h2, .policy-intro-text p {
     text-align: left;
 }
 .policy-intro-image {
@@ -475,8 +459,79 @@ header ul a:hover {
     align-items: center;
     justify-content: center;
 }
-.translator-step h3 {
-    font-size: 1.2rem;
+
+/* ----- 提供サービスページ ----- */
+.service-phase-section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.service-phase-section h2, .service-strengths-section h2, .service-strengths-section p {
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.phase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+.phase-card {
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+.phase-card h3 {
+    border-bottom: 2px solid var(--twb-blue);
+    padding-bottom: 0.5rem;
+}
+.phase-card ul {
+    list-style-type: '✓ ';
+    padding-left: 1.5rem;
+}
+.phase-card li {
+    margin-bottom: 0.75rem;
+}
+
+.service-strengths-section {
+    background-color: var(--section-bg-color);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+.service-strengths-section .value-card-content h3 {
+    font-size: 1.4rem;
+}
+
+.tech-stack-section {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.tech-stack-container {
+    display: flex;
+    gap: 3rem;
+}
+.tech-stack-column {
+    flex: 1;
+}
+.tech-stack-column h2 {
+    border-bottom: 2px solid var(--twb-blue);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+.tag-list li {
+    background-color: #e7f0f7;
+    color: var(--twb-blue);
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.9rem;
 }
 
 
@@ -622,6 +677,10 @@ header ul a:hover {
     }
 
     .policy-intro-content {
+        flex-direction: column;
+    }
+
+    .tech-stack-container {
         flex-direction: column;
     }
 }
