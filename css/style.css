@@ -1,6 +1,6 @@
 /* =================================================================
     TWB Official Website Stylesheet
-    Last Updated: 2025-09-17 (Layout Unified)
+    Last Updated: 2025-09-17 (CTA Section Fix)
     ================================================================= */
 
 /* ===== 1. 基本設定 (Variables & Reset) ===== */
@@ -206,31 +206,23 @@ header ul a:hover {
     text-align: center;
 }
 
+/* ----- CTAセクション ----- */
 .cta-section {
-    background-color: var(--twb-blue);
-    color: white;
+    background-color: var(--section-bg-color);
+    color: var(--text-color);
     padding: 4rem 1.5rem;
     text-align: center;
+    border-top: 1px solid var(--border-color);
 }
 .cta-section h2 {
-    color: white;
+    color: var(--heading-color);
     font-size: 1.6rem;
-    text-align: center;
 }
 .cta-section p {
     max-width: 600px;
     margin: 0 auto 2rem auto;
-    opacity: 0.9;
-    text-align: center;
 }
-.cta-section .btn {
-    background-color: var(--twb-orange);
-    color: white;
-}
-.cta-section .btn:hover {
-    background-color: var(--surface-color);
-    color: var(--twb-blue);
-}
+/* .cta-section の中の .btn は標準の青ボタンが適用される */
 
 
 /* ===== 6. 各ページの個別スタイル (Page Specific Styles) ===== */
@@ -449,10 +441,7 @@ header ul a:hover {
 
 /* ===== 7. フッター (Footer) ===== */
 .site-footer {
-    margin-top: 4rem;
-}
-.cta-section + .site-footer {
-    margin-top: 0;
+    margin-top: 0; /* cta-sectionがあるのでマージン不要に */
 }
 .footer-menu-wrapper {
     background-color: #222222;
