@@ -1,14 +1,17 @@
 /* =================================================================
    TWB Official Website Stylesheet
-   Last Updated: 2025-09-17 (Final Responsive Fix)
+   Last Updated: 2025-09-17 (Final Adjustments)
    ================================================================= */
 
 /* ===== 1. 基本設定 (Variables & Reset) ===== */
 :root {
+    /* TWBブランドカラー */
     --twb-blue: #003366;
     --twb-orange: #FF6600;
+
+    /* 基本色 */
     --text-color: #333333;
-    --heading-color: #111111;
+    --heading-color: #111111; /* 黒色の見出しにこの色を使用 */
     --background-color: #ffffff;
     --light-gray-bg: #f8f9fa;
     --border-color: #e9ecef;
@@ -55,12 +58,13 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: 2.2rem;
+    /* 修正点1 & 3：フォントサイズを縮小し、色を黒に変更 */
+    font-size: 2.0rem;
     font-weight: 900;
-    color: var(--twb-blue);
+    color: var(--heading-color);
     line-height: 1.5;
     margin: 0;
-    white-space: nowrap; /* PCでは絶対に折り返さない */
+    white-space: nowrap;
 }
 
 h2 {
@@ -149,11 +153,12 @@ header ul a:hover {
 .hero-text-section {
     background-color: var(--light-gray-bg);
     text-align: center;
-    padding: 2.5rem 1.5rem; /* 上下の余白を詰める */
+    /* 修正点2：上下の余白を調整 (上を詰め、下を広げる) */
+    padding: 1.5rem 1.5rem 4rem; 
 }
 
 .main-visual-section {
-    padding: 0;
+    padding: 0 1.5rem;
     margin-top: -3rem;
     max-width: 960px;
     margin-left: auto;
@@ -197,7 +202,8 @@ header ul a:hover {
     margin-top: 0;
     color: var(--twb-blue);
     padding-left: 1rem;
-    border-left: 4px solid var(--twb-orange);
+    /* 修正点4：アクセントラインを青に変更 */
+    border-left: 4px solid var(--twb-blue);
     margin-bottom: 0.5rem;
 }
 
@@ -290,7 +296,6 @@ footer {
 @media (max-width: 1280px) {
     h1 {
         white-space: normal; /* 画面が狭くなったら、折り返しを許可する */
-        font-size: 2rem;
     }
 }
 
@@ -301,7 +306,7 @@ footer {
     }
 
     .hero-text-section {
-        padding: 2.5rem 1rem;
+        padding: 2.5rem 1rem 4rem;
     }
 
     h1 {
