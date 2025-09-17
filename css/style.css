@@ -1,6 +1,6 @@
 /* =================================================================
    TWB Official Website Stylesheet
-   Last Updated: 2025-09-17 (Contained Main Visual & Adjusted H1)
+   Last Updated: 2025-09-17 (Forced H1 Font Size)
    ================================================================= */
 
 /* ===== 1. 基本設定 (Variables & Reset) ===== */
@@ -36,7 +36,6 @@ section {
     padding: 5rem 1.5rem;
 }
 
-/* 各セクション内のコンテンツ幅を制御するコンテナ */
 .intro-section,
 .features-section,
 .cases-section {
@@ -59,8 +58,8 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    /* 変更点：フォントサイズを少し小さく調整 */
-    font-size: 2.5rem;
+    /* 変更点：!importantで強制的にサイズを適用 */
+    font-size: 2.5rem !important;
     font-weight: 900;
     color: var(--twb-blue);
     line-height: 1.5;
@@ -156,11 +155,10 @@ header ul a:hover {
     padding: 5rem 1.5rem; 
 }
 
-/* 変更点：メインビジュアルのスタイルを修正 */
 .main-visual-section {
     padding: 0 1.5rem;
-    margin-top: -3rem; /* キャッチコピーセクションに少し重ねて一体感を出す */
-    max-width: 960px; /* コンテンツ幅を他のセクションと揃える */
+    margin-top: -3rem;
+    max-width: 960px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -170,18 +168,15 @@ header ul a:hover {
     height: auto;
     display: block;
     border-radius: 8px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* 上品な影を追加 */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 
 /* ===== 6. 各セクションの個別スタイル (Component Styles) ===== */
-
-/* 導入セクションのマージン調整 */
 .intro-section {
     padding-top: 5rem;
 }
 
-/* 3つの力セクション */
 .features-section {
     background-color: var(--light-gray-bg);
 }
@@ -215,7 +210,6 @@ header ul a:hover {
     margin-bottom: 0;
 }
 
-/* 導入事例セクション */
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -250,7 +244,6 @@ header ul a:hover {
     margin-bottom: 0;
 }
 
-/* ボタンとリンク */
 .btn {
     display: inline-block;
     padding: 0.8rem 2.5rem;
@@ -296,7 +289,7 @@ footer {
 }
 
 
-/* ===== 8. レスポンシブ対応 (Responsive for Smartphone) ===== */
+/* ===== 8. レスポンシブ対応 (Responsive) ===== */
 @media (max-width: 768px) {
     section {
         padding: 3rem 1rem;
@@ -307,15 +300,27 @@ footer {
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 2rem !important;
     }
 
     h2 {
         font-size: 1.75rem;
     }
 
-    /* ヘッダーのナビゲーションを非表示に（※後ほどハンバーガーメニューを実装します） */
     header ul {
         display: none;
+    }
+}
+
+/* 追加：PCの広い画面用のフォントサイズ調整 */
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 2.8rem !important; /* 横幅が広い場合は少し大きく */
+    }
+}
+
+@media (min-width: 1600px) {
+    h1 {
+        font-size: 3rem !important; /* さらに広い場合はもう少し大きく */
     }
 }
