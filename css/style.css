@@ -1,6 +1,6 @@
 /* =================================================================
    TWB Official Website Stylesheet
-   Last Updated: 2025-09-17 (Final Adjustments)
+   Last Updated: 2025-09-17 (Global Style Adjustments)
    ================================================================= */
 
 /* ===== 1. 基本設定 (Variables & Reset) ===== */
@@ -33,9 +33,10 @@ main {
 
 /* ===== 2. レイアウト (Layout & Spacing) ===== */
 section {
-    padding: 5rem 1.5rem;
+    padding: 4rem 1.5rem; /* セクション上下の余白を少し詰める */
 }
 
+.hero-text-section,
 .intro-section,
 .features-section,
 .cases-section {
@@ -44,6 +45,7 @@ section {
     margin-right: auto;
 }
 
+/* 修正点3：ユーティリティクラスは残しつつ、デフォルトを左寄せに */
 .text-center {
     text-align: center;
 }
@@ -58,34 +60,34 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    /* 修正点1 & 3：フォントサイズを縮小し、色を黒に変更 */
-    font-size: 2.0rem;
+    /* 修正点1 & 2：フォントサイズを縮小 */
+    font-size: 1.8rem;
     font-weight: 900;
-    color: var(--heading-color);
     line-height: 1.5;
     margin: 0;
     white-space: nowrap;
 }
 
 h2 {
-    font-size: 2.25rem;
-    text-align: center;
+    /* 修正点2：フォントサイズを縮小 */
+    font-size: 1.6rem;
     margin-bottom: 1.5rem;
-    color: var(--twb-blue);
+    color: var(--heading-color); /* 修正点1：フォントカラーを黒に */
 }
 
 h2 + p {
-    max-width: 680px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    margin-bottom: 3.5rem;
+    max-width: none; /* 中央寄せをやめるため、幅制限を解除 */
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left; /* 修正点3：左寄せに */
+    margin-bottom: 2.5rem;
     color: #555;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 h3 {
-    font-size: 1.25rem;
+    /* 修正点2：フォントサイズを縮小 */
+    font-size: 1.15rem;
 }
 
 p {
@@ -93,7 +95,7 @@ p {
 }
 
 a {
-    color: var(--twb-orange);
+    color: var(--heading-color); /* 修正点1：フォントカラーを黒に */
     text-decoration: none;
     font-weight: 700;
 }
@@ -144,7 +146,7 @@ header ul a {
 }
 
 header ul a:hover {
-    color: var(--twb-orange);
+    color: var(--twb-blue);
     text-decoration: none;
 }
 
@@ -152,14 +154,13 @@ header ul a:hover {
 /* ===== 5. ヒーローセクション (Hero Section) ===== */
 .hero-text-section {
     background-color: var(--light-gray-bg);
-    text-align: center;
-    /* 修正点2：上下の余白を調整 (上を詰め、下を広げる) */
-    padding: 1.5rem 1.5rem 4rem; 
+    padding: 2rem 1.5rem 3rem; 
+    text-align: left; /* 修正点3：左寄せに */
 }
 
 .main-visual-section {
     padding: 0 1.5rem;
-    margin-top: -3rem;
+    margin-top: -2rem; /* 少し重ねる */
     max-width: 960px;
     margin-left: auto;
     margin-right: auto;
@@ -176,7 +177,7 @@ header ul a:hover {
 
 /* ===== 6. 各セクションの個別スタイル (Component Styles) ===== */
 .intro-section {
-    padding-top: 5rem;
+    padding-top: 4rem;
 }
 
 .features-section {
@@ -200,9 +201,8 @@ header ul a:hover {
 
 .feature-card h3 {
     margin-top: 0;
-    color: var(--twb-blue);
+    color: var(--heading-color); /* 修正点1：フォントカラーを黒に */
     padding-left: 1rem;
-    /* 修正点4：アクセントラインを青に変更 */
     border-left: 4px solid var(--twb-blue);
     margin-bottom: 0.5rem;
 }
@@ -237,8 +237,8 @@ header ul a:hover {
 
 .card h3 {
     margin-top: 0;
-    font-size: 1.2rem;
-    color: var(--twb-blue);
+    font-size: 1.1rem; /* 修正点2：フォントサイズを縮小 */
+    color: var(--heading-color); /* 修正点1：フォントカラーを黒に */
 }
 
 .card p {
@@ -267,17 +267,17 @@ header ul a:hover {
 
 .btn-outline {
     background-color: transparent;
-    border: 2px solid var(--twb-orange);
-    color: var(--twb-orange);
+    border: 2px solid var(--heading-color); /* 修正点1：フォントカラーを黒に */
+    color: var(--heading-color); /* 修正点1：フォントカラーを黒に */
 }
 
 .btn-outline:hover {
-    background-color: rgba(255, 102, 0, 0.05);
-    color: var(--twb-orange);
+    background-color: rgba(0, 0, 0, 0.05);
+    color: var(--heading-color);
 }
 
 .link-arrow {
-    color: var(--twb-blue);
+    color: var(--heading-color); /* 修正点1：フォントカラーを黒に */
     font-weight: 700;
 }
 
@@ -295,7 +295,7 @@ footer {
 /* ===== 8. レスポンシブ対応 (Responsive) ===== */
 @media (max-width: 1280px) {
     h1 {
-        white-space: normal; /* 画面が狭くなったら、折り返しを許可する */
+        white-space: normal;
     }
 }
 
@@ -306,15 +306,19 @@ footer {
     }
 
     .hero-text-section {
-        padding: 2.5rem 1rem 4rem;
+        padding: 2.5rem 1.5rem 3rem;
     }
 
     h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     h2 {
-        font-size: 1.75rem;
+        font-size: 1.4rem;
+    }
+    
+    h3 {
+        font-size: 1.1rem;
     }
 
     header ul {
