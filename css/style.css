@@ -1,6 +1,6 @@
 /* =================================================================
    TWB Official Website Stylesheet
-   Last Updated: 2025-09-17 (Footer Menu Update)
+   Last Updated: 2025-09-17 (Multi-Layer Footer Update)
    ================================================================= */
 
 /* ===== 1. 基本設定 (Variables & Reset) ===== */
@@ -310,32 +310,34 @@ header ul a:hover {
 }
 
 
-/* ===== 7. フッター (Footer) ===== */
+/* ===== 7. フッター (Footer) - 全面的に修正 ===== */
 .site-footer {
+    margin-top: 4rem;
+}
+
+.footer-main {
     background-color: #343a40;
     color: #fff;
     padding: 2.5rem 1rem;
-    margin-top: 4rem;
 }
 
 .footer-container {
     max-width: 960px;
     margin: 0 auto;
-    text-align: center;
 }
 
 .footer-nav ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem 2rem; /* 上下左右の間隔 */
+    gap: 1rem 2rem;
     list-style: none;
-    margin: 0 0 2rem 0;
+    margin: 0;
     padding: 0;
 }
 
 .footer-nav a {
-    color: #f8f9fa; /* 少し柔らかい白 */
+    color: #f8f9fa;
     font-weight: normal;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -346,10 +348,44 @@ header ul a:hover {
     text-decoration: underline;
 }
 
-.copyright {
-    font-size: 0.875rem;
-    color: #adb5bd; /* 少し薄いグレー */
+.footer-secondary {
+    background-color: #222222;
+    padding: 0.75rem 1rem;
+}
+
+.footer-legal ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    list-style: none;
     margin: 0;
+    padding: 0;
+}
+
+.footer-legal a {
+    color: #adb5bd;
+    font-size: 0.875rem;
+    font-weight: normal;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+    color: #f8f9fa;
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    background-color: #3079ce;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    text-align: center;
+}
+
+.footer-copyright p {
+    margin: 0;
+    font-size: 0.875rem;
 }
 
 
