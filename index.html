@@ -10,13 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
-<body class="antialiased">
+<body id="main">
     <header>
         <nav>
-            <a href="index.html" class="logo">
-                <img src="./images/common/pc_twb_logo.png" alt="株式会社TWB ロゴ">
-            </a>
-            
+            <a href="index.html" class="logo">株式会社TWB</a>
             <ul>
                 <li><a href="value.html">TWBの提供価値</a></li>
                 <li><a href="policy.html">開発ポリシー</a></li>
@@ -26,17 +23,13 @@
                 <li><a href="reqruite.html">採用情報</a></li>
                 <li><a href="contact.html">お問い合わせ</a></li>
             </ul>
-
-            <div class="header-info">
-                <p class="tagline">TWBはお客様の「使いやすい」を実現するシステム会社です</p>
-                <img src="./images/common/header_tel.jpg" alt="電話番号 048-423-9832 営業時間 10:00-19:00">
-            </div>
         </nav>
     </header>
 
     <main>
         <section class="page-hero">
-            <h1>業務の「なぜ」から共に考え、事業の「次」をITで創造します。</h1>
+            <h1>業務の「なぜ」から共に考え、<br>事業の「次」をITで創造します。</h1>
+            <p>一緒に考え、一緒に創る。<br>明日はもっと良くなる。</p>
             <img src="./images/page/top/tatsu-main.png" alt="代表取締役 立原のメッセージと顔写真" class="hero-image">
         </section>
 
@@ -51,76 +44,66 @@
         <section class="features-section">
             <h2>事業の成功を支える、TWBの「3つの力」</h2>
             <p>私たちの開発思想は、プロジェクトを成功に導くための、具体的で揺ぎない「3つの力」によって支えられています。私たちは、この力を通じて、お客様の事業の未来を共創する技術パートナーとして選ばれ続けています。</p>
-            
             <div class="features-grid">
-                <article class="feature-card">
-                    <div class="feature-card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                    </div>
+                <div class="feature-card">
                     <h3>1.【解読力】</h3>
                     <p>業務課題を、実現可能な「設計図」に翻訳する力</p>
-                </article>
-                
-                <article class="feature-card">
-                    <div class="feature-card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3L2 7l10 4 10-4-10-4z"></path><path d="M2 17l10 4 10-4"></path><path d="M2 12l10 4 10-4"></path></svg>
-                    </div>
+                </div>
+                <div class="feature-card">
                     <h3>2.【判断力】</h3>
                     <p>変化に対応する「最適解」を、客観的根拠をもって導き出す力</p>
-                </article>
-                
-                <article class="feature-card">
-                    <div class="feature-card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                    </div>
+                </div>
+                <div class="feature-card">
                     <h3>3.【完遂力】</h3>
                     <p>予期せぬ課題にも動じない「高品質な体制」で、最後までやり抜く力</p>
-                </article>
+                </div>
             </div>
-
             <div class="secondary-cta-container">
                 <a href="value.html" class="btn-secondary">TWBが選ばれる理由を詳しく見る</a>
-                <a href="service.html" class="btn-secondary">TWBの提供サービスと技術一覧を見る</a>
             </div>
         </section>
 
         <section class="cases-section">
             <h2>導入事例</h2>
             <p>お客様のビジネス課題にどう向き合い、事業を成功に貢献したか。TWBの価値は、実績が証明します。</p>
-            
             <div class="card-container">
                 <article class="card">
-                    <div class="card-tag">製造業</div>
-                    <h3 class="card-title">基幹システム導入事例</h3>
-                    <p class="card-outcome">
-                        <span class="card-label">成果</span>
-                        Excel管理から脱却し、工場3拠点への拡大を実現しました。
-                    </p>
-                    <a href="./cases/case-a.html" class="card-link">詳しく見る</a>
+                    <div class="card-body">
+                        <div class="card-tag">製造業A社様</div>
+                        <h3 class="card-title"><a href="cases/case-a.html">基幹システム導入事例</a></h3>
+                    </div>
                 </article>
-
                 <article class="card">
-                    <div class="card-tag">化学・食品メーカー</div>
-                    <h3 class="card-title">EC・基幹システム統合事例</h3>
-                    <p class="card-outcome">
-                        <span class="card-label">成果</span>
-                        100年企業のDXを5年間伴走し、業務改革を達成しました。
-                    </p>
-                    <a href="./cases/case-b.html" class="card-link">詳しく見る</a>
+                    <div class="card-body">
+                        <div class="card-tag">化学・食品メーカーB社様</div>
+                        <h3 class="card-title"><a href="cases/case-b.html">EC・基幹システム統合事例</a></h3>
+                    </div>
                 </article>
-
                 <article class="card">
-                    <div class="card-tag">アパレルメーカー</div>
-                    <h3 class="card-title">BtoB ECサイトリニューアル事例</h3>
-                    <p class="card-outcome">
-                        <span class="card-label">成果</span>
-                        部分最適から全社DXへと導く、戦略的パートナーシップを構築しました。
-                    </p>
-                    <a href="./cases/case-c.html" class="card-link">詳しく見る</a>
+                    <div class="card-body">
+                        <div class="card-tag">アパレルメーカーC社様</div>
+                        <h3 class="card-title"><a href="cases/case-c.html">BtoB ECサイトリニューアル事例</a></h3>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-body">
+                        <div class="card-tag">サービス業D社様</div>
+                        <h3 class="card-title"><a href="cases/case-d.html">クラウド化とGUIツール開発事例</a></h3>
+                    </div>
                 </article>
             </div>
-            
-            <p class="text-center"><a href="cases.html" class="btn">導入事例をもっと見る</a></p>
+            <div class="text-center">
+                <a href="cases.html" class="btn">導入事例をもっと見る</a>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>事業の「次の一手」を、共に考えませんか？</h2>
+            <p>業務の効率化、新しいサービスの開発、DXの推進。何から手をつければ良いかわからない、そんな時こそ私たちにご相談ください。お客様のビジネスに深く寄り添い、最適な解決策をご提案します。</p>
+            <div class="secondary-cta-container">
+                <a href="contact.html" class="btn">無料で相談してみる</a>
+                <a href="service.html" class="btn-secondary">サービス内容を見る</a>
+            </div>
         </section>
     </main>
 

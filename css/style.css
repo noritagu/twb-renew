@@ -116,6 +116,13 @@ header nav {
     margin: 0 auto;
 }
 
+header .logo {
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--twb-blue);
+}
+
 header .logo img {
     height: 48px;
     width: auto;
@@ -225,6 +232,7 @@ header ul a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    margin-bottom: 3rem;
 }
 .card {
     background-color: var(--surface-color);
