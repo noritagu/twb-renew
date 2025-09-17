@@ -1,15 +1,12 @@
 /* =================================================================
    TWB Official Website Stylesheet
-   Last Updated: 2025-09-17 (Final Header Adjustments)
+   Last Updated: 2025-09-17 (Final Header Layout Fix)
    ================================================================= */
 
 /* ===== 1. 基本設定 (Variables & Reset) ===== */
 :root {
-    /* TWBブランドカラー */
     --twb-blue: #003366;
     --twb-orange: #FF6600;
-
-    /* 基本色 */
     --text-color: #333333;
     --heading-color: #111111;
     --background-color: #f8f9fa;
@@ -100,11 +97,11 @@ a:hover {
 }
 
 
-/* ===== 4. ヘッダー (Header & Navigation) ===== */
+/* ===== 4. ヘッダー (Header & Navigation) - 構成を全面的に修正 ===== */
 header {
     background-color: var(--surface-color);
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    padding: 0.5rem 2rem; /* 上下のpaddingを少し詰める */
+    padding: 0.75rem 2rem;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -121,26 +118,12 @@ header nav {
 
 header .logo {
     text-decoration: none;
-    color: var(--text-color);
 }
 
 header .logo img {
-    height: 40px; /* ロゴの高さを少し調整 */
+    height: 48px;
     width: auto;
     display: block;
-}
-
-header .logo span {
-    font-size: 0.75rem; /* タグラインの文字サイズ */
-    font-weight: normal;
-    display: block;
-    margin-top: -4px; /* ロゴ画像との間を詰める */
-}
-
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 2rem; /* メニューと電話番号の間隔 */
 }
 
 header ul {
@@ -163,11 +146,24 @@ header ul a:hover {
     text-decoration: none;
 }
 
-.header-tel img {
-    height: 40px; /* 電話番号画像の高さをロゴに合わせる */
+.header-info {
+    text-align: right;
+}
+
+.header-info .tagline {
+    font-size: 11px;
+    font-weight: normal;
+    color: var(--text-color);
+    margin: 0 0 4px 0;
+}
+
+.header-info img {
+    height: 32px;
     width: auto;
     display: block;
+    margin-left: auto; /* 右寄せにする */
 }
+
 
 /* ===== 5. ヒーローセクション (Hero Section) ===== */
 .hero-text-section {
@@ -310,6 +306,19 @@ header ul a:hover {
 }
 
 
+@media (max-width: 992px) { /* スマホより少し広いタブレットなども考慮 */
+    header nav {
+        flex-wrap: wrap; /* ロゴと右側情報が縦に並ぶことを許容 */
+        justify-content: space-between;
+    }
+    header ul {
+        display: none; /* ナビゲーションは非表示 */
+    }
+    .header-info {
+        display: none; /* 電話番号も非表示に */
+    }
+}
+
 @media (max-width: 768px) {
     section {
         padding: 3rem 1rem;
@@ -333,9 +342,5 @@ header ul a:hover {
 
     .features-section, .cases-section {
         padding-top: 2rem;
-    }
-
-    header ul {
-        display: none;
     }
 }
