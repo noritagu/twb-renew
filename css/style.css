@@ -1,6 +1,6 @@
 /* =================================================================
    TWB Official Website Stylesheet
-   Last Updated: 2025-09-17 (Simplified Footer)
+   Last Updated: 2025-09-17 (Feature Card Redesign)
    ================================================================= */
 
 /* ===== 1. 基本設定 (Variables & Reset) ===== */
@@ -206,26 +206,42 @@ header ul a:hover {
     margin-bottom: 3rem;
 }
 
+/* 修正点：「3つの力」カードのデザインを全面的に刷新 */
 .feature-card {
     background-color: var(--surface-color);
     padding: 2rem;
     border-radius: 8px;
     border: 1px solid var(--border-color);
-    margin-bottom: 0;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+.feature-card-icon {
+    margin: 0 auto 1.5rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #e7f0f7; /* 薄い青色 */
+    color: var(--twb-blue);
+}
 .feature-card h3 {
     margin-top: 0;
-    padding-left: 1rem;
-    border-left: 4px solid var(--twb-blue);
     margin-bottom: 0.5rem;
+    font-size: 1.2rem;
 }
-
 .feature-card p {
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: normal;
     margin-bottom: 0;
+    line-height: 1.6;
 }
+/* ここまで */
 
 .cases-section {
     padding-top: 2.5rem;
@@ -310,15 +326,14 @@ header ul a:hover {
 }
 
 
-/* ===== 7. フッター (Footer) - 全面的に修正 ===== */
+/* ===== 7. フッター (Footer) ===== */
 .site-footer {
     margin-top: 4rem;
-    color: #fff;
 }
 
 .footer-menu-wrapper {
     background-color: #222222;
-    padding: 2rem 1rem; /* 上下の余白を詰める */
+    padding: 2rem 1rem;
 }
 
 .footer-container {
@@ -350,7 +365,7 @@ header ul a:hover {
 }
 
 .footer-legal {
-    margin-top: 1.5rem; /* 上のメニューとの間隔を詰める */
+    margin-top: 1.5rem;
 }
 
 .footer-legal ul {
@@ -365,8 +380,8 @@ header ul a:hover {
 
 .footer-legal a {
     color: #adb5bd;
-    font-size: 0.8rem; /* フォントサイズを小さく */
-    font-weight: normal; /* 細字にする */
+    font-size: 0.8rem;
+    font-weight: normal;
     text-decoration: none;
     transition: color 0.3s ease;
 }
