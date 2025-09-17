@@ -1,6 +1,6 @@
 /* =================================================================
    TWB Official Website Stylesheet
-   Last Updated: 2025-09-17 (Corrected Version)
+   Last Updated: 2025-09-17 (Reverted Hero Layout)
    ================================================================= */
 
 /* ===== 1. 基本設定 (Variables & Reset) ===== */
@@ -27,16 +27,15 @@ body {
 }
 
 main {
-    display: block; /* mainタグがブロック要素であることを明示 */
+    display: block;
 }
 
 
 /* ===== 2. レイアウト (Layout & Spacing) ===== */
 section {
-    padding: 5rem 1.5rem; /* 上下の余白を大胆に取る */
+    padding: 5rem 1.5rem;
 }
 
-/* 各セクション内のコンテンツ幅を制御するコンテナ */
 .intro-section,
 .features-section,
 .cases-section {
@@ -59,7 +58,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: 900;
     color: var(--twb-blue);
     line-height: 1.5;
@@ -73,7 +72,6 @@ h2 {
     color: var(--twb-blue);
 }
 
-/* セクションのリード文 */
 h2 + p {
     max-width: 680px;
     margin-left: auto;
@@ -150,33 +148,21 @@ header ul a:hover {
 
 
 /* ===== 5. ヒーローセクション (Hero Section) ===== */
-.hero {
+.hero-text-section {
     background-color: var(--light-gray-bg);
-    padding: 4rem 1.5rem;
+    text-align: center;
+    padding: 5rem 1.5rem; /* 上下の余白を確保 */
 }
 
-.hero-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 3rem;
-    max-width: 1100px;
-    margin: 0 auto;
+.main-visual-section {
+    padding: 0; /* 余白をなくし、画像が画面幅いっぱいに広がるようにする */
+    line-height: 0; /* 画像の下にできる隙間を消す */
 }
 
-.hero-text {
-    flex: 1 1 55%;
-}
-
-.hero-image {
-    flex: 1 1 45%;
-}
-
-.hero-image img {
-    max-width: 100%;
+.main-visual-section img {
+    width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: block; /* 画像をブロック要素にして隙間を消す */
 }
 
 
@@ -303,18 +289,16 @@ footer {
         padding: 3rem 1rem;
     }
 
+    .hero-text-section {
+        padding: 3rem 1rem;
+    }
+
     h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     h2 {
-        font-size: 1.6rem;
-    }
-
-    /* ヒーローセクションを縦積みに変更 */
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
+        font-size: 1.75rem;
     }
 
     /* ヘッダーのナビゲーションを非表示に（※後ほどハンバーガーメニューを実装します） */
