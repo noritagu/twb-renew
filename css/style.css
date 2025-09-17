@@ -104,7 +104,7 @@ a:hover {
 header {
     background-color: var(--surface-color);
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem; /* 上下のpaddingを少し詰める */
     position: sticky;
     top: 0;
     z-index: 10;
@@ -120,17 +120,27 @@ header nav {
 }
 
 header .logo {
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--twb-blue);
     text-decoration: none;
+    color: var(--text-color);
 }
 
 header .logo img {
-    /* 修正点2：ロゴの高さを少し大きく */
-    height: 48px;
+    height: 40px; /* ロゴの高さを少し調整 */
     width: auto;
     display: block;
+}
+
+header .logo span {
+    font-size: 0.75rem; /* タグラインの文字サイズ */
+    font-weight: normal;
+    display: block;
+    margin-top: -4px; /* ロゴ画像との間を詰める */
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* メニューと電話番号の間隔 */
 }
 
 header ul {
@@ -149,11 +159,15 @@ header ul a {
 }
 
 header ul a:hover {
-    /* 修正点1：マウスオーバーでオレンジ色に変更 */
     color: var(--twb-orange);
     text-decoration: none;
 }
 
+.header-tel img {
+    height: 40px; /* 電話番号画像の高さをロゴに合わせる */
+    width: auto;
+    display: block;
+}
 
 /* ===== 5. ヒーローセクション (Hero Section) ===== */
 .hero-text-section {
