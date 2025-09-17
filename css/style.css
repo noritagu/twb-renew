@@ -1,6 +1,6 @@
 /* =================================================================
    TWB Official Website Stylesheet
-   Last Updated: 2025-09-17 (Feature Card Redesign)
+   Last Updated: 2025-09-17 (Feature Card Text Align)
    ================================================================= */
 
 /* ===== 1. 基本設定 (Variables & Reset) ===== */
@@ -206,13 +206,12 @@ header ul a:hover {
     margin-bottom: 3rem;
 }
 
-/* 修正点：「3つの力」カードのデザインを全面的に刷新 */
 .feature-card {
     background-color: var(--surface-color);
     padding: 2rem;
     border-radius: 8px;
     border: 1px solid var(--border-color);
-    text-align: center;
+    text-align: left; /* 修正点：カード内のテキストを左寄せに */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .feature-card:hover {
@@ -220,14 +219,14 @@ header ul a:hover {
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 .feature-card-icon {
-    margin: 0 auto 1.5rem auto;
+    margin: 0 auto 1.5rem auto; /* アイコンは中央寄せを維持 */
     display: flex;
     align-items: center;
     justify-content: center;
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-color: #e7f0f7; /* 薄い青色 */
+    background-color: #e7f0f7;
     color: var(--twb-blue);
 }
 .feature-card h3 {
@@ -241,7 +240,6 @@ header ul a:hover {
     margin-bottom: 0;
     line-height: 1.6;
 }
-/* ここまで */
 
 .cases-section {
     padding-top: 2.5rem;
