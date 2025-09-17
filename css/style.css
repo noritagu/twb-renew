@@ -1,6 +1,6 @@
 /* =================================================================
    TWB Official Website Stylesheet
-   Last Updated: 2025-09-17 (Header Logo Update)
+   Last Updated: 2025-09-17 (Final Header Adjustments)
    ================================================================= */
 
 /* ===== 1. 基本設定 (Variables & Reset) ===== */
@@ -126,11 +126,11 @@ header .logo {
     text-decoration: none;
 }
 
-/* 修正点：ロゴ画像の高さを指定 */
 header .logo img {
-    height: 40px; /* ロゴの高さを指定 */
-    width: auto; /* 幅は自動調整 */
-    display: block; /* 画像下の余白をなくす */
+    /* 修正点2：ロゴの高さを少し大きく */
+    height: 48px;
+    width: auto;
+    display: block;
 }
 
 header ul {
@@ -149,7 +149,8 @@ header ul a {
 }
 
 header ul a:hover {
-    color: var(--twb-blue);
+    /* 修正点1：マウスオーバーでオレンジ色に変更 */
+    color: var(--twb-orange);
     text-decoration: none;
 }
 
