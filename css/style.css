@@ -1,6 +1,6 @@
 /* =================================================================
    TWB Official Website Stylesheet
-   Last Updated: 2025-09-17 (Feature Card Heading Align)
+   Last Updated: 2025-09-17 (Case Card Redesign)
    ================================================================= */
 
 /* ===== 1. 基本設定 (Variables & Reset) ===== */
@@ -233,7 +233,7 @@ header ul a:hover {
     margin-top: 0;
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
-    text-align: center; /* 修正点：見出しを中央揃えに */
+    text-align: center;
 }
 .feature-card p {
     font-size: 1rem;
@@ -253,6 +253,7 @@ header ul a:hover {
     margin-bottom: 3rem;
 }
 
+/* 修正点：「導入事例」カードのデザインを全面的に刷新 */
 .card {
     background-color: var(--surface-color);
     border: 1px solid var(--border-color);
@@ -260,24 +261,55 @@ header ul a:hover {
     padding: 1.5rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
 }
-
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
-
-.card h3 {
+.card-tag {
+    display: inline-block;
+    background-color: #e7f0f7;
+    color: var(--twb-blue);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    margin-bottom: 1rem;
+    align-self: flex-start; /* タグを左上に配置 */
+}
+.card-title {
+    font-size: 1.25rem;
     margin-top: 0;
-    font-size: 1.1rem;
+    margin-bottom: 1rem;
 }
-
-.card p {
-    font-size: 1rem;
+.card-outcome {
+    font-size: 0.9rem;
     line-height: 1.6;
-    margin-bottom: 0;
+    color: #555;
+    margin-bottom: 1rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
 }
+.card-label {
+    font-weight: 700;
+    color: var(--heading-color);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+.card-link {
+    margin-top: auto; /* この一行でリンクがカードの最下部に配置される */
+    align-self: flex-end; /* リンクを右寄せに */
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--twb-blue);
+}
+.card-link:hover {
+    color: var(--twb-orange);
+}
+/* ここまで */
+
 
 .btn {
     display: inline-block;
