@@ -1,6 +1,6 @@
 /* =================================================================
     TWB Official Website Stylesheet
-    Last Updated: 2025-09-17 (CTA Section Fix)
+    Last Updated: 2025-09-17 (Strength Text Color Fix)
     ================================================================= */
 
 /* ===== 1. 基本設定 (Variables & Reset) ===== */
@@ -222,7 +222,6 @@ header ul a:hover {
     max-width: 600px;
     margin: 0 auto 2rem auto;
 }
-/* .cta-section の中の .btn は標準の青ボタンが適用される */
 
 
 /* ===== 6. 各ページの個別スタイル (Page Specific Styles) ===== */
@@ -384,7 +383,7 @@ header ul a:hover {
 .value-card-number {
     display: block;
     font-weight: 700;
-    color: var(--twb-orange);
+    color: var(--twb-blue); /* オレンジから青に変更 */
     margin-bottom: 0.5rem;
 }
 .value-card-content h2 {
@@ -441,7 +440,7 @@ header ul a:hover {
 
 /* ===== 7. フッター (Footer) ===== */
 .site-footer {
-    margin-top: 0; /* cta-sectionがあるのでマージン不要に */
+    margin-top: 0;
 }
 .footer-menu-wrapper {
     background-color: #222222;
