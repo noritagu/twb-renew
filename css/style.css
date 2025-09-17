@@ -1,6 +1,6 @@
 /* =================================================================
    TWB Official Website Stylesheet
-   Last Updated: 2025-09-17 (Corrected H1 Font Size)
+   Last Updated: 2025-09-17 (Corrected H1 Wrapping & Hero Padding)
    ================================================================= */
 
 /* ===== 1. 基本設定 (Variables & Reset) ===== */
@@ -58,8 +58,9 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    /* 変更点：フォントサイズを元のサイズ感に戻し、PCでも折り返されないように調整 */
+    /* 変更点1：折り返されないようにサイズを調整し、強制的に一行表示にする */
     font-size: 2.2rem;
+    white-space: nowrap; /* この一行で、テキストの折り返しを禁止します */
     font-weight: 900;
     color: var(--twb-blue);
     line-height: 1.5;
@@ -152,7 +153,8 @@ header ul a:hover {
 .hero-text-section {
     background-color: var(--light-gray-bg);
     text-align: center;
-    padding: 5rem 1.5rem; 
+    /* 変更点2：ヘッダーとの余白を大幅に縮めました */
+    padding: 3rem 1.5rem; 
 }
 
 .main-visual-section {
@@ -290,6 +292,14 @@ footer {
 
 
 /* ===== 8. レスポンシブ対応 (Responsive) ===== */
+@media (max-width: 1200px) {
+    h1 {
+        white-space: normal; /* 画面が狭くなったら、折り返しを許可する */
+        font-size: 2rem;
+    }
+}
+
+
 @media (max-width: 768px) {
     section {
         padding: 3rem 1rem;
