@@ -1,6 +1,6 @@
 /* =================================================================
    TWB Official Website Stylesheet
-   Last Updated: 2025-09-17 (Secondary CTA Update)
+   Last Updated: 2025-09-17 (Footer Menu Update)
    ================================================================= */
 
 /* ===== 1. 基本設定 (Variables & Reset) ===== */
@@ -282,7 +282,6 @@ header ul a:hover {
     color: white;
 }
 
-/* 追加：セカンダリボタンのスタイル */
 .btn-secondary {
     display: inline-block;
     padding: 0.8rem 2.5rem;
@@ -302,7 +301,6 @@ header ul a:hover {
     text-decoration: none;
 }
 
-/* 追加：セカンダリボタンのコンテナ */
 .secondary-cta-container {
     display: flex;
     justify-content: center;
@@ -316,10 +314,42 @@ header ul a:hover {
 .site-footer {
     background-color: #343a40;
     color: #fff;
-    text-align: center;
     padding: 2.5rem 1rem;
     margin-top: 4rem;
-    border-top: none;
+}
+
+.footer-container {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem 2rem; /* 上下左右の間隔 */
+    list-style: none;
+    margin: 0 0 2rem 0;
+    padding: 0;
+}
+
+.footer-nav a {
+    color: #f8f9fa; /* 少し柔らかい白 */
+    font-weight: normal;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: var(--twb-orange);
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 0.875rem;
+    color: #adb5bd; /* 少し薄いグレー */
+    margin: 0;
 }
 
 
@@ -330,6 +360,19 @@ header ul a:hover {
     }
 }
 
+
+@media (max-width: 992px) {
+    header nav {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    header ul {
+        display: none;
+    }
+    .header-info {
+        display: none;
+    }
+}
 
 @media (max-width: 768px) {
     section {
@@ -354,16 +397,5 @@ header ul a:hover {
 
     .features-section, .cases-section {
         padding-top: 2rem;
-    }
-
-    header nav {
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    header ul {
-        display: none;
-    }
-    .header-info {
-        display: none;
     }
 }
