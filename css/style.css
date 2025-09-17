@@ -1,6 +1,6 @@
 /* =================================================================
    TWB Official Website Stylesheet
-   Last Updated: 2025-09-17 (Unified Background Color)
+   Last Updated: 2025-09-17 (Adjusted Section Margins)
    ================================================================= */
 
 /* ===== 1. 基本設定 (Variables & Reset) ===== */
@@ -12,8 +12,8 @@
     /* 基本色 */
     --text-color: #333333;
     --heading-color: #111111;
-    --background-color: #f8f9fa; /* 修正点：サイト全体の背景色を指定 */
-    --surface-color: #ffffff; /* カードやヘッダーなど、表面に来る要素の背景色 */
+    --background-color: #f8f9fa;
+    --surface-color: #ffffff;
     --border-color: #e9ecef;
 }
 
@@ -21,7 +21,7 @@ body {
     font-family: 'Noto Sans JP', sans-serif;
     line-height: 1.8;
     color: var(--text-color); 
-    background-color: var(--background-color); /* 変数を適用 */
+    background-color: var(--background-color);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -102,13 +102,13 @@ a:hover {
 
 /* ===== 4. ヘッダー (Header & Navigation) ===== */
 header {
-    background-color: var(--surface-color); /* 白背景を維持 */
+    background-color: var(--surface-color);
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
     z-index: 10;
-    border-bottom: 1px solid var(--border-color); /* 背景との境界線を明確に */
+    border-bottom: 1px solid var(--border-color);
 }
 
 header nav {
@@ -149,7 +149,7 @@ header ul a:hover {
 
 /* ===== 5. ヒーローセクション (Hero Section) ===== */
 .hero-text-section {
-    background-color: transparent; /* 背景色をbodyから継承 */
+    background-color: transparent;
     padding: 2rem 1.5rem 3rem; 
     text-align: left;
 }
@@ -177,7 +177,9 @@ header ul a:hover {
 }
 
 .features-section {
-    background-color: transparent; /* 背景色をbodyから継承 */
+    background-color: transparent;
+    /* 修正点1：上の余白を詰める */
+    padding-top: 2.5rem;
 }
 
 .features-grid {
@@ -188,7 +190,7 @@ header ul a:hover {
 }
 
 .feature-card {
-    background-color: var(--surface-color); /* カードは白背景を維持 */
+    background-color: var(--surface-color);
     padding: 2rem;
     border-radius: 8px;
     border: 1px solid var(--border-color);
@@ -208,6 +210,11 @@ header ul a:hover {
     margin-bottom: 0;
 }
 
+.cases-section {
+    /* 修正点2：上の余白を詰める */
+    padding-top: 2.5rem;
+}
+
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -216,7 +223,7 @@ header ul a:hover {
 }
 
 .card {
-    background-color: var(--surface-color); /* カードは白背景を維持 */
+    background-color: var(--surface-color);
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 1.5rem;
@@ -277,12 +284,12 @@ header ul a:hover {
 
 /* ===== 7. フッター (Footer) ===== */
 .site-footer {
-    background-color: transparent; /* 背景色をbodyから継承 */
-    color: var(--text-color); /* 文字色を黒に */
+    background-color: transparent;
+    color: var(--text-color);
     text-align: center;
     padding: 2.5rem 1rem;
     margin-top: 4rem;
-    border-top: 1px solid var(--border-color); /* 区切り線を追加 */
+    border-top: 1px solid var(--border-color);
 }
 
 
@@ -313,6 +320,10 @@ header ul a:hover {
     
     h3 {
         font-size: 1.1rem;
+    }
+
+    .features-section, .cases-section {
+        padding-top: 2rem;
     }
 
     header ul {
