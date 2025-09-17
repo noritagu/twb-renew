@@ -1,6 +1,6 @@
 /* =================================================================
    TWB Official Website Stylesheet
-   Last Updated: 2025-09-17 (Button Style Update)
+   Last Updated: 2025-09-17 (Footer & Button Hover Update)
    ================================================================= */
 
 /* ===== 1. 基本設定 (Variables & Reset) ===== */
@@ -246,7 +246,6 @@ header ul a:hover {
     margin-bottom: 0;
 }
 
-/* 修正点：ボタンのスタイルを深い青の塗りつぶしに変更 */
 .btn {
     display: inline-block;
     padding: 0.8rem 2.5rem;
@@ -256,16 +255,15 @@ header ul a:hover {
     border-radius: 4px;
     font-weight: 700;
     text-align: center;
-    transition: opacity 0.3s ease;
+    transition: background-color 0.3s ease; /* transitionを調整 */
 }
 
 .btn:hover {
+    /* 修正点2：マウスオーバーでオレンジ色に変更 */
+    background-color: var(--twb-orange);
     text-decoration: none;
-    opacity: 0.85;
     color: white;
 }
-
-/* 不要になった.btn-outlineを削除 */
 
 .link-arrow {
     font-weight: 700;
@@ -274,12 +272,13 @@ header ul a:hover {
 
 /* ===== 7. フッター (Footer) ===== */
 .site-footer {
-    background-color: transparent;
-    color: var(--text-color);
+    /* 修正点1：フッターの背景色と文字色を元に戻す */
+    background-color: #343a40;
+    color: #fff;
     text-align: center;
     padding: 2.5rem 1rem;
     margin-top: 4rem;
-    border-top: 1px solid var(--border-color);
+    border-top: none; /* 区切り線を削除 */
 }
 
 
