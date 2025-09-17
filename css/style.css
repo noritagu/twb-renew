@@ -1,6 +1,6 @@
 /* =================================================================
    TWB Official Website Stylesheet
-   Last Updated: 2025-09-17 (Final Header Layout Fix)
+   Last Updated: 2025-09-17 (Secondary CTA Update)
    ================================================================= */
 
 /* ===== 1. 基本設定 (Variables & Reset) ===== */
@@ -97,7 +97,7 @@ a:hover {
 }
 
 
-/* ===== 4. ヘッダー (Header & Navigation) - 構成を全面的に修正 ===== */
+/* ===== 4. ヘッダー (Header & Navigation) ===== */
 header {
     background-color: var(--surface-color);
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
@@ -161,7 +161,7 @@ header ul a:hover {
     height: 32px;
     width: auto;
     display: block;
-    margin-left: auto; /* 右寄せにする */
+    margin-left: auto;
 }
 
 
@@ -282,8 +282,33 @@ header ul a:hover {
     color: white;
 }
 
-.link-arrow {
+/* 追加：セカンダリボタンのスタイル */
+.btn-secondary {
+    display: inline-block;
+    padding: 0.8rem 2.5rem;
+    background-color: var(--surface-color);
+    color: var(--twb-blue);
+    text-decoration: none;
+    border-radius: 4px;
     font-weight: 700;
+    text-align: center;
+    border: 2px solid var(--twb-blue);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--twb-blue);
+    color: var(--surface-color);
+    text-decoration: none;
+}
+
+/* 追加：セカンダリボタンのコンテナ */
+.secondary-cta-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
 
@@ -305,19 +330,6 @@ header ul a:hover {
     }
 }
 
-
-@media (max-width: 992px) { /* スマホより少し広いタブレットなども考慮 */
-    header nav {
-        flex-wrap: wrap; /* ロゴと右側情報が縦に並ぶことを許容 */
-        justify-content: space-between;
-    }
-    header ul {
-        display: none; /* ナビゲーションは非表示 */
-    }
-    .header-info {
-        display: none; /* 電話番号も非表示に */
-    }
-}
 
 @media (max-width: 768px) {
     section {
@@ -342,5 +354,16 @@ header ul a:hover {
 
     .features-section, .cases-section {
         padding-top: 2rem;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    header ul {
+        display: none;
+    }
+    .header-info {
+        display: none;
     }
 }
