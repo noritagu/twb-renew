@@ -1,6 +1,6 @@
 /* =================================================================
     TWB Official Website Stylesheet
-    Last Updated: 2025-09-17 (Cases Page Image Cut)
+    Last Updated: 2025-09-17 (Case Detail Pages Added - CORRECTED)
     ================================================================= */
 
 /* ===== 1. 基本設定 (Variables & Reset) ===== */
@@ -512,6 +512,7 @@ header ul a:hover {
 
 .tech-stack-section {
     max-width: 1000px;
+    margin: 0 auto;
 }
 .tech-stack-container {
     display: flex;
@@ -684,4 +685,67 @@ header ul a:hover {
     .tech-stack-container {
         flex-direction: column;
     }
+}
+
+/* ===== 10. 導入事例詳細ページ (Case Study Detail) ===== */
+.case-study-article {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.case-study-main-visual {
+    margin-bottom: 3rem;
+}
+.case-study-main-visual img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.case-study-summary {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.summary-item {
+    padding: 1.5rem;
+}
+@media (min-width: 769px) {
+    .summary-item:not(:last-child) {
+        border-right: 1px solid var(--border-color);
+    }
+}
+.summary-label {
+    font-weight: 700;
+    color: var(--twb-blue);
+    margin-bottom: 0.5rem;
+}
+.summary-value {
+    font-size: 1rem;
+}
+.case-study-content h2 {
+    margin-top: 3rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+.case-study-content h3 {
+    border-left: 4px solid var(--twb-blue);
+    padding-left: 1rem;
+}
+.case-study-content p:last-child {
+    margin-bottom: 0;
+}
+.pm-summary {
+    margin-top: 3rem;
+    background-color: var(--section-bg-color);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--twb-blue);
+}
+.pm-summary h3 {
+    margin-top: 0;
+    border-left: none;
+    padding-left: 0;
 }
