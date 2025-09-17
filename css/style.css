@@ -1,6 +1,6 @@
 /* =================================================================
     TWB Official Website Stylesheet
-    Last Updated: 2025-09-17 (Case Detail Pages Added - CORRECTED)
+    Last Updated: 2025-09-17 (Cases Page Image Cut)
     ================================================================= */
 
 /* ===== 1. 基本設定 (Variables & Reset) ===== */
@@ -36,8 +36,13 @@ section {
 
 .intro-section,
 .features-section,
-.cases-section {
-    max-width: 960px;
+.cases-section,
+.policy-section,
+.translator-section,
+.service-phase-section,
+.service-strengths-section,
+.tech-stack-section {
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -65,16 +70,6 @@ h1 {
 h2 {
     font-size: 1.6rem;
     margin-bottom: 1.5rem;
-}
-
-h2 + p {
-    max-width: none;
-    margin-left: 0;
-    margin-right: 0;
-    text-align: left;
-    margin-bottom: 2.5rem;
-    color: #555;
-    font-size: 1rem;
 }
 
 h3 {
@@ -169,11 +164,16 @@ header ul a:hover {
 }
 .page-hero h1 {
     font-size: 2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-hero p {
     font-size: 1.1rem;
     color: #555;
+    max-width: 800px;
+    margin: 0 auto;
     margin-bottom: 0;
 }
 .hero-image {
@@ -212,7 +212,6 @@ header ul a:hover {
 .cta-section h2 {
     color: var(--heading-color);
     font-size: 1.6rem;
-    border-bottom: none;
 }
 .cta-section p {
     max-width: 800px;
@@ -225,6 +224,7 @@ header ul a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    margin-top: 3rem;
 }
 .card {
     background-color: var(--surface-color);
@@ -283,24 +283,39 @@ header ul a:hover {
 /* ===== 7. 各ページの個別スタイル (Page Specific Styles) ===== */
 
 /* ----- トップページ ----- */
-#main .features-section, #main .cases-section {
+.features-section {
     background-color: var(--section-bg-color);
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
 }
-#main .features-section h2, #main .features-section > p,
+.features-section h2, .features-section > p {
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
 #main .cases-section h2, #main .cases-section > p {
     text-align: center;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    border-bottom: none;
 }
+#main .cases-section .card-body {
+    padding: 1.5rem 1.5rem 1rem;
+}
+#main .cases-section .card-summary {
+    display: none;
+}
+#main .cases-section .card-link {
+    display: none;
+}
+
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 .feature-card {
     background-color: var(--surface-color);
@@ -325,16 +340,6 @@ header ul a:hover {
     background-color: #e7f0f7;
     color: var(--twb-blue);
 }
-#main .cases-section .card-body {
-    padding: 1.5rem 1.5rem 1rem;
-}
-#main .cases-section .card-summary {
-    display: none;
-}
-#main .cases-section .card-link {
-    display: none;
-}
-
 
 /* ----- TWBの提供価値ページ & サービスページ ----- */
 .value-details-section, .service-strengths-section {
@@ -379,7 +384,6 @@ header ul a:hover {
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
     text-align: left;
-    border-bottom: none;
 }
 .value-card-content ul {
     list-style: disc;
@@ -406,7 +410,6 @@ header ul a:hover {
 }
 .policy-intro-text h2, .policy-intro-text p {
     text-align: left;
-    border-bottom: none;
 }
 .policy-intro-image {
     flex: 1 1 40%;
@@ -442,7 +445,6 @@ header ul a:hover {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    border-bottom: none;
 }
 .translator-steps {
     display: grid;
@@ -474,7 +476,6 @@ header ul a:hover {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    border-bottom: none;
 }
 .phase-grid {
     display: grid;
@@ -511,7 +512,6 @@ header ul a:hover {
 
 .tech-stack-section {
     max-width: 1000px;
-    margin: 0 auto;
 }
 .tech-stack-container {
     display: flex;
@@ -537,51 +537,6 @@ header ul a:hover {
     border-radius: 9999px;
     font-weight: 700;
     font-size: 0.9rem;
-}
-
-/* ----- 導入事例詳細ページ ----- */
-.case-study-article {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
-.case-study-main-visual {
-    margin-bottom: 3rem;
-}
-.case-study-main-visual img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-.case-study-summary {
-    background-color: var(--surface-color);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    margin-bottom: 3rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-.summary-item {
-    padding: 1.5rem;
-}
-@media (min-width: 769px) {
-    .summary-item:not(:last-child) {
-        border-right: 1px solid var(--border-color);
-    }
-}
-.summary-label {
-    font-weight: 700;
-    color: var(--twb-blue);
-    margin-bottom: 0.5rem;
-}
-.summary-value {
-    font-size: 1rem;
-}
-.case-study-content h2 {
-    margin-top: 3rem;
-}
-.case-study-content p:last-child {
-    margin-bottom: 0;
 }
 
 
@@ -712,6 +667,10 @@ header ul a:hover {
         font-size: 1.8rem;
     }
 
+    .intro-content {
+        padding: 2rem;
+    }
+
     .value-card, .value-card.reverse {
         flex-direction: column;
         gap: 2rem;
@@ -724,10 +683,5 @@ header ul a:hover {
 
     .tech-stack-container {
         flex-direction: column;
-    }
-
-    .summary-item:not(:last-child) {
-        border-right: none;
-        border-bottom: 1px solid var(--border-color);
     }
 }
