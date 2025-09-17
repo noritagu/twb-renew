@@ -1,135 +1,116 @@
-/* ===== RESET & BASIC SETUP ===== */
-:root {
-    --primary-color: #0055a4; /* TWBのブランドカラー（仮） */
-    --text-color: #333;
-    --heading-color: #222;
-    --background-color: #fff;
-    --light-gray-bg: #f7f7f7;
-    --border-color: #f0f0f0;
-}
+/* =================================================================
+   TWB Official Website Stylesheet
+   Last Updated: 2025-09-17 (Corrected Version)
+   ================================================================= */
 
-/* ブラウザが元々持っている余白などをリセットし、
-  私たちのデザインを正確に反映させるための下準備です。
-*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ===== 1. 基本設定 (Variables & Reset) ===== */
+:root {
+    /* TWBブランドカラー */
+    --twb-blue: #003366;
+    --twb-orange: #FF6600;
+
+    /* 基本色 */
+    --text-color: #333333;
+    --heading-color: #111111;
+    --background-color: #ffffff;
+    --light-gray-bg: #f8f9fa;
+    --border-color: #e9ecef;
 }
 
 body {
     font-family: 'Noto Sans JP', sans-serif;
-    line-height: 1.7; /* 行間を少し広げる */
+    line-height: 1.8;
     color: var(--text-color); 
-    background-color: var(--background-color); /* 背景を白に戻す */
+    background-color: var(--background-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* ===== LAYOUT ===== */
 main {
     display: block; /* mainタグがブロック要素であることを明示 */
-    max-width: 800px; /* コンテンツの最大幅 */
-    margin: 2rem auto; /* 上下に余白、左右は自動で中央揃え */
-    padding: 0 1rem; /* 左右に内側の余白 */
 }
 
-.highlight-section {
-    background-color: var(--light-gray-bg);
-    padding: 2rem;
-    margin-left: -1rem;
-    margin-right: -1rem;
-    border-radius: 8px;
+
+/* ===== 2. レイアウト (Layout & Spacing) ===== */
+section {
+    padding: 5rem 1.5rem; /* 上下の余白を大胆に取る */
 }
 
-.main-visual {
-    width: 100%;
-    height: auto;
-    max-width: none; /* mainのmax-width設定を上書き */
-    margin: 0;
-    padding: 0;
+/* 各セクション内のコンテンツ幅を制御するコンテナ */
+.intro-section,
+.features-section,
+.cases-section {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* ===== TYPOGRAPHY (見出しや文字のスタイル) ===== */
+.text-center {
+    text-align: center;
+}
+
+
+/* ===== 3. タイポグラフィ (Typography) ===== */
 h1, h2, h3, h4 {
-    margin-top: 2.5rem; /* 見出しの上に余白を設ける */
-    margin-bottom: 1rem; /* 見出しの下に余白を設ける */
+    margin-bottom: 1rem;
     line-height: 1.4;
-    font-weight: 600;
-    color: var(--heading-color); /* 見出しの文字色を少し濃く */
+    font-weight: 700;
+    color: var(--heading-color);
 }
 
 h1 {
-    font-size: 2.2rem; /* 大見出し */
-    border-bottom: 2px solid var(--border-color); /* 下線を入れる */
-    padding-bottom: 0.5rem;
-    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--twb-blue);
+    line-height: 1.5;
+    margin: 0;
 }
 
 h2 {
-    font-size: 1.8rem; /* 中見出し */
+    font-size: 2.25rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--twb-blue);
+}
+
+/* セクションのリード文 */
+h2 + p {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    color: #555;
+    font-size: 1.1rem;
 }
 
 h3 {
-    font-size: 1.5rem; /* 小見出し */
+    font-size: 1.25rem;
 }
 
-p, ul, ol, table, blockquote {
-    margin-bottom: 1.25rem; /* 段落やリストの下に余白 */
-}
-
-ul, ol {
-    padding-left: 1.5em; /* リストの字下げ */
-}
-
-li {
-    margin-bottom: 0.5rem;
+p {
+    margin-bottom: 1.25rem;
 }
 
 a {
-    color: var(--primary-color); /* リンクの色をブランドカラーに */
-    text-decoration: none; /* 下線を消す */
+    color: var(--twb-orange);
+    text-decoration: none;
+    font-weight: 700;
 }
 
 a:hover {
-    text-decoration: underline; /* マウスを乗せたら下線を出す */
+    text-decoration: underline;
 }
 
-blockquote {
-    border-left: 4px solid #eee;
-    padding-left: 1.5em;
-    margin: 1.5em 0;
-    color: #666;
-}
 
-.message-container {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-}
-
-.message-container img {
-    width: 150px;
-    height: auto;
-    flex-shrink: 0;
-}
-
-.message-container blockquote {
-    margin: 0;
-    border: none;
-    padding: 0;
-}
-
-hr {
-    border: none;
-    border-top: 1px solid #eee;
-    margin: 2em 0;
-}
-
-/* ===== HEADER & NAVIGATION ===== */
+/* ===== 4. ヘッダー (Header & Navigation) ===== */
 header {
     background-color: var(--background-color);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     padding: 1rem 2rem;
-    max-width: none;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 header nav {
@@ -141,74 +122,106 @@ header nav {
 }
 
 header .logo {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 1.5rem;
-    color: var(--text-color);
+    color: var(--twb-blue);
+    text-decoration: none;
 }
 
 header ul {
     display: flex;
     gap: 1.5rem;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 header ul a {
     text-decoration: none;
     color: var(--text-color);
-    font-weight: 500;
-    position: relative;
+    font-weight: 700;
     transition: color 0.3s ease;
 }
 
-header ul a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: var(--primary-color);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease-out;
-}
-
 header ul a:hover {
-    color: var(--primary-color);
+    color: var(--twb-orange);
     text-decoration: none;
 }
 
-header ul a:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+
+/* ===== 5. ヒーローセクション (Hero Section) ===== */
+.hero {
+    background-color: var(--light-gray-bg);
+    padding: 4rem 1.5rem;
 }
 
-/* ===== BUTTONS ===== */
-.btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 500;
-    text-align: center;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-.btn:hover {
-    text-decoration: none;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    color: var(--background-color);
+.hero-text {
+    flex: 1 1 55%;
+}
+
+.hero-image {
+    flex: 1 1 45%;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 
-/* ===== CARDS ===== */
+/* ===== 6. 各セクションの個別スタイル (Component Styles) ===== */
+
+/* 3つの力セクション */
+.features-section {
+    background-color: var(--light-gray-bg);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.feature-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 0;
+}
+
+.feature-card h3 {
+    margin-top: 0;
+    color: var(--twb-blue);
+    padding-left: 1rem;
+    border-left: 4px solid var(--twb-orange);
+    margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+/* 導入事例セクション */
 .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
+    margin-bottom: 3rem;
 }
 
 .card {
@@ -218,6 +231,7 @@ header ul a:hover::after {
     padding: 1.5rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    margin-bottom: 0;
 }
 
 .card:hover {
@@ -228,33 +242,83 @@ header ul a:hover::after {
 .card h3 {
     margin-top: 0;
     font-size: 1.2rem;
+    color: var(--twb-blue);
 }
 
 .card p {
     font-size: 1rem;
     line-height: 1.6;
+    margin-bottom: 0;
 }
 
-/* ===== FOOTER ===== */
+/* ボタンとリンク */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2.5rem;
+    background-color: var(--twb-orange);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 700;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.btn:hover {
+    text-decoration: none;
+    opacity: 0.85;
+    color: white;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--twb-orange);
+    color: var(--twb-orange);
+}
+
+.btn-outline:hover {
+    background-color: rgba(255, 102, 0, 0.05);
+    color: var(--twb-orange);
+}
+
+.link-arrow {
+    color: var(--twb-blue);
+    font-weight: 700;
+}
+
+
+/* ===== 7. フッター (Footer) ===== */
 footer {
-    background-color: #333;
+    background-color: #343a40;
     color: #fff;
     text-align: center;
-    padding: 2rem 0;
+    padding: 2.5rem 1rem;
     margin-top: 4rem;
-    max-width: none;
 }
 
-/* ===== PAGE HEADER ===== */
-.page-header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 2rem;
-    text-align: center;
-    margin-bottom: 2rem;
-}
 
-.page-header h1 {
-    font-size: 2rem;
-    margin: 0;
+/* ===== 8. レスポンシブ対応 (Responsive for Smartphone) ===== */
+@media (max-width: 768px) {
+    section {
+        padding: 3rem 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    /* ヒーローセクションを縦積みに変更 */
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* ヘッダーのナビゲーションを非表示に（※後ほどハンバーガーメニューを実装します） */
+    header ul {
+        display: none;
+    }
 }
