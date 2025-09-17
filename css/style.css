@@ -1,6 +1,6 @@
 /* =================================================================
    TWB Official Website Stylesheet
-   Last Updated: 2025-09-17 (Reverted Hero Layout)
+   Last Updated: 2025-09-17 (Contained Main Visual & Adjusted H1)
    ================================================================= */
 
 /* ===== 1. 基本設定 (Variables & Reset) ===== */
@@ -36,6 +36,7 @@ section {
     padding: 5rem 1.5rem;
 }
 
+/* 各セクション内のコンテンツ幅を制御するコンテナ */
 .intro-section,
 .features-section,
 .cases-section {
@@ -58,7 +59,8 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: 2.8rem;
+    /* 変更点：フォントサイズを少し小さく調整 */
+    font-size: 2.5rem;
     font-weight: 900;
     color: var(--twb-blue);
     line-height: 1.5;
@@ -151,22 +153,33 @@ header ul a:hover {
 .hero-text-section {
     background-color: var(--light-gray-bg);
     text-align: center;
-    padding: 5rem 1.5rem; /* 上下の余白を確保 */
+    padding: 5rem 1.5rem; 
 }
 
+/* 変更点：メインビジュアルのスタイルを修正 */
 .main-visual-section {
-    padding: 0; /* 余白をなくし、画像が画面幅いっぱいに広がるようにする */
-    line-height: 0; /* 画像の下にできる隙間を消す */
+    padding: 0 1.5rem;
+    margin-top: -3rem; /* キャッチコピーセクションに少し重ねて一体感を出す */
+    max-width: 960px; /* コンテンツ幅を他のセクションと揃える */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .main-visual-section img {
     width: 100%;
     height: auto;
-    display: block; /* 画像をブロック要素にして隙間を消す */
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* 上品な影を追加 */
 }
 
 
 /* ===== 6. 各セクションの個別スタイル (Component Styles) ===== */
+
+/* 導入セクションのマージン調整 */
+.intro-section {
+    padding-top: 5rem;
+}
 
 /* 3つの力セクション */
 .features-section {
