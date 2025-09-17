@@ -1,6 +1,6 @@
 /* =================================================================
    TWB Official Website Stylesheet
-   Last Updated: 2025-09-17
+   Last Updated: 2025-09-17 (Corrected Version)
    ================================================================= */
 
 /* ===== 1. 基本設定 (Variables & Reset) ===== */
@@ -60,7 +60,7 @@ h1, h2, h3, h4 {
 
 h1 {
     font-size: 2.5rem;
-    font-weight: 900; /* 最も太いウェイトでインパクトを出す */
+    font-weight: 900;
     color: var(--twb-blue);
     line-height: 1.5;
     margin: 0;
@@ -159,3 +159,166 @@ header ul a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.hero-text {
+    flex: 1 1 55%;
+}
+
+.hero-image {
+    flex: 1 1 45%;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+
+/* ===== 6. 各セクションの個別スタイル (Component Styles) ===== */
+
+/* 3つの力セクション */
+.features-section {
+    background-color: var(--light-gray-bg);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.feature-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 0;
+}
+
+.feature-card h3 {
+    margin-top: 0;
+    color: var(--twb-blue);
+    padding-left: 1rem;
+    border-left: 4px solid var(--twb-orange);
+    margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+/* 導入事例セクション */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.card {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    margin-bottom: 0;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: var(--twb-blue);
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* ボタンとリンク */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2.5rem;
+    background-color: var(--twb-orange);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 700;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.btn:hover {
+    text-decoration: none;
+    opacity: 0.85;
+    color: white;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--twb-orange);
+    color: var(--twb-orange);
+}
+
+.btn-outline:hover {
+    background-color: rgba(255, 102, 0, 0.05);
+    color: var(--twb-orange);
+}
+
+.link-arrow {
+    color: var(--twb-blue);
+    font-weight: 700;
+}
+
+
+/* ===== 7. フッター (Footer) ===== */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    margin-top: 4rem;
+}
+
+
+/* ===== 8. レスポンシブ対応 (Responsive for Smartphone) ===== */
+@media (max-width: 768px) {
+    section {
+        padding: 3rem 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    /* ヒーローセクションを縦積みに変更 */
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* ヘッダーのナビゲーションを非表示に（※後ほどハンバーガーメニューを実装します） */
+    header ul {
+        display: none;
+    }
+}
