@@ -1,6 +1,6 @@
 /* =================================================================
     TWB Official Website Stylesheet
-    Last Updated: 2025-09-17 (Cases Page Added)
+    Last Updated: 2025-09-17 (Cases Page Image Cut)
     ================================================================= */
 
 /* ===== 1. 基本設定 (Variables & Reset) ===== */
@@ -239,19 +239,11 @@ header ul a:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
-.card-thumbnail {
-    display: block;
-}
-.card-thumbnail img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
 .card-body {
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 .card-tag {
     display: inline-block;
@@ -273,9 +265,20 @@ header ul a:hover {
 .card-summary {
     color: #555;
     font-size: 0.9rem;
-    margin-bottom: 0;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
 }
-
+.card-link {
+    margin-top: auto;
+    align-self: flex-end;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--twb-blue);
+}
+.card-link:hover {
+    color: var(--twb-orange);
+    text-decoration: none;
+}
 
 /* ===== 7. 各ページの個別スタイル (Page Specific Styles) ===== */
 
@@ -285,12 +288,26 @@ header ul a:hover {
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
 }
-.features-section h2, .features-section > p,
-#main .cases-section h2, #main .cases-section > p { /* トップページの事例セクションのタイトルは中央揃え */
+.features-section h2, .features-section > p {
     text-align: center;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+}
+#main .cases-section h2, #main .cases-section > p {
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#main .cases-section .card-body {
+    padding: 1.5rem 1.5rem 1rem; /* トップページでは少し詰める */
+}
+#main .cases-section .card-summary {
+    display: none; /* トップページではサマリーは非表示 */
+}
+#main .cases-section .card-link {
+    display: none; /* トップページではリンクは非表示 */
 }
 
 .features-grid {
@@ -324,8 +341,8 @@ header ul a:hover {
     color: var(--twb-blue);
 }
 
-/* ----- TWBの提供価値ページ ----- */
-.value-details-section {
+/* ----- TWBの提供価値ページ & サービスページ ----- */
+.value-details-section, .service-strengths-section {
     max-width: 1000px;
     margin: 0 auto;
     padding-top: 2rem;
