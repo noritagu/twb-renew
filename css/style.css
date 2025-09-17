@@ -1,6 +1,6 @@
 /* =================================================================
     TWB Official Website Stylesheet
-    Last Updated: 2025-09-17 (Service Page Added)
+    Last Updated: 2025-09-17 (Cases Page Added)
     ================================================================= */
 
 /* ===== 1. 基本設定 (Variables & Reset) ===== */
@@ -36,8 +36,13 @@ section {
 
 .intro-section,
 .features-section,
-.cases-section {
-    max-width: 960px;
+.cases-section,
+.policy-section,
+.translator-section,
+.service-phase-section,
+.service-strengths-section,
+.tech-stack-section {
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -214,7 +219,65 @@ header ul a:hover {
 }
 
 
-/* ===== 6. 各ページの個別スタイル (Page Specific Styles) ===== */
+/* ===== 6. カードコンポーネント (Card Component) ===== */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+.card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+.card-thumbnail {
+    display: block;
+}
+.card-thumbnail img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.card-body {
+    padding: 1.5rem;
+}
+.card-tag {
+    display: inline-block;
+    background-color: #e7f0f7;
+    color: var(--twb-blue);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+}
+.card-title a {
+    text-decoration: none;
+}
+.card-title a:hover {
+    color: var(--twb-orange);
+}
+.card-summary {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+
+/* ===== 7. 各ページの個別スタイル (Page Specific Styles) ===== */
 
 /* ----- トップページ ----- */
 .features-section {
@@ -223,7 +286,7 @@ header ul a:hover {
     border-bottom: 1px solid var(--border-color);
 }
 .features-section h2, .features-section > p,
-.cases-section h2, .cases-section > p {
+#main .cases-section h2, #main .cases-section > p { /* トップページの事例セクションのタイトルは中央揃え */
     text-align: center;
     max-width: 800px;
     margin-left: auto;
@@ -260,76 +323,6 @@ header ul a:hover {
     background-color: #e7f0f7;
     color: var(--twb-blue);
 }
-.feature-card h3 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-}
-
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-}
-.card {
-    background-color: var(--surface-color);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    display: flex;
-    flex-direction: column;
-}
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-}
-.card-tag {
-    display: inline-block;
-    background-color: #e7f0f7;
-    color: var(--twb-blue);
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-    margin-bottom: 1rem;
-    align-self: flex-start;
-}
-.card-title {
-    font-size: 1.25rem;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    text-align: left;
-}
-.card-outcome {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 1rem;
-    border-top: 1px solid var(--border-color);
-    padding-top: 1rem;
-    text-align: left;
-}
-.card-label {
-    font-weight: 700;
-    color: var(--heading-color);
-    display: block;
-    margin-bottom: 0.25rem;
-}
-.card-link {
-    margin-top: auto;
-    align-self: flex-end;
-    font-size: 0.875rem;
-    font-weight: 700;
-    color: var(--twb-blue);
-}
-.card-link:hover {
-    color: var(--twb-orange);
-}
-
 
 /* ----- TWBの提供価値ページ ----- */
 .value-details-section {
@@ -370,7 +363,7 @@ header ul a:hover {
     color: var(--twb-blue);
     margin-bottom: 0.5rem;
 }
-.value-card-content h2 {
+.value-card-content h2, .value-card-content h3 {
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
     text-align: left;
@@ -385,7 +378,7 @@ header ul a:hover {
 }
 
 /* ----- 開発ポリシーページ ----- */
-.policy-section {
+.policy-section, .translator-section {
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -461,10 +454,6 @@ header ul a:hover {
 }
 
 /* ----- 提供サービスページ ----- */
-.service-phase-section {
-    max-width: 1200px;
-    margin: 0 auto;
-}
 .service-phase-section h2, .service-strengths-section h2, .service-strengths-section p {
     text-align: center;
     max-width: 800px;
@@ -506,7 +495,6 @@ header ul a:hover {
 
 .tech-stack-section {
     max-width: 1000px;
-    margin: 0 auto;
 }
 .tech-stack-container {
     display: flex;
@@ -573,7 +561,7 @@ header ul a:hover {
 }
 
 
-/* ===== 7. フッター (Footer) ===== */
+/* ===== 8. フッター (Footer) ===== */
 .site-footer {
     margin-top: 0;
 }
@@ -631,7 +619,7 @@ header ul a:hover {
 }
 
 
-/* ===== 8. レスポンシブ対応 (Responsive) ===== */
+/* ===== 9. レスポンシブ対応 (Responsive) ===== */
 @media (max-width: 1280px) {
     h1 {
         white-space: normal;
@@ -664,10 +652,6 @@ header ul a:hover {
 
     .intro-content {
         padding: 2rem;
-    }
-
-    .features-section, .cases-section {
-        padding-top: 2rem;
     }
 
     .value-card, .value-card.reverse {
