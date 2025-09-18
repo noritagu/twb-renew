@@ -13,7 +13,8 @@
 .service-strengths-section,
 .tech-stack-section,
 .case-study-article,
-.company-section {
+.company-section,
+.recruit-section {
     max-width: 960px;
     margin-left: auto;
     margin-right: auto;
@@ -429,6 +430,73 @@
     border-bottom: none;
 }
 
+/* ----- 採用情報ページ ----- */
+.recruit-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.recruit-section.bg-light {
+    background-color: var(--section-bg-color);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.section-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    color: #555;
+}
+.message-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.message-text {
+    flex: 2;
+}
+.message-image {
+    flex: 1;
+    text-align: center;
+}
+.message-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+.value-item {
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    text-align: center;
+}
+.value-item h3 {
+    color: var(--twb-blue);
+}
+.job-list {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+.job-item {
+    background-color: var(--surface-color);
+    padding: 1.5rem 3rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    text-align: center;
+}
+.job-item h3 {
+    margin: 0;
+}
+
 
 /* ===== 9. レスポンシブ対応 (Responsive) ===== */
 @media (max-width: 1280px) {
@@ -465,7 +533,7 @@
         padding: 2rem;
     }
 
-    .value-card, .value-card.reverse, .policy-intro-content, .tech-stack-container, .greeting-container, .philosophy-container, .access-container {
+    .value-card, .value-card.reverse, .policy-intro-content, .tech-stack-container, .greeting-container, .philosophy-container, .access-container, .message-container {
         flex-direction: column;
         gap: 2rem;
     }
