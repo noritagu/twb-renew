@@ -12,8 +12,9 @@
 .service-phase-section,
 .service-strengths-section,
 .tech-stack-section,
-.case-study-article { /* ここに .case-study-article を追加 */
-    max-width: 960px; /* 記事コンテンツの標準幅に設定 */
+.case-study-article,
+.company-section {
+    max-width: 960px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -240,7 +241,7 @@
     font-size: 0.9rem;
 }
 
-/* ===== 10. 導入事例詳細ページ (Case Study Detail) ===== */
+/* ----- 導入事例詳細ページ ----- */
 .case-study-article {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -298,6 +299,91 @@
     padding-left: 0;
 }
 
+/* ----- 会社案内ページ ----- */
+.company-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.company-section.bg-light {
+    background-color: var(--section-bg-color);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    border-bottom: none;
+}
+
+.greeting-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.greeting-text {
+    flex: 1 1 60%;
+}
+.greeting-image {
+    flex: 1 1 40%;
+    text-align: center;
+}
+.greeting-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.philosophy-container {
+    display: flex;
+    gap: 3rem;
+}
+.philosophy-column {
+    flex: 1;
+}
+.philosophy-list, .pledge-list {
+    list-style: none;
+    padding: 0;
+}
+.philosophy-list li, .pledge-list li {
+    background-color: var(--surface-color);
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+.philosophy-list li strong, .pledge-list li strong {
+    color: var(--twb-blue);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.profile-table th, .profile-table td {
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    text-align: left;
+}
+.profile-table th {
+    background-color: var(--section-bg-color);
+    font-weight: 700;
+    width: 25%;
+}
+
+.history-list {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+}
+.history-list dt {
+    font-weight: 700;
+}
+
+
 /* ===== 9. レスポンシブ対応 (Responsive) ===== */
 @media (max-width: 1280px) {
     h1 {
@@ -329,24 +415,19 @@
         font-size: 1.8rem;
     }
 
-    .intro-content {
+    .intro-content, .policy-card, .phase-card {
         padding: 2rem;
     }
 
-    .value-card, .value-card.reverse {
+    .value-card, .value-card.reverse, .policy-intro-content, .tech-stack-container, .greeting-container, .philosophy-container {
         flex-direction: column;
         gap: 2rem;
+    }
+    
+    .value-card {
         padding: 1.5rem;
     }
-
-    .policy-intro-content {
-        flex-direction: column;
-    }
-
-    .tech-stack-container {
-        flex-direction: column;
-    }
-
+    
     .summary-item:not(:last-child) {
         border-right: none;
         border-bottom: 1px solid var(--border-color);
