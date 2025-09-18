@@ -4,59 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>お問い合わせ | 株式会社TWB</title>
-<!--
-    <link rel="stylesheet" href="css/destyle.css">
-    <link rel="stylesheet" href="css/style.css">
--->
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/components.css">
-    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="antialiased">
     <header>
         <nav>
-            <a href="/index.html" class="logo">株式会社TWB</a>
+            <a href="index.html" class="logo">
+                <img src="./images/common/pc_twb_logo.png" alt="株式会社TWB ロゴ">
+            </a>
+            
             <ul>
-                <li><a href="/value.html">TWBの提供価値</a></li>
-                <li><a href="/policy.html">開発ポリシー</a></li>
-                <li><a href="/service.html">サービス内容</a></li>
-                <li><a href="/cases.html">導入事例</a></li>
-                <li><a href="/company.html">会社案内</a></li>
-                <li><a href="/reqruite.html">採用情報</a></li>
-                <li><a href="/contact.html">お問い合わせ</a></li>
+                <li><a href="value.html">TWBの提供価値</a></li>
+                <li><a href="policy.html">開発ポリシー</a></li>
+                <li><a href="service.html">サービス内容</a></li>
+                <li><a href="cases.html">導入事例</a></li>
+                <li><a href="company.html">会社案内</a></li>
+                <li><a href="reqruite.html">採用情報</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
             </ul>
+
+            <div class="header-info">
+                <p class="tagline">TWBはお客様の「使いやすい」を実現するシステム会社です</p>
+                <img src="./images/common/header_tel.jpg" alt="電話番号 048-423-9832 営業時間 10:00-19:00">
+            </div>
         </nav>
     </header>
 
-    <h1>お問い合わせ</h1>
-    <blockquote>
-        <p>システム開発のご相談、DX推進に関するお悩み、採用に関するご質問など、お気軽にご連絡ください。担当者より、3営業日以内にご返信いたします。</p>
-    </blockquote>
-    <p>TWBは予算規模に応じて、解決法をご提案します。 会話を重ねて柔軟に最適な解決策を、お客様と共に導き出したいと思っています。</p>
+    <main>
+        <section class="page-hero">
+            <h1>お問い合わせ</h1>
+            <p>システム開発のご相談、DX推進に関するお悩み、採用に関するご質問など、お気軽にご連絡ください。<br>担当者より、3営業日以内にご返信いたします。</p>
+        </section>
 
-    <hr>
+        <section class="contact-section">
+            <div class="contact-form-container">
+                <form action="#" method="post" class="contact-form">
+                    <div class="form-group">
+                        <label for="company-name">会社名</label>
+                        <input type="text" id="company-name" name="company-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="user-name">お名前 <span class="required">*</span></label>
+                        <input type="text" id="user-name" name="user-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">メールアドレス <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="10" required></textarea>
+                    </div>
+                    <div class="privacy-policy-agreement">
+                        <input type="checkbox" id="privacy-policy" name="privacy-policy" required>
+                        <label for="privacy-policy"><a href="privacy.html" target="_blank">プライバシーポリシー</a>に同意する</label>
+                    </div>
+                    <div class="submit-button-container">
+                        <button type="submit" class="btn">送信する</button>
+                    </div>
+                </form>
+            </div>
+        </section>
 
-    <h2>お問い合わせフォーム</h2>
-            <form action="#" method="post">
-            <!-- ... form fields ... -->
-            <button type="submit" class="btn">送信する</button>
-        </form>
+    </main>
 
-    <hr>
-
-    <h2>連絡先情報</h2>
-    <ul>
-        <li><strong>社名:</strong> 株式会社ティーダブリュービー</li>
-        <li><strong>所在地:</strong> 〒333-0862 埼玉県川口市北園町2-9 北園サンハイツ2 201</li>
-        <li><strong>TEL:</strong> 048-423-9832</li>
-    </ul>
-
-    <hr>
-    <p><a href="./privacy.html">プライバシーポリシー</a></p>
-
+    <footer class="site-footer">
+        <div class="footer-menu-wrapper">
+            <div class="footer-container">
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="value.html">TWBの提供価値</a></li>
+                        <li><a href="policy.html">開発ポリシー</a></li>
+                        <li><a href="service.html">サービス内容</a></li>
+                        <li><a href="cases.html">導入事例</a></li>
+                        <li><a href="company.html">会社案内</a></li>
+                        <li><a href="reqruite.html">採用情報</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer-legal">
+                    <ul>
+                        <li><a href="#">特定商取引法表記</a></li>
+                        <li><a href="privacy.html">プライバシーポリシー</a></li>
+                        <li><a href="#">情報セキュリティ基本方針</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2025 株式会社TWB. All Rights Reserved.</p>
+        </div>
     </footer>
 </body>
 </html>

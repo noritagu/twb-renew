@@ -14,7 +14,8 @@
 .tech-stack-section,
 .case-study-article,
 .company-section,
-.recruit-section {
+.recruit-section,
+.contact-section {
     max-width: 960px;
     margin-left: auto;
     margin-right: auto;
@@ -500,6 +501,56 @@
     width: 20%;
 }
 
+/* ----- お問い合わせページ ----- */
+.contact-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.contact-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--surface-color);
+    padding: 3rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.form-group .required {
+    color: var(--twb-orange);
+    font-size: 0.8em;
+    margin-left: 0.25rem;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+.privacy-policy-agreement {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+}
+.privacy-policy-agreement input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+.privacy-policy-agreement a {
+    text-decoration: underline;
+}
+.submit-button-container {
+    text-align: center;
+}
+
 
 /* ===== 9. レスポンシブ対応 (Responsive) ===== */
 @media (max-width: 1280px) {
@@ -532,7 +583,7 @@
         font-size: 1.8rem;
     }
 
-    .intro-content, .policy-card, .phase-card, .pledge-card, .philosophy-card {
+    .intro-content, .policy-card, .phase-card, .pledge-card, .philosophy-card, .contact-form-container {
         padding: 2rem;
     }
 
