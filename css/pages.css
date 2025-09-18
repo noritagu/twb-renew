@@ -11,8 +11,9 @@
 .translator-section,
 .service-phase-section,
 .service-strengths-section,
-.tech-stack-section {
-    max-width: 1200px;
+.tech-stack-section,
+.case-study-article { /* ここに .case-study-article を追加 */
+    max-width: 960px; /* 記事コンテンツの標準幅に設定 */
     margin-left: auto;
     margin-right: auto;
 }
@@ -28,14 +29,10 @@
 .features-section h2, .features-section > p {
     text-align: center;
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
 }
 #main .cases-section h2, #main .cases-section > p {
     text-align: center;
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
 }
 #main .cases-section .card-body {
     padding: 1.5rem 1.5rem 1rem;
@@ -81,9 +78,6 @@
 /* ----- TWBの提供価値ページ & サービスページ ----- */
 .value-details-section, .service-strengths-section {
     max-width: 1000px;
-    margin: 0 auto;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
 }
 
 .value-card-number {
@@ -109,7 +103,6 @@
 /* ----- 開発ポリシーページ ----- */
 .policy-section, .translator-section {
     max-width: 1000px;
-    margin: 0 auto;
 }
 .policy-intro-content {
     display: flex;
@@ -155,8 +148,6 @@
 .translator-section h2, .translator-section > p {
     text-align: center;
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
 }
 .translator-steps {
     display: grid;
@@ -186,8 +177,6 @@
 .service-phase-section h2, .service-strengths-section h2, .service-strengths-section p {
     text-align: center;
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
 }
 .phase-grid {
     display: grid;
@@ -224,7 +213,6 @@
 
 .tech-stack-section {
     max-width: 1000px;
-    margin: 0 auto;
 }
 .tech-stack-container {
     display: flex;
