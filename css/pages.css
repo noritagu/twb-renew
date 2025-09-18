@@ -15,7 +15,9 @@
 .case-study-article,
 .company-section,
 .recruit-section,
-.contact-section {
+.contact-section,
+.value-details-section /* value-details-section をこちらに移動 */
+{
     max-width: 960px; /* 基本のコンテンツ幅 */
     margin-left: auto;
     margin-right: auto;
