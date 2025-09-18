@@ -16,10 +16,24 @@
 .company-section,
 .recruit-section,
 .contact-section {
-    max-width: 960px;
+    max-width: 960px; /* 基本のコンテンツ幅 */
     margin-left: auto;
     margin-right: auto;
 }
+
+/* 一部のセクションでは、より広いコンテンツ幅を許容 */
+.value-details-section, 
+.service-strengths-section,
+.policy-section, 
+.translator-section,
+.tech-stack-section {
+    max-width: 1000px;
+}
+
+.service-phase-section {
+    max-width: 1200px;
+}
+
 
 /* ===== 7. 各ページの個別スタイル (Page Specific Styles) ===== */
 
@@ -79,10 +93,6 @@
 }
 
 /* ----- TWBの提供価値ページ & サービスページ ----- */
-.value-details-section, .service-strengths-section {
-    max-width: 1000px;
-}
-
 .value-card-number {
     display: block;
     font-weight: 700;
@@ -104,9 +114,6 @@
 }
 
 /* ----- 開発ポリシーページ ----- */
-.policy-section, .translator-section {
-    max-width: 1000px;
-}
 .policy-intro-content {
     display: flex;
     align-items: center;
@@ -177,9 +184,6 @@
 }
 
 /* ----- 提供サービスページ ----- */
-.service-phase-section, .service-strengths-section {
-    max-width: 1200px;
-}
 .service-phase-section h2, .service-strengths-section h2, .service-strengths-section p {
     text-align: center;
     max-width: 800px;
@@ -217,9 +221,6 @@
     font-size: 1.4rem;
 }
 
-.tech-stack-section {
-    max-width: 1000px;
-}
 .tech-stack-container {
     display: flex;
     gap: 3rem;
@@ -247,10 +248,6 @@
 }
 
 /* ----- 導入事例詳細ページ ----- */
-.case-study-article {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
 .case-study-main-visual {
     margin-bottom: 3rem;
 }
@@ -305,16 +302,10 @@
 }
 
 /* ----- 会社案内ページ ----- */
-.company-section {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
 .company-section.bg-light {
     background-color: var(--section-bg-color);
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
-    padding-top: 4rem;
-    padding-bottom: 4rem;
 }
 .section-title {
     text-align: center;
@@ -432,17 +423,6 @@
 }
 
 /* ----- 採用情報ページ ----- */
-.recruit-section {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
-.recruit-section.bg-light {
-    background-color: var(--section-bg-color);
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-}
 .section-description {
     text-align: center;
     max-width: 800px;
@@ -502,13 +482,8 @@
 }
 
 /* ----- お問い合わせページ ----- */
-.contact-section {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
 .contact-form-container {
     max-width: 800px;
-    margin: 0 auto;
     background-color: var(--surface-color);
     padding: 3rem;
     border-radius: 8px;
