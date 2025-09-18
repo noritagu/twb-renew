@@ -1,0 +1,366 @@
+/* =================================================================
+    TWB Official Website Stylesheet
+    [3/3] Page-Specific Styles
+    ================================================================= */
+
+/* ===== 2. レイアウト (Layout & Spacing) - Page Specific ===== */
+.intro-section,
+.features-section,
+.cases-section,
+.policy-section,
+.translator-section,
+.service-phase-section,
+.service-strengths-section,
+.tech-stack-section {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== 7. 各ページの個別スタイル (Page Specific Styles) ===== */
+
+/* ----- トップページ ----- */
+.features-section {
+    background-color: var(--section-bg-color);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+.features-section h2, .features-section > p {
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#main .cases-section h2, #main .cases-section > p {
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#main .cases-section .card-body {
+    padding: 1.5rem 1.5rem 1rem;
+}
+#main .cases-section .card-summary {
+    display: none;
+}
+#main .cases-section .card-link {
+    display: none;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.feature-card {
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+.feature-card-icon {
+    margin: 0 auto 1.5rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #e7f0f7;
+    color: var(--twb-blue);
+}
+
+/* ----- TWBの提供価値ページ & サービスページ ----- */
+.value-details-section, .service-strengths-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.value-card-number {
+    display: block;
+    font-weight: 700;
+    color: var(--twb-blue);
+    margin-bottom: 0.5rem;
+}
+.value-card-content h2, .value-card-content h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: left;
+}
+.value-card-content ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-top: 1.5rem;
+}
+.value-card-content li {
+    margin-bottom: 0.75rem;
+}
+
+/* ----- 開発ポリシーページ ----- */
+.policy-section, .translator-section {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.policy-intro-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+.policy-intro-text {
+    flex: 1 1 60%;
+}
+.policy-intro-text h2, .policy-intro-text p {
+    text-align: left;
+}
+.policy-intro-image {
+    flex: 1 1 40%;
+}
+.policy-intro-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.policy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+.policy-card {
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+.policy-card h3 {
+    border-bottom: 2px solid var(--twb-blue);
+    padding-bottom: 0.5rem;
+}
+
+.translator-section {
+    background-color: var(--section-bg-color);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+.translator-section h2, .translator-section > p {
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.translator-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 3rem auto 0 auto;
+}
+.translator-step {
+    text-align: center;
+}
+.translator-step-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem auto;
+    border-radius: 50%;
+    background-color: var(--twb-blue);
+    color: white;
+    font-size: 2rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ----- 提供サービスページ ----- */
+.service-phase-section h2, .service-strengths-section h2, .service-strengths-section p {
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.phase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+.phase-card {
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+.phase-card h3 {
+    border-bottom: 2px solid var(--twb-blue);
+    padding-bottom: 0.5rem;
+}
+.phase-card ul {
+    list-style-type: '✓ ';
+    padding-left: 1.5rem;
+}
+.phase-card li {
+    margin-bottom: 0.75rem;
+}
+
+.service-strengths-section {
+    background-color: var(--section-bg-color);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+.service-strengths-section .value-card-content h3 {
+    font-size: 1.4rem;
+}
+
+.tech-stack-section {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.tech-stack-container {
+    display: flex;
+    gap: 3rem;
+}
+.tech-stack-column {
+    flex: 1;
+}
+.tech-stack-column h2 {
+    border-bottom: 2px solid var(--twb-blue);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+.tag-list li {
+    background-color: #e7f0f7;
+    color: var(--twb-blue);
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* ===== 10. 導入事例詳細ページ (Case Study Detail) ===== */
+.case-study-article {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.case-study-main-visual {
+    margin-bottom: 3rem;
+}
+.case-study-main-visual img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.case-study-summary {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.summary-item {
+    padding: 1.5rem;
+}
+.summary-label {
+    font-weight: 700;
+    color: var(--twb-blue);
+    margin-bottom: 0.5rem;
+}
+.summary-value {
+    font-size: 1rem;
+}
+.case-study-content h2 {
+    margin-top: 3rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+.case-study-content h3 {
+    border-left: 4px solid var(--twb-blue);
+    padding-left: 1rem;
+}
+.case-study-content p:last-child {
+    margin-bottom: 0;
+}
+.pm-summary {
+    margin-top: 3rem;
+    background-color: var(--section-bg-color);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--twb-blue);
+}
+.pm-summary h3 {
+    margin-top: 0;
+    border-left: none;
+    padding-left: 0;
+}
+
+/* ===== 9. レスポンシブ対応 (Responsive) ===== */
+@media (max-width: 1280px) {
+    h1 {
+        white-space: normal;
+    }
+}
+@media (max-width: 992px) {
+    header nav {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    header ul, .header-info {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    section {
+        padding: 3rem 1rem;
+    }
+
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.4rem; }
+    h3 { font-size: 1.1rem; }
+    
+    .page-hero {
+        padding: 3rem 1.5rem;
+    }
+    .page-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .intro-content {
+        padding: 2rem;
+    }
+
+    .value-card, .value-card.reverse {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+
+    .policy-intro-content {
+        flex-direction: column;
+    }
+
+    .tech-stack-container {
+        flex-direction: column;
+    }
+
+    .summary-item:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+}

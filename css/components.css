@@ -1,0 +1,297 @@
+/* =================================================================
+    TWB Official Website Stylesheet
+    [2/3] Component Styles (Header, Footer, Buttons, Cards)
+    ================================================================= */
+
+/* ===== 4. ヘッダー (Header & Navigation) ===== */
+header {
+    background-color: var(--surface-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    padding: 0.75rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header .logo img {
+    height: 48px;
+    width: auto;
+    display: block;
+}
+
+header ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header ul a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+header ul a:hover {
+    color: var(--twb-orange);
+    text-decoration: none;
+}
+
+.header-info {
+    text-align: right;
+}
+
+.header-info .tagline {
+    font-size: 11px;
+    font-weight: normal;
+    color: var(--text-color);
+    margin: 0 0 4px 0;
+}
+
+.header-info img {
+    height: 32px;
+    width: auto;
+    display: block;
+    margin-left: auto;
+}
+
+/* ===== 5. ページ共通コンポーネント (Shared Components) ===== */
+.page-hero {
+    background-color: var(--section-bg-color);
+    text-align: center;
+    padding: 4rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.page-hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.page-hero p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 0;
+}
+.hero-image {
+    width: 100%;
+    max-width: 960px;
+    height: auto;
+    display: block;
+    margin: 2rem auto 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.cta-section {
+    background-color: var(--section-bg-color);
+    color: var(--text-color);
+    padding: 4rem 1.5rem;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+.cta-section h2 {
+    color: var(--heading-color);
+    font-size: 1.6rem;
+}
+.cta-section p {
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+}
+
+/* ===== 6. カードコンポーネント (Card Component) ===== */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+.card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+.card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.card-tag {
+    display: inline-block;
+    background-color: #e7f0f7;
+    color: var(--twb-blue);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+}
+.card-title a {
+    text-decoration: none;
+}
+.card-title a:hover {
+    color: var(--twb-orange);
+}
+.card-summary {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+.card-link {
+    margin-top: auto;
+    align-self: flex-end;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--twb-blue);
+}
+.card-link:hover {
+    color: var(--twb-orange);
+    text-decoration: none;
+}
+
+.value-card {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    background-color: var(--surface-color);
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+.value-card.reverse {
+    flex-direction: row-reverse;
+}
+.value-card-image {
+    flex: 1 1 40%;
+}
+.value-card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.value-card-content {
+    flex: 1 1 60%;
+}
+
+/* ----- ボタン類 ----- */
+.btn, .btn-secondary {
+    display: inline-block;
+    padding: 0.8rem 2.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 700;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.btn {
+    background-color: var(--twb-blue);
+    color: white;
+}
+.btn:hover {
+    background-color: var(--twb-orange);
+    text-decoration: none;
+    color: white;
+}
+.btn-secondary {
+    background-color: var(--surface-color);
+    color: var(--twb-blue);
+    border: 2px solid var(--twb-blue);
+}
+.btn-secondary:hover {
+    background-color: var(--twb-blue);
+    color: var(--surface-color);
+    text-decoration: none;
+}
+.secondary-cta-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+
+/* ===== 8. フッター (Footer) ===== */
+.site-footer {
+    margin-top: 0;
+}
+.footer-menu-wrapper {
+    background-color: #222222;
+    padding: 2rem 1rem;
+}
+.footer-container {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+.footer-nav ul, .footer-legal ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.footer-nav a {
+    color: #f8f9fa;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-nav a:hover {
+    color: var(--twb-orange);
+    text-decoration: underline;
+}
+.footer-legal {
+    margin-top: 1.5rem;
+}
+.footer-legal a {
+    color: #adb5bd;
+    font-size: 0.8rem;
+    font-weight: normal;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-legal a:hover {
+    color: #f8f9fa;
+    text-decoration: underline;
+}
+.footer-copyright {
+    background-color: #343a40;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    text-align: center;
+}
+.footer-copyright p {
+    margin: 0;
+    font-size: 0.8rem;
+}
