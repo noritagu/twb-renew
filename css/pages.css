@@ -175,6 +175,9 @@
 }
 
 /* ----- 提供サービスページ ----- */
+.service-phase-section, .service-strengths-section {
+    max-width: 1200px;
+}
 .service-phase-section h2, .service-strengths-section h2, .service-strengths-section p {
     text-align: center;
     max-width: 800px;
@@ -335,38 +338,50 @@
     border-radius: 50%;
 }
 
-.philosophy-container {
-    display: flex;
-    gap: 3rem;
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
 }
-.philosophy-column {
-    flex: 1;
-}
-.philosophy-list, .pledge-list {
-    list-style: none;
-    padding: 0;
-}
-.philosophy-list li, .pledge-list li {
+.philosophy-card {
     background-color: var(--surface-color);
-    padding: 1.5rem;
+    padding: 2rem;
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    margin-bottom: 1rem;
 }
-.philosophy-list li strong, .pledge-list li strong {
+.philosophy-card h3 {
     color: var(--twb-blue);
-    display: block;
-    margin-bottom: 0.5rem;
+}
+
+.pledge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    text-align: center;
+}
+.pledge-card {
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+.pledge-card h3 {
+    border-bottom: 2px solid var(--twb-blue);
+    display: inline-block;
+    padding-bottom: 0.5rem;
 }
 
 .profile-table {
     width: 100%;
-    border-collapse: collapse;
+    border: 1px solid var(--border-color);
 }
 .profile-table th, .profile-table td {
-    border: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     padding: 1rem;
     text-align: left;
+}
+.profile-table tr:last-child th, .profile-table tr:last-child td {
+    border-bottom: none;
 }
 .profile-table th {
     background-color: var(--section-bg-color);
@@ -377,10 +392,21 @@
 .history-list {
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: 1.5rem;
+    gap: 1rem 2rem;
+    border-left: 3px solid var(--twb-blue);
+    padding-left: 2rem;
 }
 .history-list dt {
     font-weight: 700;
+    grid-column: 1;
+}
+.history-list dd {
+    grid-column: 2;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed var(--border-color);
+}
+.history-list dt:last-of-type + dd {
+    border-bottom: none;
 }
 
 
@@ -431,5 +457,17 @@
     .summary-item:not(:last-child) {
         border-right: none;
         border-bottom: 1px solid var(--border-color);
+    }
+
+    .profile-table th, .profile-table td {
+        display: block;
+        width: 100%;
+        border-bottom: none;
+    }
+    .profile-table th {
+        border-bottom: 1px solid var(--border-color);
+    }
+    .profile-table tr:not(:last-child) td {
+        border-bottom: 1px solid #ddd;
     }
 }
