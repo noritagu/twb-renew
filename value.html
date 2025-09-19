@@ -3,104 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TWBの提供価値 | 株式会社TWB</title>
-<!--
-    <link rel="stylesheet" href="css/destyle.css">
-    <link rel="stylesheet" href="css/style.css">
--->
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/components.css">
-    <link rel="stylesheet" href="../css/pages.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>成果につながるパートナー選びを | 株式会社TWB</title>
+    <link rel="stylesheet" href="../css/destyle.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/script.js"></script>
 </head>
-<body class="antialiased">
-    <header>
-        <nav>
-            <a href="index.html" class="logo">
-                <img src="./images/common/pc_twb_logo.png" alt="株式会社TWB ロゴ">
-            </a>
-            
-            <ul>
-                <li><a href="value.html">TWBの提供価値</a></li>
-                <li><a href="policy.html">開発ポリシー</a></li>
-                <li><a href="service.html">サービス内容</a></li>
-                <li><a href="cases.html">導入事例</a></li>
-                <li><a href="company.html">会社案内</a></li>
-                <li><a href="reqruite.html">採用情報</a></li>
-                <li><a href="contact.html">お問い合わせ</a></li>
-            </ul>
-
-            <div class="header-info">
-                <p class="tagline">TWBはお客様の「使いやすい」を実現するシステム会社です</p>
-                <img src="./images/common/header_tel.jpg" alt="電話番号 048-423-9832 営業時間 10:00-19:00">
+<body>
+    <header id="header">
+        <div class="header_flex">
+            <div class="header_logo">
+                <h1><a href="../index.html"><img src="../images/common/pc_twb_logo.png" alt="株式会社TWB ロゴ"></a></h1>
+                <p class="header_sub">お客様の「事業の成果」を実現するシステム会社</p>
             </div>
-        </nav>
+            <div class="header_nav">
+                <ul>
+                    <li><a href="value.html">TWBの提供価値</a></li>
+                    <li><a href="policy.html">開発ポリシー</a></li>
+                    <li><a href="service.html">サービス内容</a></li>
+                    <li><a href="cases.html">導入事例</a></li>
+                    <li><a href="company.html">会社案内</a></li>
+                    <li><a href="reqruite.html">採用情報</a></li>
+                    <li class="header_contact"><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
-
+    <div class="page_img">
+        <div class="page_img_inner">
+            <div class="page_img_txt">
+                <h2>成長をともに描く技術パートナー</h2>
+            </div>
+        </div>
+    </div>
     <main>
-        <section class="page-hero">
-            <h1>事業の成功は、パートナー選びで決まる</h1>
-            <p>TWBが提供する価値は、長年の経験で培われた具体的な「3つの力」によって支えられています。私たちは、この3つの力を通じて、単なる「開発会社」ではなく、お客様の事業の未来を共創する「技術パートナー」として選ばれ続けています。</p>
+        <section id="reason">
+            <div class="reason_inner">
+                <div class="reason_lead">
+                    <p>IT開発はゴールではありません。大切なのは、システムがどれだけ事業の未来に寄与できるか。<br>
+                    そのためにTWBは、3つの力を通じて「共に事業を成長させる」存在を目指しています。</p>
+                </div>
+                <div class="reason_list">
+                    <div class="reason_item">
+                        <div class="reason_item_img">
+                            <img src="../images/page/reason/reason_img01.jpg" alt="解読力">
+                        </div>
+                        <div class="reason_item_txt">
+                            <h3>解読力 – 業務の本質を見抜き、解決策を描く力</h3>
+                            <p>私たちは、お客様の業務に潜む本質的な課題を見つけ出します。そして、それを解決するための最適なシステム設計を、お客様と共に創り上げます。</p>
+                            <ul>
+                                <li>Fit & Gap分析による最適解の抽出</li>
+                                <li>言葉にされていない業務上の課題の構造化</li>
+                                <li>既製品とオーダーメイドの最適な組み合わせ提案</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="reason_item">
+                        <div class="reason_item_img">
+                            <img src="../images/page/reason/reason_img02.jpg" alt="提案力">
+                        </div>
+                        <div class="reason_item_txt">
+                            <h3>提案力 – 事業に最適な選択肢を導き出す力</h3>
+                            <p>SaaS、クラウド、スクラッチ開発。選択肢は多様ですが、正解は企業ごとに異なります。流行や慣習に流されず、事業の成長フェーズ・将来性に合わせた最善の判断を提案いたします。</p>
+                        </div>
+                    </div>
+                    <div class="reason_item">
+                        <div class="reason_item_img">
+                            <img src="../images/page/reason/reason_img03.jpg" alt="完遂力">
+                        </div>
+                        <div class="reason_item_txt">
+                            <h3>完遂力 – プロジェクトを最後までやり遂げる力</h3>
+                            <p>プロジェクトに予期せぬ事態はつきものです。そのときこそ、私たちの真価が問われます。設計から運用までを一貫して担い、透明性の高い協力体制で最後まで共に走り切ります。</p>
+                            <ul>
+                                <li>高難度プロジェクトの多数成功実績</li>
+                                <li>属人性を排したチーム体制による安定稼働</li>
+                                <li>「外部IT部門」として伴走する当事者意識</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        
-        <section class="value-details-section">
-            <article class="value-card">
-                <div class="value-card-image">
-                    <img src="./images/page/reason/reason_img01.jpg" alt="チームで打ち合わせをしている様子。「解読力」を象徴する画像">
+        <section id="works">
+            <div class="works_inner">
+                <div class="works_ttl">
+                    <h3>成果が証明するTWBの価値</h3>
+                    <p class="works_sub_ttl">私たちが語る力は、実際に企業の成果として現れています。どう課題を乗り越えたのか、事例からご覧ください。</p>
                 </div>
-                <div class="value-card-content">
-                    <span class="value-card-number">STRENGTH 01</span>
-                    <h2>1.【解読力】– 業務課題を、実現可能な「設計図」に翻訳する</h2>
-                    <p>私たちの仕事は、まずお客様のビジネスを深く理解することから始まります。現場の担当者が使う言葉、経営者が抱える悩み、その裏にある本質的な課題を、対話を通じて丁寧に「解読」し、誰もが納得できる最適なシステムの「設計図」へと翻訳していく。この対話と翻訳のプロセスこそが、プロジェクトの成否を分ける最も重要な工程だと考えています。</p>
-                    <ul>
-                        <li>Fit & Gap分析による、客観的な最適解の導出</li>
-                        <li>業務フローに深く入り込み、言語化されていないニーズを構造化</li>
-                        <li>お客様の業務に最適な、オーダーメイドと既製品の組み合わせを判断・設計</li>
-                    </ul>
+                <div class="works_list">
+                    <div class="works_item">
+                        <a href="../cases/case-a.html">
+                            <img src="../images/page/top/works_img001.jpg" alt="基幹システム導入事例">
+                            <p class="works_cat">製造業</p>
+                            <p class="works_txt">Excel管理から脱却し、工場3拠点への拡大を実現</p>
+                        </a>
+                    </div>
+                    <div class="works_item">
+                        <a href="../cases/case-b.html">
+                            <img src="../images/page/top/works_img002.jpg" alt="EC・基幹システム統合事例">
+                            <p class="works_cat">化学・食品メーカー</p>
+                            <p class="works_txt">100年企業のDXを5年間伴走、業務改革を達成</p>
+                        </a>
+                    </div>
+                    <div class="works_item">
+                        <a href="../cases/case-c.html">
+                            <img src="../images/page/top/works_img003.jpg" alt="BtoB ECサイトリニューアル事例">
+                            <p class="works_cat">アパレルメーカー</p>
+                            <p class="works_txt">部分最適から全社DXへ導くECリニューアルを実現</p>
+                        </a>
+                    </div>
                 </div>
-            </article>
-
-            <article class="value-card reverse">
-                <div class="value-card-image">
-                    <img src="./images/page/reason/reason_img02.jpg" alt="データやグラフを分析している様子。「判断力」を象徴する画像">
+                <div class="works_btn">
+                    <a href="../cases.html">プロジェクト事例を見る</a>
                 </div>
-                <div class="value-card-content">
-                    <span class="value-card-number">STRENGTH 02</span>
-                    <h2>2.【判断力】– 変化に対応する「最適解」を、客観的根拠をもって導き出す</h2>
-                    <p>私たちの役割は、流行や慣例に流されることなく、お客様にとって本当に最適な解決策を判断し、ご提案することです。最新の技術、SaaSのような既製品、あるいはオーダーメイドの開発。それぞれの長所と短所を客観的に分析し、ときにはそれらを組み合わせたハイブリッドな構成まで含めて、お客様の事業フェーズや将来の拡張性を考慮した最善の道筋を示します。私たちが目指すのは、短期的な成果ではなく、お客様の事業が長期的に成長していくためのご支援だからです。</p>
-                </div>
-            </article>
-
-            <article class="value-card">
-                <div class="value-card-image">
-                    <img src="./images/page/reason/reason_img03.jpg" alt="チームで協力して作業を進める様子。「完遂力」を象徴する画像">
-                </div>
-                <div class="value-card-content">
-                    <span class="value-card-number">STRENGTH 03</span>
-                    <h2>3.【完遂力】– 予期せぬ課題にも動じない「高品質な体制」で、最後までやり抜く</h2>
-                    <p>プロジェクトには、困難や予定通りに進まないことがつきものです。私たちの真価は、まさにそうした時にこそ発揮されます。私たちのチームが、設計から開発、プロジェクト管理までを一気通貫で担当。予期せぬ課題が発生した際も、お客様との対話を重ねながら、迅速かつ柔軟に対応します。顔の見える関係で、ゴールまで共に走り抜く。この「当事者意識」と「完遂力」が、多くのパートナー企業から信頼をいただく理由です。</p>
-                    <ul>
-                        <li>高難度案件を安定的に成功させてきた「実行力」</li>
-                        <li>専門的な強みを属人性に頼らず、組織の「仕組み」として標準化</li>
-                        <li>高い当事者意識を持つ、お客様の会社の「外部IT部門」</li>
-                    </ul>
-                </div>
-            </article>
-        </section>
-
-        <section class="cta-section">
-             <h2>私たちの価値を、実績で証明します</h2>
-             <p>私たちが語る「3つの力」が、お客様のビジネスにどのような「成果」をもたらしたのか。具体的な事例をご覧いただくことで、私たちの価値を実感していただけると信じています。</p>
-             <a href="cases.html" class="btn">プロジェクト事例を見る</a>
+            </div>
         </section>
     </main>
-
-    <footer class="site-footer">
-        <div class="footer-menu-wrapper">
-            <div class="footer-container">
-                <nav class="footer-nav">
+    <footer>
+        <div id="footer_contact">
+            <div class="footer_contact_inner">
+                <div class="footer_contact_txt">
+                    <p class="footer_contact_sub">お問い合わせ・ご相談</p>
+                    <p class="footer_contact_main">お客様の課題を解決する<br>パートナーがここにいます</p>
+                    <div class="footer_contact_btn">
+                        <a href="../contact.html">今すぐ相談する</a>
+                    </div>
+                </div>
+                <div class="footer_contact_img">
+                    <img src="../images/common/contact_img.jpg" alt="お問い合わせ">
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="footer_inner">
+                <div class="footer_logo">
+                    <a href="../index.html"><img src="../images/common/footer_logo.jpg" alt="株式会社TWB"></a>
+                </div>
+                <div class="footer_nav">
                     <ul>
                         <li><a href="value.html">TWBの提供価値</a></li>
                         <li><a href="policy.html">開発ポリシー</a></li>
@@ -110,18 +149,16 @@
                         <li><a href="reqruite.html">採用情報</a></li>
                         <li><a href="contact.html">お問い合わせ</a></li>
                     </ul>
-                </nav>
-                <nav class="footer-legal">
+                </div>
+                <div class="footer_info">
                     <ul>
-                        <li><a href="#">特定商取引法表記</a></li>
-                        <li><a href="#">プライバシーポリシー</a></li>
-                        <li><a href="#">情報セキュリティ基本方針</a></li>
+                        <li><a href="../notation.html">特定商取引法表記</a></li>
+                        <li><a href="../privacy.html">プライバシーポリシー</a></li>
+                        <li><a href="../isms.html">情報セキュリティ基本方針</a></li>
                     </ul>
-                </nav>
+                    <p class="copyright">© 2025 株式会社TWB. All Rights Reserved.</p>
+                </div>
             </div>
-        </div>
-        <div class="footer-copyright">
-            <p>&copy; 2025 株式会社TWB. All Rights Reserved.</p>
         </div>
     </footer>
 </body>
