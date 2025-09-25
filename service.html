@@ -1,65 +1,34 @@
-<!DOCTYPE html><!DOCTYPE html>
-
-<html lang="ja"><html lang="ja">
-
-<head><head>
-
-    <meta charset="UTF-8">    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>提供サービスと技術力 | 株式会社TWB</title>    <title>提供サービスと技術力 | 株式会社TWB</title>
-
-    <script src="https://cdn.tailwindcss.com"></script>    <script src="https://cdn.tailwindcss.com"></script>
-
-    <style>    <style>
-
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap');        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap');
-
-        body { font-family: 'Noto Sans JP', sans-serif; }        
-
-        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }        body {
-
-        .card-hover { transition: all 0.3s ease; }            font-family: 'Noto Sans JP', sans-serif;
-
-        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }        }
-
-        .fade-in { opacity: 0; transform: translateY(30px); animation: fadeInUp 0.8s ease forwards; }        
-
-        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }        .gradient-bg {
-
-        .nav-link { position: relative; transition: color 0.3s ease; }            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-
-        .nav-link:hover { color: #667eea; }        }
-
-        .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: #667eea; transition: width 0.3s ease; }        
-
-        .nav-link:hover::after { width: 100%; }        .card-hover {
-
-        .phase-icon { width: 80px; height: 80px; margin: 0 auto 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; }            transition: all 0.3s ease;
-
-        .service-card { background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); border: 1px solid #e5e7eb; height: 100%; }        }
-
-        .industry-card { background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); border-radius: 12px; padding: 1.5rem; border: 1px solid #cbd5e1; }        
-
-    </style>        .card-hover:hover {
-
-</head>            transform: translateY(-8px);
-
-<body class="bg-gray-50">            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-
-<!-- ...service01.htmlの本文をそのまま... -->        }
-
-<script>        
-
-// ...service01.htmlのスクリプトをそのまま...        .fade-in {
-
-</script>            opacity: 0;
-
-</body>            transform: translateY(30px);
-
-</html>            animation: fadeInUp 0.8s ease forwards;
-
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>提供サービスと技術力 | 株式会社TWB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
         }
         
         @keyframes fadeInUp {
@@ -133,14 +102,14 @@
                 
                 <!-- Navigation -->
                 <nav class="hidden lg:flex space-x-8">
-                    <a href="#value" class="nav-link text-gray-700 font-medium">OUR VALUE</a>
-                    <a href="#policy" class="nav-link text-gray-700 font-medium">OUR POLICY</a>
-                    <a href="#why-choose" class="nav-link text-gray-700 font-medium">WHY CHOOSE TWB</a>
-                    <a href="#services" class="nav-link text-blue-600 font-medium">SERVICES</a>
-                    <a href="#cases" class="nav-link text-gray-700 font-medium">SUCCESS STORIES</a>
-                    <a href="#company" class="nav-link text-gray-700 font-medium">COMPANY</a>
-                    <a href="#recruit" class="nav-link text-gray-700 font-medium">RECRUIT</a>
-                    <a href="#contact" class="nav-link text-gray-700 font-medium">CONTACT</a>
+                    <a href="value.html" class="nav-link text-gray-700 font-medium">提供する価値</a>
+                    <a href="policy.html" class="nav-link text-gray-700 font-medium">開発ポリシー</a>
+                    <a href="whyus.html" class="nav-link text-gray-700 font-medium">選ばれる理由</a>
+                    <a href="service.html" class="nav-link text-blue-600 font-medium">サービス内容</a>
+                    <a href="cases.html" class="nav-link text-gray-700 font-medium">プロジェクト実績</a>
+                    <a href="company.html" class="nav-link text-gray-700 font-medium">会社概要</a>
+                    <a href="recruit.html" class="nav-link text-gray-700 font-medium">人材募集</a>
+                    <a href="contact.html" class="nav-link text-gray-700 font-medium">お問合わせ</a>
                 </nav>
                 
                 <!-- Mobile menu button -->
@@ -154,14 +123,14 @@
             <!-- Mobile Navigation -->
             <div id="mobileMenu" class="lg:hidden hidden pb-4">
                 <div class="flex flex-col space-y-2">
-                    <a href="#value" class="text-gray-700 py-2 border-b border-gray-200">OUR VALUE</a>
-                    <a href="#policy" class="text-gray-700 py-2 border-b border-gray-200">OUR POLICY</a>
-                    <a href="#why-choose" class="text-gray-700 py-2 border-b border-gray-200">WHY CHOOSE TWB</a>
-                    <a href="#services" class="text-blue-600 py-2 border-b border-gray-200 font-medium">SERVICES</a>
-                    <a href="#cases" class="text-gray-700 py-2 border-b border-gray-200">SUCCESS STORIES</a>
-                    <a href="#company" class="text-gray-700 py-2 border-b border-gray-200">COMPANY</a>
-                    <a href="#recruit" class="text-gray-700 py-2 border-b border-gray-200">RECRUIT</a>
-                    <a href="#contact" class="text-gray-700 py-2">CONTACT</a>
+                    <a href="value.html" class="text-gray-700 py-2 border-b border-gray-200">提供する価値</a>
+                    <a href="policy.html" class="text-gray-700 py-2 border-b border-gray-200">開発ポリシー</a>
+                    <a href="whyus.html" class="text-gray-700 py-2 border-b border-gray-200">選ばれる理由</a>
+                    <a href="service.html" class="text-blue-600 py-2 border-b border-gray-200 font-medium">サービス内容</a>
+                    <a href="cases.html" class="text-gray-700 py-2 border-b border-gray-200">プロジェクト実績</a>
+                    <a href="company.html" class="text-gray-700 py-2 border-b border-gray-200">会社概要</a>
+                    <a href="recruit.html" class="text-gray-700 py-2 border-b border-gray-200">人材募集</a>
+                    <a href="contact.html" class="text-gray-700 py-2">お問合わせ</a>
                 </div>
             </div>
         </div>
@@ -1001,7 +970,7 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">会社情報</h4>
                     <div class="text-gray-300 text-sm space-y-2">
-                        <p>〒351-0114<br>埼玉県和光市本町8-3<br>和光グリーンハイツ101</p>
+                        <p>〒333-0862<br>埼玉県川口市北園町2－9<br>北園サンハイム2　201</p>
                         <p>TEL: 048-423-9832</p>
                     </div>
                 </div>
@@ -1081,5 +1050,5 @@
             observer.observe(el);
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98419c22427080ef',t:'MTc1ODcwOTg2My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9848db52e5f5e38d',t:'MTc1ODc4NTg1MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
