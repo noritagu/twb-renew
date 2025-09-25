@@ -1,0 +1,127 @@
+:root {
+    --text-color: #333333;
+    --background-color: #FFFFFF;
+    --section-background-color: #F8F8F8;
+    --accent-color: #00AEEF; /* 仮のアクセントカラー */
+    --card-border-color: #EAEAEA;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.three-powers {
+    background-color: var(--section-background-color);
+    padding: 4rem 2rem;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 8px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-color);
+}
+
+.powers-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.power-card {
+    background-color: var(--background-color);
+    border: 1px solid var(--card-border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 320px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.power-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.power-card-number {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    opacity: 0.2;
+}
+
+.power-card-icon {
+    margin-bottom: 1.5rem;
+}
+
+.power-card-icon img {
+    width: 48px;
+    height: 48px;
+}
+
+.power-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.power-card-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #666666;
+}
+
+@media (max-width: 992px) {
+    .powers-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .power-card {
+        max-width: 480px;
+    }
+}
+
+@media (max-width: 768px) {
+    .three-powers {
+        padding: 3rem 1rem;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .power-card-title {
+        font-size: 1.25rem;
+    }
+}

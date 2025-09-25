@@ -3,158 +3,449 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>株式会社TWB | お客様の事業課題を解決する開発パートナー</title>
-<!--
-    <link rel="stylesheet" href="css/destyle.css">
-    <link rel="stylesheet" href="css/style.css">
--->
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/components.css">
-    <link rel="stylesheet" href="../css/pages.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>株式会社TWB - お客様の「事業の成果」を実現するシステム会社</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: #667eea;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #667eea;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
 </head>
-<body class="antialiased">
-    <header>
-        <nav>
-            <a href="index.html" class="logo">
-                <img src="./images/common/pc_twb_logo.png" alt="株式会社TWB ロゴ">
-            </a>
-            
-            <ul>
-                <li><a href="value.html">TWBの提供価値</a></li>
-                <li><a href="policy.html">開発ポリシー</a></li>
-                <li><a href="service.html">サービス内容</a></li>
-                <li><a href="cases.html">導入事例</a></li>
-                <li><a href="company.html">会社案内</a></li>
-                <li><a href="reqruite.html">採用情報</a></li>
-                <li><a href="contact.html">お問い合わせ</a></li>
-            </ul>
-
-            <div class="header-info">
-                <p class="tagline">TWBはお客様の「使いやすい」を実現するシステム会社です</p>
-                <img src="./images/common/header_tel.jpg" alt="電話番号 048-423-9832 営業時間 10:00-19:00">
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-gray-900">株式会社TWB</h1>
+                    <span class="ml-4 text-sm text-gray-600 hidden sm:block">お客様の「事業の成果」を実現するシステム会社</span>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="hidden lg:flex space-x-8">
+                    <a href="#value" class="nav-link text-gray-700 font-medium">OUR VALUE</a>
+                    <a href="#policy" class="nav-link text-gray-700 font-medium">OUR POLICY</a>
+                    <a href="#services" class="nav-link text-gray-700 font-medium">SERVICES</a>
+                    <a href="#cases" class="nav-link text-gray-700 font-medium">SUCCESS STORIES</a>
+                    <a href="#company" class="nav-link text-gray-700 font-medium">COMPANY</a>
+                    <a href="#recruit" class="nav-link text-gray-700 font-medium">RECRUIT</a>
+                    <a href="#contact" class="nav-link text-gray-700 font-medium">CONTACT</a>
+                </nav>
+                
+                <!-- Mobile menu button -->
+                <button class="lg:hidden p-2" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
-        </nav>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobileMenu" class="lg:hidden hidden pb-4">
+                <div class="flex flex-col space-y-2">
+                    <a href="#value" class="text-gray-700 py-2 border-b border-gray-200">OUR VALUE</a>
+                    <a href="#policy" class="text-gray-700 py-2 border-b border-gray-200">OUR POLICY</a>
+                    <a href="#services" class="text-gray-700 py-2 border-b border-gray-200">SERVICES</a>
+                    <a href="#cases" class="text-gray-700 py-2 border-b border-gray-200">SUCCESS STORIES</a>
+                    <a href="#company" class="text-gray-700 py-2 border-b border-gray-200">COMPANY</a>
+                    <a href="#recruit" class="text-gray-700 py-2 border-b border-gray-200">RECRUIT</a>
+                    <a href="#contact" class="text-gray-700 py-2">CONTACT</a>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section class="page-hero">
-            <h1>業務の「なぜ」から共に考え、事業の「次」をITで創造します。</h1>
-            <img src="./images/page/top/tatsu-main.png" alt="代表取締役 立原のメッセージと顔写真" class="hero-image">
-        </section>
-
-        <section class="intro-section">
-            <div class="intro-content">
-                <h2>なぜ、私たちは“聞くこと”から始めるのか</h2>
-                <p>私たちの開発は、いつも「話を聞くこと」から始まります。それは、仕様書に書かれた機能ではなく、お客様が語る「困っていること」「実現したい未来」に耳を傾けること。TWBは、システム開発を「技術の組み合わせ」ではなく、事業の言葉を受け止め、技術に翻訳する営みだと考えています。この姿勢こそが、私たちの開発思想の出発点です。</p>
-                <p class="text-center"><a href="policy.html" class="btn">私たちの開発思想を詳しく見る</a></p>
-            </div>
-        </section>
-        
-        <section class="features-section">
-            <h2>事業の成功を支える、TWBの「3つの力」</h2>
-            <p>私たちの開発思想は、プロジェクトを成功に導くための、具体的で揺ぎない「3つの力」によって支えられています。私たちは、この力を通じて、お客様の事業の未来を共創する技術パートナーとして選ばれ続けています。</p>
-            
-            <div class="features-grid">
-                <article class="feature-card">
-                    <div class="feature-card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                    </div>
-                    <h3>1.【解読力】</h3>
-                    <p>業務課題を、実現可能な「設計図」に翻訳する力</p>
-                </article>
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <h1 class="text-4xl lg:text-6xl font-bold leading-tight mb-6">
+                        課題の本質を共に見つけ、<br>
+                        <span class="text-yellow-300">未来の事業をITで育てる</span><br>
+                        パートナー
+                    </h1>
+                    <p class="text-xl lg:text-2xl mb-8 text-blue-100">
+                        お客様の業務に寄り添い、本当に必要なシステムを共に創り上げる。<br>
+                        それがTWBの使命です。
+                    </p>
+                    <a href="#policy" class="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors duration-300 shadow-lg">
+                        私たちの考え方を詳しく見る
+                    </a>
+                </div>
                 
-                <article class="feature-card">
-                    <div class="feature-card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3L2 7l10 4 10-4-10-4z"></path><path d="M2 17l10 4 10-4"></path><path d="M2 12l10 4 10-4"></path></svg>
+                <div class="fade-in flex justify-center">
+                    <!-- Representative Photo Placeholder -->
+                    <div class="w-80 h-80 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                        <div class="w-72 h-72 bg-white/30 rounded-full flex items-center justify-center">
+                            <svg class="w-32 h-32 text-white/70" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                            </svg>
+                        </div>
                     </div>
-                    <h3>2.【判断力】</h3>
-                    <p>変化に対応する「最適解」を、客観的根拠をもって導き出す力</p>
-                </article>
-                
-                <article class="feature-card">
-                    <div class="feature-card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                    </div>
-                    <h3>3.【完遂力】</h3>
-                    <p>予期せぬ課題にも動じない「高品質な体制」で、最後までやり抜く力</p>
-                </article>
-            </div>
-
-            <div class="secondary-cta-container">
-                <a href="value.html" class="btn-secondary">TWBが選ばれる理由を詳しく見る</a>
-                <a href="service.html" class="btn-secondary">TWBの提供サービスと技術一覧を見る</a>
-            </div>
-        </section>
-
-        <section class="cases-section">
-            <h2>導入事例</h2>
-            <p>お客様のビジネス課題にどう向き合い、事業を成功に貢献したか。TWBの価値は、実績が証明します。</p>
-            
-            <div class="card-container">
-                <article class="card">
-                    <div class="card-tag">製造業</div>
-                    <h3 class="card-title">基幹システム導入事例</h3>
-                    <p class="card-outcome">
-                        <span class="card-label">成果</span>
-                        Excel管理から脱却し、工場3拠点への拡大を実現しました。
-                    </p>
-                    <a href="./cases/case-a.html" class="card-link">詳しく見る</a>
-                </article>
-
-                <article class="card">
-                    <div class="card-tag">化学・食品メーカー</div>
-                    <h3 class="card-title">EC・基幹システム統合事例</h3>
-                    <p class="card-outcome">
-                        <span class="card-label">成果</span>
-                        100年企業のDXを5年間伴走し、業務改革を達成しました。
-                    </p>
-                    <a href="./cases/case-b.html" class="card-link">詳しく見る</a>
-                </article>
-
-                <article class="card">
-                    <div class="card-tag">アパレルメーカー</div>
-                    <h3 class="card-title">BtoB ECサイトリニューアル事例</h3>
-                    <p class="card-outcome">
-                        <span class="card-label">成果</span>
-                        部分最適から全社DXへと導く、戦略的パートナーシップを構築しました。
-                    </p>
-                    <a href="./cases/case-c.html" class="card-link">詳しく見る</a>
-                </article>
-            </div>
-            
-            <p class="text-center"><a href="cases.html" class="btn">導入事例をもっと見る</a></p>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="footer-menu-wrapper">
-            <div class="footer-container">
-                <nav class="footer-nav">
-                    <ul>
-                        <li><a href="value.html">TWBの提供価値</a></li>
-                        <li><a href="policy.html">開発ポリシー</a></li>
-                        <li><a href="service.html">サービス内容</a></li>
-                        <li><a href="cases.html">導入事例</a></li>
-                        <li><a href="company.html">会社案内</a></li>
-                        <li><a href="reqruite.html">採用情報</a></li>
-                        <li><a href="contact.html">お問い合わせ</a></li>
-                    </ul>
-                </nav>
-                <nav class="footer-legal">
-                    <ul>
-                        <li><a href="#">特定商取引法表記</a></li>
-                        <li><a href="#">プライバシーポリシー</a></li>
-                        <li><a href="#">情報セキュリティ基本方針</a></li>
-                    </ul>
-                </nav>
+                </div>
             </div>
         </div>
-        <div class="footer-copyright">
-            <p>&copy; 2025 株式会社TWB. All Rights Reserved.</p>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
+                お客様の『業務』を深く理解することから始めます
+            </h2>
+            <div class="text-lg text-gray-700 leading-relaxed space-y-6">
+                <p>
+                    新しいシステム開発を検討するとき、多くの企業は「どの機能を作るか」から議論を始めがちです。しかし、私たちは違います。まずお客様の『業務』を深く理解することから始め、お客様が抱えている「いまの課題」「これから実現したい未来」を言葉にするところからスタートします。
+                </p>
+                <p>
+                    目の前の仕様ではなく、事業そのものを正しく理解し、その言葉を「技術」に翻訳する。TWBが目指すのは、短期的なシステム導入ではなく、事業の進化を支える土台を共に築くことです。
+                </p>
+            </div>
+            <div class="mt-10">
+                <a href="#policy" class="inline-block text-blue-600 font-semibold hover:text-blue-800 transition-colors duration-300">
+                    私たちの考え方を詳しく見る →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Three Powers Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                    成果を実現するための、3つの力
+                </h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    事業の目的に最適なシステムを形にするのは簡単ではありません。だからこそTWBは、3つの力を核にしてプロジェクトを進めています。この力があるから、多くの企業から「頼れるパートナー」として選ばれ続けています。
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- 傾聴力 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg card-hover">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">1. 傾聴力</h3>
+                    <p class="text-blue-600 font-semibold mb-4">課題の本質を見抜き、「具体的な設計」に翻訳する力</p>
+                    <p class="text-gray-700 leading-relaxed">
+                        声なき不便や現場に潜む課題を引き出し、誰もが納得できるシステム像へと翻訳します。形式的な要件定義ではなく、事業の本質を理解することから成果は始まります。
+                    </p>
+                </div>
+                
+                <!-- 提案力 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg card-hover">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">2. 提案力</h3>
+                    <p class="text-green-600 font-semibold mb-4">数ある選択肢の中から、客観的に最適解を導き出す力</p>
+                    <p class="text-gray-700 leading-relaxed">
+                        SaaS、クラウド、スクラッチ開発。選択肢は多様ですが、正解は企業ごとに異なります。流行や慣習に流されず、事業の成長フェーズ・将来性に合わせた最善の判断を提案いたします。
+                    </p>
+                </div>
+                
+                <!-- 完遂力 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg card-hover">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">3. 完遂力</h3>
+                    <p class="text-purple-600 font-semibold mb-4">予期せぬ事態にも対応し、最後までやり抜く力</p>
+                    <p class="text-gray-700 leading-relaxed">
+                        プロジェクトに予期せぬ事態はつきものです。そのときこそ、私たちの真価が問われます。設計から運用までを一貫して担い、透明性の高い協力体制で最後まで共に走り切ります。
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#value" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300">
+                        TWBが選ばれる理由を詳しく見る
+                    </a>
+                    <a href="#services" class="inline-block border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors duration-300">
+                        提供サービスと技術を見る
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                    事例が示す、私たちの価値
+                </h2>
+                <p class="text-lg text-gray-700">
+                    「どのように課題と向き合い、成果を生み出したのか」<br>
+                    それが、TWBを知っていただく最も確かな証拠です。
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Case 1 -->
+                <div class="bg-gray-50 rounded-xl p-8 card-hover">
+                    <div class="flex items-start space-x-4 mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">製造業</h3>
+                            <p class="text-gray-600 text-sm">ウチダステンレス工業株式会社</p>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-3">
+                        Excel管理から脱却し、工場3拠点への拡大を実現
+                    </h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        「システム化によって、工場3拠点に拡大が可能になった。資材破棄ロスの減少、納品ミスの防止を実現。」
+                    </p>
+                </div>
+                
+                <!-- Case 2 -->
+                <div class="bg-gray-50 rounded-xl p-8 card-hover">
+                    <div class="flex items-start space-x-4 mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">化学・食品メーカー</h3>
+                            <p class="text-gray-600 text-sm">太陽油脂株式会社</p>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-3">
+                        100年企業のDXを5年間伴走、業務改革を達成
+                    </h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        「ECとアナログ受注の一元管理により、手作業による転記ミスや確認作業が撲滅。物流倉庫との連携も自動化。」
+                    </p>
+                </div>
+                
+                <!-- Case 3 -->
+                <div class="bg-gray-50 rounded-xl p-8 card-hover">
+                    <div class="flex items-start space-x-4 mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">アパレルメーカー</h3>
+                            <p class="text-gray-600 text-sm">株式会社ボンマックス</p>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-3">
+                        部分最適から全社DXへ導くECリニューアルを実現
+                    </h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        「5年越しの提案が実を結び、会社全体の業務を再設計する一大DXプロジェクトへと発展。複数ベンダーの中心的役割を担当。」
+                    </p>
+                </div>
+                
+                <!-- Case 4 -->
+                <div class="bg-gray-50 rounded-xl p-8 card-hover">
+                    <div class="flex items-start space-x-4 mb-4">
+                        <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">ギフトサービス</h3>
+                            <p class="text-gray-600 text-sm">家樹株式会社</p>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-3">
+                        クラウド化で事業継続性を実現
+                    </h4>
+                    <p class="text-gray-700 leading-relaxed">
+                        「クラウド型システムだったおかげで、コロナ禍の影響を業務において全く受けることなく、業務を継続することができた。」
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#cases" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300">
+                    成功事例をもっと詳しく見る
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                事業の成長を共に描きませんか
+            </h3>
+            <p class="text-lg text-gray-700 mb-8">
+                システム開発でお困りのことがございましたら、お気軽にご相談ください。<br>
+                まずはお話をお聞かせいただくことから始めさせていただきます。
+            </p>
+            <a href="#contact" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300">
+                お問い合わせ
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">株式会社TWB</h4>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        お客様の「事業の成果」を実現するシステム会社
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">会社情報</h4>
+                    <div class="text-gray-300 text-sm space-y-2">
+                        <p>〒351-0114<br>埼玉県和光市本町8-3<br>和光グリーンハイツ101</p>
+                        <p>TEL: 048-423-9832</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">サービス</h4>
+                    <div class="text-gray-300 text-sm space-y-2">
+                        <a href="#value" class="block hover:text-white transition-colors">OUR VALUE</a>
+                        <a href="#policy" class="block hover:text-white transition-colors">OUR POLICY</a>
+                        <a href="#services" class="block hover:text-white transition-colors">SERVICES</a>
+                        <a href="#cases" class="block hover:text-white transition-colors">SUCCESS STORIES</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">企業情報</h4>
+                    <div class="text-gray-300 text-sm space-y-2">
+                        <a href="#company" class="block hover:text-white transition-colors">COMPANY</a>
+                        <a href="#recruit" class="block hover:text-white transition-colors">RECRUIT</a>
+                        <a href="#contact" class="block hover:text-white transition-colors">CONTACT</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400 text-sm">
+                    © 2024 株式会社TWB. All rights reserved.
+                </p>
+            </div>
         </div>
     </footer>
-</body>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobileMenu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0.2s';
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.card-hover').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98414925f4c480ef',t:'MTc1ODcwNjQ2NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

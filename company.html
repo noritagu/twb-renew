@@ -3,204 +3,1015 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>会社案内 | 株式会社TWB</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/pages.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>会社情報 - 私たちについて | 株式会社TWB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .professional-gradient {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: #667eea;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #667eea;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+            background: #667eea;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #667eea;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 0.5rem;
+            top: 1.5rem;
+            width: 2px;
+            height: calc(100% + 1rem);
+            background: #e5e7eb;
+        }
+        
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        
+        .value-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+            height: 100%;
+        }
+        
+        .info-table {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .info-table tr:nth-child(even) {
+            background: #f8fafc;
+        }
+        
+        .info-table td, .info-table th {
+            padding: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .info-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .milestone-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        .culture-item {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #10b981;
+        }
+        
+        .message-section {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 2rem 0;
+        }
+    </style>
 </head>
-<body class="antialiased">
-    <header>
-        <nav>
-            <a href="index.html" class="logo">
-                <img src="./images/common/pc_twb_logo.png" alt="株式会社TWB ロゴ">
-            </a>
-            
-            <ul>
-                <li><a href="value.html">TWBの提供価値</a></li>
-                <li><a href="policy.html">開発ポリシー</a></li>
-                <li><a href="service.html">サービス内容</a></li>
-                <li><a href="cases.html">導入事例</a></li>
-                <li><a href="company.html">会社案内</a></li>
-                <li><a href="reqruite.html">採用情報</a></li>
-                <li><a href="contact.html">お問い合わせ</a></li>
-            </ul>
-
-            <div class="header-info">
-                <p class="tagline">TWBはお客様の「使いやすい」を実現するシステム会社です</p>
-                <img src="./images/common/header_tel.jpg" alt="電話番号 048-423-9832 営業時間 10:00-19:00">
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-gray-900">株式会社TWB</h1>
+                    <span class="ml-4 text-sm text-gray-600 hidden sm:block">お客様の「事業の成果」を実現するシステム会社</span>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="hidden lg:flex space-x-8">
+                    <a href="#value" class="nav-link text-gray-700 font-medium">OUR VALUE</a>
+                    <a href="#policy" class="nav-link text-gray-700 font-medium">OUR POLICY</a>
+                    <a href="#why-choose" class="nav-link text-gray-700 font-medium">WHY CHOOSE TWB</a>
+                    <a href="#services" class="nav-link text-gray-700 font-medium">SERVICES</a>
+                    <a href="#cases" class="nav-link text-gray-700 font-medium">SUCCESS STORIES</a>
+                    <a href="#company" class="nav-link text-blue-600 font-medium">COMPANY</a>
+                    <a href="#recruit" class="nav-link text-gray-700 font-medium">RECRUIT</a>
+                    <a href="#contact" class="nav-link text-gray-700 font-medium">CONTACT</a>
+                </nav>
+                
+                <!-- Mobile menu button -->
+                <button class="lg:hidden p-2" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
-        </nav>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobileMenu" class="lg:hidden hidden pb-4">
+                <div class="flex flex-col space-y-2">
+                    <a href="#value" class="text-gray-700 py-2 border-b border-gray-200">OUR VALUE</a>
+                    <a href="#policy" class="text-gray-700 py-2 border-b border-gray-200">OUR POLICY</a>
+                    <a href="#why-choose" class="text-gray-700 py-2 border-b border-gray-200">WHY CHOOSE TWB</a>
+                    <a href="#services" class="text-gray-700 py-2 border-b border-gray-200">SERVICES</a>
+                    <a href="#cases" class="text-gray-700 py-2 border-b border-gray-200">SUCCESS STORIES</a>
+                    <a href="#company" class="text-blue-600 py-2 border-b border-gray-200 font-medium">COMPANY</a>
+                    <a href="#recruit" class="text-gray-700 py-2 border-b border-gray-200">RECRUIT</a>
+                    <a href="#contact" class="text-gray-700 py-2">CONTACT</a>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section class="page-hero">
-            <h1>会社案内</h1>
-            <p>株式会社TWBについてご紹介します。</p>
-        </section>
-
-        <section class="company-section">
-            <h2 class="section-title">代表挨拶</h2>
-            <div class="greeting-container">
-                <div class="greeting-text">
-                    <p><strong>はじめまして、株式会社TWB、代表の立原です。</strong></p>
-                    <p>この度は、私たちのWebサイトにお越しいただき、誠にありがとうございます。</p>
-                    <p>システム開発は、決して安い買い物ではありません。むしろ、企業の未来を左右する、極めて重要な経営判断の一つです。だからこそ、パートナー選びは慎重になるべきですし、私たちはその厳しい選択の目に耐えうる存在でなければならないと考えています。</p>
-                    <p>私たちが何よりも大切にしているのは、お客様のビジネスを深く理解し、その成功のために共に汗をかく「パートナー」であることです。仕様書に書かれた機能を作るだけでは、プロジェクトは成功しません。その機能の先に、お客様のどのような事業成長が描かれているのか。私たちは、そこから共に考えます。</p>
-                    <p>このサイトを通じて、私たちの実績や技術だけでなく、仕事に対する「姿勢」や「体温」のようなものが、少しでも伝われば幸いです。</p>
-                    <p>あなたの事業の「次」を、ぜひ私たちと共創させてください。お会いできる日を、心から楽しみにしています。</p>
+    <!-- Hero Section -->
+    <section class="professional-gradient text-gray-800 py-20 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="fade-in">
+                    <h1 class="text-4xl lg:text-6xl font-bold leading-tight mb-6">
+                        <span class="text-blue-600">私たちについて</span>
+                    </h1>
+                    <div class="max-w-4xl mx-auto">
+                        <p class="text-xl lg:text-2xl mb-6 text-gray-700 leading-relaxed">
+                            株式会社TWB（ティーダブリュービー）は2006年の設立以来、<br>
+                            「お客様の『使いやすい』を実現するシステム会社」として、<br>
+                            多くの企業のDX推進を支援してまいりました。
+                        </p>
+                        <p class="text-lg text-gray-600">
+                            単なる受託開発に留まらず、お客様のビジネスに深く寄り添い、<br>
+                            共に成長していく「真のパートナーシップ」を大切にしています。
+                        </p>
+                    </div>
                 </div>
-                <div class="greeting-image">
-                    <img src="./images\page\reqruit\signal-2025-03-29-213136.jpeg" alt="代表取締役 立原 芳具">
-                </div>
-            </div>
-        </section>
-
-        <section id="philosophy" class="company-section bg-light">
-            <h2 class="section-title">私たちの理念</h2>
-            <div class="philosophy-grid">
-                <div class="philosophy-card">
-                    <h3>1. 柔軟な問題解決</h3>
-                    <p>私たちは、変化するビジネス環境に対応した的確で柔軟な問題解決を目指します。お客様の業務プロセスを深く理解し、最先端の技術を活用して効率化と最適化を実現します。</p>
-                </div>
-                <div class="philosophy-card">
-                    <h3>2. 共創の姿勢</h3>
-                    <p>私たちは、お客様やパートナー企業と共に価値を創造することを大切にしています。要件定義から運用・保守まで密接に連携し、最適なシステムを共に作り上げます。</p>
-                </div>
-                <div class="philosophy-card">
-                    <h3>3. 社会的責任</h3>
-                    <p>私たちは、システム開発を通じて社会に貢献することを使命としています。業務効率を向上させるソリューションの提供により、企業の生産性を高め、より良い社会の実現に寄与します。</p>
-                </div>
-                <div class="philosophy-card">
-                    <h3>4. 多様性の尊重</h3>
-                    <p>私たちは、多様な価値観やスキルを持つチームメンバーが集まることで、革新的なシステムを開発できると信じています。異なる背景や経験を尊重し、多様な視点を取り入れます。</p>
-                </div>
-                <div class="philosophy-card">
-                    <h3>5. 活躍の場の創出</h3>
-                    <p>私たちは様々な理由で就労に困難を抱える方々に門戸を開き、その才能を最大限に発揮できる場を創ります。ビジネスの成功と社会貢献の両立を目指します。</p>
-                </div>
-            </div>
-        </section>
-        
-        <section class="company-section">
-            <h2 class="section-title">私たちの誓い</h2>
-            <div class="pledge-grid">
-                <div class="pledge-card">
-                    <h3>お客様へ</h3>
-                    <p>本当に必要なものを見極め、最適な解決策を。本質的な価値を提供します。</p>
-                </div>
-                <div class="pledge-card">
-                    <h3>社会へ</h3>
-                    <p>技術の力で社会課題に挑み、より良い未来を共に創ります。</p>
-                </div>
-                <div class="pledge-card">
-                    <h3>仲間へ</h3>
-                    <p>公正な機会と成長の場を。私たちは技術と創造性、そして何より「人」を大切にする企業として、社会に新たな価値を生み出し続けます。</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="company-section bg-light">
-            <h2 class="section-title">会社概要</h2>
-            <table class="profile-table">
-                <tbody>
-                    <tr>
-                        <th>社名</th>
-                        <td>株式会社ティーダブリュービー (TWB)</td>
-                    </tr>
-                    <tr>
-                        <th>所在地</th>
-                        <td>〒333-0862 埼玉県川口市北園町2-9 北園サンハイツ2 201</td>
-                    </tr>
-                    <tr>
-                        <th>設立</th>
-                        <td>2006年12月</td>
-                    </tr>
-                    <tr>
-                        <th>資本金</th>
-                        <td>1,000万円</td>
-                    </tr>
-                    <tr>
-                        <th>代表者</th>
-                        <td>代表取締役 立原 芳具</td>
-                    </tr>
-                    <tr>
-                        <th>認証</th>
-                        <td>ISO 27001 (ISMS) 認証取得 (2016年)</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section class="company-section">
-            <h2 class="section-title">アクセスマップ</h2>
-            <div class="access-container">
-                <div class="map-embed">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3235.197931818295!2d139.6908354762591!3d35.8197769234862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601895632a677271%3A0x6855ddde0a5323a!2z44CSMzMzLTA4NjIg埼玉県川口市北園町２−９!5e0!3m2!1sja!2sjp!4v1726635905741!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <div class="address-details">
-                    <h3>株式会社TWB</h3>
-                    <p>
-                        〒333-0862<br>
-                        埼玉県川口市北園町2-9 北園サンハイツ2 201
-                    </p>
-                    <p>
-                        TEL: 048-423-9832<br>
-                        営業時間: 10:00～19:00<br>
-                        定休日: 土日、祝日
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="company-section bg-light">
-            <h2 class="section-title">沿革</h2>
-            <dl class="history-list">
-                <dt>2001年</dt>
-                <dd>フリーランスのSOHOグループとして活動開始</dd>
-                <dt>2003年</dt>
-                <dd>有限会社ビクトリーに法人化</dd>
-                <dt>2006年</dt>
-                <dd>株式会社TWBに社名変更</dd>
-                <dt>2013年</dt>
-                <dd>上流工程へのシフトを強化</dd>
-                <dt>2016年</dt>
-                <dd>ISO 27001 (ISMS) 認証取得</dd>
-                <dt>2021年</dt>
-                <dd>埼玉県川口市に事務所移転</dd>
-            </dl>
-        </section>
-
-    </main>
-
-    <footer class="site-footer">
-        <div class="footer-menu-wrapper">
-            <div class="footer-container">
-                <nav class="footer-nav">
-                    <ul>
-                        <li><a href="value.html">TWBの提供価値</a></li>
-                        <li><a href="policy.html">開発ポリシー</a></li>
-                        <li><a href="service.html">サービス内容</a></li>
-                        <li><a href="cases.html">導入事例</a></li>
-                        <li><a href="company.html">会社案内</a></li>
-                        <li><a href="reqruite.html">採用情報</a></li>
-                        <li><a href="contact.html">お問い合わせ</a></li>
-                    </ul>
-                </nav>
-                <nav class="footer-legal">
-                    <ul>
-                        <li><a href="#">特定商取引法表記</a></li>
-                        <li><a href="#">プライバシーポリシー</a></li>
-                        <li><a href="#">情報セキュリティ基本方針</a></li>
-                    </ul>
-                </nav>
             </div>
         </div>
-        <div class="footer-copyright">
-            <p>&copy; 2025 株式会社TWB. All Rights Reserved.</p>
+    </section>
+
+    <!-- 会社概要 -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                    会社概要
+                </h2>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- 基本情報 -->
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">基本情報</h3>
+                    <div class="info-table">
+                        <table class="w-full">
+                            <tr>
+                                <td class="font-semibold text-gray-900 w-1/3">会社名</td>
+                                <td class="text-gray-700">株式会社ティーダブリュービー（TWB）</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-gray-900">設立</td>
+                                <td class="text-gray-700">2006年12月</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-gray-900">資本金</td>
+                                <td class="text-gray-700">1,000万円</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-gray-900">従業員数</td>
+                                <td class="text-gray-700">10名</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-gray-900">代表取締役</td>
+                                <td class="text-gray-700">立木 方具</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-gray-900">所在地</td>
+                                <td class="text-gray-700">〒351-0114<br>埼玉県和光市本町8-3<br>和光グリーンハイツ101</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-gray-900">電話番号</td>
+                                <td class="text-gray-700">048-423-9832</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-gray-900">事業内容</td>
+                                <td class="text-gray-700">Web系・業務系システムの開発<br>およびITコンサルティング</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- 主要取引実績 -->
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">主要取引実績</h3>
+                    <div class="space-y-6">
+                        <div class="bg-blue-50 rounded-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-blue-900">継続取引年数</h4>
+                                    <p class="text-blue-700">平均5年以上（最長12年継続中）</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-green-50 rounded-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-green-900">案件規模</h4>
+                                    <p class="text-green-700">1,000万円〜1億円規模のプロジェクトを多数実績</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-purple-50 rounded-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-purple-900">紹介・リピート率</h4>
+                                    <p class="text-purple-700">全案件の9割</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-orange-50 rounded-lg p-6">
+                            <div class="flex items-center mb-3">
+                                <div class="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-orange-900">主要業界</h4>
+                                    <p class="text-orange-700">製造業、建設業、流通業、化学・食品業等</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 私たちの理念 -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                    私たちの理念
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 柔軟な問題解決 -->
+                <div class="value-card card-hover">
+                    <div class="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">柔軟な問題解決</h3>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        私たちは、変化するビジネス環境に対応した的確で柔軟な問題解決を目指します。
+                        お客様の業務プロセスを深く理解し、最先端の技術を活用して効率化と最適化を実現します。
+                        複雑な業務要件にも迅速に対応し、使いやすく効果的なソリューションを提供します。
+                    </p>
+                </div>
+                
+                <!-- 共創の姿勢 -->
+                <div class="value-card card-hover">
+                    <div class="w-16 h-16 bg-green-600 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">共創の姿勢</h3>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        私たちは、お客様やパートナー企業と共に価値を創造することを大切にしています。
+                        システム開発においては、要件定義から運用・保守まで密接に連携し、信頼関係を築きながら最適なシステムを共に作り上げます。
+                        お客様の声に耳を傾け、多様な意見を取り入れることで、より良いシステムを実現します。
+                    </p>
+                </div>
+                
+                <!-- 社会的責任 -->
+                <div class="value-card card-hover">
+                    <div class="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">社会的責任</h3>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        私たちは、システム開発を通して社会に貢献することを使命としています。
+                        業務効率を向上させるソリューションの提供により、企業の生産性を高め、より良い社会の実現に寄与します。
+                        また、セキュリティやプライバシー保護に配慮し、公正かつ信頼できるサービスを提供します。
+                    </p>
+                </div>
+                
+                <!-- 多様性の尊重 -->
+                <div class="value-card card-hover">
+                    <div class="w-16 h-16 bg-orange-600 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">多様性の尊重</h3>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        私たちは、多様な価値観やスキルを持つチームメンバーが集まることで、革新的なシステムを開発できると信じています。
+                        異なる背景や経験を尊重し、多様な視点を取り入れる。
+                        この多様性が、新たなイノベーションの源泉であると考えています。
+                    </p>
+                </div>
+                
+                <!-- 活躍の場の創出 -->
+                <div class="value-card card-hover md:col-span-2 lg:col-span-1">
+                    <div class="w-16 h-16 bg-red-600 rounded-lg flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">活躍の場の創出</h3>
+                    <p class="text-gray-700 leading-relaxed text-sm">
+                        誰もが活躍できる社会へ。
+                        私たちは様々な理由で就労に困難を抱える方々に門戸を開き、その才能を最大限に発揮できる場を創ります。
+                        ビジネスの成功と社会貢献は、決して相反しません。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 私たちの誓い -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                    私たちの誓い
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-600 mb-4">お客様へ</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        本当に必要なものを見極め、最適な解決策を。<br>
+                        本質的な価値を提供します。
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-green-600 mb-4">社会へ</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        技術の力で社会課題に挑み、<br>
+                        より良い未来を共に創ります。
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-purple-600 mb-4">仲間へ</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        公正な機会と成長の場を。<br>
+                        私たちは技術と創造性、そして何より「人」を大切にします。
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
+                    私たちは技術と創造性、そして何より「人」を大切にする企業として、社会に新たな価値を生み出し続けます。<br>
+                    課題解決のその先にある、豊かな未来を目指して。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 代表メッセージ -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                    代表からのメッセージ
+                </h2>
+            </div>
+            
+            <div class="message-section">
+                <div class="grid lg:grid-cols-3 gap-8 items-start">
+                    <!-- 代表写真 -->
+                    <div class="lg:col-span-1 text-center">
+                        <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-lg">
+                            <img src="https://www.twb.jp/images/page/reqruit/tatsu-reqruit2.png" 
+                                 alt="代表取締役 立木 方具" 
+                                 class="w-full h-full object-cover"
+                                 onerror="this.src=''; this.alt='代表写真'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full bg-gray-200 rounded-full flex items-center justify-center\'><svg class=\'w-16 h-16 text-gray-400\' fill=\'currentColor\' viewBox=\'0 0 24 24\'><path d=\'M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z\'/></svg></div>';">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">代表取締役</h3>
+                        <p class="text-lg text-gray-700 mb-4">立木 方具</p>
+                        
+                        <!-- 直筆署名 -->
+                        <div class="mt-6">
+                            <img src="https://www.twb.jp/images/page/reqruit/tatsu-sign.png" 
+                                 alt="代表直筆署名" 
+                                 class="h-16 mx-auto"
+                                 onerror="this.style.display='none';">
+                        </div>
+                    </div>
+                    
+                    <!-- メッセージ本文 -->
+                    <div class="lg:col-span-2">
+                        <h3 class="text-2xl font-bold text-blue-600 mb-6">共に成長できるパートナーシップを目指して</h3>
+                        <div class="text-gray-700 leading-relaxed space-y-4">
+                            <p>
+                                私たちTWBは、お客様との関係を単なる「発注者と受注者」ではなく、「共に事業を成長させるパートナー」として捉えています。
+                            </p>
+                            
+                            <p>
+                                システム開発を通じて、お客様の事業が発展し、社会に価値を提供できるよう、全力でサポートいたします。そのために必要なのは、高い技術力だけでなく、お客様の業務を深く理解し、共感し、同じ目線で課題解決に取り組む姿勢です。
+                            </p>
+                            
+                            <p>
+                                創業から18年、多くのお客様にご信頼をいただき、長期にわたるパートナーシップを築くことができました。これからも、「お客様の事業成功こそが私たちの成功」という信念のもと、より良いサービスを提供し続けてまいります。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TWBの歩み -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                    TWBの歩み
+                </h2>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- 会社の歩み -->
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8">主要マイルストーン</h3>
+                    <div class="space-y-6">
+                        <div class="timeline-item">
+                            <div class="milestone-card">
+                                <h4 class="font-bold text-blue-600 mb-2">2006年</h4>
+                                <p class="text-gray-700">株式会社ティーダブリュービー設立</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="milestone-card">
+                                <h4 class="font-bold text-blue-600 mb-2">2013年</h4>
+                                <p class="text-gray-700">大学生協向け就職支援システム開発開始（現在まで12年継続中）</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="milestone-card">
+                                <h4 class="font-bold text-blue-600 mb-2">2015年</h4>
+                                <p class="text-gray-700">製造業向けクラウド化プロジェクト開始、AWS本格活用開始</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="milestone-card">
+                                <h4 class="font-bold text-blue-600 mb-2">2018年</h4>
+                                <p class="text-gray-700">100年企業のDX伴走プロジェクト開始（5年間継続）</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="milestone-card">
+                                <h4 class="font-bold text-blue-600 mb-2">2020年</h4>
+                                <p class="text-gray-700">フルリモート体制確立、コロナ禍でも安定したサービス提供を維持</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="milestone-card">
+                                <h4 class="font-bold text-blue-600 mb-2">2022年</h4>
+                                <p class="text-gray-700">大手アパレル企業の全社DXプロジェクトを複数ベンダーとの協業で成功</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="milestone-card">
+                                <h4 class="font-bold text-blue-600 mb-2">2024年</h4>
+                                <p class="text-gray-700">案件の9割が紹介・リピート、継続的な成長を実現</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 技術的マイルストーン -->
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8">技術的マイルストーン</h3>
+                    <div class="space-y-4">
+                        <div class="bg-blue-50 rounded-lg p-6">
+                            <h4 class="font-bold text-blue-900 mb-2">2015年</h4>
+                            <p class="text-blue-800">JavaScript Canvas APIを活用した高度なGUIアプリケーション開発</p>
+                        </div>
+                        
+                        <div class="bg-green-50 rounded-lg p-6">
+                            <h4 class="font-bold text-green-900 mb-2">2018年</h4>
+                            <p class="text-green-800">Laravel + Vue.js による本格的SPA開発開始</p>
+                        </div>
+                        
+                        <div class="bg-purple-50 rounded-lg p-6">
+                            <h4 class="font-bold text-purple-900 mb-2">2020年</h4>
+                            <p class="text-purple-800">AWS クラウドネイティブ開発の本格化</p>
+                        </div>
+                        
+                        <div class="bg-orange-50 rounded-lg p-6">
+                            <h4 class="font-bold text-orange-900 mb-2">2022年</h4>
+                            <p class="text-orange-800">複数システム連携による大規模DXプロジェクトの統括</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TWBで働くということ -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                    TWBで働くということ
+                </h2>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- 成長を支援する文化 -->
+                <div>
+                    <h3 class="text-xl font-bold text-green-600 mb-6">成長を支援する文化</h3>
+                    <div class="space-y-4">
+                        <div class="culture-item">
+                            <h4 class="font-semibold text-gray-900 mb-2">個人のキャリアプラン重視</h4>
+                            <p class="text-sm text-gray-700">エンジニアそれぞれの成長目標に合わせたプロジェクト配置</p>
+                        </div>
+                        
+                        <div class="culture-item">
+                            <h4 class="font-semibold text-gray-900 mb-2">上流工程へのチャレンジ</h4>
+                            <p class="text-sm text-gray-700">開発だけでなく、設計・要件定義などの経験も積める環境</p>
+                        </div>
+                        
+                        <div class="culture-item">
+                            <h4 class="font-semibold text-gray-900 mb-2">継続的な学習支援</h4>
+                            <p class="text-sm text-gray-700">新技術習得のための時間と環境を提供</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- フレキシブルな働き方 -->
+                <div>
+                    <h3 class="text-xl font-bold text-blue-600 mb-6">フレキシブルな働き方</h3>
+                    <div class="space-y-4">
+                        <div class="culture-item">
+                            <h4 class="font-semibold text-gray-900 mb-2">フルリモート対応</h4>
+                            <p class="text-sm text-gray-700">地理的な制約なく、優秀な人材と協業</p>
+                        </div>
+                        
+                        <div class="culture-item">
+                            <h4 class="font-semibold text-gray-900 mb-2">柔軟な時間管理</h4>
+                            <p class="text-sm text-gray-700">成果重視の働き方で、ワークライフバランスを実現</p>
+                        </div>
+                        
+                        <div class="culture-item">
+                            <h4 class="font-semibold text-gray-900 mb-2">多様な働き方の尊重</h4>
+                            <p class="text-sm text-gray-700">それぞれの生活スタイルに合わせた働き方を支援</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 手厚いサポート体制 -->
+                <div>
+                    <h3 class="text-xl font-bold text-purple-600 mb-6">手厚いサポート体制</h3>
+                    <div class="space-y-4">
+                        <div class="culture-item">
+                            <h4 class="font-semibold text-gray-900 mb-2">PM・PMO・上級SEによる指導</h4>
+                            <p class="text-sm text-gray-700">豊富な経験を持つ先輩からの直接指導</p>
+                        </div>
+                        
+                        <div class="culture-item">
+                            <h4 class="font-semibold text-gray-900 mb-2">チーム体制での安心感</h4>
+                            <p class="text-sm text-gray-700">一人で抱え込まず、チーム全体でプロジェクトを推進</p>
+                        </div>
+                        
+                        <div class="culture-item">
+                            <h4 class="font-semibold text-gray-900 mb-2">透明性の高い情報共有</h4>
+                            <p class="text-sm text-gray-700">プロジェクトの状況、課題、ノウハウを組織全体で共有</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 社会への貢献 -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                    社会への貢献
+                </h2>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- 技術を通じた社会貢献 -->
+                <div>
+                    <h3 class="text-2xl font-bold text-blue-600 mb-6">技術を通じた社会貢献</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-2">DX推進による生産性向上</h4>
+                                <p class="text-gray-700 text-sm">お客様の業務効率化を通じた社会全体の生産性向上に貢献</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-2">長期的なシステム保守</h4>
+                                <p class="text-gray-700 text-sm">作って終わりではなく、継続的な保守により社会インフラを支える</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-2">オープンソース活動</h4>
+                                <p class="text-gray-700 text-sm">技術コミュニティへの知見共有・貢献</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ダイバーシティ＆インクルージョン -->
+                <div>
+                    <h3 class="text-2xl font-bold text-orange-600 mb-6">ダイバーシティ＆インクルージョン</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-2">多様な働き方の実現</h4>
+                                <p class="text-gray-700 text-sm">様々な背景を持つ人材が活躍できる環境作り</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-2">就労機会の創出</h4>
+                                <p class="text-gray-700 text-sm">技術習得意欲のある方への門戸開放</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-2">継続的な成長支援</h4>
+                                <p class="text-gray-700 text-sm">スキルアップを通じた個人の社会参画支援</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 品質・セキュリティへの取り組み -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                    信頼される技術パートナーとして
+                </h2>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- 品質管理体制 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-6">品質管理体制</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">コードレビューの徹底</h4>
+                                <p class="text-sm text-gray-600">複数名でのコード品質チェック体制</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">テスト自動化</h4>
+                                <p class="text-sm text-gray-600">CI/CDパイプラインによる継続的品質保証</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">ドキュメント整備</h4>
+                                <p class="text-sm text-gray-600">後任者でも保守可能な詳細設計書・運用手順書の作成</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- セキュリティ対策 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-green-600 mb-6">セキュリティ対策</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">情報セキュリティの徹底</h4>
+                                <p class="text-sm text-gray-600">最新のセキュリティ基準に準拠したシステム開発</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">プライバシー保護</h4>
+                                <p class="text-sm text-gray-600">個人情報・企業機密情報の厳格な管理</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">継続的なセキュリティ更新</h4>
+                                <p class="text-sm text-gray-600">脅威の変化に対応した継続的なセキュリティ強化</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                お気軽にお問い合わせください
+            </h3>
+            <p class="text-lg text-gray-700 mb-8">
+                TWBについて、ご質問やご相談がございましたら、どのようなことでもお気軽にお聞かせください。<br>
+                まずはお話をお聞かせいただくことから始めさせていただきます。
+            </p>
+            <a href="#contact" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300">
+                お問い合わせ
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">株式会社TWB</h4>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        お客様の「事業の成果」を実現するシステム会社
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">会社情報</h4>
+                    <div class="text-gray-300 text-sm space-y-2">
+                        <p>〒351-0114<br>埼玉県和光市本町8-3<br>和光グリーンハイツ101</p>
+                        <p>TEL: 048-423-9832</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">サービス</h4>
+                    <div class="text-gray-300 text-sm space-y-2">
+                        <a href="#value" class="block hover:text-white transition-colors">OUR VALUE</a>
+                        <a href="#policy" class="block hover:text-white transition-colors">OUR POLICY</a>
+                        <a href="#why-choose" class="block hover:text-white transition-colors">WHY CHOOSE TWB</a>
+                        <a href="#services" class="block hover:text-white transition-colors">SERVICES</a>
+                        <a href="#cases" class="block hover:text-white transition-colors">SUCCESS STORIES</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">企業情報</h4>
+                    <div class="text-gray-300 text-sm space-y-2">
+                        <a href="#company" class="block hover:text-white transition-colors">COMPANY</a>
+                        <a href="#recruit" class="block hover:text-white transition-colors">RECRUIT</a>
+                        <a href="#contact" class="block hover:text-white transition-colors">CONTACT</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400 text-sm">
+                    © 2024 株式会社TWB. All rights reserved.
+                </p>
+            </div>
         </div>
     </footer>
-</body>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobileMenu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0.2s';
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.card-hover, .value-card, .milestone-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9841ae83e35280ef',t:'MTc1ODcxMDYxNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
