@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>導入事例：ギフトECサイト構築 | 株式会社TWB</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="antialiased">
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">
+                <img src="../images/common/pc_twb_logo.png" alt="株式会社TWB ロゴ">
+            </a>
+            
+            <ul>
+                <li><a href="../value.html">TWBの提供価値</a></li>
+                <li><a href="../policy.html">開発ポリシー</a></li>
+                <li><a href="../service.html">サービス内容</a></li>
+                <li><a href="../cases.html">導入事例</a></li>
+                <li><a href="../会社概要.html">会社案内</a></li>
+                <li><a href="../reqruite.html">採用情報</a></li>
+                <li><a href="../contact.html">お問い合わせ</a></li>
+            </ul>
+
+            <div class="header-info">
+                <p class="tagline">TWBはお客様の「使いやすい」を実現するシステム会社です</p>
+                <img src="../images/common/header_tel.jpg" alt="電話番号 048-423-9832 営業時間 10:00-19:00">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <h1>ギフトECサイト構築事例</h1>
+            <p>サービス業D社様</p>
+        </section>
+
+        <article class="case-study-article">
+            <div class="case-study-main-visual">
+                <img src="../images/page/cases/cases_04.jpg" alt="ギフトECサイト構築事例のイメージ画像">
+            </div>
+
+            <div class="case-study-summary">
+                <div class="summary-item">
+                    <div class="summary-label">お客様の課題</div>
+                    <div class="summary-value">オンプレミスサーバーの運用コスト増大と、物理サーバーに依存したシステムが将来の働き方の多様化に対応できないリスクを抱えていた。</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-label">TWBの解決策</div>
+                    <div class="summary-value">時代を先読みし、将来的な事業拡大の基盤となるクラウドでのシステム化を強く推奨。Webブラウザ上で動作する高機能なオンラインデザインGUIを開発。</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-label">導入後の成果</div>
+                    <div class="summary-value">業務効率が飛躍的に向上し、リーディングカンパニーへと成長。クラウド化により、後のコロナ禍でも業務を一切停滞させることなく事業を継続できた。</div>
+                </div>
+            </div>
+
+            <div class="case-study-content">
+                <h2>お客様が抱えていた課題</h2>
+                <p>事業の急成長に伴い、オンプレミスサーバーの増強と運用コストの増大が経営課題となっていました。また、物理的なサーバーに依存したシステムは、将来の働き方の多様化に対応できないリスクを抱えていました。</p>
+                
+                <h2>TWBのソリューションと貢献</h2>
+                <h3>1. 磐石な「上流工程」の遂行能力</h3>
+                <p>お客様の当初の想定に対し、私たちは「時代を先読み」し、場所を選ばない働き方と将来的な事業拡大の基盤となるクラウドでのシステム化を強く推奨。単なる制作ツールに留めず、事業創造のパートナーとして関与しました。</p>
+                
+                <h3>2. プロセスが標準化された「高品質な開発体制」</h3>
+                <p>当時、前例のなかった 「Webブラウザ上で動作する、高機能なオンラインデザインGUI」という難易度の高い要求に対し、JavaScriptを駆使して実現。複数担当者による共同編集を可能にし、手作業とは比較にならない生産性を達成しました。</p>
+                
+                <h3>3. 根拠に基づいた「透明性の高いプロジェクト管理」</h3>
+                <p>他の案件での成功体験を根拠に、クラウド化のメリットを丁寧に説明し、ご納得いただいた上でプロジェクトを推進。「言われたものを作る」のではなく、お客様の事業の未来にとって最善となる技術を選定し、導きました。</p>
+
+                <h2>導入後の成果</h2>
+                <p>業務効率が飛躍的に向上し、お客様はパーソナルギフト市場におけるリーディングカンパニーへと成長されました。2020年にリモートワークが必須となった際、クラウドシステムであったおかげで業務が一切停滞することなく継続できました。</p>
+                
+                <div class="pm-summary">
+                    <h3>担当PMの総括</h3>
+                    <p>後日、お客様からは、私たちの提案が事業の継続そのものに貢献できたことを示す、非常に重みのあるお言葉をいただきました。</p>
+                </div>
+            </div>
+        </article>
+
+        <section class="cta-section">
+            <a href="../cases.html" class="btn-secondary">導入事例一覧へ戻る</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-menu-wrapper">
+            <div class="footer-container">
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="../value.html">TWBの提供価値</a></li>
+                        <li><a href="../policy.html">開発ポリシー</a></li>
+                        <li><a href="../service.html">サービス内容</a></li>
+                        <li><a href="../cases.html">導入事例</a></li>
+                        <li><a href="../会社概要.html">会社案内</a></li>
+                        <li><a href="../reqruite.html">採用情報</a></li>
+                        <li><a href="../contact.html">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer-legal">
+                    <ul>
+                        <li><a href="#">特定商取引法表記</a></li>
+                        <li><a href="#">プライバシーポリシー</a></li>
+                        <li><a href="#">情報セキュリティ基本方針</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2025 株式会社TWB. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

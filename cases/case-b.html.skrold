@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>導入事例：EC・基幹システム統合 | 株式会社TWB</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="antialiased">
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">
+                <img src="../images/common/pc_twb_logo.png" alt="株式会社TWB ロゴ">
+            </a>
+            
+            <ul>
+                <li><a href="../value.html">TWBの提供価値</a></li>
+                <li><a href="../policy.html">開発ポリシー</a></li>
+                <li><a href="../service.html">サービス内容</a></li>
+                <li><a href="../cases.html">導入事例</a></li>
+                <li><a href="../会社概要.html">会社案内</a></li>
+                <li><a href="../reqruite.html">採用情報</a></li>
+                <li><a href="../contact.html">お問い合わせ</a></li>
+            </ul>
+
+            <div class="header-info">
+                <p class="tagline">TWBはお客様の「使いやすい」を実現するシステム会社です</p>
+                <img src="../images/common/header_tel.jpg" alt="電話番号 048-423-9832 営業時間 10:00-19:00">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <h1>EC・基幹システム統合事例</h1>
+            <p>化学・食品メーカーB社様</p>
+        </section>
+
+        <article class="case-study-article">
+            <div class="case-study-main-visual">
+                <img src="../images/page/cases/cases_02.jpg" alt="EC・基幹システム統合事例のイメージ画像">
+            </div>
+
+            <div class="case-study-summary">
+                <div class="summary-item">
+                    <div class="summary-label">お客様の課題</div>
+                    <div class="summary-value">複数のExcelとAccessによる複雑な在庫管理、ECサイトと基幹システムのデータ不整合による手作業での情報更新、そして3日間を要する手作業の棚卸が、事業成長の大きな障壁となっていた。</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-label">TWBの解決策</div>
+                    <div class="summary-value">5年間の継続的なヒアリングを通じてECと基幹システムをAPI連携。さらにハンディターミナル導入による倉庫業務の抜本的な改善まで踏み込んだ、全体最適のシステム化を提案・開発。</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-label">導入後の成果</div>
+                    <div class="summary-value">1日の出荷件数の上限が1.5倍に向上。また、3日間かかっていた棚卸作業がわずか1時間に短縮され、従業員の負担を大幅に軽減した。</div>
+                </div>
+            </div>
+
+            <div class="case-study-content">
+                <h2>お客様が抱えていた課題</h2>
+                <p>複数のExcelとAccessによる複雑な在庫管理、ECサイトと基幹システムのデータ不整合による手作業での情報更新、そして3日間を要する手作業の棚卸が、事業成長の大きな障壁となっていました。</p>
+                
+                <h2>TWBのソリューションと貢献</h2>
+                <h3>1. 磐石な「上流工程」の遂行能力</h3>
+                <p>5年間にわたる継続的なヒアリングを通じて、お客様の複雑な業務フロー全体を可視化。ECと基幹システムを連携させるだけでなく、ハンディターミナル導入による倉庫業務の抜本的な改善まで踏み込んだ、全体最適の視点でのシステム化を提案しました。</p>
+                
+                <h3>2. プロセスが標準化された「高品質な開発体制」</h3>
+                <p>フロントのECサイトはEC-CUBEで構築し、バックエンドの基幹システムはJava(Spring Boot)でフルスクラッチ開発。API連携により、ECからの受注データがリアルタイムで基幹システムに反映される仕組みを構築しました。</p>
+
+                <h3>3. 根拠に基づいた「透明性の高いプロジェクト管理」</h3>
+                <p>お客様のITリテラシーに合わせ、専門用語を排した丁寧なコミュニケーションを徹底。システム導入後も操作トレーニングや改善提案を継続し、単なる開発会社ではなく「事業部のIT担当」として信頼を獲得しました。</p>
+
+                <h2>導入後の成果</h2>
+                <p>受注から在庫管理、出荷までが一気通貫で連携され、<strong>1日の出荷件数の上限が1.5倍に向上。</strong> また、ハンディターミナル導入により、<strong>3日間かかっていた棚卸作業がわずか1時間に短縮</strong>され、従業員の負担を大幅に軽減しました。</p>
+                
+                <div class="pm-summary">
+                    <h3>担当PMの総括</h3>
+                    <p>「TWBさんは、私たちのことを私たち以上に理解してくれている」という言葉が、5年間のプロジェクトで築いた信頼関係の証だと感じています。</p>
+                </div>
+            </div>
+        </article>
+
+        <section class="cta-section">
+            <a href="../cases.html" class="btn-secondary">導入事例一覧へ戻る</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-menu-wrapper">
+            <div class="footer-container">
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="../value.html">TWBの提供価値</a></li>
+                        <li><a href="../policy.html">開発ポリシー</a></li>
+                        <li><a href="../service.html">サービス内容</a></li>
+                        <li><a href="../cases.html">導入事例</a></li>
+                        <li><a href="../会社概要.html">会社案内</a></li>
+                        <li><a href="../reqruite.html">採用情報</a></li>
+                        <li><a href="../contact.html">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer-legal">
+                    <ul>
+                        <li><a href="#">特定商取引法表記</a></li>
+                        <li><a href="#">プライバシーポリシー</a></li>
+                        <li><a href="#">情報セキュリティ基本方針</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2025 株式会社TWB. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
