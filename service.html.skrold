@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -105,10 +105,10 @@
                     <a href="value.html" class="nav-link text-gray-700 font-medium">提供する価値</a>
                     <a href="policy.html" class="nav-link text-gray-700 font-medium">開発ポリシー</a>
                     <a href="whyus.html" class="nav-link text-gray-700 font-medium">選ばれる理由</a>
-                    <a href="service.html" class="nav-link text-blue-600 font-medium">サービス内容</a>
-                    <a href="cases.html" class="nav-link text-gray-700 font-medium">プロジェクト実績</a>
+                    <a href="service01.html" class="nav-link text-gray-700 font-medium">サービス内容</a>
+                    <a href="cases.html" class="nav-link text-gray-700 font-medium">開発実績</a>
+                    <a href="reqruite.html" class="nav-link text-gray-700 font-medium">人材募集</a>
                     <a href="company.html" class="nav-link text-gray-700 font-medium">会社概要</a>
-                    <a href="recruit.html" class="nav-link text-gray-700 font-medium">人材募集</a>
                     <a href="contact.html" class="nav-link text-gray-700 font-medium">お問合わせ</a>
                 </nav>
                 
@@ -126,10 +126,10 @@
                     <a href="value.html" class="text-gray-700 py-2 border-b border-gray-200">提供する価値</a>
                     <a href="policy.html" class="text-gray-700 py-2 border-b border-gray-200">開発ポリシー</a>
                     <a href="whyus.html" class="text-gray-700 py-2 border-b border-gray-200">選ばれる理由</a>
-                    <a href="service.html" class="text-blue-600 py-2 border-b border-gray-200 font-medium">サービス内容</a>
-                    <a href="cases.html" class="text-gray-700 py-2 border-b border-gray-200">プロジェクト実績</a>
+                    <a href="service01.html" class="text-gray-700 py-2 border-b border-gray-200">サービス内容</a>
+                    <a href="cases.html" class="text-gray-700 py-2 border-b border-gray-200">開発実績</a>
+                    <a href="reqruite.html" class="text-gray-700 py-2 border-b border-gray-200">人材募集</a>
                     <a href="company.html" class="text-gray-700 py-2 border-b border-gray-200">会社概要</a>
-                    <a href="recruit.html" class="text-gray-700 py-2 border-b border-gray-200">人材募集</a>
                     <a href="contact.html" class="text-gray-700 py-2">お問合わせ</a>
                 </div>
             </div>
@@ -138,22 +138,20 @@
 
     <!-- Hero Section -->
     <section class="gradient-bg text-white py-20 lg:py-32">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <div class="fade-in">
-                    <h1 class="text-4xl lg:text-6xl font-bold leading-tight mb-6">
-                        事業課題の解決を支える<br>
-                        <span class="text-yellow-300">サービスと技術</span>
-                    </h1>
-                    <p class="text-xl lg:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
-                        TWBは、お客様の事業フェーズと課題に合わせて、最適なサービスを提供します。<br>
-                        構想段階から運用・改善まで、一貫したサポートが可能です。<br><br>
-                        また、モダンで安定性の高い技術スタックにより、<br>
-                        将来の拡張性と保守性を確保したシステムを構築いたします。
-                    </p>
-                </div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="fade-in">
+                <h1 class="text-2xl lg:text-3xl font-bold leading-snug mb-2">
+                    事業課題の解決を支える<br>
+                    <span class="text-yellow-300">サービスと技術</span>
+                </h1>
+                <p class="text-base lg:text-lg mb-4 text-blue-100 max-w-3xl mx-auto">
+                    TWBは、お客様の事業フェーズと課題に合わせて、最適なサービスを提供します。<br>
+                    構想段階から運用・改善まで、一貫したサポートが可能です。<br>
+                    また、モダンで安定性の高い技術スタックにより、将来の拡張性と保守性を確保したシステムを構築いたします。
+                </p>
             </div>
         </div>
+    </section>
     </section>
 
     <!-- 事業フェーズ別サービス -->
@@ -448,8 +446,385 @@
         </div>
     </section>
 
-    <!-- 得意分野・対応業界 -->
+    <!-- 技術スタック詳細 -->
     <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                    モダンで安定性の高い技術による堅牢なシステム構築
+                </h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    最新技術と実績のある安定技術を適切に組み合わせ、将来の拡張性と保守性を確保したシステムを構築します
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 mb-20">
+                <!-- フロントエンド技術 -->
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">フロントエンド技術</h3>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-3">JavaScript フレームワーク</h4>
+                            <div class="space-y-3 text-sm">
+                                <div class="bg-white rounded-lg p-4">
+                                    <div class="font-semibold text-blue-700 mb-2">Vue.js 3.x</div>
+                                    <ul class="text-gray-700 space-y-1">
+                                        <li>• Composition API によるメンテナブルな設計</li>
+                                        <li>• Vue Router、Pinia による状態管理</li>
+                                        <li>• TypeScript対応による型安全性確保</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-white rounded-lg p-4">
+                                    <div class="font-semibold text-blue-700 mb-2">React 18.x</div>
+                                    <ul class="text-gray-700 space-y-1">
+                                        <li>• React Hooks による関数コンポーネント設計</li>
+                                        <li>• Next.js によるSSR/SSG対応</li>
+                                        <li>• Redux Toolkit による効率的な状態管理</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-white rounded-lg p-4">
+                                    <div class="font-semibold text-blue-700 mb-2">Nuxt.js 3.x</div>
+                                    <ul class="text-gray-700 space-y-1">
+                                        <li>• サーバーサイドレンダリング（SSR）</li>
+                                        <li>• 静的サイト生成（SSG）による高速化</li>
+                                        <li>• TypeScript標準対応</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-3">スタイリング・UI</h4>
+                            <div class="grid grid-cols-2 gap-2 text-sm">
+                                <div class="bg-white rounded p-3">
+                                    <div class="font-semibold text-blue-700">Tailwind CSS</div>
+                                    <div class="text-xs text-gray-600">効率的なスタイリング</div>
+                                </div>
+                                <div class="bg-white rounded p-3">
+                                    <div class="font-semibold text-blue-700">Bootstrap 5.x</div>
+                                    <div class="text-xs text-gray-600">レスポンシブ対応</div>
+                                </div>
+                                <div class="bg-white rounded p-3">
+                                    <div class="font-semibold text-blue-700">Sass/SCSS</div>
+                                    <div class="text-xs text-gray-600">メンテナブルCSS</div>
+                                </div>
+                                <div class="bg-white rounded p-3">
+                                    <div class="font-semibold text-blue-700">PostCSS</div>
+                                    <div class="text-xs text-gray-600">最新CSS機能</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- バックエンド技術 -->
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">バックエンド技術</h3>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-3">PHP</h4>
+                            <div class="space-y-3 text-sm">
+                                <div class="bg-white rounded-lg p-4">
+                                    <div class="font-semibold text-green-700 mb-2">Laravel 10.x</div>
+                                    <ul class="text-gray-700 space-y-1">
+                                        <li>• Eloquent ORM による効率的DB操作</li>
+                                        <li>• Laravel Sanctum による認証・認可</li>
+                                        <li>• Queue システムによる非同期処理</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-white rounded-lg p-4">
+                                    <div class="font-semibold text-green-700 mb-2">Symfony 6.x</div>
+                                    <ul class="text-gray-700 space-y-1">
+                                        <li>• 大規模アプリケーション向け堅牢設計</li>
+                                        <li>• Doctrine ORM による高度なDB操作</li>
+                                        <li>• API Platform によるREST/GraphQL API</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-3">Node.js / Python</h4>
+                            <div class="grid grid-cols-1 gap-2 text-sm">
+                                <div class="bg-white rounded p-3">
+                                    <div class="font-semibold text-green-700">Express.js / NestJS</div>
+                                    <div class="text-xs text-gray-600">軽量〜企業レベルWebアプリ</div>
+                                </div>
+                                <div class="bg-white rounded p-3">
+                                    <div class="font-semibold text-green-700">Django / FastAPI</div>
+                                    <div class="text-xs text-gray-600">フルスタック〜高性能API</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- データベース技術 -->
+                <div class="bg-gradient-to-br from-purple-50 to-violet-50 rounded-xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">データベース技術</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-3">リレーショナルDB</h4>
+                            <div class="space-y-2 text-sm">
+                                <div class="bg-white rounded p-3">
+                                    <div class="font-semibold text-purple-700">MySQL 8.x</div>
+                                    <div class="text-xs text-gray-600">ACID準拠、JSON型サポート</div>
+                                </div>
+                                <div class="bg-white rounded p-3">
+                                    <div class="font-semibold text-purple-700">PostgreSQL 15.x</div>
+                                    <div class="text-xs text-gray-600">高度なSQL機能、PostGIS対応</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-3">NoSQL・その他</h4>
+                            <div class="space-y-2 text-sm">
+                                <div class="bg-white rounded p-3">
+                                    <div class="font-semibold text-purple-700">Redis</div>
+                                    <div class="text-xs text-gray-600">インメモリ、キャッシュ</div>
+                                </div>
+                                <div class="bg-white rounded p-3">
+                                    <div class="font-semibold text-purple-700">MongoDB</div>
+                                    <div class="text-xs text-gray-600">ドキュメント指向DB</div>
+                                </div>
+                                <div class="bg-white rounded p-3">
+                                    <div class="font-semibold text-purple-700">Elasticsearch</div>
+                                    <div class="text-xs text-gray-600">全文検索・ログ解析</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- クラウド・インフラ技術 -->
+                <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">クラウド・インフラ</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-3">Amazon Web Services</h4>
+                            <div class="space-y-2 text-sm">
+                                <div class="bg-white rounded p-3">
+                                    <div class="font-semibold text-orange-700">EC2 / Lambda</div>
+                                    <div class="text-xs text-gray-600">仮想サーバー・サーバーレス</div>
+                                </div>
+                                <div class="bg-white rounded p-3">
+                                    <div class="font-semibold text-orange-700">S3 / RDS</div>
+                                    <div class="text-xs text-gray-600">ストレージ・マネージドDB</div>
+                                </div>
+                                <div class="bg-white rounded p-3">
+                                    <div class="font-semibold text-orange-700">CloudFront / WAF</div>
+                                    <div class="text-xs text-gray-600">CDN・セキュリティ</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-3">Azure / GCP</h4>
+                            <div class="space-y-2 text-sm">
+                                <div class="bg-white rounded p-3">
+                                    <div class="font-semibold text-orange-700">App Service / App Engine</div>
+                                    <div class="text-xs text-gray-600">フルマネージド実行環境</div>
+                                </div>
+                                <div class="bg-white rounded p-3">
+                                    <div class="font-semibold text-orange-700">Azure DevOps / BigQuery</div>
+                                    <div class="text-xs text-gray-600">CI/CD・データ分析基盤</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 開発・運用ツール -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                    効率的な開発・運用を支えるツール群
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-4">バージョン管理・CI/CD</h3>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li><strong>Git</strong>: 分散バージョン管理</li>
+                        <li><strong>GitHub</strong>: Actions による自動化</li>
+                        <li><strong>GitLab</strong>: DevOps統合環境</li>
+                        <li><strong>Jenkins</strong>: 継続的インテグレーション</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-4">コンテナ・監視</h3>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li><strong>Docker</strong>: アプリケーションコンテナ化</li>
+                        <li><strong>Kubernetes</strong>: コンテナオーケストレーション</li>
+                        <li><strong>CloudWatch</strong>: AWS環境監視</li>
+                        <li><strong>New Relic</strong>: アプリケーション性能監視</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-4">ログ管理・分析</h3>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li><strong>ELK Stack</strong>: ログ収集・分析・可視化</li>
+                        <li><strong>Datadog</strong>: 統合監視プラットフォーム</li>
+                        <li><strong>Grafana</strong>: メトリクス可視化</li>
+                        <li><strong>Prometheus</strong>: メトリクス収集</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-4">プロジェクト管理</h3>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li><strong>Jira</strong>: 課題追跡・プロジェクト管理</li>
+                        <li><strong>Confluence</strong>: ドキュメント管理</li>
+                        <li><strong>Slack</strong>: チームコミュニケーション</li>
+                        <li><strong>Backlog</strong>: 国産プロジェクト管理</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- セキュリティ・品質管理 -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                    企業レベルのセキュリティと品質を保証
+                </h2>
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    情報セキュリティ要件に準拠し、継続的な品質向上を実現する体制を整備しています
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- セキュリティ対策 -->
+                <div class="bg-gradient-to-br from-red-50 to-pink-50 rounded-xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">セキュリティ対策</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-lg p-4">
+                            <h4 class="font-bold text-red-700 mb-2">通信・認証セキュリティ</h4>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• HTTPS通信の標準化（SSL/TLS証明書）</li>
+                                <li>• OAuth 2.0、SAML、多要素認証対応</li>
+                                <li>• ロールベースアクセス制御（RBAC）</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-4">
+                            <h4 class="font-bold text-red-700 mb-2">データ保護・攻撃対策</h4>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• 保存時・転送時のデータ暗号化</li>
+                                <li>• XSS、CSRF攻撃に対する防御</li>
+                                <li>• WAF（Webアプリケーションファイアウォール）</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-4">
+                            <h4 class="font-bold text-red-700 mb-2">継続的セキュリティ</h4>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• 定期的な脆弱性診断・ペネトレーションテスト</li>
+                                <li>• セキュリティパッチの迅速な適用</li>
+                                <li>• セキュリティインシデント対応体制</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 品質管理体制 -->
+                <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-emerald-600 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">品質管理体制</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-lg p-4">
+                            <h4 class="font-bold text-emerald-700 mb-2">コード品質管理</h4>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Pull Request による全コードレビュー</li>
+                                <li>• 静的解析による品質・脆弱性チェック</li>
+                                <li>• コーディング規約の統一・自動チェック</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-4">
+                            <h4 class="font-bold text-emerald-700 mb-2">テスト・検証体制</h4>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Unit Test、Integration Test、E2E Test</li>
+                                <li>• 負荷テストによる性能・安定性検証</li>
+                                <li>• ユーザビリティテストの実施</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-4">
+                            <h4 class="font-bold text-emerald-700 mb-2">継続的改善</h4>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• CI/CDパイプラインによる自動化</li>
+                                <li>• 運用データに基づく性能最適化</li>
+                                <li>• 定期的な技術的負債の解消</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 得意分野・対応業界 -->
+    <section class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
@@ -536,41 +911,45 @@
     </section>
 
     <!-- Next Steps Section -->
-    <section class="py-16 bg-gray-50">
+    <section class="py-16 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h3 class="text-2xl font-bold text-gray-900 mb-6">
-                TWBのサービスをより詳しく知っていただくために
+                具体的な技術力を事例でご確認ください
             </h3>
+            <p class="text-lg text-gray-700 mb-8">
+                これらの技術力と経験を活かして、実際にどのような成果を上げているか、<br>
+                具体的な開発事例をご紹介しています。
+            </p>
             
             <div class="grid md:grid-cols-3 gap-6">
-                <a href="cases.html" class="block bg-white rounded-lg p-6 hover:bg-gray-50 transition-colors duration-300 shadow-sm">
-                    <h4 class="font-semibold text-gray-900 mb-2">具体的な成功事例を見る</h4>
-                    <p class="text-sm text-gray-600">→ プロジェクト実績</p>
+                <a href="#cases" class="block bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors duration-300 shadow-sm">
+                    <h4 class="font-semibold text-gray-900 mb-2">成功事例を詳しく見る</h4>
+                    <p class="text-sm text-gray-600">→ SUCCESS STORIES</p>
                 </a>
-                <a href="value.html" class="block bg-white rounded-lg p-6 hover:bg-gray-50 transition-colors duration-300 shadow-sm">
-                    <h4 class="font-semibold text-gray-900 mb-2">TWBの3つの力について知る</h4>
-                    <p class="text-sm text-gray-600">→ 提供する価値</p>
-                </a>
-                <a href="why-choose.html" class="block bg-white rounded-lg p-6 hover:bg-gray-50 transition-colors duration-300 shadow-sm">
-                    <h4 class="font-semibold text-gray-900 mb-2">選ばれる理由を確認する</h4>
+                <a href="#why-choose" class="block bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors duration-300 shadow-sm">
+                    <h4 class="font-semibold text-gray-900 mb-2">なぜTWBが選ばれるのかを知る</h4>
                     <p class="text-sm text-gray-600">→ WHY CHOOSE TWB</p>
+                </a>
+                <a href="#policy" class="block bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors duration-300 shadow-sm">
+                    <h4 class="font-semibold text-gray-900 mb-2">お客様にとってのメリットを確認する</h4>
+                    <p class="text-sm text-gray-600">→ OUR POLICY</p>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h3 class="text-2xl font-bold text-gray-900 mb-4">
-                お客様の事業課題をお聞かせください
+                技術的なご相談もお気軽に
             </h3>
             <p class="text-lg text-gray-700 mb-8">
-                構想段階から運用・改善まで、TWBが一貫してサポートいたします。<br>
-                まずはお気軽にご相談ください。
+                現在お使いのシステムの技術的な課題や、新規開発での技術選定について、<br>
+                お気軽にご相談ください。お客様の要件に最適な技術構成をご提案いたします。
             </p>
-            <a href="contact.html" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300">
-                お問い合わせ
+            <a href="#contact" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300">
+                技術相談・お問い合わせ
             </a>
         </div>
     </section>
@@ -597,20 +976,20 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">サービス</h4>
                     <div class="text-gray-300 text-sm space-y-2">
-                        <a href="value.html" class="block hover:text-white transition-colors">提供する価値</a>
-                        <a href="policy.html" class="block hover:text-white transition-colors">開発ポリシー</a>
-                        <a href="why-choose.html" class="block hover:text-white transition-colors">WHY CHOOSE TWB</a>
-                        <a href="service.html" class="block hover:text-white transition-colors">サービス内容</a>
-                        <a href="cases.html" class="block hover:text-white transition-colors">プロジェクト実績</a>
+                        <a href="#value" class="block hover:text-white transition-colors">OUR VALUE</a>
+                        <a href="#policy" class="block hover:text-white transition-colors">OUR POLICY</a>
+                        <a href="#why-choose" class="block hover:text-white transition-colors">WHY CHOOSE TWB</a>
+                        <a href="#services" class="block hover:text-white transition-colors">SERVICES</a>
+                        <a href="#cases" class="block hover:text-white transition-colors">SUCCESS STORIES</a>
                     </div>
                 </div>
                 
                 <div>
                     <h4 class="text-lg font-semibold mb-4">企業情報</h4>
                     <div class="text-gray-300 text-sm space-y-2">
-                        <a href="company.html" class="block hover:text-white transition-colors">会社概要</a>
-                        <a href="recruit.html" class="block hover:text-white transition-colors">人材募集</a>
-                        <a href="contact.html" class="block hover:text-white transition-colors">お問合わせ</a>
+                        <a href="#company" class="block hover:text-white transition-colors">COMPANY</a>
+                        <a href="#recruit" class="block hover:text-white transition-colors">RECRUIT</a>
+                        <a href="#contact" class="block hover:text-white transition-colors">CONTACT</a>
                     </div>
                 </div>
             </div>
@@ -669,5 +1048,5 @@
             observer.observe(el);
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98418551d0a9fcca',t:'MTc1ODcwODkyOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9848db52e5f5e38d',t:'MTc1ODc4NTg1MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

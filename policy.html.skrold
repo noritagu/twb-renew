@@ -89,7 +89,7 @@
                     <a href="value.html" class="nav-link text-gray-700 font-medium">提供する価値</a>
                     <a href="policy.html" class="nav-link text-gray-700 font-medium">開発ポリシー</a>
                     <a href="whyus.html" class="nav-link text-gray-700 font-medium">選ばれる理由</a>
-                    <a href="service.html" class="nav-link text-gray-700 font-medium">サービス内容</a>
+                    <a href="service01.html" class="nav-link text-gray-700 font-medium">サービス内容</a>
                     <a href="cases.html" class="nav-link text-gray-700 font-medium">プロジェクト実績</a>
                     <a href="company.html" class="nav-link text-gray-700 font-medium">会社概要</a>
                     <a href="recruit.html" class="nav-link text-gray-700 font-medium">人材募集</a>
@@ -110,7 +110,7 @@
                     <a href="value.html" class="text-gray-700 py-2 border-b border-gray-200">提供する価値</a>
                     <a href="policy.html" class="text-gray-700 py-2 border-b border-gray-200">開発ポリシー</a>
                     <a href="whyus.html" class="text-gray-700 py-2 border-b border-gray-200">選ばれる理由</a>
-                    <a href="service.html" class="text-gray-700 py-2 border-b border-gray-200">サービス内容</a>
+                    <a href="service01.html" class="text-gray-700 py-2 border-b border-gray-200">サービス内容</a>
                     <a href="cases.html" class="text-gray-700 py-2 border-b border-gray-200">プロジェクト実績</a>
                     <a href="company.html" class="text-gray-700 py-2 border-b border-gray-200">会社概要</a>
                     <a href="recruit.html" class="text-gray-700 py-2 border-b border-gray-200">人材募集</a>
@@ -450,7 +450,7 @@
                     <h4 class="font-semibold text-gray-900 mb-2">TWBの技術力・対応力を知る</h4>
                     <p class="text-sm text-gray-600">→ 提供する価値</p>
                 </a>
-                <a href="service.html" class="block bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors duration-300">
+                <a href="service01.html" class="block bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors duration-300">
                     <h4 class="font-semibold text-gray-900 mb-2">提供サービスを詳しく見る</h4>
                     <p class="text-sm text-gray-600">→ サービス内容</p>
                 </a>
@@ -498,7 +498,7 @@
                     <div class="text-gray-300 text-sm space-y-2">
                         <a href="value.html" class="block hover:text-white transition-colors">提供する価値</a>
                         <a href="policy.html" class="block hover:text-white transition-colors">開発ポリシー</a>
-                        <a href="service.html" class="block hover:text-white transition-colors">サービス内容</a>
+                        <a href="service01.html" class="block hover:text-white transition-colors">サービス内容</a>
                         <a href="cases.html" class="block hover:text-white transition-colors">プロジェクト実績</a>
                     </div>
                 </div>
