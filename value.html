@@ -137,17 +137,143 @@
     </section>
 
         <!-- パンくずリスト -->
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav class="text-sm text-gray-600 my-4" aria-label="パンくずリスト">
-                <ol class="list-reset flex">
-                    <li>
-                        <a href="index.html" class="hover:underline text-blue-600">ホーム</a>
-                    </li>
-                    <li><span class="mx-2">/</span></li>
-                    <li class="text-gray-500">TWBの強み</li>
-                </ol>
-            </nav>
-        </div>
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <nav class="text-sm text-gray-600 my-4" aria-label="パンくずリスト">
+                                <ol class="list-reset flex">
+                                        <li>
+                                                <a href="index.html" class="hover:underline text-blue-600">ホーム</a>
+                                        </li>
+                                        <li><span class="mx-2">/</span></li>
+                                        <li class="text-gray-500">TWBの強み</li>
+                                </ol>
+                        </nav>
+                </div>
+
+                <!-- イントロダクションセクション -->
+                <section class="bg-white py-12">
+                    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+                        <!-- セクション1：TWBの価値観 -->
+                        <div>
+                            <h2 class="text-2xl lg:text-3xl font-bold text-blue-900 mb-4">真に価値のあるシステム開発のために、私たちが大切にしていること</h2>
+                            <p class="text-lg text-gray-700 leading-relaxed">
+                                TWBは長年の経験から、一つの確信を得ています。それは<strong>「本当に成果につながるシステム開発」</strong>を実現するためには、技術力だけでは足りないということです。<br>
+                                最も重要なのは、お客様とベンダが共に「<strong>暗黙知</strong>」と向き合うことです。「当然わかっているはず」「言わなくても通じるはず」という領域にこそ、システムの真の価値を生み出すヒントが隠されているからです。
+                            </p>
+                        </div>
+
+                        <!-- セクション2：暗黙知の重要性 -->
+                        <div>
+                            <h3 class="text-xl lg:text-2xl font-bold text-blue-800 mb-4">システム開発において、最も価値のある情報は言語化されていない知識の中にある</h3>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h4 class="font-semibold text-blue-700 mb-2">クライアント側の暗黙知</h4>
+                                    <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                                        <li>「この業界では当たり前」と思っている業務フロー</li>
+                                        <li>「言わなくても分かるはず」の例外処理</li>
+                                        <li>「今まで通り」で済ませている運用ルール</li>
+                                        <li>将来的な事業拡大・変更の可能性</li>
+                                        <li>部門間で認識が異なっている業務ルール</li>
+                                        <li>属人的でナレッジ化されていない暗黙の処理</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-blue-700 mb-2">ベンダ側の暗黙知</h4>
+                                    <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                                        <li>「この技術では当然」と考える制約事項</li>
+                                        <li>「一般的な運用方法」への誘導</li>
+                                        <li>専門用語での説明による認識齟齬</li>
+                                        <li>「標準的な仕様」という曖昧な表現</li>
+                                        <li>開発効率を優先した妥協案の提示</li>
+                                        <li>「よくあるパターン」での決めつけ</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- セクション3：既存開発手法の限界 -->
+                        <div>
+                            <h3 class="text-xl lg:text-2xl font-bold text-blue-800 mb-4">様々な開発手法も、暗黙知リスクの完全解決には至らない</h3>
+                            <p class="text-gray-700 mb-6">
+                                この問題を解決するため、業界では様々な開発手法が生まれました。ウォーターフォール、アジャイル、スパイラル。それぞれが暗黙知によるリスクの軽減を目指していますが、100%の解決策にはなり得ないのが現実です。
+                            </p>
+                            <div class="grid md:grid-cols-3 gap-6">
+                                <div class="bg-blue-50 rounded-lg p-4">
+                                    <h4 class="font-semibold text-blue-700 mb-1">ウォーターフォール</h4>
+                                    <p class="text-sm text-gray-700"><strong>特徴：</strong>綿密な計画による リスク管理<br><strong>限界：</strong>変化する要求への対応力不足</p>
+                                </div>
+                                <div class="bg-blue-50 rounded-lg p-4">
+                                    <h4 class="font-semibold text-blue-700 mb-1">アジャイル</h4>
+                                    <p class="text-sm text-gray-700"><strong>特徴：</strong>短期間での反復による 柔軟性確保<br><strong>限界：</strong>全体観の把握と品質管理の困難</p>
+                                </div>
+                                <div class="bg-blue-50 rounded-lg p-4">
+                                    <h4 class="font-semibold text-blue-700 mb-1">スパイラル</h4>
+                                    <p class="text-sm text-gray-700"><strong>特徴：</strong>段階的開発による リスク最小化<br><strong>限界：</strong>コスト・期間の増大傾向</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- セクション4：本当に重要なのは「人」 -->
+                        <div>
+                            <h3 class="text-xl lg:text-2xl font-bold text-blue-800 mb-4">どのような手法も、結局は「人と人とのコミュニケーション」が成否を分ける</h3>
+                            <p class="text-gray-700">
+                                技術や手法は確かに重要です。しかし、どれだけ優れたフレームワークを使っても、最終的にプロジェクトの成否を分けるのは<strong>「当事者意識を共有した密なコミュニケーション」</strong>です。<br>
+                                クライアント・ベンダの垣根を越えて、一つのチームとして課題に向き合う。お互いの「当たり前」を理解し合い、暗黙知を顕在化していく。そのプロセスこそが、真の成果につながるのです。
+                            </p>
+                        </div>
+
+                        <!-- セクション5：TWBのアプローチ -->
+                        <div class="rounded-xl p-8" style="background: linear-gradient(90deg, #e3f0fc 0%, #c3e0f7 100%);">
+                            <h3 class="text-xl lg:text-2xl font-bold text-blue-800 mb-4">だからこそ、TWBは「暗黙知の存在」を前提とした開発を行います</h3>
+                            <p class="text-gray-700 mb-6">
+                                私たちは過去の豊富な経験から、一つの確信を得ています。それは「<strong>完璧な要件定義は存在しない</strong>」ということです。<br>
+                                どれだけ丁寧に打ち合わせを重ねても、「当たり前すぎて伝え忘れた要件」「部門間で認識が異なっていた業務ルール」「属人的でナレッジ化されていなかった処理」は、必ずプロジェクトの途中で発見されます。
+                                <br><br>
+                                <strong>重要なのは、その事実を受け入れること。</strong><br>
+                                そして、それを前提とした体制と心構えで、お客様と共に課題解決に取り組むことです。
+                            </p>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="bg-white rounded-lg p-4 shadow">
+                                    <h4 class="font-semibold text-blue-700 mb-1">当事者意識の共有</h4>
+                                    <p class="text-sm text-gray-700">外部ベンダーとしてではなく、「外部IT部門」として。<br>お客様と同じ目線で課題に向き合い、一緒に解決していきます。</p>
+                                </div>
+                                <div class="bg-white rounded-lg p-4 shadow">
+                                    <h4 class="font-semibold text-blue-700 mb-1">経験に基づく予測</h4>
+                                    <p class="text-sm text-gray-700">長年の実績から培った「よくある落とし穴」の知見で、<br>潜在的な課題を事前に発見・対策します。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- セクション6：3つの力への導入 -->
+                        <div>
+                            <h3 class="text-xl lg:text-2xl font-bold text-blue-800 mb-4">この考え方を支えるのが、TWBの「3つの力」です</h3>
+                            <p class="text-gray-700 mb-8">
+                                暗黙知リスクを乗り越え、お客様の事業成功を実現するために。<br>
+                                私たちが長年の経験から培ってきた、3つの力をご紹介いたします。
+                            </p>
+                            <div class="grid md:grid-cols-3 gap-6">
+                                <div class="flex flex-col items-center bg-blue-50 rounded-lg p-6">
+                                    <img src="images/page/top/icon_listen.png" alt="傾聴力アイコン" class="w-12 h-12 mb-2">
+                                    <h4 class="font-semibold text-blue-700 mb-1">1. 傾聴力</h4>
+                                    <p class="text-sm text-gray-700 text-center">「言わなくても分かるはず」の領域まで踏み込んで、課題の本質を見抜く力</p>
+                                </div>
+                                <div class="flex flex-col items-center bg-blue-50 rounded-lg p-6">
+                                    <img src="images/page/top/icon_propose.png" alt="提案力アイコン" class="w-12 h-12 mb-2">
+                                    <h4 class="font-semibold text-blue-700 mb-1">2. 提案力</h4>
+                                    <p class="text-sm text-gray-700 text-center">複数の選択肢を公平に比較し、お客様にとって最適な解を導き出す力</p>
+                                </div>
+                                <div class="flex flex-col items-center bg-blue-50 rounded-lg p-6">
+                                    <img src="images/page/top/icon_complete.png" alt="完遂力アイコン" class="w-12 h-12 mb-2">
+                                    <h4 class="font-semibold text-blue-700 mb-1">3. 完遂力</h4>
+                                    <p class="text-sm text-gray-700 text-center">暗黙知による手戻りも含めて、最後まで責任を持ってやり抜く力</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 mt-8 text-center">
+                                これらの力こそが、TWBが多くの企業様から信頼され続ける理由であり、<br>
+                                プロジェクトを確実に成功に導く原動力なのです。
+                            </p>
+                        </div>
+                    </div>
+                </section>
 
     <!-- Listening Power Section -->
     <section class="py-20 bg-white">
