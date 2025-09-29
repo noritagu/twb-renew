@@ -333,6 +333,31 @@
             color: #6b7280;
             line-height: 1.6;
         }
+        
+        .hero-bg {
+            position: relative;
+            background: url('images/page/guide/guide_bg.jpg') center center/cover no-repeat;
+            min-height: 340px;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255,255,255,0.70); /* 明るめの半透明オーバーレイ */
+            /* 必要に応じてグラデーションも可 */
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        @media (min-width: 1024px) {
+            .hero-content {
+                padding-top: 6rem;
+                padding-bottom: 6rem;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -382,16 +407,16 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="professional-gradient text-gray-800 py-8 lg:py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="hero-bg text-gray-800">
+        <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <div class="fade-in">
-                    <h1 class="text-2xl lg:text-3xl font-bold leading-snug mb-2">
+                    <h1 class="text-2xl lg:text-3xl font-bold leading-snug mb-2 drop-shadow">
                         事業成果を実現する、<br>
                         <span class="text-blue-600">TWBの3つの力</span>
                     </h1>
                     <div class="max-w-4xl mx-auto">
-                        <p class="text-base lg:text-lg mb-4 text-gray-700 max-w-3xl mx-auto">
+                        <p class="text-base lg:text-lg mb-4 text-gray-700 max-w-3xl mx-auto drop-shadow">
                             お客様から「また頼みたい」「知り合いにも紹介したい」と言われる理由。<br>
                             それは、TWBが持つ3つの力にあります。
                         </p>
