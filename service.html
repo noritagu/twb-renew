@@ -98,6 +98,30 @@
             padding: 1.5rem;
             border: 1px solid #cbd5e1;
         }
+
+        .hero-bg {
+            position: relative;
+            background: url('images/page/service/service_bg.jpg') center center/cover no-repeat;
+            min-height: 340px;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255,255,255,0.70);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        @media (min-width: 1024px) {
+            .hero-content {
+                padding-top: 6rem;
+                padding-bottom: 6rem;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -147,15 +171,15 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="text-gray-800 py-8 lg:py-12" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="hero-bg text-gray-800">
+        <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <div class="fade-in">
-                    <h1 class="text-2xl lg:text-3xl font-bold leading-snug mb-2">
+                    <h1 class="text-2xl lg:text-3xl font-bold leading-snug mb-2 drop-shadow">
                         <span class="text-blue-600">事業課題の解決を支える<br><span class='text-yellow-400'>サービスと技術</span></span>
                     </h1>
                     <div class="max-w-4xl mx-auto">
-                        <p class="text-base lg:text-lg mb-4 text-gray-700 max-w-3xl mx-auto">
+                        <p class="text-base lg:text-lg mb-4 text-gray-700 max-w-3xl mx-auto drop-shadow">
                             TWBは、お客様の事業フェーズと課題に合わせて、最適なサービスを提供します。<br>
                             構想段階から運用・改善まで、一貫したサポートが可能です。<br>
                             また、モダンで安定性の高い技術スタックにより、将来の拡張性と保守性を確保したシステムを構築いたします。

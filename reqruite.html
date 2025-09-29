@@ -137,6 +137,30 @@
             margin-bottom: 1rem;
             border-left: 4px solid #667eea;
         }
+        
+        .hero-bg {
+            position: relative;
+            background: url('images/page/reqruit/reqruit_bg.jpg') center center/cover no-repeat;
+            min-height: 340px;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255,255,255,0.70);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        @media (min-width: 1024px) {
+            .hero-content {
+                padding-top: 6rem;
+                padding-bottom: 6rem;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -186,18 +210,20 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="professional-gradient text-gray-800 py-8 lg:py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="hero-bg text-gray-800">
+        <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <div class="fade-in">
-                    <h1 class="text-2xl lg:text-3xl font-bold leading-snug mb-2">
+                    <h1 class="text-2xl lg:text-3xl font-bold leading-snug mb-2 drop-shadow">
                         考える力と創る情熱を持つ<br>
                         <span class="text-orange-600">仲間を募集しています！</span>
                     </h1>
-                    <p class="text-base lg:text-lg mb-4 text-gray-700 max-w-3xl mx-auto">
-                        あなたらしく働ける環境で、<br>
-                        お客様の事業成功を支えるシステム開発に取り組みませんか
-                    </p>
+                    <div class="max-w-4xl mx-auto">
+                        <p class="text-base lg:text-lg mb-4 text-gray-700 max-w-3xl mx-auto drop-shadow">
+                            あなたらしく働ける環境で、<br>
+                            お客様の事業成功を支えるシステム開発に取り組みませんか
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -128,6 +128,30 @@
         .timeline-item:last-child::after {
             display: none;
         }
+        
+        .hero-bg {
+            position: relative;
+            background: url('images/page/cases/cases_bg.jpg') center center/cover no-repeat;
+            min-height: 340px;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255,255,255,0.70);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        @media (min-width: 1024px) {
+            .hero-content {
+                padding-top: 6rem;
+                padding-bottom: 6rem;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -142,7 +166,7 @@
                 
                 <!-- Navigation -->
                 <nav class="hidden lg:flex space-x-8">
-                    <a href="value.html" class="nav-link text-gray-700 font-medium">TWBの強み</a>
+                    <a href="value.html" class="nav-link text-gray-700 font-medium">提供する価値</a>
                     <a href="policy.html" class="nav-link text-gray-700 font-medium">開発ポリシー</a>
                     <a href="whyus.html" class="nav-link text-gray-700 font-medium">選ばれる理由</a>
                     <a href="service.html" class="nav-link text-gray-700 font-medium">サービス内容</a>
@@ -163,9 +187,9 @@
             <!-- Mobile Navigation -->
             <div id="mobileMenu" class="lg:hidden hidden pb-4">
                 <div class="flex flex-col space-y-2">
-                    <a href="value.html" class="text-gray-700 py-2 border-b border-gray-200">TWBの強み</a>
+                    <a href="value.html" class="text-gray-700 py-2 border-b border-gray-200">提供する価値</a>
                     <a href="policy.html" class="text-gray-700 py-2 border-b border-gray-200">開発ポリシー</a>
-                    <a href="whyus.html" class="text-gray-700 py-2 border-b border-gray-200">選ばれる理由</a>
+                    <a href="why-choose.html" class="text-gray-700 py-2 border-b border-gray-200">WHY CHOOSE TWB</a>
                     <a href="service.html" class="text-gray-700 py-2 border-b border-gray-200">サービス内容</a>
                     <a href="cases.html" class="text-blue-600 py-2 border-b border-gray-200 font-medium">プロジェクト実績</a>
                     <a href="company.html" class="text-gray-700 py-2 border-b border-gray-200">会社概要</a>
@@ -177,19 +201,18 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="professional-gradient text-gray-800 py-8 lg:py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="hero-bg text-gray-800">
+        <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <div class="fade-in">
-                    <h1 class="text-2xl lg:text-3xl font-bold leading-snug mb-2">
-                        <span class="text-blue-600">事例が示す、<br>私たちの価値</span>
+                    <h1 class="text-2xl lg:text-3xl font-bold leading-snug mb-2 drop-shadow">
+                        事例が示す、<br>
+                        <span class="text-yellow-300">私たちの価値</span>
                     </h1>
                     <div class="max-w-4xl mx-auto">
-                        <p class="text-base lg:text-lg mb-4 text-gray-700 max-w-3xl mx-auto">
+                        <p class="text-base lg:text-lg mb-4 text-gray-700 max-w-3xl mx-auto drop-shadow">
                             「どのように課題と向き合い、成果を生み出したのか」<br>
-                            それが、TWBを知っていただく最も確かな証拠です。
-                        </p>
-                        <p class="text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
+                            それが、TWBを知っていただく最も確かな証拠です。<br><br>
                             業界も規模も異なる4つのプロジェクトから、TWBの「傾聴力」「提案力」「完遂力」が<br>
                             どのように発揮され、お客様の事業にどのような価値をもたらしたかをご紹介します。
                         </p>
@@ -198,18 +221,6 @@
             </div>
         </div>
     </section>
-    <!-- パンくずリスト -->
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <nav class="text-sm text-gray-600 my-4" aria-label="パンくずリスト">
-            <ol class="list-reset flex">
-                <li>
-                    <a href="index.html" class="hover:underline text-blue-600">ホーム</a>
-                </li>
-                <li><span class="mx-2">/</span></li>
-                <li class="text-gray-500">プロジェクト実績</li>
-            </ol>
-        </nav>
-    </div>
 
     <!-- 成功事例一覧 -->
     <section class="py-20 bg-white">
@@ -842,7 +853,7 @@
             </p>
             
             <div class="grid md:grid-cols-3 gap-6">
-                <a href="whyus.html" class="block bg-white rounded-lg p-6 hover:bg-gray-100 transition-colors duration-300 shadow-sm">
+                <a href="why-choose.html" class="block bg-white rounded-lg p-6 hover:bg-gray-100 transition-colors duration-300 shadow-sm">
                     <h4 class="font-semibold text-gray-900 mb-2">なぜTWBが選ばれるのかを知る</h4>
                     <p class="text-sm text-gray-600">→ WHY CHOOSE TWB</p>
                 </a>
@@ -896,9 +907,9 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">サービス</h4>
                     <div class="text-gray-300 text-sm space-y-2">
-                        <a href="value.html" class="block hover:text-white transition-colors">TWBの強み</a>
+                        <a href="value.html" class="block hover:text-white transition-colors">提供する価値</a>
                         <a href="policy.html" class="block hover:text-white transition-colors">開発ポリシー</a>
-                        <a href="whyus.html" class="block hover:text-white transition-colors">WHY CHOOSE TWB</a>
+                        <a href="why-choose.html" class="block hover:text-white transition-colors">WHY CHOOSE TWB</a>
                         <a href="service.html" class="block hover:text-white transition-colors">サービス内容</a>
                         <a href="cases.html" class="block hover:text-white transition-colors">プロジェクト実績</a>
                     </div>

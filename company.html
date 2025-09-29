@@ -151,6 +151,29 @@
             padding: 3rem;
             margin: 2rem 0;
         }
+        .hero-bg {
+            position: relative;
+            background: url('images/page/company/company_bg.jpg') center center/cover no-repeat;
+            min-height: 340px;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255,255,255,0.70);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        @media (min-width: 1024px) {
+            .hero-content {
+                padding-top: 6rem;
+                padding-bottom: 6rem;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -200,22 +223,18 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="professional-gradient text-gray-800 py-8 lg:py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="hero-bg text-gray-800">
+        <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <div class="fade-in">
-                    <h1 class="text-2xl lg:text-3xl font-bold leading-snug mb-2">
-                        <span class="text-blue-600">私たちについて</span>
+                    <!-- ここに元のヒーローセクションのタイトル・説明文をそのまま配置 -->
+                    <!-- 例: -->
+                    <h1 class="text-2xl lg:text-3xl font-bold leading-snug mb-2 drop-shadow">
+                        <!-- 元のタイトル -->
                     </h1>
                     <div class="max-w-4xl mx-auto">
-                        <p class="text-base lg:text-lg mb-4 text-gray-700 max-w-3xl mx-auto">
-                            株式会社TWB（ティーダブリュービー）は2006年の設立以来、<br>
-                            「お客様の『使いやすい』を実現するシステム会社」として、<br>
-                            多くの企業のDX推進を支援してまいりました。
-                        </p>
-                        <p class="text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
-                            単なる受託開発に留まらず、お客様のビジネスに深く寄り添い、<br>
-                            共に成長していく「真のパートナーシップ」を大切にしています。
+                        <p class="text-base lg:text-lg mb-4 text-gray-700 max-w-3xl mx-auto drop-shadow">
+                            <!-- 元のサブテキスト -->
                         </p>
                     </div>
                 </div>
