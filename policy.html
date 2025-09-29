@@ -3,26 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>お客様にとって安心できるシステム開発とは | 株式会社TWB</title>
+    <title>プロジェクトの不安を解消する、TWBの開発ポリシー | 株式会社TWB</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap');
         
         body {
+            box-sizing: border-box;
             font-family: 'Noto Sans JP', sans-serif;
         }
         
         .gradient-bg {
-            background: linear-gradient(135deg, #16ca94 0%, #82b6a8 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
-        .lg\:text-lg {
-            font-size: 1.0rem;
-            line-height: 1.75rem;
-        }
-
-        .text-blue-100 {
-            --tw-text-opacity: 1;
-            color: rgb(255 255 255);
+        
+        .professional-gradient {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
         }
         
         .card-hover {
@@ -30,8 +26,8 @@
         }
         
         .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
         }
         
         .fade-in {
@@ -71,15 +67,146 @@
             width: 100%;
         }
         
+        .policy-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e7eb;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 3rem;
+        }
+        
+        .policy-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
         .policy-icon {
             width: 80px;
             height: 80px;
-            margin: 0 auto 1.5rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-size: 2rem;
+        }
+        
+        .benefit-item {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 1.5rem;
+            border-left: 4px solid #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        .breadcrumb {
+            background: #f8fafc;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .breadcrumb a {
+            color: #6b7280;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .breadcrumb a:hover {
+            color: #667eea;
+        }
+        
+        .breadcrumb .current {
+            color: #374151;
+            font-weight: 500;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .cta-button {
+            background: white;
+            color: #667eea;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+        }
+        
+        .policy-summary {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: 6px solid #3b82f6;
+        }
+        
+        .policy-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .policy-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e5e7eb;
+            color: #374151;
+            font-weight: 500;
+        }
+        
+        .policy-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .policy-list li::before {
+            content: '✓';
+            color: #3b82f6;
+            font-weight: bold;
+            margin-right: 0.75rem;
+        }
+        
+        .next-steps-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+            text-align: center;
+        }
+        
+        .next-steps-card h4 {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+        
+        .next-steps-card p {
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+        }
+        
+        .next-steps-card a {
+            color: #667eea;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .next-steps-card a:hover {
+            color: #4f46e5;
         }
     </style>
 </head>
@@ -89,20 +216,20 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center">
-                    <a href="index.html" class="block"><img src="images/common/pc_twb_logo.png" alt="株式会社TWBロゴ" class="h-10" /></a>
-
+                    <h1 class="text-2xl font-bold text-gray-900">株式会社TWB</h1>
+                    <span class="ml-4 text-sm text-gray-600 hidden sm:block">お客様の「事業の成果」を実現するシステム会社</span>
                 </div>
                 
                 <!-- Navigation -->
                 <nav class="hidden lg:flex space-x-8">
-                    <a href="value.html" class="nav-link text-gray-700 font-medium">TWBの強み</a>
-                    <a href="policy.html" class="nav-link text-gray-700 font-medium">開発ポリシー</a>
-                    <a href="whyus.html" class="nav-link text-gray-700 font-medium">選ばれる理由</a>
-                    <a href="service.html" class="nav-link text-gray-700 font-medium">サービス内容</a>
-                    <a href="cases.html" class="nav-link text-gray-700 font-medium">プロジェクト実績</a>
-                    <a href="company.html" class="nav-link text-gray-700 font-medium">会社概要</a>
-                    <a href="reqruite.html" class="nav-link text-gray-700 font-medium">人材募集</a>
-                    <a href="contact.html" class="nav-link text-gray-700 font-medium">お問合わせ</a>
+                    <a href="#value" class="nav-link text-gray-700 font-medium">OUR VALUE</a>
+                    <a href="#policy" class="nav-link text-blue-600 font-medium">OUR POLICY</a>
+                    <a href="#why-choose" class="nav-link text-gray-700 font-medium">WHY CHOOSE TWB</a>
+                    <a href="#services" class="nav-link text-gray-700 font-medium">SERVICES</a>
+                    <a href="#cases" class="nav-link text-gray-700 font-medium">SUCCESS STORIES</a>
+                    <a href="#company" class="nav-link text-gray-700 font-medium">COMPANY</a>
+                    <a href="#recruit" class="nav-link text-gray-700 font-medium">RECRUIT</a>
+                    <a href="#contact" class="nav-link text-gray-700 font-medium">CONTACT</a>
                 </nav>
                 
                 <!-- Mobile menu button -->
@@ -116,296 +243,290 @@
             <!-- Mobile Navigation -->
             <div id="mobileMenu" class="lg:hidden hidden pb-4">
                 <div class="flex flex-col space-y-2">
-                    <a href="value.html" class="text-gray-700 py-2 border-b border-gray-200">TWBの強み</a>
-                    <a href="policy.html" class="text-gray-700 py-2 border-b border-gray-200">開発ポリシー</a>
-                    <a href="whyus.html" class="text-gray-700 py-2 border-b border-gray-200">選ばれる理由</a>
-                    <a href="service.html" class="text-gray-700 py-2 border-b border-gray-200">サービス内容</a>
-                    <a href="cases.html" class="text-gray-700 py-2 border-b border-gray-200">プロジェクト実績</a>
-                    <a href="company.html" class="text-gray-700 py-2 border-b border-gray-200">会社概要</a>
-                    <a href="reqruite.html" class="text-gray-700 py-2 border-b border-gray-200">人材募集</a>
-                    <a href="contact.html" class="text-gray-700 py-2">お問合わせ</a>
+                    <a href="#value" class="text-gray-700 py-2 border-b border-gray-200">OUR VALUE</a>
+                    <a href="#policy" class="text-blue-600 py-2 border-b border-gray-200 font-medium">OUR POLICY</a>
+                    <a href="#why-choose" class="text-gray-700 py-2 border-b border-gray-200">WHY CHOOSE TWB</a>
+                    <a href="#services" class="text-gray-700 py-2 border-b border-gray-200">SERVICES</a>
+                    <a href="#cases" class="text-gray-700 py-2 border-b border-gray-200">SUCCESS STORIES</a>
+                    <a href="#company" class="text-gray-700 py-2 border-b border-gray-200">COMPANY</a>
+                    <a href="#recruit" class="text-gray-700 py-2 border-b border-gray-200">RECRUIT</a>
+                    <a href="#contact" class="text-gray-700 py-2">CONTACT</a>
                 </div>
             </div>
         </div>
     </header>
 
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="text-sm">
+                <a href="#home">HOME</a>
+                <span class="mx-2">></span>
+                <span class="current">開発ポリシー</span>
+            </nav>
+        </div>
+    </div>
+
     <!-- Hero Section -->
-    <section class="gradient-bg text-white py-8 lg:py-12">
+    <section class="professional-gradient text-gray-800 py-20 lg:py-32">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <div class="fade-in">
-                    <h1 class="text-2xl lg:text-3xl font-bold leading-snug mb-2">
-                        お客様にとって<br>
-                        <span class="text-yellow-300">安心できる</span><br>
-                        システム開発とは
+                    <h1 class="text-4xl lg:text-6xl font-bold leading-tight mb-8">
+                        <span class="text-blue-600">TWBの開発ポリシー</span>
                     </h1>
-                    <p class="text-base lg:text-lg mb-4 text-blue-100 max-w-3xl mx-auto">
-                        「本当に期待通りのものができるだろうか」「途中で予算が膨らまないだろうか」<br>
-                        「完成後もきちんとサポートしてもらえるだろうか」<br><br>
-                        私たちTWBは、お客様の不安を解消し、確実な成果をお届けするための<br>
-                        具体的なアプローチを追求してきました。
-                    </p>
-            </div>
-        </div>
-    </section>
-    <!-- パンくずリスト -->
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <nav class="text-sm text-gray-600 my-4" aria-label="パンくずリスト">
-            <ol class="list-reset flex">
-                <li>
-                    <a href="index.html" class="hover:underline text-blue-600">ホーム</a>
-                </li>
-                <li><span class="mx-2">/</span></li>
-                <li class="text-gray-500">開発ポリシー</li>
-            </ol>
-        </nav>
-    </div>
-
-    <!-- 暗黙知アプローチ Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                    「伝え忘れ」「認識違い」があっても安心です
-                </h2>
-            </div>
-            
-            <div class="grid lg:grid-cols-3 gap-8 mb-12">
-                <div class="lg:col-span-2">
-                    <div class="text-lg text-gray-700 leading-relaxed space-y-6">
-                        <p>
-                            多くのお客様が心配されるのが「要件をうまく伝えられるだろうか」「後から『それは聞いていない』と言われないだろうか」ということです。
-                        </p>
-                        <p>
-                            私たちは長年の経験から、どれだけ丁寧に打ち合わせを行っても、<strong>「当たり前すぎて伝え忘れてしまう要件」</strong>や<strong>「部門間で認識が異なっていた業務ルール」</strong>は必ず存在することを理解しています。
-                        </p>
-                        <p>
-                            だからこそ、そうした「後から分かること」を前提としてプロジェクトを進めます。追加費用を要求するのではなく、一緒に解決していく。それがお客様にとっての本当の安心につながると考えています。
+                    <div class="max-w-4xl mx-auto">
+                        <p class="text-xl lg:text-2xl text-gray-700 leading-relaxed">
+                            多くのお客様から選ばれ、長く信頼され続ける理由。<br>
+                            それは、私たちが実践している5つの開発ポリシーにあります。
                         </p>
                     </div>
                 </div>
-                
-                <div class="bg-blue-50 rounded-xl p-6">
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">お客様にとってのメリット</h3>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-start">
-                            <div class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                            <span><strong>完璧な要件定義ができなくても安心</strong>: 後から出てくる要件にも柔軟に対応</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                            <span><strong>部門間の認識違いがあっても大丈夫</strong>: 複数部門との対話で課題を整理・解決</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                            <span><strong>追加費用の心配が少ない</strong>: 想定内の範囲での調整は基本料金に含めて対応</span>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                            <span><strong>責任の押し付け合いなし</strong>: お客様と一緒に課題解決に取り組む姿勢</span>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- 3つの制作ポリシー Section -->
-    <section class="py-20 bg-gray-50">
+    <!-- ポリシー紹介 -->
+    <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                    お客様の事業成功のための3つのお約束
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
+                    <span class="text-blue-600">TWBの開発ポリシー</span>
                 </h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    私たちは、以下の5つを開発の基本ポリシーとしています。
+                </p>
             </div>
             
-            <!-- Policy 1 -->
-            <div class="mb-20">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- ポリシー1: ビジネスモデル・事業戦略の深い理解 -->
+            <div class="policy-card">
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
                     <div>
                         <div class="policy-icon">
-                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                            </svg>
+                            🎯
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">
-                            ビジネスモデル、事業戦略、<br>要望の本質の理解・共有と共感
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                            1. ビジネスモデル・事業戦略の<br>深い理解から始める
                         </h3>
-                        <p class="text-lg font-semibold text-blue-600 mb-6 text-center">
-                            本当に事業に役立つシステムができる
-                        </p>
-                        <div class="text-gray-700 leading-relaxed space-y-4">
+                    </div>
+                    <div>
+                        <div class="text-lg text-gray-700 leading-relaxed space-y-4">
                             <p>
-                                「システムを作ること」が目的ではなく、「お客様の事業を成功させること」が私たちの目的です。そのため、まずはお客様のビジネスモデルや事業戦略を深く理解することから始めます。
+                                新しいシステム開発を検討するとき、多くの企業は「どの機能を作るか」から議論を始めがちです。しかし、私たちは違います。
                             </p>
                             <p>
-                                表面的な機能要求ではなく、なぜその機能が必要なのか、お客様の事業にどのような価値をもたらすのかを共に考えます。だからこそ、本当に事業の役に立つシステムをお作りできるのです。
+                                まず、お客様の事業モデル、業務フロー、組織構造、将来ビジョンを深く理解することから始めます。「なぜこのシステムが必要なのか」「事業戦略の中でどのような位置づけなのか」「将来どのように成長していきたいのか」。こうした本質的な問いに向き合うことで、表面的な要件の奥にある真の課題が見えてきます。
+                            </p>
+                            <p class="font-semibold text-blue-800">
+                                目の前の仕様ではなく、事業そのものを正しく理解し、その言葉を「技術」に翻訳する。TWBが目指すのは、短期的なシステム導入ではなく、事業の進化を支える土台を共に築くことです。
                             </p>
                         </div>
                     </div>
-                    <div class="bg-white rounded-xl p-8 shadow-lg">
-                        <h4 class="text-xl font-bold text-gray-900 mb-4">お客様が得られる価値</h4>
-                        <ul class="space-y-3 text-gray-700">
-                            <li class="flex items-start">
-                                <div class="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span>事業戦略に沿った、本当に必要な機能に集中できる</span>
-                            </li>
-                            <li class="flex items-start">
-                                <div class="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span>作ったけれど使わない機能への無駄な投資を回避できる</span>
-                            </li>
-                            <li class="flex items-start">
-                                <div class="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span>システム導入後の事業成果を実感しやすい</span>
-                            </li>
-                        </ul>
+                </div>
+                
+                <div class="mt-8">
+                    <h4 class="text-xl font-bold text-gray-900 mb-4">お客様にとってのメリット</h4>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="benefit-item">
+                            <p class="font-semibold text-blue-800 mb-2">投資の集中</p>
+                            <p class="text-gray-600 text-sm">本当に必要な機能だけに投資を集中できる</p>
+                        </div>
+                        <div class="benefit-item">
+                            <p class="font-semibold text-blue-800 mb-2">投資対効果の最大化</p>
+                            <p class="text-gray-600 text-sm">事業戦略とシステムが整合し、投資対効果が最大化する</p>
+                        </div>
+                        <div class="benefit-item">
+                            <p class="font-semibold text-blue-800 mb-2">柔軟な設計</p>
+                            <p class="text-gray-600 text-sm">将来の事業変化にも対応できる、柔軟な設計が実現する</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Policy 2 -->
-            <div class="mb-20">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div class="lg:order-2">
-                        <div class="policy-icon">
-                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">
-                            スモールスタート＆クイックウィン<br>
-                            <span class="text-lg font-normal">－コストバランスを測った段階的なサイト拡張－</span>
-                        </h3>
-                        <p class="text-lg font-semibold text-blue-600 mb-6 text-center">
-                            少ない初期投資で早く成果を実感できる
-                        </p>
-                        <div class="text-gray-700 leading-relaxed space-y-4">
-                            <p>
-                                いきなり大規模なシステムを作るのではなく、最も重要な機能から段階的に開発・導入していきます。早期に成果を実感していただきながら、予算に合わせて必要な機能を追加していく方式です。
-                            </p>
-                            <p>
-                                実際に使ってみてから「やっぱりここも必要だった」「この機能はそれほど重要でなかった」という気づきを次の開発に活かせるため、結果的により良いシステムになります。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="lg:order-1 bg-white rounded-xl p-8 shadow-lg">
-                        <h4 class="text-xl font-bold text-gray-900 mb-4">お客様が得られる価値</h4>
-                        <ul class="space-y-3 text-gray-700">
-                            <li class="flex items-start">
-                                <div class="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span>初期投資を抑えて導入をスタートできる</span>
-                            </li>
-                            <li class="flex items-start">
-                                <div class="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span>早期に効果を実感でき、社内の理解・協力を得やすい</span>
-                            </li>
-                            <li class="flex items-start">
-                                <div class="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span>実際の運用を通じて、本当に必要な機能を見極められる</span>
-                            </li>
-                            <li class="flex items-start">
-                                <div class="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span>予算に合わせて段階的に拡張できる</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Policy 3 -->
-            <div class="mb-20">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- ポリシー2: スモールスタート＆クイックウィン -->
+            <div class="policy-card">
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
                     <div>
                         <div class="policy-icon">
-                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
-                            </svg>
+                            🚀
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">
-                            拡張性の高いシステム設計
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                            2. スモールスタート＆<br>クイックウィン
                         </h3>
-                        <p class="text-lg font-semibold text-blue-600 mb-6 text-center">
-                            将来の事業拡大にも柔軟に対応できる
-                        </p>
-                        <div class="text-gray-700 leading-relaxed space-y-4">
+                    </div>
+                    <div>
+                        <div class="text-lg text-gray-700 leading-relaxed space-y-4">
                             <p>
-                                お客様の事業は成長し、変化していきます。そのとき、システムが足かせになってしまっては本末転倒です。私たちは、将来の事業拡大や要件変更に柔軟に対応できる拡張性を重視した設計を行います。
+                                大規模な初期投資でリスクを取るのではなく、小さく始めて成果を確認しながら拡張していく。これが、TWBが推奨する開発アプローチです。
                             </p>
                             <p>
-                                また、後から発見される新たな要件（暗黙知）にも対応できるよう、変更に強いアーキテクチャを最初から構築しておきます。
+                                最小限の機能でまず効果を実感していただき、そこから段階的に機能を追加していく。この方法なら、予算・期間のリスクを最小化しながら、確実に成果を積み上げられます。また、実際に使ってみて初めて分かる改善点や新たなニーズにも、柔軟に対応できます。
+                            </p>
+                            <p class="font-semibold text-green-800">
+                                「完璧なシステムを最初から作る」のではなく、「お客様と一緒に育てていく」。この姿勢が、多くのプロジェクトを成功に導いてきました。
                             </p>
                         </div>
                     </div>
-                    <div class="bg-white rounded-xl p-8 shadow-lg">
-                        <h4 class="text-xl font-bold text-gray-900 mb-4">お客様が得られる価値</h4>
-                        <ul class="space-y-3 text-gray-700">
-                            <li class="flex items-start">
-                                <div class="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span>事業拡大に合わせてシステムも成長させられる</span>
-                            </li>
-                            <li class="flex items-start">
-                                <div class="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span>新しい要件が出てきても、大幅な作り直しが不要</span>
-                            </li>
-                            <li class="flex items-start">
-                                <div class="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span>長期的な視点で、システム投資の費用対効果を最大化</span>
-                            </li>
-                            <li class="flex items-start">
-                                <div class="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                <span>ベンダーロックインを回避し、選択の自由を維持</span>
-                            </li>
-                        </ul>
+                </div>
+                
+                <div class="mt-8">
+                    <h4 class="text-xl font-bold text-gray-900 mb-4">お客様にとってのメリット</h4>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="benefit-item">
+                            <p class="font-semibold text-green-800 mb-2">早期効果実感</p>
+                            <p class="text-gray-600 text-sm">初期投資を抑えながら、早期に効果を実感できる</p>
+                        </div>
+                        <div class="benefit-item">
+                            <p class="font-semibold text-green-800 mb-2">低リスク</p>
+                            <p class="text-gray-600 text-sm">実際に使いながら改善できるため、失敗リスクが低い</p>
+                        </div>
+                        <div class="benefit-item">
+                            <p class="font-semibold text-green-800 mb-2">柔軟な調整</p>
+                            <p class="text-gray-600 text-sm">予算・スケジュールの状況に応じて、柔軟に優先順位を調整できる</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- 長期的なパートナーとしての価値 Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                    長期的なパートナーとしての価値
-                </h2>
+            <!-- ポリシー3: 拡張性の高いシステム設計 -->
+            <div class="policy-card">
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    <div>
+                        <div class="policy-icon">
+                            🔧
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                            3. 拡張性の高い<br>システム設計
+                        </h3>
+                    </div>
+                    <div>
+                        <div class="text-lg text-gray-700 leading-relaxed space-y-4">
+                            <p>
+                                お客様の事業は成長し、変化していきます。従業員が増え、取引先が増え、新しいサービスが生まれる。そのとき、システムが足かせになってしまっては本末転倒です。
+                            </p>
+                            <p class="font-semibold text-orange-800">
+                                私たちは、将来の事業拡大や要件変更に柔軟に対応できる拡張性を重視した設計を行います。「今、必要な機能」だけでなく、「将来、必要になるかもしれない変更」も視野に入れた設計を行うことで、後から大幅な作り直しが必要になるリスクを回避します。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8">
+                    <h4 class="text-xl font-bold text-gray-900 mb-4">お客様にとってのメリット</h4>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="benefit-item">
+                            <p class="font-semibold text-orange-800 mb-2">システム成長</p>
+                            <p class="text-gray-600 text-sm">事業拡大に合わせてシステムも成長させられる</p>
+                        </div>
+                        <div class="benefit-item">
+                            <p class="font-semibold text-orange-800 mb-2">作り直し不要</p>
+                            <p class="text-gray-600 text-sm">新しい要件が出てきても、大幅な作り直しが不要</p>
+                        </div>
+                        <div class="benefit-item">
+                            <p class="font-semibold text-orange-800 mb-2">費用対効果最大化</p>
+                            <p class="text-gray-600 text-sm">長期的な視点で、システム投資の費用対効果を最大化できる</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                        </svg>
+
+            <!-- ポリシー4: ベンダーロックインを作らない -->
+            <div class="policy-card">
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    <div>
+                        <div class="policy-icon">
+                            🔓
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                            4. ベンダーロックインを作らない、<br>透明性の高い設計
+                        </h3>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">継続的なサポート体制</h3>
-                    <p class="text-gray-700">
-                        私たちは「作って終わり」ではありません。システムが稼働してからが、本当の価値提供の始まりです。運用中に出てくる課題や改善要望にも、継続的にお応えします。
-                    </p>
+                    <div>
+                        <div class="text-lg text-gray-700 leading-relaxed space-y-4">
+                            <p>
+                                私たちは、お客様が将来、他のベンダーに移行することも可能なよう、システムの仕様書・設計書は詳細に残し、透明な情報提供を行います。
+                            </p>
+                            <p>
+                                特定のベンダーにしかメンテナンスできないブラックボックス化したシステムや、独自技術で固められた脱出不可能な構成は作りません。標準的な技術・オープンな設計により、お客様が選択の自由を維持できるよう配慮します。
+                            </p>
+                            <p class="font-semibold text-purple-800">
+                                技術的な情報を包み隠さず共有し、システムの内部構造も明確にドキュメント化する。この透明性が、お客様の将来の選択肢を広げます。
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
+                <div class="mt-8">
+                    <h4 class="text-xl font-bold text-gray-900 mb-4">お客様にとってのメリット</h4>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="benefit-item">
+                            <p class="font-semibold text-purple-800 mb-2">選択の自由</p>
+                            <p class="text-gray-600 text-sm">将来、他のベンダーへの移行も選択肢として残せる</p>
+                        </div>
+                        <div class="benefit-item">
+                            <p class="font-semibold text-purple-800 mb-2">長期保守性</p>
+                            <p class="text-gray-600 text-sm">システムのブラックボックス化を回避し、長期的な保守性を確保できる</p>
+                        </div>
+                        <div class="benefit-item">
+                            <p class="font-semibold text-purple-800 mb-2">安心感</p>
+                            <p class="text-gray-600 text-sm">透明性の高い情報提供により、安心してプロジェクトを進められる</p>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">透明性の高い情報共有</h3>
-                    <p class="text-gray-700">
-                        技術的な制約や将来のリスクも包み隠さずお伝えします。お客様が適切な判断をできるよう、必要な情報はすべて共有いたします。
-                    </p>
+                </div>
+            </div>
+
+            <!-- ポリシー5: 長期パートナーシップ -->
+            <div class="policy-card">
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    <div>
+                        <div class="policy-icon">
+                            🤝
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                            5. お客様の自走支援を見据えた、<br>長期パートナーシップ
+                        </h3>
+                    </div>
+                    <div>
+                        <div class="text-lg text-gray-700 leading-relaxed space-y-4">
+                            <p>
+                                私たちが目指すのは、単なる受託開発ではありません。お客様のビジネスに深く寄り添い、共に成長していく「真のパートナーシップ」です。
+                            </p>
+                            <p>
+                                システム導入後も、運用・改善・拡張を継続的にサポートします。そして同時に、お客様自身がシステムを理解し、自走できるよう支援していきます。必要な知識の移転、運用ノウハウの共有、技術的な判断基準の伝達。これらを通じて、お客様の自立を促します。
+                            </p>
+                            <p>
+                                依存関係を作るのではなく、信頼関係を築く。お客様が「TWBに任せたい」と思っていただけるよう、誠実な対応を心がけます。そして、いつか「自分たちでできる」と思っていただける日まで、全力でサポートし続けます。
+                            </p>
+                            <p>
+                                お客様の事業が成長し、新たな課題が出てくれば、それに応じたシステムの進化を提案します。プロジェクトの進捗・課題・リスクは包み隠さず共有し、透明性の高いコミュニケーションを徹底します。
+                            </p>
+                            <p class="font-semibold text-indigo-800">
+                                長期的な関係を築くからこそ、お客様の事業を深く理解でき、より的確な提案ができる。この好循環が、TWBと多くのお客様との10年以上にわたる継続的な関係を生み出しています。
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-                        </svg>
+                <div class="mt-8">
+                    <h4 class="text-xl font-bold text-gray-900 mb-4">お客様にとってのメリット</h4>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="benefit-item">
+                            <p class="font-semibold text-indigo-800 mb-2">自社コントロール力向上</p>
+                            <p class="text-gray-600 text-sm">システムの運用・保守を自社でコントロールできる力が身につく</p>
+                        </div>
+                        <div class="benefit-item">
+                            <p class="font-semibold text-indigo-800 mb-2">健全な依存関係</p>
+                            <p class="text-gray-600 text-sm">ベンダーへの依存度を下げながら、必要な時にサポートを受けられる</p>
+                        </div>
+                        <div class="benefit-item">
+                            <p class="font-semibold text-indigo-800 mb-2">継続的進化</p>
+                            <p class="text-gray-600 text-sm">事業の成長に合わせた、継続的なシステム進化が可能</p>
+                        </div>
+                        <div class="benefit-item">
+                            <p class="font-semibold text-indigo-800 mb-2">健全なパートナーシップ</p>
+                            <p class="text-gray-600 text-sm">信頼によって選ばれ続ける、健全なパートナーシップを構築できる</p>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">ベンダーロックの回避</h3>
-                    <p class="text-gray-700">
-                        お客様が他のベンダーに移行することも可能なよう、システムの仕様書や設計書は詳細に残し、透明な情報提供を行います。依存関係を作るのではなく、信頼関係を築きたいと考えています。
-                    </p>
                 </div>
             </div>
         </div>
@@ -413,83 +534,94 @@
 
     <!-- まとめセクション -->
     <section class="py-20 bg-gray-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                    私たちがお約束できること
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
+                    <span class="text-blue-600">TWBがお約束できること</span>
                 </h2>
-                <p class="text-lg text-gray-700 leading-relaxed">
-                    TWBは、お客様にとって「安心してシステム開発を任せられるパートナー」であることを第一に考えています。技術的な優秀さだけでなく、お客様の立場に立った誠実な対応で、本当に事業の役に立つシステムをお作りします。
+                <p class="text-xl text-gray-700 max-w-4xl mx-auto mb-8">
+                    TWBは、お客様にとって「安心してシステム開発を任せられるパートナー」であることを第一に考えています。
+                </p>
+                <p class="text-lg text-gray-700 max-w-4xl mx-auto">
+                    技術的な優秀さだけでなく、お客様の立場に立った誠実な対応で、本当に事業の役に立つシステムをお作りします。
                 </p>
             </div>
             
-            <div class="bg-white rounded-xl p-8 shadow-lg">
-                <h3 class="text-xl font-bold text-gray-900 mb-6 text-center">具体的なお約束</h3>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="flex items-start">
-                        <div class="w-3 h-3 bg-blue-600 rounded-full mt-1 mr-3 flex-shrink-0"></div>
-                        <span class="text-gray-700"><strong>後から出てくる要件にも誠実に対応</strong>します</span>
+            <div class="policy-summary max-w-5xl mx-auto">
+                <h3 class="text-2xl font-bold text-blue-800 mb-6 text-center">私たちの開発ポリシー</h3>
+                <ul class="policy-list">
+                    <li>事業の本質を理解することから始める、深いヒアリング</li>
+                    <li>小さく始めて成果を確認しながら拡張する、段階的なアプローチ</li>
+                    <li>将来の変化に柔軟に対応できる、拡張性の高い設計</li>
+                    <li>ベンダーロックインを作らない、透明性の高い情報共有</li>
+                    <li>お客様の自走支援を見据えた、長期的なパートナーシップ</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Steps -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
+                    TWBの実績をご確認ください
+                </h3>
+                <p class="text-lg text-gray-700">
+                    私たちのポリシーが実際にどのような成果を生んでいるか、<br>
+                    具体的な数字と事例でご紹介しています。
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="next-steps-card card-hover">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
                     </div>
-                    <div class="flex items-start">
-                        <div class="w-3 h-3 bg-blue-600 rounded-full mt-1 mr-3 flex-shrink-0"></div>
-                        <span class="text-gray-700"><strong>予算に合わせた段階的な開発</strong>を提案します</span>
+                    <h4>選ばれる理由を確認する</h4>
+                    <p>なぜ多くの企業から信頼され続けているのか</p>
+                    <a href="#whyus">詳しく見る →</a>
+                </div>
+                
+                <div class="next-steps-card card-hover">
+                    <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
                     </div>
-                    <div class="flex items-start">
-                        <div class="w-3 h-3 bg-blue-600 rounded-full mt-1 mr-3 flex-shrink-0"></div>
-                        <span class="text-gray-700"><strong>将来の拡張性を考慮した設計</strong>を行います</span>
+                    <h4>TWBの強みを詳しく知る</h4>
+                    <p>3つの力がどのように成果を生み出すのか</p>
+                    <a href="#value">詳しく見る →</a>
+                </div>
+                
+                <div class="next-steps-card card-hover">
+                    <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
                     </div>
-                    <div class="flex items-start">
-                        <div class="w-3 h-3 bg-blue-600 rounded-full mt-1 mr-3 flex-shrink-0"></div>
-                        <span class="text-gray-700"><strong>長期的なパートナー</strong>として継続サポートします</span>
-                    </div>
-                    <div class="flex items-start md:col-span-2 justify-center">
-                        <div class="w-3 h-3 bg-blue-600 rounded-full mt-1 mr-3 flex-shrink-0"></div>
-                        <span class="text-gray-700"><strong>透明性の高い情報共有</strong>を徹底します</span>
-                    </div>
+                    <h4>具体的な成功事例を見る</h4>
+                    <p>実際のプロジェクト事例と成果</p>
+                    <a href="#cases">詳しく見る →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Next Steps Section -->
-    <section class="py-16 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h3 class="text-2xl font-bold text-gray-900 mb-6">
-                TWBの実績をご確認ください
-            </h3>
-            <p class="text-lg text-gray-700 mb-8">
-                私たちのアプローチが実際にどのような成果を生んでいるか、具体的な事例をご紹介しています。
-            </p>
-            
-            <div class="grid md:grid-cols-3 gap-6">
-                <a href="cases.html" class="block bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors duration-300">
-                    <h4 class="font-semibold text-gray-900 mb-2">成功事例を詳しく見る</h4>
-                    <p class="text-sm text-gray-600">→ プロジェクト実績</p>
-                </a>
-                <a href="value.html" class="block bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors duration-300">
-                    <h4 class="font-semibold text-gray-900 mb-2">TWBの技術力・対応力を知る</h4>
-                    <p class="text-sm text-gray-600">→ TWBの強み</p>
-                </a>
-                <a href="service.html" class="block bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors duration-300">
-                    <h4 class="font-semibold text-gray-900 mb-2">提供サービスを詳しく見る</h4>
-                    <p class="text-sm text-gray-600">→ サービス内容</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
     <!-- CTA Section -->
-    <section class="py-16 bg-gray-50">
+    <section class="cta-section py-20">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+            <h3 class="text-2xl lg:text-3xl font-bold mb-6">
                 まずはお気軽にご相談ください
             </h3>
-            <p class="text-lg text-gray-700 mb-8">
+            <p class="text-xl mb-8 opacity-90">
                 システム開発に関する不安や疑問がございましたら、どのようなことでもお聞かせください。<br>
                 お客様の状況に合わせた最適なアプローチをご提案いたします。
             </p>
-            <a href="contact.html" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300">
-                お問い合わせ
+            <a href="#contact" class="cta-button inline-block px-8 py-4 rounded-lg font-semibold text-lg">
+                無料相談を申し込む
             </a>
         </div>
     </section>
@@ -508,27 +640,29 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">会社情報</h4>
                     <div class="text-gray-300 text-sm space-y-2">
-                        <p>〒333-0862<br>埼玉県川口市北園町2－9<br>北園サンハイム2　201</p>
+                        <p>〒334-0057<br>埼玉県川口市北原台2-9<br>北愛サンハイム2 201</p>
                         <p>TEL: 048-423-9832</p>
+                        <p>MAIL: info@twb.jp</p>
                     </div>
                 </div>
                 
                 <div>
                     <h4 class="text-lg font-semibold mb-4">サービス</h4>
                     <div class="text-gray-300 text-sm space-y-2">
-                        <a href="value.html" class="block hover:text-white transition-colors">TWBの強み</a>
-                        <a href="policy.html" class="block hover:text-white transition-colors">開発ポリシー</a>
-                        <a href="service.html" class="block hover:text-white transition-colors">サービス内容</a>
-                        <a href="cases.html" class="block hover:text-white transition-colors">プロジェクト実績</a>
+                        <a href="#value" class="block hover:text-white transition-colors">OUR VALUE</a>
+                        <a href="#policy" class="block hover:text-white transition-colors">OUR POLICY</a>
+                        <a href="#why-choose" class="block hover:text-white transition-colors">WHY CHOOSE TWB</a>
+                        <a href="#services" class="block hover:text-white transition-colors">SERVICES</a>
+                        <a href="#cases" class="block hover:text-white transition-colors">SUCCESS STORIES</a>
                     </div>
                 </div>
                 
                 <div>
                     <h4 class="text-lg font-semibold mb-4">企業情報</h4>
                     <div class="text-gray-300 text-sm space-y-2">
-                        <a href="company.html" class="block hover:text-white transition-colors">会社概要</a>
-                        <a href="reqruite.html" class="block hover:text-white transition-colors">人材募集</a>
-                        <a href="contact.html" class="block hover:text-white transition-colors">お問合わせ</a>
+                        <a href="#company" class="block hover:text-white transition-colors">COMPANY</a>
+                        <a href="#recruit" class="block hover:text-white transition-colors">RECRUIT</a>
+                        <a href="#contact" class="block hover:text-white transition-colors">CONTACT</a>
                     </div>
                 </div>
             </div>
@@ -576,16 +710,16 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.animationDelay = '0.2s';
+                    entry.target.style.animationDelay = Math.random() * 0.3 + 's';
                     entry.target.classList.add('fade-in');
                 }
             });
         }, observerOptions);
 
         // Observe elements for animation
-        document.querySelectorAll('.card-hover').forEach(el => {
+        document.querySelectorAll('.policy-card, .next-steps-card').forEach(el => {
             observer.observe(el);
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'984161a891ab80e3',t:'MTc1ODcwNzQ2OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'986867e531fa2612',t:'MTc1OTExNjY2OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
