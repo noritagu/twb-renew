@@ -3,49 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>提供サービスと技術力 | 株式会社TWB</title>
+    <title>サービス内容 | 株式会社TWB</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
         
         body {
-            font-family: 'Noto Sans JP', sans-serif;
-        }
-        
-         .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-
-        .lg\:text-lg {
-            font-size: 1.0rem;
-            line-height: 1.75rem;
-        }
-
-        .text-blue-100 {
-            --tw-text-opacity: 1;
-            color: rgb(255 255 255);
-        }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-        
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.8s ease forwards;
-        }
-        
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            color: #1f2937;
         }
         
         .nav-link {
@@ -54,7 +19,7 @@
         }
         
         .nav-link:hover {
-            color: #667eea;
+            color: #2563eb;
         }
         
         .nav-link::after {
@@ -64,7 +29,7 @@
             height: 2px;
             bottom: -4px;
             left: 0;
-            background-color: #667eea;
+            background-color: #2563eb;
             transition: width 0.3s ease;
         }
         
@@ -72,58 +37,55 @@
             width: 100%;
         }
         
-        .phase-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 1.5rem;
-            background: linear-gradient(135deg, #eabe66 0%, #af9a6d 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .service-card {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            border: 1px solid #e5e7eb;
-            height: 100%;
-        }
-        
-        .industry-card {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            border-radius: 12px;
-            padding: 0.5rem 0.5rem 1rem 0.5rem;
-            border: 1px solid #cbd5e1;
-            min-width: 0;
-            width: 100%;
-            box-sizing: border-box;
-            font-size: 0.95rem;
-        }
-
         .hero-bg {
             position: relative;
-            background: url('images/page/service/service_bg.jpg') center center/cover no-repeat;
-            min-height: 340px;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            min-height: 280px;
         }
-        .hero-bg::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: rgba(255,255,255,0.70);
-        }
+        
         .hero-content {
             position: relative;
             z-index: 1;
-            padding-top: 4rem;
-            padding-bottom: 4rem;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
         }
+        
         @media (min-width: 1024px) {
             .hero-content {
-                padding-top: 6rem;
-                padding-bottom: 6rem;
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+            }
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+        
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 0.75rem;
+        }
+        
+        @media (min-width: 1024px) {
+            .section-title {
+                font-size: 2rem;
             }
         }
     </style>
@@ -132,25 +94,23 @@
     <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
+            <div class="flex justify-between items-center py-3">
                 <div class="flex items-center">
-                    <a href="index.html" class="block"><img src="images/common/pc_twb_logo.png" alt="株式会社TWBロゴ" class="h-10" /></a>
-
+                    <a href="index.html" class="block">
+                        <img src="images/common/pc_twb_logo.png" alt="株式会社TWBロゴ" class="h-9" />
+                    </a>
                 </div>
                 
-                <!-- Navigation -->
-                <nav class="hidden lg:flex space-x-8">
-                    <a href="value.html" class="nav-link text-gray-700 font-medium">TWBの強み</a>
-                    <a href="policy.html" class="nav-link text-gray-700 font-medium">開発ポリシー</a>
-                    <a href="whyus.html" class="nav-link text-gray-700 font-medium">選ばれる理由</a>
-                    <a href="service.html" class="nav-link text-gray-700 font-medium">サービス内容</a>
-                    <a href="cases.html" class="nav-link text-gray-700 font-medium">プロジェクト実績</a>
-                    <a href="reqruite.html" class="nav-link text-gray-700 font-medium">人材募集</a>
-                    <a href="company.html" class="nav-link text-gray-700 font-medium">会社概要</a>
-                    <a href="contact.html" class="nav-link text-gray-700 font-medium">お問合わせ</a>
+                <nav class="hidden lg:flex space-x-6">
+                    <a href="value.html" class="nav-link text-gray-700 text-sm font-medium">TWBの強み</a>
+                    <a href="policy.html" class="nav-link text-gray-700 text-sm font-medium">開発ポリシー</a>
+                    <a href="whyus.html" class="nav-link text-gray-700 text-sm font-medium">選ばれる理由</a>
+                    <a href="service.html" class="nav-link text-gray-700 text-sm font-medium">サービス内容</a>
+                    <a href="cases.html" class="nav-link text-gray-700 text-sm font-medium">プロジェクト実績</a>
+                    <a href="company.html" class="nav-link text-gray-700 text-sm font-medium">会社概要</a>
+                    <a href="contact.html" class="nav-link text-gray-700 text-sm font-medium">お問合わせ</a>
                 </nav>
                 
-                <!-- Mobile menu button -->
                 <button class="lg:hidden p-2" onclick="toggleMobileMenu()">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -158,924 +118,414 @@
                 </button>
             </div>
             
-            <!-- Mobile Navigation -->
             <div id="mobileMenu" class="lg:hidden hidden pb-4">
                 <div class="flex flex-col space-y-2">
-                    <a href="value.html" class="text-gray-700 py-2 border-b border-gray-200">TWBの強み</a>
-                    <a href="policy.html" class="text-gray-700 py-2 border-b border-gray-200">開発ポリシー</a>
-                    <a href="whyus.html" class="text-gray-700 py-2 border-b border-gray-200">選ばれる理由</a>
-                    <a href="service.html" class="text-gray-700 py-2 border-b border-gray-200">サービス内容</a>
-                    <a href="cases.html" class="text-gray-700 py-2 border-b border-gray-200">プロジェクト実績</a>
-                    <a href="reqruite.html" class="text-gray-700 py-2 border-b border-gray-200">人材募集</a>
-                    <a href="company.html" class="text-gray-700 py-2 border-b border-gray-200">会社概要</a>
-                    <a href="contact.html" class="text-gray-700 py-2">お問合わせ</a>
+                    <a href="value.html" class="text-gray-700 py-2 border-b border-gray-200 text-sm">TWBの強み</a>
+                    <a href="policy.html" class="text-gray-700 py-2 border-b border-gray-200 text-sm">開発ポリシー</a>
+                    <a href="whyus.html" class="text-gray-700 py-2 border-b border-gray-200 text-sm">選ばれる理由</a>
+                    <a href="service.html" class="text-gray-700 py-2 border-b border-gray-200 text-sm">サービス内容</a>
+                    <a href="cases.html" class="text-gray-700 py-2 border-b border-gray-200 text-sm">プロジェクト実績</a>
+                    <a href="company.html" class="text-gray-700 py-2 border-b border-gray-200 text-sm">会社概要</a>
+                    <a href="contact.html" class="text-gray-700 py-2 text-sm">お問合わせ</a>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-bg text-gray-800">
+    <section class="hero-bg text-white">
         <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <div class="fade-in">
-                    <h1 class="text-2xl lg:text-3xl font-bold leading-snug mb-2 drop-shadow">
-                        <span class="text-blue-600">事業課題の解決を支える<br><span class='text-yellow-400'>サービスと技術</span></span>
-                    </h1>
-                    <div class="max-w-4xl mx-auto">
-                        <p class="text-base lg:text-lg mb-4 text-gray-700 max-w-3xl mx-auto drop-shadow">
-                            TWBは、要求整理・要件定義・基本設計から開発・テスト・運用保守まで、<br>
-                            システム開発の全工程をサポートします。<br>
-                            特に、プロジェクトの方向性に大きく影響する上流工程では、<br>
-                            お客様の業務を深く理解し、実現可能で効果的なシステム要件へと落とし込みます。<br>
-                            実績ある技術で、事業の進化に対応できるシステムを構築します。
-                        </p>
-                    </div>
-                </div>
+            <div class="max-w-4xl">
+                <h1 class="text-2xl lg:text-3xl font-bold leading-tight mb-3">
+                    TWBのサービス内容
+                </h1>
+                <p class="text-base lg:text-lg text-blue-50 leading-relaxed">
+                    要求整理・要件定義からシステム開発、プロジェクト進行管理、保守・運用まで。<br>
+                    お客様の事業環境に合わせた、一気通貫の対応をご提供します。
+                </p>
             </div>
         </div>
     </section>
+
     <!-- パンくずリスト -->
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <nav class="text-sm text-gray-600 my-4" aria-label="パンくずリスト">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav class="text-xs text-gray-600 my-3" aria-label="パンくずリスト">
             <ol class="list-reset flex">
-                <li>
-                    <a href="index.html" class="hover:underline text-blue-600">ホーム</a>
-                </li>
+                <li><a href="index.html" class="hover:underline text-blue-600">ホーム</a></li>
                 <li><span class="mx-2">/</span></li>
                 <li class="text-gray-500">サービス内容</li>
             </ol>
         </nav>
     </div>
-    </section>
 
-    <!-- 事業フェーズ別サービス -->
-    <section class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                    プロジェクト成否を左右する上流工程から、<br/>運用保守まで全工程をサポート
-                </h2>
-                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
-                    要求整理・要件定義といった上流工程は、プロジェクトの方向性に大きく影響します。<br>
-                    TWBは、お客様の業務を深く理解する上流工程の経験が豊富です。<br>
-                    お客様の状況に応じて必要な工程から支援可能です。<br>
-                    特に上流工程からご依頼いただくことで、<br>
-                    ベンダー切り替えに伴う引き継ぎコストや情報ロスを避け、効率的にプロジェクトを進めることができます。
-                </p>
-            </div>            
-            <div class="grid lg:grid-cols-3 gap-8">
-                <!-- フェーズ3: プロジェクト管理支援 -->
-                <div class="service-card card-hover">
-                    <div class="text-center mb-6">
-                        <div class="phase-icon">
-                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-2">プロジェクト管理支援</h3>
-                        <h4 class="text-xl font-semibold text-purple-600 mb-4">計画〜運用・改善</h4>
-                        <p class="text-gray-700 font-medium">プロジェクト全体をマネジメントし、確実に成功へ導く</p>
-                    </div>
-                    
-                    <div class="mb-6">
-                        <h5 class="font-bold text-gray-900 mb-4">プロジェクト管理の価値</h5>
-                        <div class="space-y-3 mb-6">
-                            <div class="bg-gray-50 rounded-lg p-3">
-                                <div class="font-semibold text-purple-700 text-sm mb-1">1. 上流工程段階</div>
-                                <p class="text-xs text-gray-700">経営層、現場、ベンダー、エンドユーザーなど複雑に絡み合うステークホルダーの利害関係・要求事項を整理し、プロジェクトの方向性を定めます。</p>
-                            </div>
-                            <div class="bg-gray-50 rounded-lg p-3">
-                                <div class="font-semibold text-purple-700 text-sm mb-1">2. 開発・テスト段階</div>
-                                <p class="text-xs text-gray-700">複数ベンダー間のリソース調整、タスクの流れの管理、進捗把握と報告を緻密に行い、プロジェクトリスクを常に監視します。</p>
-                            </div>
-                            <div class="bg-gray-50 rounded-lg p-3">
-                                <div class="font-semibold text-purple-700 text-sm mb-1">3. 受け入れ検証段階（最重要）</div>
-                                <p class="text-xs text-gray-700">暗黙知の発現、要件の手戻り、認識齟齬による「言った言わない」を調整。プロジェクトで最もリスクが高いこの段階を、経験に基づいて乗り越えます。</p>
-                            </div>
-                            <div class="bg-gray-50 rounded-lg p-3">
-                                <div class="font-semibold text-purple-700 text-sm mb-1">4. 本番リリース段階</div>
-                                <p class="text-xs text-gray-700">利用者の業務やサービス提供に影響が出ないよう、緻密なタスクスケジューリングでソフトランディングを実現します。</p>
-                            </div>
-                        </div>
-                        
-                        <h5 class="font-bold text-gray-900 mb-3">提供サービス</h5>
-                        <ul class="space-y-2 text-sm text-gray-700">
-                            <li class="flex items-start">
-                                <span class="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                <div><strong>ステークホルダー管理</strong>: 複数の利害関係者間のコミュニケーション調整</div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                <div><strong>リスク管理・課題解決</strong>: 潜在リスクの早期発見と対策立案</div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                <div><strong>進捗管理・品質管理</strong>: リアルタイムでの作業状況可視化</div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                <div><strong>受け入れ検証支援</strong>: 暗黙知の顕在化と認識齟齬の調整</div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                <div><strong>リリース計画策定</strong>: 業務影響を最小化するソフトランディング</div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                <div><strong>システム保守・運用</strong>: リリース後の安定稼働と継続改善</div>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bg-purple-50 rounded-lg p-4">
-                        <h5 class="font-bold text-gray-900 mb-2">対応できる課題例</h5>
-                        <ul class="space-y-1 text-xs text-gray-700">
-                            <li>「複雑なステークホルダー間の調整を円滑に進めたい」</li>
-                            <li>「受け入れ検証段階のリスクを最小化したい」</li>
-                            <li>「本番リリースを業務に影響なくソフトランディングさせたい」</li>
-                            <li>「進捗や課題をリアルタイムで把握したい」</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- フェーズ1: DXコンサルティング -->
-                <div class="service-card card-hover">
-                    <div class="text-center mb-6">
-                        <div class="phase-icon">
-                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-2">DXコンサルティング</h3>
-                        <h4 class="text-xl font-semibold text-blue-600 mb-4">上流工程(要求整理〜基本設計)</h4>
-                        <p class="text-gray-700 font-medium">業務の本質を理解し、最適なシステム要件へ</p>
-                    </div>
-                    
-                    <div class="mb-6">
-                        <h5 class="font-bold text-gray-900 mb-3">提供サービス</h5>
-                        <ul class="space-y-2 text-sm text-gray-700">
-                            <li class="flex items-start">
-                                <span class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                <div><strong>DXコンサルティング</strong>: 現状業務の分析と改善提案</div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                <div><strong>業務分析・業務設計</strong>: 効率化ポイントの特定と業務フロー再設計</div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                <div><strong>要件定義支援</strong>: お客様の要望を具体的なシステム要件に整理</div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                <div><strong>UI/UX設計</strong>: ユーザビリティを重視したインターフェース設計</div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                <div><strong>システム化構想策定</strong>: 段階的な導入計画とROI試算</div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                <div><strong>RFP作成支援</strong>: 他社との比較検討用の提案依頼書作成サポート</div>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bg-blue-50 rounded-lg p-4">
-                        <h5 class="font-bold text-gray-900 mb-2">対応できる課題例</h5>
-                        <ul class="space-y-1 text-xs text-gray-700">
-                            <li>「Excel管理から脱却したいが、何から始めればよいか分からない」</li>
-                            <li>「DXを推進したいが、どの業務をシステム化すべきか迷っている」</li>
-                            <li>「現在の業務フローに問題があるが、改善方法が見えない」</li>
-                            <li>「システム化の予算取りのため、効果を数値化したい」</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- フェーズ2: システム開発 -->
-                <div class="service-card card-hover">
-                    <div class="text-center mb-6">
-                        <div class="phase-icon">
-                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-2">システム開発</h3>
-                        <h4 class="text-xl font-semibold text-green-600 mb-4">開発・構築</h4>
-                        <p class="text-gray-700 font-medium">実績ある技術で確実にシステムを構築</p>
-                    </div>
-                    
-                    <div class="mb-6">
-                        <h5 class="font-bold text-gray-900 mb-3">提供サービス</h5>
-                        <ul class="space-y-2 text-sm text-gray-700">
-                            <li class="flex items-start">
-                                <span class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                <div><strong>Webアプリケーション開発</strong>: SPAからMPAまで対応</div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                <div><strong>業務システム開発</strong>: 基幹システム、販売管理、顧客管理、在庫管理等</div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                <div><strong>SaaS・パッケージカスタマイズ</strong>: 既存システムの改修・機能追加</div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                <div><strong>API開発・システム連携</strong>: 既存システムとの連携、外部サービス連携</div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                <div><strong>クラウドインフラ構築</strong>: AWS、Azure、GCPでのスケーラブルな基盤構築</div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                <div><strong>既存システム刷新</strong>: レガシーシステムのモダナイゼーション</div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                <div><strong>セキュリティ対策</strong>: 情報セキュリティ要件に準拠した堅牢な設計</div>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bg-green-50 rounded-lg p-4">
-                        <h5 class="font-bold text-gray-900 mb-2">対応できる課題例</h5>
-                        <ul class="space-y-1 text-xs text-gray-700">
-                            <li>「既存のシステムが古くなり、保守が困難になっている」</li>
-                            <li>「複数のシステムがバラバラで、データ連携ができていない」</li>
-                            <li>「クラウド移行したいが、技術的な知見がない」</li>
-                            <li>「セキュリティ要件を満たしたシステムを構築したい」</li>
-                        </ul>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </section>
-
-    <!-- TWBの遂行能力 -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                    確実なプロジェクト遂行を実現する開発体制
-                </h2>
-                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
-                    お客様のプロジェクトを成功に導くため、<br>
-                    上流工程の経験、品質管理体制、透明性の高いプロジェクト管理を提供します
-                </p>
-            </div>
-            
-            <div class="grid lg:grid-cols-3 gap-8">
-                <!-- 上流工程の深い理解と提案力 -->
-                <div class="bg-white rounded-xl p-8 shadow-lg card-hover">
-                    <div class="text-center mb-6">
-                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900">上流工程での業務理解と要件定義力</h3>
-                    </div>
-                    
-                    <ul class="space-y-3 text-sm text-gray-700">
-                        <li class="flex items-start">
-                            <span class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            <div><strong>10年以上の豊富なPM経験</strong>: 要件定義から運用保守まで一貫したプロジェクト管理</div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            <div><strong>業界知見に基づく提案</strong>: 製造業、建設業、流通業での専門的なコンサルティング</div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            <div><strong>暗黙知の発見力</strong>: 「当たり前すぎて伝え忘れる要件」を経験から予測・発見</div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            <div><strong>Fit&Gap分析</strong>: SaaS・パッケージ・スクラッチ開発の最適な組み合わせ提案</div>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- チーム全体で品質を支える開発体制 -->
-                <div class="bg-white rounded-xl p-8 shadow-lg card-hover">
-                    <div class="text-center mb-6">
-                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900">チーム全体で品質を支える開発体制</h3>
-                    </div>
-                    
-                    <ul class="space-y-3 text-sm text-gray-700">
-                        <li class="flex items-start">
-                            <span class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            <div><strong>コードレビュー体制</strong>: 複数名でのコード品質チェック</div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            <div><strong>テスト自動化</strong>: CI/CDパイプラインによる継続的な品質保証</div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            <div><strong>ドキュメント整備</strong>: 後任者でも保守可能な詳細な設計書・運用手順書作成</div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            <div><strong>ナレッジ共有</strong>: チーム内での技術情報・プロジェクト知見の共有体制</div>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- 透明性の高いプロジェクト管理 -->
-                <div class="bg-white rounded-xl p-8 shadow-lg card-hover">
-                    <div class="text-center mb-6">
-                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900">透明性の高いプロジェクト管理</h3>
-                    </div>
-                    
-                    <ul class="space-y-3 text-sm text-gray-700">
-                        <li class="flex items-start">
-                            <span class="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            <div><strong>進捗の可視化</strong>: リアルタイムでの作業状況・課題・リスクの共有</div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            <div><strong>定期的なコミュニケーション</strong>: 週次・月次での詳細な進捗報告</div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            <div><strong>変更管理</strong>: 仕様変更・スケジュール調整の影響を事前に分析・報告</div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                            <div><strong>品質管理</strong>: テスト結果・バグ修正状況の透明な共有</div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 技術スタック詳細 -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                    実績ある技術の組み合わせで、変化に対応できるシステムを構築
-                </h2>
-                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
-                    事業環境の変化に合わせてシステムも進化できるよう、実績があり、メンテナンス性の高い技術を選定します。<br>
-                    フロントエンドからインフラまで、フルスタックの技術力で、<br>
-                    今必要な機能を確実に動かしながら、将来の事業拡大にも対応できる基盤を構築します。
-                </p>
-            </div>
-            <div class="grid lg:grid-cols-2 gap-12 mb-20">
-                <!-- フロントエンド技術 -->
-                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">フロントエンド技術</h3>
-                    </div>
-                    
-                    <div class="space-y-6">
-                        <div>
-                            <h4 class="font-bold text-gray-900 mb-3">JavaScript フレームワーク</h4>
-                            <div class="space-y-3 text-sm">
-                                <div class="bg-white rounded-lg p-4">
-                                    <div class="font-semibold text-blue-700 mb-2">Vue.js 3.x</div>
-                                    <ul class="text-gray-700 space-y-1">
-                                        <li>• Composition API によるメンテナブルな設計</li>
-                                        <li>• Vue Router、Pinia による状態管理</li>
-                                        <li>• TypeScript対応による型安全性確保</li>
-                                    </ul>
-                                </div>
-                                <div class="bg-white rounded-lg p-4">
-                                    <div class="font-semibold text-blue-700 mb-2">React 18.x</div>
-                                    <ul class="text-gray-700 space-y-1">
-                                        <li>• React Hooks による関数コンポーネント設計</li>
-                                        <li>• Next.js によるSSR/SSG対応</li>
-                                        <li>• Redux Toolkit による効率的な状態管理</li>
-                                    </ul>
-                                </div>
-                                <div class="bg-white rounded-lg p-4">
-                                    <div class="font-semibold text-blue-700 mb-2">Nuxt.js 3.x</div>
-                                    <ul class="text-gray-700 space-y-1">
-                                        <li>• サーバーサイドレンダリング(SSR)</li>
-                                        <li>• 静的サイト生成(SSG)による高速化</li>
-                                        <li>• TypeScript標準対応</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <h4 class="font-bold text-gray-900 mb-3">スタイリング・UI</h4>
-                            <div class="grid grid-cols-2 gap-2 text-sm">
-                                <div class="bg-white rounded p-3">
-                                    <div class="font-semibold text-blue-700">Tailwind CSS</div>
-                                    <div class="text-xs text-gray-600">効率的なスタイリング</div>
-                                </div>
-                                <div class="bg-white rounded p-3">
-                                    <div class="font-semibold text-blue-700">Bootstrap 5.x</div>
-                                    <div class="text-xs text-gray-600">レスポンシブ対応</div>
-                                </div>
-                                <div class="bg-white rounded p-3">
-                                    <div class="font-semibold text-blue-700">Sass/SCSS</div>
-                                    <div class="text-xs text-gray-600">メンテナブルCSS</div>
-                                </div>
-                                <div class="bg-white rounded p-3">
-                                    <div class="font-semibold text-blue-700">PostCSS</div>
-                                    <div class="text-xs text-gray-600">最新CSS機能</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- バックエンド技術 -->
-                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-8">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-4">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">バックエンド技術</h3>
-                    </div>
-                    
-                    <div class="space-y-6">
-                        <div>
-                            <h4 class="font-bold text-gray-900 mb-3">PHP</h4>
-                            <div class="space-y-3 text-sm">
-                                <div class="bg-white rounded-lg p-4">
-                                    <div class="font-semibold text-green-700 mb-2">Laravel 10.x</div>
-                                    <ul class="text-gray-700 space-y-1">
-                                        <li>• Eloquent ORM による効率的DB操作</li>
-                                        <li>• Laravel Sanctum による認証・認可</li>
-                                        <li>• Queue システムによる非同期処理</li>
-                                    </ul>
-                                </div>
-                                <div class="bg-white rounded-lg p-4">
-                                    <div class="font-semibold text-green-700 mb-2">Symfony 6.x</div>
-                                    <ul class="text-gray-700 space-y-1">
-                                        <li>• 大規模アプリケーション向け堅牢設計</li>
-                                        <li>• Doctrine ORM による高度なDB操作</li>
-                                        <li>• API Platform によるREST/GraphQL API</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <h4 class="font-bold text-gray-900 mb-3">Node.js / Python</h4>
-                            <div class="grid grid-cols-1 gap-2 text-sm">
-                                <div class="bg-white rounded p-3">
-                                    <div class="font-semibold text-green-700">Express.js / NestJS</div>
-                                    <div class="text-xs text-gray-600">軽量〜企業レベルWebアプリ</div>
-                                </div>
-                                <div class="bg-white rounded p-3">
-                                    <div class="font-semibold text-green-700">Django / FastAPI</div>
-                                    <div class="text-xs text-gray-600">フルスタック〜高性能API</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="grid lg:grid-cols-2 gap-12">
-                <!-- データベース技術 -->
-                <div class="bg-gradient-to-br from-purple-50 to-violet-50 rounded-xl p-8">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">データベース技術</h3>
-                    </div>
-                    
-                    <div class="space-y-4">
-                        <div>
-                            <h4 class="font-bold text-gray-900 mb-3">リレーショナルDB</h4>
-                            <div class="space-y-2 text-sm">
-                                <div class="bg-white rounded p-3">
-                                    <div class="font-semibold text-purple-700">MySQL 8.x</div>
-                                    <div class="text-xs text-gray-600">ACID準拠、JSON型サポート</div>
-                                </div>
-                                <div class="bg-white rounded p-3">
-                                    <div class="font-semibold text-purple-700">PostgreSQL 15.x</div>
-                                    <div class="text-xs text-gray-600">高度なSQL機能、PostGIS対応</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <h4 class="font-bold text-gray-900 mb-3">NoSQL・その他</h4>
-                            <div class="space-y-2 text-sm">
-                                <div class="bg-white rounded p-3">
-                                    <div class="font-semibold text-purple-700">Redis</div>
-                                    <div class="text-xs text-gray-600">インメモリ、キャッシュ</div>
-                                </div>
-                                <div class="bg-white rounded p-3">
-                                    <div class="font-semibold text-purple-700">MongoDB</div>
-                                    <div class="text-xs text-gray-600">ドキュメント指向DB</div>
-                                </div>
-                                <div class="bg-white rounded p-3">
-                                    <div class="font-semibold text-purple-700">Elasticsearch</div>
-                                    <div class="text-xs text-gray-600">全文検索・ログ解析</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- クラウド・インフラ技術 -->
-                <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-8">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mr-4">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">クラウド・インフラ</h3>
-                    </div>
-                    
-                    <div class="space-y-4">
-                        <div>
-                            <h4 class="font-bold text-gray-900 mb-3">Amazon Web Services</h4>
-                            <div class="space-y-2 text-sm">
-                                <div class="bg-white rounded p-3">
-                                    <div class="font-semibold text-orange-700">EC2 / Lambda</div>
-                                    <div class="text-xs text-gray-600">仮想サーバー・サーバーレス</div>
-                                </div>
-                                <div class="bg-white rounded p-3">
-                                    <div class="font-semibold text-orange-700">S3 / RDS</div>
-                                    <div class="text-xs text-gray-600">ストレージ・マネージドDB</div>
-                                </div>
-                                <div class="bg-white rounded p-3">
-                                    <div class="font-semibold text-orange-700">CloudFront / WAF</div>
-                                    <div class="text-xs text-gray-600">CDN・セキュリティ</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <h4 class="font-bold text-gray-900 mb-3">Azure / GCP</h4>
-                            <div class="space-y-2 text-sm">
-                                <div class="bg-white rounded p-3">
-                                    <div class="font-semibold text-orange-700">App Service / App Engine</div>
-                                    <div class="text-xs text-gray-600">フルマネージド実行環境</div>
-                                </div>
-                                <div class="bg-white rounded p-3">
-                                    <div class="font-semibold text-orange-700">Azure DevOps / BigQuery</div>
-                                    <div class="text-xs text-gray-600">CI/CD・データ分析基盤</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 開発・運用ツール -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                    効率的な開発・運用を支えるツール群
-                </h2>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white rounded-lg p-6 shadow-sm">
-                    <h3 class="font-bold text-gray-900 mb-4">バージョン管理・CI/CD</h3>
-                    <ul class="space-y-2 text-sm text-gray-700">
-                        <li><strong>Git</strong>: 分散バージョン管理</li>
-                        <li><strong>GitHub</strong>: Actions による自動化</li>
-                        <li><strong>GitLab</strong>: DevOps統合環境</li>
-                        <li><strong>Jenkins</strong>: 継続的インテグレーション</li>
-                    </ul>
-                </div>
-                
-                <div class="bg-white rounded-lg p-6 shadow-sm">
-                    <h3 class="font-bold text-gray-900 mb-4">コンテナ・監視</h3>
-                    <ul class="space-y-2 text-sm text-gray-700">
-                        <li><strong>Docker</strong>: アプリケーションコンテナ化</li>
-                        <li><strong>Kubernetes</strong>: コンテナオーケストレーション</li>
-                        <li><strong>CloudWatch</strong>: AWS環境監視</li>
-                        <li><strong>New Relic</strong>: アプリケーション性能監視</li>
-                    </ul>
-                </div>
-                
-                <div class="bg-white rounded-lg p-6 shadow-sm">
-                    <h3 class="font-bold text-gray-900 mb-4">ログ管理・分析</h3>
-                    <ul class="space-y-2 text-sm text-gray-700">
-                        <li><strong>ELK Stack</strong>: ログ収集・分析・可視化</li>
-                        <li><strong>Datadog</strong>: 統合監視プラットフォーム</li>
-                        <li><strong>Grafana</strong>: メトリクス可視化</li>
-                        <li><strong>Prometheus</strong>: メトリクス収集</li>
-                    </ul>
-                </div>
-                
-                <div class="bg-white rounded-lg p-6 shadow-sm">
-                    <h3 class="font-bold text-gray-900 mb-4">プロジェクト管理</h3>
-                    <ul class="space-y-2 text-sm text-gray-700">
-                        <li><strong>Jira</strong>: 課題追跡・プロジェクト管理</li>
-                        <li><strong>Confluence</strong>: ドキュメント管理</li>
-                        <li><strong>Slack</strong>: チームコミュニケーション</li>
-                        <li><strong>Backlog</strong>: 国産プロジェクト管理</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- セキュリティ・品質管理 -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                    企業レベルのセキュリティと品質を保証
-                </h2>
-                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
-                    情報セキュリティ要件に準拠し、継続的な品質向上を実現する体制を整備しています
-                </p>
-            </div>
-            
-            <div class="grid lg:grid-cols-2 gap-12">
-                <!-- セキュリティ対策 -->
-                <div class="bg-gradient-to-br from-red-50 to-pink-50 rounded-xl p-8">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mr-4">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">セキュリティ対策</h3>
-                    </div>
-                    
-                    <div class="space-y-4">
-                        <div class="bg-white rounded-lg p-4">
-                            <h4 class="font-bold text-red-700 mb-2">通信・認証セキュリティ</h4>
-                            <ul class="text-sm text-gray-700 space-y-1">
-                                <li>• HTTPS通信の標準化(SSL/TLS証明書)</li>
-                                <li>• OAuth 2.0、SAML、多要素認証対応</li>
-                                <li>• ロールベースアクセス制御(RBAC)</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="bg-white rounded-lg p-4">
-                            <h4 class="font-bold text-red-700 mb-2">データ保護・攻撃対策</h4>
-                            <ul class="text-sm text-gray-700 space-y-1">
-                                <li>• 保存時・転送時のデータ暗号化</li>
-                                <li>• XSS、CSRF攻撃に対する防御</li>
-                                <li>• WAF(Webアプリケーションファイアウォール)</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="bg-white rounded-lg p-4">
-                            <h4 class="font-bold text-red-700 mb-2">継続的セキュリティ</h4>
-                            <ul class="text-sm text-gray-700 space-y-1">
-                                <li>• 定期的な脆弱性診断・ペネトレーションテスト</li>
-                                <li>• セキュリティパッチの迅速な適用</li>
-                                <li>• セキュリティインシデント対応体制</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 品質管理体制 -->
-                <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-8">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-emerald-600 rounded-lg flex items-center justify-center mr-4">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">品質管理体制</h3>
-                    </div>
-                    
-                    <div class="space-y-4">
-                        <div class="bg-white rounded-lg p-4">
-                            <h4 class="font-bold text-emerald-700 mb-2">コード品質管理</h4>
-                            <ul class="text-sm text-gray-700 space-y-1">
-                                <li>• Pull Request による全コードレビュー</li>
-                                <li>• 静的解析による品質・脆弱性チェック</li>
-                                <li>• コーディング規約の統一・自動チェック</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="bg-white rounded-lg p-4">
-                            <h4 class="font-bold text-emerald-700 mb-2">テスト・検証体制</h4>
-                            <ul class="text-sm text-gray-700 space-y-1">
-                                <li>• Unit Test、Integration Test、E2E Test</li>
-                                <li>• 負荷テストによる性能・安定性検証</li>
-                                <li>• ユーザビリティテストの実施</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="bg-white rounded-lg p-4">
-                            <h4 class="font-bold text-emerald-700 mb-2">継続的改善</h4>
-                            <ul class="text-sm text-gray-700 space-y-1">
-                                <li>• CI/CDパイプラインによる自動化</li>
-                                <li>• 運用データに基づく性能最適化</li>
-                                <li>• 定期的な技術的負債の解消</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 得意分野・対応業界 -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                    深い業界知見に基づく専門的支援
-                </h2>
-                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
-                    各業界の特性を理解した、実践的なシステム構築をご提供します
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
-                <!-- 製造業 -->
-                <div class="industry-card md:col-span-1 min-h-[260px] flex flex-col justify-start">
-                    <div class="text-center mb-4">
-                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900">製造業</h3>
-                    </div>
-                    <ul class="space-y-2 text-sm text-gray-700">
-                        <li><strong>生産管理システム</strong>: 工程管理、品質管理、トレーサビリティ</li>
-                        <li><strong>在庫・物流管理</strong>: 倉庫管理(WMS)、配送最適化</li>
-                        <li><strong>受注・販売管理</strong>: 見積もり、受注、請求までの一元管理</li>
-                        <li><strong>IoT・データ活用</strong>: 設備データ収集・分析、予知保全</li>
-                    </ul>
-                </div>
-
-                <!-- 建設・不動産業 -->
-                <div class="industry-card md:col-span-1 min-h-[260px] flex flex-col justify-start">
-                    <div class="text-center mb-4">
-                        <div class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900">建設・不動産業</h3>
-                    </div>
-                    <ul class="space-y-2 text-sm text-gray-700">
-                        <li><strong>施工管理システム</strong>: 工程管理、品質管理、安全管理</li>
-                        <li><strong>BIM連携システム</strong>: 3Dモデルデータとの連携、図面管理</li>
-                        <li><strong>見積・積算システム</strong>: 自動見積もり、原価管理</li>
-                        <li><strong>顧客・物件管理</strong>: CRM、物件情報管理</li>
-                    </ul>
-                </div>
-
-                <!-- 小売・流通業 -->
-                <div class="industry-card md:col-span-1 min-h-[260px] flex flex-col justify-start">
-                    <div class="text-center mb-4">
-                        <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900">小売・流通業</h3>
-                    </div>
-                    <ul class="space-y-2 text-sm text-gray-700">
-                        <li><strong>ECサイト構築</strong>: B2C、B2B両対応、マルチチャネル対応</li>
-                        <li><strong>在庫管理システム</strong>: 複数店舗・倉庫の在庫一元管理</li>
-                        <li><strong>顧客管理(CRM)</strong>: 会員管理、ポイント管理、マーケティング支援</li>
-                        <li><strong>POS連携</strong>: 実店舗とECの在庫・顧客情報統合</li>
-                    </ul>
-                </div>
-
-                <!-- 中古車流通業 -->
-                <div class="industry-card md:col-span-1 min-h-[260px] flex flex-col justify-start">
-                    <div class="text-center mb-4">
-                        <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900">中古車流通業</h3>
-                    </div>
-                    <ul class="space-y-2 text-sm text-gray-700">
-                        <li><strong>車両管理システム</strong>: 仕入れ、査定、販売、配送までの一元管理</li>
-                        <li><strong>オークション連携</strong>: 業界標準システムとのAPI連携</li>
-                        <li><strong>SaaS型業務支援</strong>: 複数事業者での情報共有システム</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Next Steps Section -->
-    <section class="py-16 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h3 class="text-2xl font-bold text-gray-900 mb-6">
-                具体的な技術力を事例でご確認ください
-            </h3>
-            <p class="text-lg text-gray-700 mb-8">
-                これらの技術力と経験を活かして、実際にどのような成果を上げているか、<br>
-                具体的な開発事例をご紹介しています。
+    <!-- 導入セクション -->
+    <section class="py-10 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-sm text-gray-700 leading-relaxed mb-6">
+                TWBは、要求整理・要件定義からシステム開発、プロジェクト進行管理、保守・運用まで、システム開発の全工程を一貫してサポートします。特に、プロジェクトの方向性に大きく影響する上流工程では、お客様の業務を深く理解し、実現可能で効果的なシステム要件へと落とし込みます。
             </p>
+            <p class="text-sm text-gray-700 leading-relaxed">
+                製造業、建設・住宅業、通販・EC、アパレル・卸売、中古車流通など、多様な業界での開発実績を通じて培った業界知識と技術力で、お客様の事業成果を実現します。
+            </p>
+        </div>
+    </section>
+
+    <!-- 業界別実績 -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-10">
+                <h2 class="section-title">深い業界知識に基づくシステム構築</h2>
+                <p class="text-sm text-gray-600 leading-relaxed mt-3">
+                    TWBは、各業界特有の業務フローや商習慣を深く理解し、単なるシステム開発に留まらず、お客様のビジネス課題解決に寄与する提案型の開発を行っています。
+                </p>
+            </div>
             
-            <div class="grid md:grid-cols-3 gap-6">
-                <a href="#cases" class="block bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors duration-300 shadow-sm">
-                    <h4 class="font-semibold text-gray-900 mb-2">成功事例を詳しく見る</h4>
-                    <p class="text-sm text-gray-600">→ SUCCESS STORIES</p>
-                </a>
-                <a href="#why-choose" class="block bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors duration-300 shadow-sm">
-                    <h4 class="font-semibold text-gray-900 mb-2">なぜTWBが選ばれるのかを知る</h4>
-                    <p class="text-sm text-gray-600">→ WHY CHOOSE TWB</p>
-                </a>
-                <a href="#policy" class="block bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors duration-300 shadow-sm">
-                    <h4 class="font-semibold text-gray-900 mb-2">お客様にとってのメリットを確認する</h4>
-                    <p class="text-sm text-gray-600">→ OUR POLICY</p>
-                </a>
+            <!-- 製造業界 -->
+            <div class="mb-10 bg-white rounded-lg p-6 border border-gray-200">
+                <div class="flex items-start mb-4">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">製造業界</h3>
+                        <p class="text-xs text-gray-500 mb-3">プロジェクト規模：約144人月（チーム3名×48ヶ月）</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4 text-sm text-gray-700 leading-relaxed">
+                    <p>
+                        ある製造業のお客様は、長年Excelで管理していた業務の限界を感じていました。案件管理、顧客管理、売上管理、請求管理、勤怠管理、買掛管理が分散し、情報の一元化ができない状態でした。
+                    </p>
+                    <p>
+                        TWBは、これらの業務をクラウドシステムとして統合。さらに、HT（ハンディターミナル）を活用したリアルタイム工程管理を導入しました。製造工程のトレーサビリティを確保し、複数拠点での生産管理を一元化。在庫の適正化と資材ロスの最小化を実現し、製造業特有の原価管理（材料費、労務費、外注費）にも対応しました。
+                    </p>
+                    <p class="text-blue-600 font-medium">
+                        結果、システム化により工場3拠点への拡大が可能となり、資材破棄ロスの減少、納品ミスの防止を達成しました。
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 建設・住宅業界 -->
+            <div class="mb-10 bg-white rounded-lg p-6 border border-gray-200">
+                <div class="flex items-start mb-4">
+                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                        <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">建設・住宅業界</h3>
+                        <p class="text-xs text-gray-500 mb-3">プロジェクト規模：約21人月（チーム3名×7ヶ月）</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4 text-sm text-gray-700 leading-relaxed">
+                    <p>
+                        あるハウスメーカーは、建売分譲から注文住宅事業への拡大を目指していました。しかし、注文住宅特有の長期にわたる案件管理（初回商談から引渡しまで数ヶ月～1年超）、顧客ごとにカスタマイズされる仕様の柔軟な管理が既存システムでは対応できませんでした。
+                    </p>
+                    <p>
+                        TWBは、建売分譲とは異なる注文住宅の見積・設計プロセスを深く理解し、業務管理システムをスクラッチ開発。顧客情報と案件進捗を一元管理し、長期案件でも情報が散逸しない仕組みを構築しました。
+                    </p>
+                    <p>
+                        また、別の建築・ゼネコン向けプロジェクトでは、BIM（Building Information Modeling）データの取り扱い、施工図面の版管理と関係者間での共有、建設業特有の積算・見積プロセス、複数の協力会社との情報連携といった、業界特有の要件に対応したシステムを構築しました。
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 通販・EC業界 -->
+            <div class="mb-10 bg-white rounded-lg p-6 border border-gray-200">
+                <div class="flex items-start mb-4">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">通販・EC業界</h3>
+                        <p class="text-xs text-gray-500 mb-3">プロジェクト規模：ECサイト約360人月（チーム6名×5年間）+ OMS/WMS約126人月（チーム3名×42ヶ月）</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4 text-sm text-gray-700 leading-relaxed">
+                    <p>
+                        ある天然油脂メーカーは、BtoB（卸売）からBtoC（直販）への事業転換を図っていました。ブランド力強化を目的としたUI/UX設計、食品・化粧品等の通販特有の法規制対応、定期購入・セット販売などの販売手法の実装が必要でした。
+                    </p>
+                    <p>
+                        TWBは、EC-CUBEをベースにカスタマイズし、toC向けECサイトを構築。その後5年間で2度のリニューアルを実施し、複数の外部クラウドサービス（販促ツール、セキュリティツール）との連携も実現しました。セキュリティ対策（個人情報保護、決済情報の安全性）にも万全を期しました。
+                    </p>
+                    <p>
+                        さらに、ECサイトと連携した受注管理システム（OMS）と倉庫管理システム（WMS）を構築。3つの既存パッケージシステムを統合し、スクラッチ開発で一元化しました。受注から出荷までのリアルタイム連携、在庫の引当・引落処理の正確性、物流センター業務フロー（入荷検品、ピッキング、梱包、出荷）の理解、トレーサビリティ（ロット管理、賞味期限管理）、配送業者との連携（送り状発行、追跡番号管理）など、通販・EC業界特有の要件に対応しました。
+                    </p>
+                    <p class="text-green-600 font-medium">
+                        結果、顧客管理・売上管理の利便性が向上し、物流効率化とトレーサビリティを実現しました。
+                    </p>
+                </div>
+            </div>
+            
+            <!-- アパレル・卸売業界 -->
+            <div class="mb-10 bg-white rounded-lg p-6 border border-gray-200">
+                <div class="flex items-start mb-4">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">アパレル・卸売業界</h3>
+                        <p class="text-xs text-gray-500 mb-3">プロジェクト規模：約96人月（チーム8名×12ヶ月）</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4 text-sm text-gray-700 leading-relaxed">
+                    <p>
+                        あるアパレル製造卸大手は、既存のBtoB発注管理システムの老朽化に直面していました。アパレル特有の商品属性管理（サイズ、カラー、柄などの多軸展開）、シーズン商材の発注サイクル管理、卸売特有の取引形態（掛率、返品条件、納期管理）に対応する必要がありました。
+                    </p>
+                    <p>
+                        TWBは、フルリニューアルを実施。基幹システム（販売管理、在庫管理）との連携を実装し、BtoB取引における代理店ごとの価格・条件管理にも対応しました。卸代理店向けの発注システムとして、業界特有の商習慣を深く理解したシステムを構築しました。
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 中古車流通業界 -->
+            <div class="mb-10 bg-white rounded-lg p-6 border border-gray-200">
+                <div class="flex items-start mb-4">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                        <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"></path>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">中古車流通業界</h3>
+                        <p class="text-xs text-gray-500 mb-3">プロジェクト規模：大規模プロジェクト（複数年対応）</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4 text-sm text-gray-700 leading-relaxed">
+                    <p>
+                        中古車流通業界では、1台1台が異なる商品特性を持つため、一般的な在庫管理システムでは対応できません。オークション形式の売買プロセス、車両状態の詳細情報管理（走行距離、修復歴、装備等）、複数の販売チャネル管理、価格変動の激しい商材への対応が求められます。
+                    </p>
+                    <p>
+                        TWBは、これらの業界特有の要件を理解し、中古車流通向けSaaSシステムを開発。在庫管理と売買支援機能を実装し、業界の効率化に貢献しました。
+                    </p>
+                </div>
+            </div>
+            
+            <!-- その他の業界 -->
+            <div class="bg-white rounded-lg p-6 border border-gray-200">
+                <h3 class="text-lg font-bold text-gray-900 mb-4">その他の対応業界</h3>
+                <div class="grid md:grid-cols-2 gap-4 text-sm text-gray-700">
+                    <div>
+                        <h4 class="font-semibold text-gray-900 mb-2">学生支援業界</h4>
+                        <p class="text-xs leading-relaxed mb-3">
+                            学生向け就職支援サービスのWebシステム。Eラーニング機能、会員管理機能を実装し、完全リニューアルを実施。学生の就職活動サイクルに合わせた季節性の高いアクセス集中への対応、大学生協という公益性の高い組織特性への配慮を実現。10年以上の継続運用実績あり。
+                        </p>
+                        <p class="text-xs text-gray-500">約84人月（チーム7名×12ヶ月）</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-900 mb-2">コンサルティング業界</h4>
+                        <p class="text-xs leading-relaxed mb-3">
+                            マーケティングオートメーション（MA）のクラウドサービス。リード管理からナーチャリング、スコアリングまでの一連のMA機能、外部マーケティングツールとの連携、データ分析・レポーティング機能、マルチテナント対応のSaaSアーキテクチャを実装。
+                        </p>
+                        <p class="text-xs text-gray-500">約30人月（チーム5名×6ヶ月）</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TWBの技術的特徴 -->
+    <section class="py-12 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-8">
+                <h2 class="section-title">TWBの技術的特徴</h2>
+                <p class="text-sm text-gray-600 leading-relaxed mt-3">
+                    実績ある技術スタックを活用し、お客様のビジネスに最適なシステムを構築します
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-gray-50 rounded-lg p-5 border border-gray-200">
+                    <h4 class="font-semibold text-gray-900 mb-3 text-sm">フロントエンド</h4>
+                    <div class="space-y-2 text-xs text-gray-700">
+                        <p><strong>Vue.js、React、Next.js</strong></p>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            モダンなJavaScriptフレームワークを活用し、直感的で使いやすいUI/UXを実現します
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg p-5 border border-gray-200">
+                    <h4 class="font-semibold text-gray-900 mb-3 text-sm">バックエンド</h4>
+                    <div class="space-y-2 text-xs text-gray-700">
+                        <p><strong>PHP（Laravel、CakePHP）</strong></p>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            堅実なフレームワークによる、保守性の高いサーバーサイド開発を提供します
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg p-5 border border-gray-200">
+                    <h4 class="font-semibold text-gray-900 mb-3 text-sm">データベース・インフラ</h4>
+                    <div class="space-y-2 text-xs text-gray-700">
+                        <p><strong>MySQL、PostgreSQL、AWS</strong></p>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            最適なデータ設計とクラウド構成で、スケーラブルなシステム基盤を構築します
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-blue-50 rounded-lg p-6 border border-blue-200">
+                <h4 class="font-semibold text-gray-900 mb-3">対応可能な開発形態</h4>
+                <div class="grid md:grid-cols-2 gap-4 text-sm text-gray-700">
+                    <div>
+                        <p class="mb-2"><strong>スクラッチ開発</strong></p>
+                        <p class="text-xs text-gray-600">お客様の要件に完全に合わせたオリジナルシステムの構築</p>
+                    </div>
+                    <div>
+                        <p class="mb-2"><strong>パッケージカスタマイズ</strong></p>
+                        <p class="text-xs text-gray-600">EC-CUBE、WordPressなどの既製品を活用した効率的な開発</p>
+                    </div>
+                    <div>
+                        <p class="mb-2"><strong>既存システムのリニューアル</strong></p>
+                        <p class="text-xs text-gray-600">レガシーシステムのモダナイゼーションとクラウド移行</p>
+                    </div>
+                    <div>
+                        <p class="mb-2"><strong>外部サービスとの連携</strong></p>
+                        <p class="text-xs text-gray-600">既存システムや外部サービスとのシームレスな統合</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- プロジェクト体制の特徴 -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-8">
+                <h2 class="section-title">プロジェクト体制の特徴</h2>
+                <p class="text-sm text-gray-600 leading-relaxed mt-3">
+                    小〜中規模チームによる機動的な開発と、長期パートナーシップの構築
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg p-6 border border-gray-200">
+                    <h3 class="font-bold text-gray-900 mb-4">柔軟なチーム編成</h3>
+                    <div class="space-y-3 text-sm text-gray-700">
+                        <div class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <p class="text-xs leading-relaxed"><strong>小規模プロジェクト：</strong>3名体制でスピーディな対応（製造業クラウド化、OMS/WMS等）</p>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <p class="text-xs leading-relaxed"><strong>中規模プロジェクト：</strong>6〜8名体制で複雑な要件にも対応（ECサイト、アパレルBtoB、学生支援等）</p>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <p class="text-xs leading-relaxed"><strong>大規模プロジェクト：</strong>最大20名規模のプロジェクト統括実績</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 border border-gray-200">
+                    <h3 class="font-bold text-gray-900 mb-4">一貫したサポート</h3>
+                    <div class="space-y-3 text-sm text-gray-700">
+                        <div class="flex items-start">
+                            <svg class="w-5 h-5 text-green-600 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <p class="text-xs leading-relaxed"><strong>全工程一貫対応：</strong>要件定義から運用保守まで、すべての工程をサポート</p>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-5 h-5 text-green-600 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <p class="text-xs leading-relaxed"><strong>長期パートナーシップ：</strong>最長10年超の継続運用実績、2度のリニューアルを経ても継続している案件多数</p>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-5 h-5 text-green-600 mt-0.5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <p class="text-xs leading-relaxed"><strong>PM経験10年以上：</strong>プロジェクトマネジメントの豊富な経験で確実な進行管理</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-16 bg-gray-50">
+    <section class="py-12 bg-gray-50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">
-                技術的なご相談もお気軽に
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+                まずはお気軽にご相談ください
             </h3>
-            <p class="text-lg text-gray-700 mb-8">
-                現在お使いのシステムの技術的な課題や、新規開発での技術選定について、<br>
-                お気軽にご相談ください。お客様の要件に最適な技術構成をご提案いたします。
+            <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                システム開発に関するご相談、お見積もり、技術的なご質問など、どのようなことでもお聞かせください。<br>
+                お客様の状況に合わせた最適なアプローチをご提案いたします。
             </p>
-            <a href="#contact" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300">
-                技術相談・お問い合わせ
-            </a>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg text-sm font-semibold hover:bg-blue-700 transition-colors duration-300">
+                    お問い合わせはこちら
+                </a>
+                <a href="cases.html" class="inline-block bg-white text-gray-700 px-8 py-3 rounded-lg text-sm font-semibold border border-gray-300 hover:bg-gray-50 transition-colors duration-300">
+                    プロジェクト実績を見る
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-gray-900 text-white py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">株式会社TWB</h4>
-                    <p class="text-gray-300 text-sm leading-relaxed">
+                    <h4 class="text-base font-semibold mb-3">株式会社TWB</h4>
+                    <p class="text-gray-300 text-xs leading-relaxed">
                         お客様の「事業の成果」を実現するシステム会社
                     </p>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">会社情報</h4>
-                    <div class="text-gray-300 text-sm space-y-2">
+                    <h4 class="text-base font-semibold mb-3">会社情報</h4>
+                    <div class="text-gray-300 text-xs space-y-1">
                         <p>〒333-0862<br>埼玉県川口市北園町2−9<br>北園サンハイム2　201</p>
                         <p>TEL: 048-423-9832</p>
                     </div>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">サービス</h4>
-                    <div class="text-gray-300 text-sm space-y-2">
+                    <h4 class="text-base font-semibold mb-3">サービス</h4>
+                    <div class="text-gray-300 text-xs space-y-1">
                         <a href="value.html" class="block hover:text-white transition-colors">TWBの強み</a>
                         <a href="policy.html" class="block hover:text-white transition-colors">開発ポリシー</a>
-                        <a href="whyus.html" class="block hover:text-white transition-colors">WHY CHOOSE TWB</a>
+                        <a href="whyus.html" class="block hover:text-white transition-colors">選ばれる理由</a>
                         <a href="service.html" class="block hover:text-white transition-colors">サービス内容</a>
                         <a href="cases.html" class="block hover:text-white transition-colors">プロジェクト実績</a>
                     </div>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">企業情報</h4>
-                    <div class="text-gray-300 text-sm space-y-2">
-                        <a href="#company" class="block hover:text-white transition-colors">COMPANY</a>
-                        <a href="#recruit" class="block hover:text-white transition-colors">RECRUIT</a>
-                        <a href="#contact" class="block hover:text-white transition-colors">CONTACT</a>
+                    <h4 class="text-base font-semibold mb-3">企業情報</h4>
+                    <div class="text-gray-300 text-xs space-y-1">
+                        <a href="company.html" class="block hover:text-white transition-colors">会社概要</a>
+                        <a href="contact.html" class="block hover:text-white transition-colors">お問合わせ</a>
                     </div>
                 </div>
             </div>
             
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p class="text-gray-400 text-sm">
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center">
+                <p class="text-gray-400 text-xs">
                     © 2024 株式会社TWB. All rights reserved.
                 </p>
             </div>
@@ -1088,7 +538,6 @@
             menu.classList.toggle('hidden');
         }
 
-        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1100,32 +549,11 @@
                     });
                 }
                 
-                // Close mobile menu if open
                 const mobileMenu = document.getElementById('mobileMenu');
                 if (!mobileMenu.classList.contains('hidden')) {
                     mobileMenu.classList.add('hidden');
                 }
             });
-        });
-
-        // Add fade-in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationDelay = '0.2s';
-                    entry.target.classList.add('fade-in');
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements for animation
-        document.querySelectorAll('.card-hover').forEach(el => {
-            observer.observe(el);
         });
     </script>
 </body>
