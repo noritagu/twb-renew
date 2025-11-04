@@ -1,954 +1,881 @@
-﻿<!DOCTYPE html>
-<html lang="ja">
-<head>
+<!DOCTYPE html>
+<html lang="ja" data-theme="light" style=""><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>なぜTWBが選ばれ続けるのか | 株式会社TWB</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap');
-        
-        body {
-            box-sizing: border-box;
-            font-family: 'Noto Sans JP', sans-serif;
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap');
+
+      body {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 14px;
+        color: #334155;
+      }
+
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+
+      .card-hover:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.8s ease forwards;
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        
-        .professional-gradient {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-        }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-        }
-        
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.8s ease forwards;
-        }
-        
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .nav-link {
-            position: relative;
-            transition: color 0.3s ease;
-        }
-        
-        .nav-link:hover {
-            color: #667eea;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: #667eea;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .stat-card {
-            background: white;
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            border: 1px solid #e5e7eb;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .stat-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        
-        .stat-number {
-            font-size: 3rem;
-            font-weight: bold;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .testimonial-card {
-            background: white;
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            border-left: 4px solid #667eea;
-            position: relative;
-        }
-        
-        .testimonial-card::before {
-            content: '"';
-            position: absolute;
-            top: -10px;
-            left: 20px;
-            font-size: 4rem;
-            color: #667eea;
-            opacity: 0.3;
-        }
-        
-        .case-study-card {
-            background: white;
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            border: 1px solid #e5e7eb;
-        }
-        
-        .progress-bar {
-            background: #e5e7eb;
-            border-radius: 10px;
-            overflow: hidden;
-            height: 20px;
-        }
-        
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 10px;
-            transition: width 2s ease-in-out;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 0.875rem;
-        }
-        
-        .icon-circle {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-            background: #334155; /* slate-700 */
-            color: white;
-        }
-        
-        .breadcrumb {
-            background: #f8fafc;
-            padding: 1rem 0;
-            border-bottom: 1px solid #e5e7eb;
-        }
-        
-        .breadcrumb a {
-            color: #6b7280;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .breadcrumb a:hover {
-            color: #667eea;
-        }
-        
-        .breadcrumb .current {
-            color: #374151;
-            font-weight: 500;
-        }
-        
-        .cta-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-        
-        .cta-button {
-            background: white;
-            color: #334155;
-            transition: all 0.3s ease;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
-        }
-        
-        .hero-bg {
-            position: relative;
-            background: url('images/page/reason/reason_bg.jpg') center center/cover no-repeat;
-            min-height: 260px;
-        }
-        .hero-bg::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: rgba(255,255,255,0.70);
-        }
+      }
+
+      .nav-link {
+        position: relative;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link:hover {
+        color: #334155;
+      }
+
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #334155;
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .stat-card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e5e7eb;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #334155;
+      }
+
+      .testimonial-card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        border-left: 4px solid #334155;
+        position: relative;
+      }
+
+      .testimonial-card::before {
+        content: '"';
+        position: absolute;
+        top: -8px;
+        left: 16px;
+        font-size: 3rem;
+        color: #334155;
+        opacity: 0.3;
+      }
+
+      .case-study-card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e5e7eb;
+      }
+
+      .progress-bar {
+        background: #e5e7eb;
+        border-radius: 8px;
+        overflow: hidden;
+        height: 16px;
+      }
+
+      .progress-fill {
+        height: 100%;
+        background: #334155;
+        border-radius: 8px;
+        transition: width 2s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        font-size: 0.75rem;
+      }
+
+      .icon-circle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+        background: #334155;
+        color: white;
+      }
+
+      .hero-bg {
+        position: relative;
+        background: url('images/page/reason/reason_bg.jpg') center center/cover no-repeat;
+        min-height: 220px;
+      }
+      .hero-bg::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.7);
+      }
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+      }
+      @media (min-width: 1024px) {
         .hero-content {
-            position: relative;
-            z-index: 1;
-            padding-top: 2rem;
-            padding-bottom: 2rem;
+          padding-top: 2.5rem;
+          padding-bottom: 2.5rem;
         }
-        @media (min-width: 1024px) {
-            .hero-content {
-                padding-top: 3.5rem;
-                padding-bottom: 3.5rem;
-            }
-        }
+      }
     </style>
-</head>
-<body class="bg-gray-50">
+  <style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0}.sticky{position:sticky}.top-0{top:0px}.z-50{z-index:50}.mx-2{margin-left:0.5rem;margin-right:0.5rem}.mx-auto{margin-left:auto;margin-right:auto}.my-4{margin-top:1rem;margin-bottom:1rem}.mb-1{margin-bottom:0.25rem}.mb-10{margin-bottom:2.5rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mr-2{margin-right:0.5rem}.mr-3{margin-right:0.75rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-12{height:3rem}.h-6{height:1.5rem}.w-10{width:2.5rem}.w-12{width:3rem}.w-6{width:1.5rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-gray-700{--tw-border-opacity:1;border-color:rgb(55 65 81 / var(--tw-border-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity, 1))}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.p-2{padding:0.5rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-4{padding-bottom:1rem}.pt-6{padding-top:1.5rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.opacity-90{opacity:0.9}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.drop-shadow{--tw-drop-shadow:drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.hover\:text-slate-800:hover{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}@media (min-width: 640px){.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:text-2xl{font-size:1.5rem;line-height:2rem}.lg\:text-base{font-size:1rem;line-height:1.5rem}}</style></head>
+  <body class="bg-gray-50" style="">
     <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center">
-                    <a href="index.html" class="block"><img src="images/common/pc_twb_logo.png" alt="株式会社TWBロゴ" class="h-10" /></a>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center">
+            <a href="index.html" class="block"><img src="images/common/pc_twb_logo.png" alt="株式会社TWBロゴ" class="h-10" data-height-listener-added="true"></a>
+          </div>
 
-                </div>
-                
-                <!-- Navigation -->
-                <nav class="hidden lg:flex space-x-8">
-                    <a href="value.html" class="nav-link text-gray-700 font-medium">TWBの強み</a>
-                    <a href="policy.html" class="nav-link text-gray-700 font-medium">開発ポリシー</a>
-                    <a href="whyus.html" class="nav-link text-gray-700 font-medium">選ばれる理由</a>
-                    <a href="service.html" class="nav-link text-gray-700 font-medium">サービス内容</a>
-                    <a href="cases.html" class="nav-link text-gray-700 font-medium">プロジェクト実績</a>
-                    <a href="company.html" class="nav-link text-gray-700 font-medium">会社概要</a>
-                    <a href="reqruite.html" class="nav-link text-blue-600 font-medium">人材募集</a>
-                    <a href="contact.html" class="nav-link text-gray-700 font-medium">お問合わせ</a>
-                </nav>
-                
-                <!-- Mobile menu button -->
-                <button id="mobileMenuButton" class="lg:hidden p-2" type="button" onclick="toggleMobileMenu()" aria-label="メニュー" title="メニュー" aria-controls="mobileMenu" aria-expanded="false">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                    <span class="sr-only">メニュー</span>
-                </button>
-            </div>
-            
-            <!-- Mobile Navigation -->
-            <div id="mobileMenu" class="lg:hidden hidden pb-4">
-                <div class="flex flex-col space-y-2">
-                    <a href="value.html" class="text-gray-700 py-2 border-b border-gray-200">TWBの強み</a>
-                    <a href="policy.html" class="text-gray-700 py-2 border-b border-gray-200">開発ポリシー</a>
-                    <a href="whyus.html" class="text-gray-700 py-2 border-b border-gray-200">選ばれる理由</a>
-                    <a href="service.html" class="text-gray-700 py-2 border-b border-gray-200">サービス内容</a>
-                    <a href="cases.html" class="text-gray-700 py-2 border-b border-gray-200">プロジェクト実績</a>
-                    <a href="company.html" class="text-gray-700 py-2 border-b border-gray-200">会社概要</a>
-                    <a href="reqruite.html" class="text-blue-600 py-2 border-b border-gray-200 font-medium">人材募集</a>
-                    <a href="contact.html" class="text-gray-700 py-2">お問合わせ</a>
-                </div>
-            </div>
+          <!-- Navigation -->
+          <nav class="hidden lg:flex space-x-8">
+            <a href="value.html" class="nav-link text-gray-700 font-medium">TWBの強み</a>
+            <a href="policy.html" class="nav-link text-gray-700 font-medium">開発ポリシー</a>
+            <a href="whyus.html" class="nav-link text-gray-700 font-medium">選ばれる理由</a>
+            <a href="service.html" class="nav-link text-gray-700 font-medium">サービス内容</a>
+            <a href="cases.html" class="nav-link text-gray-700 font-medium">プロジェクト実績</a>
+            <a href="company.html" class="nav-link text-gray-700 font-medium">会社概要</a>
+            <a href="reqruite.html" class="nav-link text-gray-700 font-medium">人材募集</a>
+            <a href="contact.html" class="nav-link text-gray-700 font-medium">お問合わせ</a>
+          </nav>
+
+          <!-- Mobile menu button -->
+          <button id="mobileMenuButton" class="lg:hidden p-2" type="button" onclick="toggleMobileMenu()" aria-label="メニュー" title="メニュー" aria-controls="mobileMenu" aria-expanded="false">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <span class="sr-only">メニュー</span>
+          </button>
         </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobileMenu" class="lg:hidden hidden pb-4">
+          <div class="flex flex-col space-y-2">
+            <a href="value.html" class="text-gray-700 py-2 border-b border-gray-200">TWBの強み</a>
+            <a href="policy.html" class="text-gray-700 py-2 border-b border-gray-200">開発ポリシー</a>
+            <a href="whyus.html" class="text-gray-700 py-2 border-b border-gray-200">選ばれる理由</a>
+            <a href="service.html" class="text-gray-700 py-2 border-b border-gray-200">サービス内容</a>
+            <a href="cases.html" class="text-gray-700 py-2 border-b border-gray-200">プロジェクト実績</a>
+            <a href="company.html" class="text-gray-700 py-2 border-b border-gray-200">会社概要</a>
+            <a href="reqruite.html" class="text-gray-700 py-2 border-b border-gray-200">人材募集</a>
+            <a href="contact.html" class="text-gray-700 py-2">お問合わせ</a>
+          </div>
+        </div>
+      </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero-bg text-gray-800">
-        <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <div class="fade-in">
-                    <!-- ここに元のヒーローセクションのタイトル・説明文をそのまま配置 -->
-                    <!-- 例: -->
-                    <h1 class="text-xl lg:text-2xl font-bold leading-snug mb-1 drop-shadow">
-                        <span class="text-slate-800">選ばれる理由</span>
-                    </h1>
-                    <div class="max-w-4xl mx-auto">
-                        <p class="text-sm lg:text-base mb-3 text-gray-700 max-w-3xl mx-auto drop-shadow">
-                            なぜ多くの企業がTWBを選び続けてくださるのか。<br>
-                            実績と信頼の理由をご紹介します。
-                        </p>
-                    </div>
-                </div>
+      <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <div class="fade-in">
+            <h1 class="text-xl lg:text-2xl font-bold leading-snug mb-3 drop-shadow">
+              <span class="text-slate-800">選ばれる理由</span>
+            </h1>
+            <div class="max-w-4xl mx-auto">
+              <p class="text-sm lg:text-base text-gray-700 max-w-3xl mx-auto drop-shadow">
+                なぜ多くの企業がTWBを選び続けてくださるのか。<br>
+                実績と信頼の理由をご紹介します。
+              </p>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- パンくずリスト -->
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <nav class="text-sm text-gray-600 my-4" aria-label="パンくずリスト">
-            <ol class="list-reset flex">
-                <li>
-                    <a href="index.html" class="hover:underline text-slate-700">ホーム</a>
-                </li>
-                <li><span class="mx-2">/</span></li>
-                <li class="text-gray-500">選ばれる理由</li>
-            </ol>
-        </nav>
+      <nav class="text-sm text-gray-600 my-4" aria-label="パンくずリスト">
+        <ol class="list-reset flex">
+          <li>
+            <a href="index.html" class="hover:underline text-slate-700">ホーム</a>
+          </li>
+          <li><span class="mx-2">/</span></li>
+          <li class="text-gray-500">選ばれる理由</li>
+        </ol>
+      </nav>
     </div>
 
     <!-- 導入セクション追加 -->
     <section class="py-10 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-lg text-gray-700 leading-relaxed">
-                私たちTWBは、特別な営業活動を行っているわけではありません。<br>
-                案件の9割が既存のお客様やパートナー企業からのご紹介です。<br>
-                主要なお取引先とは10年以上にわたって継続的な関係を維持しています。
-            </p>
-        </div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-base text-gray-700 leading-relaxed">
+          私たちTWBは、特別な営業活動を行っているわけではありません。<br>
+          案件の9割が既存のお客様やパートナー企業からのご紹介です。<br>
+          主要なお取引先とは10年以上にわたって継続的な関係を維持しています。
+        </p>
+      </div>
     </section>
 
     <!-- 案件の9割が紹介・リピート -->
-    <section class="py-12 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                    案件の9割が紹介・リピート<br>
-                    <span class="text-blue-600">数字が証明する信頼性</span>
-                </h2>
-            </div>
-            
-            <div class="grid lg:grid-cols-2 gap-12 mb-16">
-                <!-- TWBの案件獲得内訳 -->
-                <div class="stat-card">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-8">📊 TWBの案件獲得内訳</h3>
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-gray-700">既存顧客からのリピート案件</span>
-                                <span class="font-bold text-slate-700">60%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill progress-60">60%</div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-gray-700">パートナー企業からの紹介</span>
-                                <span class="font-bold text-slate-700">30%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill progress-30">30%</div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-gray-700">新規営業による獲得</span>
-                                <span class="font-bold text-gray-600">10%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill progress-10 muted">10%</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 顧客との関係継続年数 -->
-                <div class="stat-card">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-8">📈 顧客との関係継続年数</h3>
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-gray-700">10年以上継続</span>
-                                <span class="font-bold text-slate-700">40%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill progress-40">40%</div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-gray-700">5年以上継続</span>
-                                <span class="font-bold text-slate-700">30%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill progress-30">30%</div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-gray-700">3年以上継続</span>
-                                <span class="font-bold text-slate-700">20%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill progress-20">20%</div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-gray-700">新規取引</span>
-                                <span class="font-bold text-gray-600">10%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill progress-10 muted">10%</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="max-w-4xl mx-auto text-center">
-                <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                    この数字が意味することは明確です。TWBと仕事をされたお客様やパートナー企業の方々が、私たちの仕事に満足し、「また頼みたい」「知り合いにも紹介したい」と思ってくださっているということです。
-                </p>
-                <p class="text-lg text-gray-700 leading-relaxed">
-                    特に印象的なのは、初回の開発プロジェクト完了後、継続的な保守・運用や追加開発をご依頼いただくケースが非常に多いことです。これは、「作って終わり」ではなく、長期的なパートナーとしての価値を認めていただいている証拠だと考えています。
-                </p>
-            </div>
+    <section class="py-10 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">
+            案件の9割が紹介・リピート<br>
+            <span class="text-slate-700">数字が証明する信頼性</span>
+          </h2>
         </div>
+
+        <div class="grid lg:grid-cols-2 gap-8 mb-10">
+          <!-- TWBの案件獲得内訳 -->
+          <div class="stat-card">
+            <h3 class="text-xl font-bold text-gray-900 mb-6">📊 TWBの案件獲得内訳</h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-gray-700">既存顧客からのリピート案件</span>
+                  <span class="font-bold text-slate-700">60%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill progress-60">60%</div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-gray-700">パートナー企業からの紹介</span>
+                  <span class="font-bold text-slate-700">30%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill progress-30">30%</div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-gray-700">新規営業による獲得</span>
+                  <span class="font-bold text-gray-600">10%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill progress-10 muted">10%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 顧客との関係継続年数 -->
+          <div class="stat-card">
+            <h3 class="text-xl font-bold text-gray-900 mb-6">📈 顧客との関係継続年数</h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-gray-700">10年以上継続</span>
+                  <span class="font-bold text-slate-700">40%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill progress-40">40%</div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-gray-700">5年以上継続</span>
+                  <span class="font-bold text-slate-700">30%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill progress-30">30%</div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-gray-700">3年以上継続</span>
+                  <span class="font-bold text-slate-700">20%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill progress-20">20%</div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-gray-700">新規取引</span>
+                  <span class="font-bold text-gray-600">10%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill progress-10 muted">10%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto text-center">
+          <p class="text-base text-gray-700 leading-relaxed mb-4">
+            この数字が意味することは明確です。TWBと仕事をされたお客様やパートナー企業の方々が、私たちの仕事に満足し、「また頼みたい」「知り合いにも紹介したい」と思ってくださっているということです。
+          </p>
+          <p class="text-base text-gray-700 leading-relaxed">
+            特に印象的なのは、初回の開発プロジェクト完了後、継続的な保守・運用や追加開発をご依頼いただくケースが非常に多いことです。これは、「作って終わり」ではなく、長期的なパートナーとしての価値を認めていただいている証拠だと考えています。
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- 10年以上のお付き合い -->
-    <section class="py-12 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                    10年以上のお付き合い<br>
-                    <span class="text-blue-600">継続される理由</span>
-                </h2>
-            </div>
-            
-            <div class="grid lg:grid-cols-2 gap-8 mb-16">
-                <!-- 事例1 -->
-                <div class="case-study-card">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                            1
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-gray-900">教育関連団体様</h3>
-                            <p class="text-slate-700 font-semibold">継続期間: 12年（2013年〜現在）</p>
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="font-semibold text-gray-900 mb-2">プロジェクト</h4>
-                        <p class="text-gray-700">学生向け就職支援サービスの開発・運用</p>
-                    </div>
-                    <p class="text-gray-700">
-                        初回の完全リニューアルから12年間、継続的な機能改善・運用保守を担当しています。システムの進化とともに、お客様の事業も拡大・発展を続けています。
-                    </p>
-                </div>
-                
-                <!-- 事例2 -->
-                <div class="case-study-card">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                            2
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-gray-900">化粧品・日用品メーカー様</h3>
-                            <p class="text-slate-700 font-semibold">継続期間: 6年（2018年〜現在）</p>
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <h4 class="font-semibold text-gray-900 mb-2">プロジェクト</h4>
-                        <p class="text-gray-700">ECサイト・基幹システムの段階的構築</p>
-                    </div>
-                    <p class="text-gray-700">
-                        初回のECサイト構築から、2度のリニューアル、受注管理システム・在庫管理システムの開発まで一貫してサポート。6年間の伴走により、アナログ業務からの完全デジタル化を実現しました。
-                    </p>
-                </div>
-            </div>
-            
-            <div class="max-w-4xl mx-auto">
-                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">なぜ長期継続されるのか</h3>
-                <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                    お客様の事業は成長し、変化します。その変化に合わせて、システムも進化させる必要があります。
-                </p>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-white p-6 rounded-lg shadow-sm">
-                        <h4 class="font-semibold text-gray-900 mb-3">🚀 事業成長への対応</h4>
-                        <p class="text-gray-700 text-sm">お客様の事業拡大に合わせた段階的な成長支援を行います。</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-sm">
-                        <h4 class="font-semibold text-gray-900 mb-3">⚡ 迅速な変化対応</h4>
-                        <p class="text-gray-700 text-sm">事業環境の変化に応じた機能追加・修正にも迅速に対応します。</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-sm">
-                        <h4 class="font-semibold text-gray-900 mb-3">💬 透明性の高いコミュニケーション</h4>
-                        <p class="text-gray-700 text-sm">技術的な制約やリスクも包み隠さず共有する透明性を徹底しています。</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-sm">
-                        <h4 class="font-semibold text-gray-900 mb-3">💰 持続可能な価格設定</h4>
-                        <p class="text-gray-700 text-sm">長期的な関係を重視した合理的な価格設定により、持続可能なパートナーシップを実現しています。</p>
-                    </div>
-                </div>
-                <p class="text-lg text-gray-700 leading-relaxed mt-6 text-center">
-                    このような姿勢が、10年以上にわたる長期継続関係につながっています。
-                </p>
-            </div>
+    <section class="py-10 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">
+            10年以上のお付き合い<br>
+            <span class="text-slate-700">継続される理由</span>
+          </h2>
         </div>
+
+        <div class="grid lg:grid-cols-2 gap-8 mb-10">
+          <!-- 事例1 -->
+          <div class="case-study-card">
+            <div class="flex items-center mb-4">
+              <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                1
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-900">教育関連団体様</h3>
+                <p class="text-slate-700 font-semibold">継続期間: 12年（2013年〜現在）</p>
+              </div>
+            </div>
+            <div class="mb-3">
+              <h4 class="font-semibold text-gray-900 mb-1">プロジェクト</h4>
+              <p class="text-gray-700">学生向け就職支援サービスの開発・運用</p>
+            </div>
+            <p class="text-gray-700">
+              初回の完全リニューアルから12年間、継続的な機能改善・運用保守を担当しています。システムの進化とともに、お客様の事業も拡大・発展を続けています。
+            </p>
+          </div>
+
+          <!-- 事例2 -->
+          <div class="case-study-card">
+            <div class="flex items-center mb-4">
+              <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                2
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-900">化粧品・日用品メーカー様</h3>
+                <p class="text-slate-700 font-semibold">継続期間: 6年（2018年〜現在）</p>
+              </div>
+            </div>
+            <div class="mb-3">
+              <h4 class="font-semibold text-gray-900 mb-1">プロジェクト</h4>
+              <p class="text-gray-700">ECサイト・基幹システムの段階的構築</p>
+            </div>
+            <p class="text-gray-700">
+              初回のECサイト構築から、2度のリニューアル、受注管理システム・在庫管理システムの開発まで一貫してサポート。6年間の伴走により、アナログ業務からの完全デジタル化を実現しました。
+            </p>
+          </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+          <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">なぜ長期継続されるのか</h3>
+          <p class="text-base text-gray-700 leading-relaxed mb-4">
+            お客様の事業は成長し、変化します。その変化に合わせて、システムも進化させる必要があります。
+          </p>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="font-semibold text-gray-900 mb-2">🚀 事業成長への対応</h4>
+              <p class="text-gray-700 text-sm">お客様の事業拡大に合わせた段階的な成長支援を行います。</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="font-semibold text-gray-900 mb-2">⚡ 迅速な変化対応</h4>
+              <p class="text-gray-700 text-sm">事業環境の変化に応じた機能追加・修正にも迅速に対応します。</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="font-semibold text-gray-900 mb-2">💬 透明性の高いコミュニケーション</h4>
+              <p class="text-gray-700 text-sm">技術的な制約やリスクも包み隠さず共有する透明性を徹底しています。</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="font-semibold text-gray-900 mb-2">💰 持続可能な価格設定</h4>
+              <p class="text-gray-700 text-sm">
+                長期的な関係を重視した合理的な価格設定により、持続可能なパートナーシップを実現しています。
+              </p>
+            </div>
+          </div>
+          <p class="text-base text-gray-700 leading-relaxed mt-4 text-center">
+            このような姿勢が、10年以上にわたる長期継続関係につながっています。
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- 「やり切る」姿勢 -->
-    <section class="py-12 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                    『やり切る』姿勢が生む<br>
-                    <span class="text-blue-600">信頼の連鎖</span>
-                </h2>
-            </div>
-            
-            <div class="max-w-4xl mx-auto text-center mb-12">
-                <p class="text-xl text-gray-700 leading-relaxed mb-8">
-                    私たちは、目の前のプロジェクトを確実に完遂し、お客様に満足していただくことが最大の営業活動だと考えています。
-                </p>
-                <p class="text-lg text-gray-700 leading-relaxed">
-                    その結果として、お客様から新しいお客様をご紹介いただき、パートナー企業から継続的にお声がけをいただく。この好循環こそが、TWBが持続的に成長できている理由です。
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="text-center">
-                    <div class="icon-circle">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="font-bold text-gray-900 mb-2">完遂への責任</h3>
-                    <p class="text-gray-700 text-sm">困難な状況になっても決して途中で投げ出さない</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="icon-circle">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="font-bold text-gray-900 mb-2">正直な対話</h3>
-                    <p class="text-gray-700 text-sm">問題が発生したときこそ正直に状況を共有する</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="icon-circle">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="font-bold text-gray-900 mb-2">顧客第一主義</h3>
-                    <p class="text-gray-700 text-sm">ベンダー都合ではなく、常にお客様の事業成功を最優先</p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="icon-circle">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="font-bold text-gray-900 mb-2">継続的価値提供</h3>
-                    <p class="text-gray-700 text-sm">プロジェクト完了後も、運用・改善を通じた価値提供を続ける</p>
-                </div>
-            </div>
-            
-            <div class="text-center mt-12">
-                <p class="text-lg text-gray-700">
-                    この姿勢が、お客様からの信頼につながっています。
-                </p>
-            </div>
+    <section class="py-10 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">
+            『やり切る』姿勢が生む<br>
+            <span class="text-slate-700">信頼の連鎖</span>
+          </h2>
         </div>
+
+        <div class="max-w-4xl mx-auto text-center mb-8">
+          <p class="text-base text-gray-700 leading-relaxed mb-6">
+            私たちは、目の前のプロジェクトを確実に完遂し、お客様に満足していただくことが最大の営業活動だと考えています。
+          </p>
+          <p class="text-base text-gray-700 leading-relaxed">
+            その結果として、お客様から新しいお客様をご紹介いただき、パートナー企業から継続的にお声がけをいただく。この好循環こそが、TWBが持続的に成長できている理由です。
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="text-center">
+            <div class="icon-circle">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">完遂への責任</h3>
+            <p class="text-gray-700 text-sm">困難な状況になっても決して途中で投げ出さない</p>
+          </div>
+
+          <div class="text-center">
+            <div class="icon-circle">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+              </svg>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">正直な対話</h3>
+            <p class="text-gray-700 text-sm">問題が発生したときこそ正直に状況を共有する</p>
+          </div>
+
+          <div class="text-center">
+            <div class="icon-circle">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+              </svg>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">顧客第一主義</h3>
+            <p class="text-gray-700 text-sm">ベンダー都合ではなく、常にお客様の事業成功を最優先</p>
+          </div>
+
+          <div class="text-center">
+            <div class="icon-circle">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">継続的価値提供</h3>
+            <p class="text-gray-700 text-sm">プロジェクト完了後も、運用・改善を通じた価値提供を続ける</p>
+          </div>
+        </div>
+
+        <div class="text-center mt-8">
+          <p class="text-base text-gray-700">この姿勢が、お客様からの信頼につながっています。</p>
+        </div>
+      </div>
     </section>
 
     <!-- 業界からの評価 -->
-    <section class="py-12 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                    同業他社からも頼られる<br>
-                    <span class="text-blue-600">技術力と対応力</span>
-                </h2>
-            </div>
-            
-            <div class="grid lg:grid-cols-2 gap-12">
-                <!-- パートナー企業からのヘルプ要請 -->
-                <div class="bg-white p-8 rounded-lg shadow-sm">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">🤝 パートナー企業からのヘルプ要請</h3>
-                    <p class="text-gray-700 leading-relaxed mb-6">
-                        制作会社やSIerの方々から、進捗の遅れたプロジェクトや、お客様との要件調整に難航しているプロジェクトのサポートをご依頼いただくことがあります。
-                    </p>
-                    <div class="bg-blue-50 p-6 rounded-lg">
-                        <h4 class="font-semibold text-blue-900 mb-4">よくいただくお声</h4>
-                        <div class="space-y-3 text-sm text-blue-800">
-                            <div class="flex items-start">
-                                <span class="text-slate-700 mr-2">•</span>
-                                <span>「TWBさんなら最後までやり遂げてくれるから」</span>
-                            </div>
-                            <div class="flex items-start">
-                                <span class="text-slate-700 mr-2">•</span>
-                                <span>「困った時のTWB頼み」</span>
-                            </div>
-                            <div class="flex items-start">
-                                <span class="text-slate-700 mr-2">•</span>
-                                <span>「クライアントとの調整もお任せできる」</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 leading-relaxed mt-6">
-                        こうしたお声をいただけることは、技術力だけでなく、プロジェクト管理能力、顧客対応力、そして何より「信頼性」を認められている証拠だと考えています。
-                    </p>
-                </div>
-                
-                <!-- セカンドオピニオンとしての相談 -->
-                <div class="bg-white p-8 rounded-lg shadow-sm">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">💡 セカンドオピニオンとしての相談</h3>
-                    <p class="text-gray-700 leading-relaxed mb-6">
-                        他社での見積もりや提案に納得できないお客様から、セカンドオピニオンとしてご相談をいただくケースも増えています。
-                    </p>
-                    <div class="bg-green-50 p-6 rounded-lg">
-                        <h4 class="font-semibold text-green-900 mb-4">選ばれる理由</h4>
-                        <div class="space-y-3 text-sm text-green-800">
-                            <div class="flex items-start">
-                                <span class="text-slate-700 mr-2">•</span>
-                                <span>「TWBさんなら私たちの話をよく聞いてくれる」</span>
-                            </div>
-                            <div class="flex items-start">
-                                <span class="text-slate-700 mr-2">•</span>
-                                <span>「技術的な説明が分かりやすい」</span>
-                            </div>
-                            <div class="flex items-start">
-                                <span class="text-slate-700 mr-2">•</span>
-                                <span>「メリット・デメリットを正直に教えてくれる」</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 leading-relaxed mt-6">
-                        同業他社から頼られ、お客様からセカンドオピニオンを求められるということは、業界内でも確かな信頼を得ている証拠だと自負しています。
-                    </p>
-                </div>
-            </div>
+    <section class="py-10 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">
+            同業他社からも頼られる<br>
+            <span class="text-slate-700">技術力と対応力</span>
+          </h2>
         </div>
+
+        <div class="grid lg:grid-cols-2 gap-8">
+          <!-- パートナー企業からのヘルプ要請 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">🤝 パートナー企業からのヘルプ要請</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              制作会社やSIerの方々から、進捗の遅れたプロジェクトや、お客様との要件調整に難航しているプロジェクトのサポートをご依頼いただくことがあります。
+            </p>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-gray-900 mb-3">よくいただくお声</h4>
+              <div class="space-y-2 text-sm text-gray-700">
+                <div class="flex items-start">
+                  <span class="text-slate-700 mr-2">•</span>
+                  <span>「TWBさんなら最後までやり遂げてくれるから」</span>
+                </div>
+                <div class="flex items-start">
+                  <span class="text-slate-700 mr-2">•</span>
+                  <span>「困った時のTWB頼み」</span>
+                </div>
+                <div class="flex items-start">
+                  <span class="text-slate-700 mr-2">•</span>
+                  <span>「クライアントとの調整もお任せできる」</span>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-700 leading-relaxed mt-4">
+              こうしたお声をいただけることは、技術力だけでなく、プロジェクト管理能力、顧客対応力、そして何より「信頼性」を認められている証拠だと考えています。
+            </p>
+          </div>
+
+          <!-- セカンドオピニオンとしての相談 -->
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">💡 セカンドオピニオンとしての相談</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              他社での見積もりや提案に納得できないお客様から、セカンドオピニオンとしてご相談をいただくケースも増えています。
+            </p>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-gray-900 mb-3">選ばれる理由</h4>
+              <div class="space-y-2 text-sm text-gray-700">
+                <div class="flex items-start">
+                  <span class="text-slate-700 mr-2">•</span>
+                  <span>「TWBさんなら私たちの話をよく聞いてくれる」</span>
+                </div>
+                <div class="flex items-start">
+                  <span class="text-slate-700 mr-2">•</span>
+                  <span>「技術的な説明が分かりやすい」</span>
+                </div>
+                <div class="flex items-start">
+                  <span class="text-slate-700 mr-2">•</span>
+                  <span>「メリット・デメリットを正直に教えてくれる」</span>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-700 leading-relaxed mt-4">
+              同業他社から頼られ、お客様からセカンドオピニオンを求められるということは、業界内でも確かな信頼を得ている証拠だと自負しています。
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- 数字が示す価値 -->
-    <section class="py-12 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                    数字と評価が示す<br>
-                    <span class="text-blue-600">TWBの価値</span>
-                </h2>
-            </div>
-            
-            <div class="grid lg:grid-cols-3 gap-8">
-                <!-- 紹介・リピート率 -->
-                <div class="stat-card">
-                    <div class="icon-circle mb-6">
-                        <span class="text-2xl">📊</span>
-                    </div>
-                    <div class="stat-number mb-4">90%</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">紹介・リピート率</h3>
-                    <p class="text-gray-700 mb-4">案件の90%が既存顧客・パートナーからのご依頼</p>
-                    <p class="text-sm text-gray-600">
-                        営業活動をほとんど行わなくても、お客様やパートナー企業から継続的にご依頼をいただける。これは、プロジェクトでの成果と誠実な対応が評価されている証拠です。
-                    </p>
-                </div>
-                
-                <!-- 長期継続率 -->
-                <div class="stat-card">
-                    <div class="icon-circle mb-6">
-                        <span class="text-2xl">🤝</span>
-                    </div>
-                    <div class="stat-number mb-4">40%</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">長期継続率</h3>
-                    <p class="text-gray-700 mb-4">主要取引先の40%が10年以上の継続関係</p>
-                    <p class="text-sm text-gray-600">
-                        一度きりの取引ではなく、お客様の事業成長に寄り添い続ける長期的なパートナーシップを実現しています。
-                    </p>
-                </div>
-                
-                <!-- 顧客満足度 -->
-                <div class="stat-card">
-                    <div class="icon-circle mb-6">
-                        <span class="text-2xl">⭐</span>
-                    </div>
-                    <div class="stat-number mb-4">95%</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">顧客満足度</h3>
-                    <p class="text-gray-700 mb-4">初回プロジェクト後の継続率95%以上</p>
-                    <p class="text-sm text-gray-600">
-                        初めてTWBにご依頼いただいたお客様のほぼ全員が、その後も継続的にご依頼をくださっています。
-                    </p>
-                </div>
-            </div>
+    <section class="py-10 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">
+            数字と評価が示す<br>
+            <span class="text-slate-700">TWBの価値</span>
+          </h2>
         </div>
+
+        <div class="grid lg:grid-cols-3 gap-6">
+          <!-- 紹介・リピート率 -->
+          <div class="stat-card">
+            <div class="icon-circle mb-4">
+              <span class="text-lg">📊</span>
+            </div>
+            <div class="stat-number mb-3">90%</div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3">紹介・リピート率</h3>
+            <p class="text-gray-700 mb-3">案件の90%が既存顧客・パートナーからのご依頼</p>
+            <p class="text-sm text-gray-600">
+              営業活動をほとんど行わなくても、お客様やパートナー企業から継続的にご依頼をいただける。これは、プロジェクトでの成果と誠実な対応が評価されている証拠です。
+            </p>
+          </div>
+
+          <!-- 長期継続率 -->
+          <div class="stat-card">
+            <div class="icon-circle mb-4">
+              <span class="text-lg">🤝</span>
+            </div>
+            <div class="stat-number mb-3">40%</div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3">長期継続率</h3>
+            <p class="text-gray-700 mb-3">主要取引先の40%が10年以上の継続関係</p>
+            <p class="text-sm text-gray-600">
+              一度きりの取引ではなく、お客様の事業成長に寄り添い続ける長期的なパートナーシップを実現しています。
+            </p>
+          </div>
+
+          <!-- 顧客満足度 -->
+          <div class="stat-card">
+            <div class="icon-circle mb-4">
+              <span class="text-lg">⭐</span>
+            </div>
+            <div class="stat-number mb-3">95%</div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3">顧客満足度</h3>
+            <p class="text-gray-700 mb-3">初回プロジェクト後の継続率95%以上</p>
+            <p class="text-sm text-gray-600">
+              初めてTWBにご依頼いただいたお客様のほぼ全員が、その後も継続的にご依頼をくださっています。
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- お客様の声 -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                    お客様・パートナーからの<br>
-                    <span class="text-blue-600">評価</span>
-                </h2>
-            </div>
-            
-            <div class="grid lg:grid-cols-3 gap-8">
-                <!-- 製造業のお客様 -->
-                <div class="testimonial-card">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center text-white mr-4">
-                            💼
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-gray-900">製造業のお客様</h3>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 leading-relaxed">
-                        他の会社では『それは仕様にありません』と言われそうなことでも、TWBさんは一緒に考えて解決してくれる。だから長く付き合えるんです。
-                    </p>
-                </div>
-                
-                <!-- 制作会社のパートナー様 -->
-                <div class="testimonial-card">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center text-white mr-4">
-                            🤝
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-gray-900">制作会社のパートナー様</h3>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 leading-relaxed">
-                        困ったプロジェクトがあると、いつもTWBさんにお声がけしています。技術力もありますが、何より『最後まで投げ出さない』という安心感があります。
-                    </p>
-                </div>
-                
-                <!-- アパレル業界のお客様 -->
-                <div class="testimonial-card">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center text-white mr-4">
-                            👗
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-gray-900">アパレル業界のお客様</h3>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 leading-relaxed">
-                        5年間、私たちの事業の成長に合わせて、システムも一緒に育ててくれました。単なる開発会社ではなく、本当のビジネスパートナーです。
-                    </p>
-                </div>
-            </div>
+    <section class="py-10 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">
+            お客様・パートナーからの<br>
+            <span class="text-slate-700">評価</span>
+          </h2>
         </div>
+
+        <div class="grid lg:grid-cols-3 gap-6">
+          <!-- 製造業のお客様 -->
+          <div class="testimonial-card">
+            <div class="flex items-center mb-3">
+              <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center text-white mr-3">💼</div>
+              <div>
+                <h3 class="font-bold text-gray-900">製造業のお客様</h3>
+              </div>
+            </div>
+            <p class="text-gray-700 leading-relaxed">
+              他の会社では『それは仕様にありません』と言われそうなことでも、TWBさんは一緒に考えて解決してくれる。だから長く付き合えるんです。
+            </p>
+          </div>
+
+          <!-- 制作会社のパートナー様 -->
+          <div class="testimonial-card">
+            <div class="flex items-center mb-3">
+              <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center text-white mr-3">🤝</div>
+              <div>
+                <h3 class="font-bold text-gray-900">制作会社のパートナー様</h3>
+              </div>
+            </div>
+            <p class="text-gray-700 leading-relaxed">
+              困ったプロジェクトがあると、いつもTWBさんにお声がけしています。技術力もありますが、何より『最後まで投げ出さない』という安心感があります。
+            </p>
+          </div>
+
+          <!-- アパレル業界のお客様 -->
+          <div class="testimonial-card">
+            <div class="flex items-center mb-3">
+              <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center text-white mr-3">👗</div>
+              <div>
+                <h3 class="font-bold text-gray-900">アパレル業界のお客様</h3>
+              </div>
+            </div>
+            <p class="text-gray-700 leading-relaxed">
+              5年間、私たちの事業の成長に合わせて、システムも一緒に育ててくれました。単なる開発会社ではなく、本当のビジネスパートナーです。
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- まとめ -->
-    <section class="py-12 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
-                選ばれる理由は、<br>
-                <span class="text-slate-700">結果が証明しています</span>
-            </h2>
-            <div class="text-lg text-gray-700 leading-relaxed mb-8">
-                <p class="mb-6">
-                    TWBが多くの企業から選ばれ、信頼され続ける理由。それは、言葉ではなく「結果」が証明しています。
-                </p>
-                <p class="mb-6">
-                    9割の紹介・リピート率。10年以上の継続取引。業界からの信頼とヘルプ要請。セカンドオピニオンとしての相談。
-                </p>
-                <p>
-                    これらすべてが、私たちの仕事に対する姿勢と成果への評価です。
-                </p>
-            </div>
+    <section class="py-10 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">
+          選ばれる理由は、<br>
+          <span class="text-slate-700">結果が証明しています</span>
+        </h2>
+        <div class="text-base text-gray-700 leading-relaxed mb-6">
+          <p class="mb-4">
+            TWBが多くの企業から選ばれ、信頼され続ける理由。それは、言葉ではなく「結果」が証明しています。
+          </p>
+          <p class="mb-4">
+            9割の紹介・リピート率。10年以上の継続取引。業界からの信頼とヘルプ要請。セカンドオピニオンとしての相談。
+          </p>
+          <p>これらすべてが、私たちの仕事に対する姿勢と成果への評価です。</p>
         </div>
+      </div>
     </section>
 
     <!-- Next Steps -->
-    <section class="py-12 bg-blue-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
-                    TWBをもっと詳しく知る
-                </h3>
-                <p class="text-lg text-gray-700">
-                    私たちがどのような能力と方針でプロジェクトに取り組んでいるか、さらに詳しくご紹介しています。
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-sm text-center card-hover">
-                    <div class="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-3">TWBの強みを詳しく知る</h4>
-                    <p class="text-gray-600 mb-4">私たちの技術力と対応力の詳細をご紹介</p>
-                    <a href="#value" class="text-slate-700 font-semibold hover:text-slate-800">詳しく見る →</a>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-sm text-center card-hover">
-                    <div class="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-3">開発ポリシーを確認する</h4>
-                    <p class="text-gray-600 mb-4">品質と信頼性を支える開発方針</p>
-                    <a href="#policy" class="text-slate-700 font-semibold hover:text-slate-800">詳しく見る →</a>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow-sm text-center card-hover">
-                    <div class="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-3">具体的な成功事例を見る</h4>
-                    <p class="text-gray-600 mb-4">実際のプロジェクト事例と成果</p>
-                    <a href="#cases" class="text-slate-700 font-semibold hover:text-slate-800">詳しく見る →</a>
-                </div>
-            </div>
+    <section class="py-10 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">TWBをもっと詳しく知る</h3>
+          <p class="text-base text-gray-700">
+            私たちがどのような能力と方針でプロジェクトに取り組んでいるか、さらに詳しくご紹介しています。
+          </p>
         </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white p-4 rounded-lg shadow-sm text-center card-hover">
+            <div class="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-gray-900 mb-2">TWBの強みを詳しく知る</h4>
+            <p class="text-gray-600 mb-3">私たちの技術力と対応力の詳細をご紹介</p>
+            <a href="value.html" class="text-slate-700 font-semibold hover:text-slate-800">詳しく見る →</a>
+          </div>
+
+          <div class="bg-white p-4 rounded-lg shadow-sm text-center card-hover">
+            <div class="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-gray-900 mb-2">開発ポリシーを確認する</h4>
+            <p class="text-gray-600 mb-3">品質と信頼性を支える開発方針</p>
+            <a href="policy.html" class="text-slate-700 font-semibold hover:text-slate-800">詳しく見る →</a>
+          </div>
+
+          <div class="bg-white p-4 rounded-lg shadow-sm text-center card-hover">
+            <div class="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-gray-900 mb-2">具体的な成功事例を見る</h4>
+            <p class="text-gray-600 mb-3">実際のプロジェクト事例と成果</p>
+            <a href="cases.html" class="text-slate-700 font-semibold hover:text-slate-800">詳しく見る →</a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section py-12">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h3 class="text-2xl lg:text-3xl font-bold mb-6">
-                まずはお気軽にご相談ください
-            </h3>
-            <p class="text-xl mb-8 opacity-90">
-                多くのお客様・パートナー企業から信頼をいただいているTWBに、安心してお任せください。<br>
-                あなたの事業課題の解決と成長を、全力でサポートいたします。
-            </p>
-            <a href="#contact" class="cta-button inline-block px-8 py-4 rounded-lg font-semibold text-lg">
-                無料相談を申し込む
-            </a>
-        </div>
+    <section class="py-10 bg-slate-700">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h3 class="text-xl font-bold mb-4 text-white">まずはお気軽にご相談ください</h3>
+        <p class="text-base mb-6 text-white opacity-90">
+          多くのお客様・パートナー企業から信頼をいただいているTWBに、安心してお任せください。<br>
+          あなたの事業課題の解決と成長を、全力でサポートいたします。
+        </p>
+        <a href="contact.html" class="inline-block bg-white text-slate-700 px-6 py-2.5 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
+          無料相談を申し込む
+        </a>
+      </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">株式会社TWB</h4>
-                    <p class="text-gray-300 text-sm leading-relaxed">
-                        お客様の「事業の成果」を実現するシステム会社
-                    </p>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">会社情報</h4>
-                    <div class="text-gray-300 text-sm space-y-2">
-                        <p>〒333-0862<br>埼玉県川口市北園町2－9<br>北園サンハイム2　201</p>
-                        <p>TEL: 048-423-9832</p>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">サービス</h4>
-                    <div class="text-gray-300 text-sm space-y-2">
-                        <a href="value.html" class="block hover:text-white transition-colors">TWBの強み</a>
-                        <a href="policy.html" class="block hover:text-white transition-colors">開発ポリシー</a>
-                        <a href="whyus.html" class="block hover:text-white transition-colors">選ばれる理由</a>
-                        <a href="service.html" class="block hover:text-white transition-colors">サービス内容</a>
-                        <a href="cases.html" class="block hover:text-white transition-colors">プロジェクト実績</a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">企業情報</h4>
-                    <div class="text-gray-300 text-sm space-y-2">
-                        <a href="company.html" class="block hover:text-white transition-colors">会社概要</a>
-                        <a href="reqruite.html" class="block hover:text-white transition-colors">人材募集</a>
-                        <a href="contact.html" class="block hover:text-white transition-colors">お問合わせ</a>
-                    </div>
-                </div>
+    <footer class="bg-gray-900 text-white py-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div>
+            <h4 class="text-base font-semibold mb-3">株式会社TWB</h4>
+            <p class="text-gray-300 text-sm leading-relaxed">お客様の「事業の成果」を実現するシステム会社</p>
+          </div>
+
+          <div>
+            <h4 class="text-base font-semibold mb-3">会社情報</h4>
+            <div class="text-gray-300 text-sm space-y-2">
+              <p>〒333-0862<br>埼玉県川口市北園町2－9<br>北園サンハイム2　201</p>
+              <p>TEL: 048-423-9832</p>
             </div>
-            
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p class="text-gray-400 text-sm">
-                    © 2024 株式会社TWB. All rights reserved.
-                </p>
+          </div>
+
+          <div>
+            <h4 class="text-base font-semibold mb-3">サービス</h4>
+            <div class="text-gray-300 text-sm space-y-2">
+              <a href="value.html" class="block hover:text-white transition-colors">TWBの強み</a>
+              <a href="policy.html" class="block hover:text-white transition-colors">開発ポリシー</a>
+              <a href="whyus.html" class="block hover:text-white transition-colors">選ばれる理由</a>
+              <a href="service.html" class="block hover:text-white transition-colors">サービス内容</a>
+              <a href="cases.html" class="block hover:text-white transition-colors">プロジェクト実績</a>
             </div>
+          </div>
+
+          <div>
+            <h4 class="text-base font-semibold mb-3">企業情報</h4>
+            <div class="text-gray-300 text-sm space-y-2">
+              <a href="company.html" class="block hover:text-white transition-colors">会社概要</a>
+              <a href="reqruite.html" class="block hover:text-white transition-colors">人材募集</a>
+              <a href="contact.html" class="block hover:text-white transition-colors">お問合わせ</a>
+            </div>
+          </div>
         </div>
+
+        <div class="border-t border-gray-700 mt-6 pt-6 text-center">
+          <p class="text-gray-400 text-sm">© 2024 株式会社TWB. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
 
     <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-            const btn = document.getElementById('mobileMenuButton');
-            if (btn) {
-                const expanded = btn.getAttribute('aria-expanded') === 'true';
-                btn.setAttribute('aria-expanded', (!expanded).toString());
-            }
+      function toggleMobileMenu() {
+        const menu = document.getElementById('mobileMenu');
+        menu.classList.toggle('hidden');
+        const btn = document.getElementById('mobileMenuButton');
+        if (btn) {
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', (!expanded).toString());
         }
+      }
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-                
-                // Close mobile menu if open
-                const mobileMenu = document.getElementById('mobileMenu');
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                    const btn = document.getElementById('mobileMenuButton');
-                    if (btn) btn.setAttribute('aria-expanded', 'false');
-                }
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
             });
+          }
+
+          // Close mobile menu if open
+          const mobileMenu = document.getElementById('mobileMenu');
+          if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+            const btn = document.getElementById('mobileMenuButton');
+            if (btn) btn.setAttribute('aria-expanded', 'false');
+          }
         });
+      });
 
-        // Add fade-in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+      // Add fade-in animation on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px',
+      };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationDelay = Math.random() * 0.3 + 's';
-                    entry.target.classList.add('fade-in');
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements for animation
-        document.querySelectorAll('.stat-card, .case-study-card, .testimonial-card').forEach(el => {
-            observer.observe(el);
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationDelay = Math.random() * 0.3 + 's';
+            entry.target.classList.add('fade-in');
+          }
         });
+      }, observerOptions);
 
-        // Animate progress bars when they come into view
-        const progressObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const progressFills = entry.target.querySelectorAll('.progress-fill');
-                    progressFills.forEach(fill => {
-                        const width = fill.style.width;
-                        fill.style.width = '0%';
-                        setTimeout(() => {
-                            fill.style.width = width;
-                        }, 500);
-                    });
-                }
-            });
-        }, { threshold: 0.5 });
+      // Observe elements for animation
+      document.querySelectorAll('.stat-card, .case-study-card, .testimonial-card').forEach((el) => {
+        observer.observe(el);
+      });
 
-        document.querySelectorAll('.stat-card').forEach(card => {
-            progressObserver.observe(card);
-        });
+      // Animate progress bars when they come into view
+      const progressObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const progressFills = entry.target.querySelectorAll('.progress-fill');
+              progressFills.forEach((fill) => {
+                const width = fill.style.width;
+                fill.style.width = '0%';
+                setTimeout(() => {
+                  fill.style.width = width;
+                }, 500);
+              });
+            }
+          });
+        },
+        { threshold: 0.5 },
+      );
+
+      document.querySelectorAll('.stat-card').forEach((card) => {
+        progressObserver.observe(card);
+      });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9867f8a10214a442',t:'MTc1OTExMjExMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
-</html>
+  
+
+</body></html>
