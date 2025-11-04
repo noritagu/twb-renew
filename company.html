@@ -154,7 +154,7 @@
         .hero-bg {
             position: relative;
             background: url('images/page/company/company_bg.jpg') center center/cover no-repeat;
-            min-height: 340px;
+            min-height: 260px;
         }
         .hero-bg::before {
             content: '';
@@ -165,13 +165,13 @@
         .hero-content {
             position: relative;
             z-index: 1;
-            padding-top: 4rem;
-            padding-bottom: 4rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
         }
         @media (min-width: 1024px) {
             .hero-content {
-                padding-top: 6rem;
-                padding-bottom: 6rem;
+                padding-top: 3.5rem;
+                padding-bottom: 3.5rem;
             }
         }
     </style>
@@ -199,10 +199,11 @@
                 </nav>
                 
                 <!-- Mobile menu button -->
-                <button class="lg:hidden p-2" onclick="toggleMobileMenu()">
+                <button id="mobileMenuButton" class="lg:hidden p-2" type="button" onclick="toggleMobileMenu()" aria-label="メニュー" title="メニュー" aria-controls="mobileMenu" aria-expanded="false">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
+                    <span class="sr-only">メニュー</span>
                 </button>
             </div>
             
@@ -229,11 +230,11 @@
                 <div class="fade-in">
                     <!-- ここに元のヒーローセクションのタイトル・説明文をそのまま配置 -->
                     <!-- 例: -->
-                    <h1 class="text-2xl lg:text-3xl font-bold leading-snug mb-2 drop-shadow">
-                        <span class="text-blue-600">私たちについて</span>
+                    <h1 class="text-xl lg:text-2xl font-bold leading-snug mb-1 drop-shadow">
+                        <span class="text-slate-800">私たちについて</span>
                     </h1>
                     <div class="max-w-4xl mx-auto">
-                        <p class="text-base lg:text-lg mb-4 text-gray-700 max-w-3xl mx-auto drop-shadow">
+                        <p class="text-sm lg:text-base mb-3 text-gray-700 max-w-3xl mx-auto drop-shadow">
                             株式会社TWB(ティーダブリュービー)は2006年の設立以来、<br>
                         「お客様の『使いやすい』を実現するシステム会社」として、<br>
                         多くの企業のDX推進を支援してまいりました。
@@ -248,7 +249,7 @@
         <nav class="text-sm text-gray-600 my-4" aria-label="パンくずリスト">
             <ol class="list-reset flex">
                 <li>
-                    <a href="index.html" class="hover:underline text-blue-600">ホーム</a>
+                    <a href="index.html" class="hover:underline text-slate-700">ホーム</a>
                 </li>
                 <li><span class="mx-2">/</span></li>
                 <li class="text-gray-500">会社概要</li>
@@ -257,7 +258,7 @@
     </div>
 
     <!-- 会社概要 -->
-    <section class="py-20 bg-white">
+    <section class="py-12 bg-white">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
@@ -1002,6 +1003,11 @@
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('hidden');
+            const btn = document.getElementById('mobileMenuButton');
+            if (btn) {
+                const expanded = btn.getAttribute('aria-expanded') === 'true';
+                btn.setAttribute('aria-expanded', (!expanded).toString());
+            }
         }
 
         // Smooth scrolling for anchor links
@@ -1020,6 +1026,8 @@
                 const mobileMenu = document.getElementById('mobileMenu');
                 if (!mobileMenu.classList.contains('hidden')) {
                     mobileMenu.classList.add('hidden');
+                    const btn = document.getElementById('mobileMenuButton');
+                    if (btn) btn.setAttribute('aria-expanded', 'false');
                 }
             });
         });
