@@ -10,6 +10,8 @@
         
         body {
             font-family: 'Noto Sans JP', sans-serif;
+            font-size: 14px;
+            color: #334155;
         }
         
         .gradient-bg {
@@ -44,7 +46,7 @@
         }
         
         .nav-link:hover {
-            color: #667eea;
+            color: #334155;
         }
         
         .nav-link::after {
@@ -54,7 +56,7 @@
             height: 2px;
             bottom: -4px;
             left: 0;
-            background-color: #667eea;
+            background-color: #334155;
             transition: width 0.3s ease;
         }
         
@@ -85,10 +87,11 @@
                 </nav>
                 
                 <!-- Mobile menu button -->
-                <button class="lg:hidden p-2" onclick="toggleMobileMenu()">
+                <button id="mobileMenuButton" class="lg:hidden p-2" type="button" onclick="toggleMobileMenu()" aria-label="メニュー" title="メニュー" aria-controls="mobileMenu" aria-expanded="false">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
+                    <span class="sr-only">メニュー</span>
                 </button>
             </div>
             
@@ -109,33 +112,33 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-white py-6 lg:py-10">
+    <section class="bg-white py-3 lg:py-6">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">課題の本質を共に見つけ、未来の事業をITで育てるパートナー</h1>
-            <h2 class="text-base lg:text-lg text-gray-700 mb-8 font-medium">お客様の業務に寄り添い、本当に必要なシステムを共に創り上げる。それがTWBの使命です。</h2>
-            <img src="images/page/top/tatsu-main.png" alt="TWB代表イメージ" class="w-full max-w-4xl h-auto object-cover rounded-xl shadow-lg mx-auto mb-6" style="max-width:100%;height:auto;" />
+            <h1 class="text-xl lg:text-2xl font-bold text-gray-900 mb-3">課題の本質を共に見つけ、未来の事業をITで育てるパートナー</h1>
+            <h2 class="text-sm lg:text-base text-gray-700 mb-6 font-medium">お客様の業務に寄り添い、本当に必要なシステムを共に創り上げる。それがTWBの使命です。</h2>
+            <img src="images/page/top/tatsu-main.png" alt="TWB代表イメージ" class="w-full h-auto object-cover rounded-xl shadow-md mx-auto mb-2 hero-illustration" />
         </div>
     </section>
 
     <!-- Intro Section -->
-    <section class="py-20 bg-white">
+    <section class="py-10 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-blue-900 mb-8 text-center">TWBのアプローチ</h2>
-            <div class="text-center mb-16">
-                <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6 text-center">TWBのアプローチ</h2>
+            <div class="text-center mb-10">
+                <h3 class="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
                     お客様の『業務』を深く理解することから始まります
                 </h3>
                 <div class="max-w-4xl mx-auto">
-                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    <p class="text-base text-gray-700 leading-relaxed mb-4">
                         新しいシステム開発を検討するとき、多くの企業は「どの機能を作るか」から議論を始めがちです。しかし、私たちは違います。まずお客様の『業務』を深く理解することから始め、お客様が抱えている「いまの課題」「これから実現したい未来」を言葉にするところからスタートします。
                     </p>
-                    <p class="text-lg text-gray-700 leading-relaxed">
+                    <p class="text-base text-gray-700 leading-relaxed">
                         目の前の仕様ではなく、事業そのものを正しく理解し、その言葉を「技術」に翻訳する。TWBが目指すのは、短期的なシステム導入ではなく、事業の進化を支える土台を共に築くことです。
                     </p>
                 </div>
             </div>
             <div class="text-center">
-                <a href="policy.html" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300">
+                <a href="policy.html" class="inline-block bg-slate-700 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-slate-800 transition-colors duration-300">
                     開発ポリシーを詳しく見る
                 </a>
             </div>
@@ -143,34 +146,34 @@
     </section>
 
     <!-- サービス内容(Document 3版) -->
-    <section id="services" class="py-20 bg-gray-50">
+    <section id="services" class="py-10 bg-gray-50">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-blue-900 mb-8 text-center">サービス内容</h2>
-            <div class="text-center mb-16">
-                <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6 text-center">サービス内容</h2>
+            <div class="text-center mb-10">
+                <h3 class="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
                     企画から運用まで、一貫したサポート体制
                 </h3>
-                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                <p class="text-base text-gray-700 max-w-3xl mx-auto">
                     システム開発から保守・運用、DX推進まで、お客様のビジネス成長を総合的にサポートします。
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-3 gap-6">
                 <!-- DXコンサルティング -->
                 <div class="service-card bg-white border border-gray-200 rounded-xl p-8 text-center">
-                    <div class="text-4xl mb-4">💭</div>
-                    <h3 class="text-xl font-bold text-blue-900 mb-4">DXコンサルティング</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
+                    <div class="text-3xl mb-3">💭</div>
+                    <h3 class="text-lg font-bold text-slate-800 mb-3">DXコンサルティング</h3>
+                    <p class="text-gray-600 mb-5 leading-relaxed text-sm">
                         システム化の企画段階から参画し、要件定義や業務プロセス改善をサポート。最適なDX戦略を共に策定します。
                     </p>
                     <div class="flex-grow">
-                        <h4 class="font-bold text-gray-800 mb-3">提供サービス</h4>
-                        <ul class="space-y-2 text-sm text-gray-700">
-                            <li class="flex"><span class="text-blue-600 mr-2">✓</span><strong>DXコンサルティング</strong></li>
-                            <li class="flex"><span class="text-blue-600 mr-2">✓</span><strong>業務分析・業務設計</strong></li>
-                            <li class="flex"><span class="text-blue-600 mr-2">✓</span><strong>要件定義支援</strong></li>
-                            <li class="flex"><span class="text-blue-600 mr-2">✓</span><strong>UI/UX設計</strong></li>
-                            <li class="flex"><span class="text-blue-600 mr-2">✓</span><strong>RFP作成支援</strong></li>
+                        <h4 class="font-bold text-gray-800 mb-2">提供サービス</h4>
+                        <ul class="space-y-1.5 text-sm text-gray-700">
+                            <li class="flex"><span class="text-slate-700 mr-2">✓</span><strong>DXコンサルティング</strong></li>
+                            <li class="flex"><span class="text-slate-700 mr-2">✓</span><strong>業務分析・業務設計</strong></li>
+                            <li class="flex"><span class="text-slate-700 mr-2">✓</span><strong>要件定義支援</strong></li>
+                            <li class="flex"><span class="text-slate-700 mr-2">✓</span><strong>UI/UX設計</strong></li>
+                            <li class="flex"><span class="text-slate-700 mr-2">✓</span><strong>RFP作成支援</strong></li>
                         </ul>
                     </div>
 <!--
@@ -186,19 +189,19 @@
                   </div>
                 <!-- システム開発 -->
                 <div class="service-card bg-white border border-gray-200 rounded-xl p-8 text-center">
-                    <div class="text-4xl mb-4">⚙️</div>
-                    <h3 class="text-xl font-bold text-blue-900 mb-4">システム開発</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
+                    <div class="text-3xl mb-3">⚙️</div>
+                    <h3 class="text-lg font-bold text-slate-800 mb-3">システム開発</h3>
+                    <p class="text-gray-600 mb-5 leading-relaxed text-sm">
                         お客様の業務に最適化されたオーダーメイドシステムを開発。新規開発からリプレイス、機能拡張まで対応します。
                     </p>
                     <div class="flex-grow">
-                        <h4 class="font-bold text-gray-800 mb-3">提供サービス</h4>
-                        <ul class="space-y-2 text-sm text-gray-700">
-                            <li class="flex"><span class="text-blue-600 mr-2">✓</span><strong>Webアプリケーション開発</strong></li>
-                            <li class="flex"><span class="text-blue-600 mr-2">✓</span><strong>業務システム開発</strong></li>
-                            <li class="flex"><span class="text-blue-600 mr-2">✓</span><strong>API開発・システム連携</strong></li>
-                            <li class="flex"><span class="text-blue-600 mr-2">✓</span><strong>クラウドインフラ構築</strong></li>
-                            <li class="flex"><span class="text-blue-600 mr-2">✓</span><strong>既存システム刷新</strong></li>
+                        <h4 class="font-bold text-gray-800 mb-2">提供サービス</h4>
+                        <ul class="space-y-1.5 text-sm text-gray-700">
+                            <li class="flex"><span class="text-slate-700 mr-2">✓</span><strong>Webアプリケーション開発</strong></li>
+                            <li class="flex"><span class="text-slate-700 mr-2">✓</span><strong>業務システム開発</strong></li>
+                            <li class="flex"><span class="text-slate-700 mr-2">✓</span><strong>API開発・システム連携</strong></li>
+                            <li class="flex"><span class="text-slate-700 mr-2">✓</span><strong>クラウドインフラ構築</strong></li>
+                            <li class="flex"><span class="text-slate-700 mr-2">✓</span><strong>既存システム刷新</strong></li>
                         </ul>
                     </div>
 <!--
@@ -215,19 +218,19 @@
 
                 <!-- 保守・運用 -->
                 <div class="service-card bg-white border border-gray-200 rounded-xl p-8 text-center">
-                    <div class="text-4xl mb-4">🔄</div>
-                    <h3 class="text-xl font-bold text-blue-900 mb-4">保守・運用</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
+                    <div class="text-3xl mb-3">🔄</div>
+                    <h3 class="text-lg font-bold text-slate-800 mb-3">保守・運用</h3>
+                    <p class="text-gray-600 mb-5 leading-relaxed text-sm">
                         システムの安定稼働と継続的改善をサポート。専任IT担当者の代わりとして、情報システム部門の機能を提供します。
                     </p>
                     <div class="flex-grow">
-                        <h4 class="font-bold text-gray-800 mb-3">提供サービス</h4>
-                        <ul class="space-y-2 text-sm text-gray-700">
-                            <li class="flex"><span class="text-blue-600 mr-2">✓</span><strong>システム保守・運用</strong></li>
-                            <li class="flex"><span class="text-blue-600 mr-2">✓</span><strong>継続的改善提案</strong></li>
-                            <li class="flex"><span class="text-blue-600 mr-2">✓</span><strong>データ活用支援</strong></li>
-                            <li class="flex"><span class="text-blue-600 mr-2">✓</span><strong>パフォーマンス最適化</strong></li>
-                            <li class="flex"><span class="text-blue-600 mr-2">✓</span><strong>機能拡張・追加開発</strong></li>
+                        <h4 class="font-bold text-gray-800 mb-2">提供サービス</h4>
+                        <ul class="space-y-1.5 text-sm text-gray-700">
+                            <li class="flex"><span class="text-slate-700 mr-2">✓</span><strong>システム保守・運用</strong></li>
+                            <li class="flex"><span class="text-slate-700 mr-2">✓</span><strong>継続的改善提案</strong></li>
+                            <li class="flex"><span class="text-slate-700 mr-2">✓</span><strong>データ活用支援</strong></li>
+                            <li class="flex"><span class="text-slate-700 mr-2">✓</span><strong>パフォーマンス最適化</strong></li>
+                            <li class="flex"><span class="text-slate-700 mr-2">✓</span><strong>機能拡張・追加開発</strong></li>
                         </ul>
                     </div>
 <!--
@@ -243,9 +246,9 @@
                 </div>
             </div>
         </div>
-        <div class="text-center mt-8">
-            <div class="text-center mt-12">
-                <a href="service.html" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300">
+        <div class="text-center mt-6">
+            <div class="text-center mt-8">
+                <a href="service.html" class="inline-block bg-slate-700 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-slate-800 transition-colors duration-300">
                     サービス内容を詳しく見る
                 </a>
             </div>
@@ -254,68 +257,68 @@
     </section>
 
      <!-- モダンで安定性の高い技術スタック -->
-<section class="py-20 bg-white">
+    <section class="py-10 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-4xl font-bold text-blue-900 mb-8 text-center">技術スタック</h2>
-        <div class="text-center mb-16">
-            <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
+        <h2 class="text-2xl font-bold text-slate-800 mb-6 text-center">技術スタック</h2>
+        <div class="text-center mb-10">
+            <h3 class="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
                 モダンで安定性の高い技術選定
             </h3>
-            <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+            <p class="text-base text-gray-700 max-w-3xl mx-auto">
                 最新技術と実績のある安定技術を適切に組み合わせ、将来の拡張性と保守性を確保したシステムを構築します。
             </p>
         </div>
         
-        <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-5">
-            <div class="bg-white rounded-lg p-5 border border-gray-200">
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-4">
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
                 <div class="flex items-center mb-3">
-                    <div class="w-10 h-10 bg-blue-600 text-white rounded-md flex items-center justify-center mr-3 flex-shrink-0"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div>
-                    <h3 class="text-lg font-bold text-slate-800">フロントエンド</h3>
+                    <div class="w-10 h-10 bg-slate-700 text-white rounded-md flex items-center justify-center mr-3 flex-shrink-0"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div>
+                    <h3 class="text-base font-bold text-slate-800">フロントエンド</h3>
                 </div>
-                <div class="space-y-2 text-sm text-gray-700">
+                <div class="space-y-1.5 text-sm text-gray-700">
                     <p><span class="font-semibold">フレームワーク:</span>Vue.js, React, Nuxt.js, Next.js</p>
                     <p><span class="font-semibold">スタイリング:</span>Tailwind CSS, Sass/SCSS</p>
                 </div>
             </div>
             
-            <div class="bg-white rounded-lg p-5 border border-gray-200">
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
                 <div class="flex items-center mb-3">
-                    <div class="w-10 h-10 bg-green-600 text-white rounded-md flex items-center justify-center mr-3 flex-shrink-0"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path></svg></div>
-                    <h3 class="text-lg font-bold text-slate-800">バックエンド</h3>
+                    <div class="w-10 h-10 bg-slate-700 text-white rounded-md flex items-center justify-center mr-3 flex-shrink-0"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path></svg></div>
+                    <h3 class="text-base font-bold text-slate-800">バックエンド</h3>
                 </div>
-                <div class="space-y-2 text-sm text-gray-700">
+                <div class="space-y-1.5 text-sm text-gray-700">
                     <p><span class="font-semibold">言語・FW:</span>PHP(Laravel), Node.js(NestJS), Python(Django)</p>
                     <p><span class="font-semibold">DB:</span>MySQL, PostgreSQL, Redis</p>
                 </div>
             </div>
             
-            <div class="bg-white rounded-lg p-5 border border-gray-200">
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
                 <div class="flex items-center mb-3">
-                    <div class="w-10 h-10 bg-orange-600 text-white rounded-md flex items-center justify-center mr-3 flex-shrink-0"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg></div>
-                    <h3 class="text-lg font-bold text-slate-800">インフラ・クラウド</h3>
+                    <div class="w-10 h-10 bg-slate-700 text-white rounded-md flex items-center justify-center mr-3 flex-shrink-0"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg></div>
+                    <h3 class="text-base font-bold text-slate-800">インフラ・クラウド</h3>
                 </div>
-                <div class="space-y-2 text-sm text-gray-700">
+                <div class="space-y-1.5 text-sm text-gray-700">
                     <p><span class="font-semibold">クラウド:</span>AWS</p>
                     <p><span class="font-semibold">コンテナ・CI/CD:</span>Docker, GitHub Actions, Jenkins</p>
                 </div>
             </div>
             
-            <div class="bg-white rounded-lg p-5 border border-gray-200">
+            <div class="bg-white rounded-lg p-4 border border-gray-200">
                 <div class="flex items-center mb-3">
-                    <div class="w-10 h-10 bg-purple-600 text-white rounded-md flex items-center justify-center mr-3 flex-shrink-0"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg></div>
-                    <h3 class="text-lg font-bold text-slate-800">品質・セキュリティ</h3>
+                    <div class="w-10 h-10 bg-slate-700 text-white rounded-md flex items-center justify-center mr-3 flex-shrink-0"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg></div>
+                    <h3 class="text-base font-bold text-slate-800">品質・セキュリティ</h3>
                 </div>
-                <div class="space-y-2 text-sm text-gray-700">
+                <div class="space-y-1.5 text-sm text-gray-700">
                     <p><span class="font-semibold">品質管理:</span>コードレビュー, 自動テスト, 静的解析</p>
                     <p><span class="font-semibold">セキュリティ:</span>WAF, 脆弱性診断, HTTPS標準化</p>
                 </div>
             </div>
         </div>
         
-        <div class="text-center mt-8">
-            <p class="text-sm text-gray-600 mb-4">技術選定は、お客様の環境や将来性を考慮し、最適な構成を提案します。</p>
-            <div class="text-center mt-12">
-                <a href="service.html" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300">
+        <div class="text-center mt-6">
+            <p class="text-sm text-gray-600 mb-3">技術選定は、お客様の環境や将来性を考慮し、最適な構成を提案します。</p>
+            <div class="text-center mt-8">
+                <a href="service.html" class="inline-block bg-slate-700 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-slate-800 transition-colors duration-300">
                     技術スタックを詳しく見る
                 </a>
             </div>
@@ -324,7 +327,7 @@
 </section>
 
 <!-- 対応業界・実績 -->
-<section class="py-20 bg-gray-50">
+<section class="py-16 bg-gray-50">
     <div class="max-w-6xl mx-auto px-6">
         <h2 class="text-4xl font-bold text-blue-900 mb-8 text-center">対応業界・実績</h2>
         <div class="text-center mb-16">
@@ -750,6 +753,11 @@
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('hidden');
+            const btn = document.getElementById('mobileMenuButton');
+            if (btn) {
+                const expanded = btn.getAttribute('aria-expanded') === 'true';
+                btn.setAttribute('aria-expanded', (!expanded).toString());
+            }
         }
 
         // Smooth scrolling for anchor links
@@ -768,6 +776,8 @@
                 const mobileMenu = document.getElementById('mobileMenu');
                 if (!mobileMenu.classList.contains('hidden')) {
                     mobileMenu.classList.add('hidden');
+                    const btn = document.getElementById('mobileMenuButton');
+                    if (btn) btn.setAttribute('aria-expanded', 'false');
                 }
             });
         });

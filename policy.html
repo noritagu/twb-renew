@@ -256,10 +256,11 @@
                 </nav>
                 
                 <!-- Mobile menu button -->
-                <button class="lg:hidden p-2" onclick="toggleMobileMenu()">
+                <button id="mobileMenuButton" class="lg:hidden p-2" type="button" onclick="toggleMobileMenu()" aria-label="メニュー" title="メニュー" aria-controls="mobileMenu" aria-expanded="false">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
+                    <span class="sr-only">メニュー</span>
                 </button>
             </div>
             
@@ -284,11 +285,11 @@
         <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <div class="fade-in">
-                    <h1 class="text-2xl lg:text-3xl font-bold leading-snug mb-8">
-                        <span class="text-blue-600">TWBの開発ポリシー</span>
+                    <h1 class="text-xl lg:text-2xl font-bold leading-snug mb-6">
+                        <span class="text-slate-800">TWBの開発ポリシー</span>
                     </h1>
                     <div class="max-w-4xl mx-auto">
-                        <p class="text-base lg:text-lg text-gray-700 leading-relaxed">
+                        <p class="text-sm lg:text-base text-gray-700 leading-relaxed">
                             多くのお客様から選ばれ、長く信頼され続ける理由。<br>
                             それは、私たちが実践している5つの開発ポリシーにあります。
                         </p>
@@ -326,7 +327,7 @@
             <!-- ポリシー1: ビジネスモデル・事業戦略の深い理解 -->
             <div class="policy-card">
                 <div class="flex items-center mb-8">
-                    <div class="policy-icon" style="margin-bottom: 0; margin-right: 1.5rem; width: 60px; height: 60px; font-size: 1.5rem; flex-shrink: 0;">🎯</div>
+                    <div class="policy-icon">🎯</div>
                     <h3 class="text-2xl font-bold text-gray-900">1. ビジネスモデル・事業戦略の深い理解から始める</h3>
                 </div>
 
@@ -371,7 +372,7 @@
             <!-- ポリシー2: スモールスタート&クイックウィン -->
             <div class="policy-card">
                 <div class="flex items-center mb-8">
-                    <div class="policy-icon" style="margin-bottom: 0; margin-right: 1.5rem; width: 60px; height: 60px; font-size: 1.5rem; flex-shrink: 0;">🚀</div>
+                    <div class="policy-icon">🚀</div>
                     <h3 class="text-2xl font-bold text-gray-900">2. スモールスタート&クイックウィン</h3>
                 </div>
 
@@ -416,7 +417,7 @@
             <!-- ポリシー3: 拡張性の高いシステム設計 -->
             <div class="policy-card">
                 <div class="flex items-center mb-8">
-                    <div class="policy-icon" style="margin-bottom: 0; margin-right: 1.5rem; width: 60px; height: 60px; font-size: 1.5rem; flex-shrink: 0;">🔧</div>
+                    <div class="policy-icon">🔧</div>
                     <h3 class="text-2xl font-bold text-gray-900">3. 拡張性の高いシステム設計</h3>
                 </div>
 
@@ -458,7 +459,7 @@
             <!-- ポリシー4: ベンダーロックインを作らない -->
             <div class="policy-card">
                 <div class="flex items-center mb-8">
-                    <div class="policy-icon" style="margin-bottom: 0; margin-right: 1.5rem; width: 60px; height: 60px; font-size: 1.5rem; flex-shrink: 0;">🔓</div>
+                    <div class="policy-icon">🔓</div>
                     <h3 class="text-2xl font-bold text-gray-900">4. ベンダーロックインを作らない、透明性の高い設計</h3>
                 </div>
 
@@ -503,7 +504,7 @@
             <!-- ポリシー5: 長期パートナーシップ -->
             <div class="policy-card">
                 <div class="flex items-center mb-8">
-                    <div class="policy-icon" style="margin-bottom: 0; margin-right: 1.5rem; width: 60px; height: 60px; font-size: 1.5rem; flex-shrink: 0;">🤝</div>
+                    <div class="policy-icon">🤝</div>
                     <h3 class="text-2xl font-bold text-gray-900">5. お客様の自走支援を見据えた、長期パートナーシップ</h3>
                 </div>
 
