@@ -5,128 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>提供サービスと技術力 | 株式会社TWB</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'Noto Sans JP', sans-serif;
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap');
+    
+    body {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 14px;
+        color: #334155;
+    }
+    
+    .card-hover {
+        transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    }
+    
+    .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.8s ease forwards;
+    }
+    
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
-        
-         .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-
-        .lg\:text-lg {
-            font-size: 1.0rem;
-            line-height: 1.75rem;
-        }
-
-        .text-blue-100 {
-            --tw-text-opacity: 1;
-            color: rgb(255 255 255);
-        }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-        
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.8s ease forwards;
-        }
-        
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .nav-link {
-            position: relative;
-            transition: color 0.3s ease;
-        }
-        
-        .nav-link:hover {
-            color: #667eea;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: #667eea;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .phase-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 1.5rem;
-            background: linear-gradient(135deg, #eabe66 0%, #af9a6d 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .service-card {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            border: 1px solid #e5e7eb;
-            height: 100%;
-        }
-        
-        .industry-card {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            border-radius: 12px;
-            padding: 0.5rem 0.5rem 1rem 0.5rem;
-            border: 1px solid #cbd5e1;
-            min-width: 0;
-            width: 100%;
-            box-sizing: border-box;
-            font-size: 0.95rem;
-        }
-
-        .hero-bg {
-            position: relative;
-            background: url('images/page/service/service_bg.jpg') center center/cover no-repeat;
-            min-height: 260px;
-        }
-        .hero-bg::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: rgba(255,255,255,0.70);
-        }
+    }
+    
+    .nav-link {
+        position: relative;
+        transition: color 0.3s ease;
+    }
+    
+    .nav-link:hover {
+        color: #334155;
+    }
+    
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #334155;
+        transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after {
+        width: 100%;
+    }
+    
+    .phase-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 1.5rem;
+        background: #334155;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .service-card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e5e7eb;
+        height: 100%;
+    }
+    
+    .industry-card {
+        background: white;
+        border-radius: 12px;
+        padding: 0.5rem 0.5rem 1rem 0.5rem;
+        border: 1px solid #e5e7eb;
+        min-width: 0;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 0.95rem;
+    }
+    
+    .hero-bg {
+        position: relative;
+        background: url('images/page/service/service_bg.jpg') center center/cover no-repeat;
+        min-height: 220px;
+    }
+    
+    .hero-bg::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.7);
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    
+    @media (min-width: 1024px) {
         .hero-content {
-            position: relative;
-            z-index: 1;
-            padding-top: 2rem;
-            padding-bottom: 2rem;
+            padding-top: 2.5rem;
+            padding-bottom: 2.5rem;
         }
-        @media (min-width: 1024px) {
-            .hero-content {
-                padding-top: 3.5rem;
-                padding-bottom: 3.5rem;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 <body class="bg-gray-50">
     <!-- Header -->
