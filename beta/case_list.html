@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>開発実績一覧 | 株式会社TWB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        body {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #334155;
+        }
+        
+        .nav-link {
+            font-size: 13px;
+            transition: color 0.2s;
+            padding: 0.5rem 0;
+        }
+        
+        .nav-link:hover {
+            color: #3b82f6;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .category-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        .category-header {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            color: white;
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .category-count {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9em;
+        }
+
+        thead {
+            background: #f8fafc;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        th {
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+            color: #475569;
+            white-space: nowrap;
+            font-size: 0.85em;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #f1f5f9;
+            transition: background-color 0.15s ease;
+        }
+
+        tbody tr:hover {
+            background-color: #f8fafc;
+        }
+
+        tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        td {
+            padding: 12px 16px;
+            vertical-align: top;
+            color: #64748b;
+        }
+
+        .industry-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75em;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .industry-it { background: #dbeafe; color: #1e40af; }
+        .industry-manufacturing { background: #fed7aa; color: #c2410c; }
+        .industry-real-estate { background: #e9d5ff; color: #7c3aed; }
+        .industry-consulting { background: #d1fae5; color: #065f46; }
+        .industry-service { background: #fecaca; color: #b91c1c; }
+        .industry-other { background: #e2e8f0; color: #475569; }
+
+        .scale-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75em;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .scale-large {
+            background: #fecaca;
+            color: #b91c1c;
+        }
+
+        .scale-medium {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .scale-small {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .tech-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            background: #f1f5f9;
+            color: #475569;
+            border-radius: 4px;
+            font-size: 0.7em;
+            font-weight: 500;
+            border: 1px solid #e2e8f0;
+        }
+
+        .system-type {
+            color: #475569;
+            line-height: 1.5;
+            font-size: 0.95em;
+        }
+
+        .date-range {
+            color: #64748b;
+            font-size: 0.85em;
+            white-space: nowrap;
+        }
+
+        .employee-count {
+            color: #64748b;
+            font-size: 0.85em;
+        }
+
+        .note-section {
+            background: #fef9c3;
+            border-left: 4px solid #eab308;
+            padding: 16px 20px;
+            margin: 32px 0;
+            border-radius: 4px;
+        }
+
+        .note-section h3 {
+            font-size: 1em;
+            font-weight: 600;
+            color: #713f12;
+            margin-bottom: 8px;
+        }
+
+        .note-section p {
+            color: #854d0e;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        /* hero section (from value.html) */
+        .hero-bg { position: relative; background: url('images/page/guide/guide_bg.jpg') center center/cover no-repeat; min-height: 260px; }
+    .hero-bg::before { content: ''; position: absolute; inset: 0; background: rgba(255,255,255,0.70); pointer-events: none; }
+        .hero-content { position: relative; z-index: 1; padding-top: 2rem; padding-bottom: 2rem; }
+        @media (min-width: 1024px) { .hero-content { padding-top: 3.5rem; padding-bottom: 3.5rem; } }
+
+        @media (max-width: 768px) {
+            .category-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            th, td {
+                padding: 8px 12px;
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header (from value.html) -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="index.html" class="block"><img src="images/common/pc_twb_logo.png" alt="株式会社TWBロゴ" class="h-10" /></a>
+                </div>
+                
+               <!-- Navigation -->
+                <nav class="hidden lg:flex space-x-8">
+                    <a href="case_list.html" class="nav-link text-gray-700 font-medium">開発実績</a>
+                    <a href="value.html" class="nav-link text-gray-700 font-medium">提供する価値</a>
+                    <a href="policy.html" class="nav-link text-gray-700 font-medium">開発ポリシー</a>
+                    <a href="whyus.html" class="nav-link text-gray-700 font-medium">選ばれる理由</a>
+                    <a href="service.html" class="nav-link text-gray-700 font-medium">サービス内容</a>
+                    <a href="cases.html" class="nav-link text-blue-600 font-medium">プロジェクト事例</a>
+                    <a href="company.html" class="nav-link text-gray-700 font-medium">会社概要</a>
+<!--
+                    <a href="reqruite.html" class="nav-link text-gray-700 font-medium">人材募集</a>
+-->
+                    <a href="contact.html" class="nav-link text-gray-700 font-medium">お問合わせ</a>
+                </nav>
+                
+                <!-- Mobile menu button -->
+                <button id="mobileMenuButton" class="lg:hidden p-2" type="button" onclick="toggleMobileMenu()" aria-label="メニュー" title="メニュー" aria-controls="mobileMenu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <span class="sr-only">メニュー</span>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobileMenu" class="lg:hidden hidden pb-4">
+                <div class="flex flex-col space-y-2">
+                    <a href="case_list.html" class="text-gray-700 py-2 border-b border-gray-200">開発実績</a>
+                    <a href="value.html" class="text-gray-700 py-2 border-b border-gray-200">提供する価値</a>
+                    <a href="policy.html" class="text-gray-700 py-2 border-b border-gray-200">開発ポリシー</a>
+                    <a href="why-choose.html" class="text-gray-700 py-2 border-b border-gray-200">WHY CHOOSE TWB</a>
+                    <a href="service.html" class="text-gray-700 py-2 border-b border-gray-200">サービス内容</a>
+                    <a href="cases.html" class="text-blue-600 py-2 border-b border-gray-200 font-medium">プロジェクト事例</a>
+                    <a href="company.html" class="text-gray-700 py-2 border-b border-gray-200">会社概要</a>
+<!--
+                    <a href="reqruite.html" class="text-gray-700 py-2 border-b border-gray-200">人材募集</a>
+-->                    <a href="contact.html" class="text-gray-700 py-2">お問合わせ</a>
+                </div>
+            </div>
+ 
+        </div>
+    </header>
+
+    <!-- Hero Section (from value.html, text adapted) -->
+    <section class="hero-bg text-gray-800">
+        <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="fade-in">
+                    <h1 class="text-2xl lg:text-3xl font-bold leading-snug mb-2 drop-shadow">開発実績一覧</h1>
+                    <div class="max-w-4xl mx-auto">
+                        <p class="text-base lg:text-lg mb-4 text-gray-700 max-w-3xl mx-auto drop-shadow">TWBがこれまでに手がけてきたプロジェクトの実績です。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-6 py-12">
+        
+        <!-- 基幹業務システム -->
+        <div class="category-card mb-8">
+            <div class="category-header">
+                <h2 class="text-lg font-semibold">基幹業務システム</h2>
+                <span class="category-count">41件 / 617人月</span>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 90px;">業界</th>
+                            <th style="width: 140px;">業種</th>
+                            <th style="width: 80px;">従業員規模</th>
+                            <th style="width: 240px;">システム種別</th>
+                            <th style="width: 180px;">技術スタック</th>
+                            <th style="width: 130px;">プロジェクト期間</th>
+                            <th style="width: 70px;">規模</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="industry-badge industry-manufacturing">製造業</span></td>
+                            <td>ショベル刃、製品製造・輸出</td>
+                            <td class="employee-count">13名</td>
+                            <td class="system-type">販売管理システム</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">オンプレ</span>
+                                    <span class="tech-badge">VB.Net</span>
+                                    <span class="tech-badge">PostgreSQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2017/02 - 2022/01</td>
+                            <td><span class="scale-badge scale-large">91人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-other">その他</span></td>
+                            <td>中古車流通業</td>
+                            <td class="employee-count">75名</td>
+                            <td class="system-type">取引管理システム</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">Laravel</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2019/12 - 2024/03</td>
+                            <td><span class="scale-badge scale-large">86人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-service">サービス</span></td>
+                            <td>マンション総合管理</td>
+                            <td class="employee-count">5,750名</td>
+                            <td class="system-type">工事受発注管理・協力業者管理システム</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">オンプレ</span>
+                                    <span class="tech-badge">Java</span>
+                                    <span class="tech-badge">Spring</span>
+                                    <span class="tech-badge">Terasoluna</span>
+                                    <span class="tech-badge">Oracle</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2019/05 - 2023/03</td>
+                            <td><span class="scale-badge scale-large">76人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-other">その他</span></td>
+                            <td>中古車流通業</td>
+                            <td class="employee-count">75名</td>
+                            <td class="system-type">在庫共有システム</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">Laravel</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2019/07 - 2021/03</td>
+                            <td><span class="scale-badge scale-large">64人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-real-estate">不動産</span></td>
+                            <td>コインランドリー経営</td>
+                            <td class="employee-count">8名</td>
+                            <td class="system-type">管理システム、モバイルアプリ</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">CakePHP</span>
+                                    <span class="tech-badge">Swift</span>
+                                    <span class="tech-badge">Kotlin</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2016/10 - 2022/01</td>
+                            <td><span class="scale-badge scale-large">58人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-other">その他</span></td>
+                            <td>中古車流通業</td>
+                            <td class="employee-count">75名</td>
+                            <td class="system-type">帳票作成システム</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">Laravel</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2020/04 - 2021/11</td>
+                            <td><span class="scale-badge scale-large">40人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-it">IT</span></td>
+                            <td>勤怠管理システム開発</td>
+                            <td class="employee-count">110名</td>
+                            <td class="system-type">勤怠管理システム</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">オンプレ</span>
+                                    <span class="tech-badge">VB.Net</span>
+                                    <span class="tech-badge">MS-SQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2015/04 - 2017/11</td>
+                            <td><span class="scale-badge scale-large">31人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-manufacturing">製造業</span></td>
+                            <td>化粧品、石鹸の製造卸</td>
+                            <td class="employee-count">社員35名<br>パート70名</td>
+                            <td class="system-type">在庫管理システム</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">オンプレ</span>
+                                    <span class="tech-badge">FileMaker</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2016/07 - 2016/10</td>
+                            <td><span class="scale-badge scale-medium">18人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-manufacturing">製造業</span></td>
+                            <td>化粧品、石鹸の製造卸</td>
+                            <td class="employee-count">社員35名<br>パート70名</td>
+                            <td class="system-type">EC受注・ロジ連携API構築プロジェクト</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">MySQL</span>
+                                    <span class="tech-badge">FileMaker</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2024/03 - 2024/09</td>
+                            <td><span class="scale-badge scale-medium">12人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-consulting">コンサル</span></td>
+                            <td>システム開発/コンサルティング</td>
+                            <td class="employee-count">250名</td>
+                            <td class="system-type">農業現場向け作業管理システム</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2018/10 - 2019/01</td>
+                            <td><span class="scale-badge scale-medium">11人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-it">IT</span></td>
+                            <td>Webメディア運営</td>
+                            <td class="employee-count">105名</td>
+                            <td class="system-type">データ分析システム</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">Embulk</span>
+                                    <span class="tech-badge">BigQuery</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2021/07 - 2022/03</td>
+                            <td><span class="scale-badge scale-medium">10人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-other">その他</span></td>
+                            <td>中古車流通業</td>
+                            <td class="employee-count">75名</td>
+                            <td class="system-type">データ移行バッチ</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">Laravel</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2020/04 - 2021/03</td>
+                            <td><span class="scale-badge scale-medium">9人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-service">サービス</span></td>
+                            <td>メンタルヘルスケア</td>
+                            <td class="employee-count">442名</td>
+                            <td class="system-type">面談管理システム機能改善</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2019/04 - 2019/09</td>
+                            <td><span class="scale-badge scale-medium">8人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-service">サービス</span></td>
+                            <td>メンタルヘルスケア</td>
+                            <td class="employee-count">442名</td>
+                            <td class="system-type">EC機能改善プロジェクト</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2018/09 - 2019/01</td>
+                            <td><span class="scale-badge scale-medium">7人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-service">サービス</span></td>
+                            <td>メンタルヘルスケア</td>
+                            <td class="employee-count">442名</td>
+                            <td class="system-type">業務アプリ開発プロジェクト</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2017/05 - 2017/10</td>
+                            <td><span class="scale-badge scale-medium">7人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-other">その他</span></td>
+                            <td>中古車流通業</td>
+                            <td class="employee-count">75名</td>
+                            <td class="system-type">電話履歴管理システム</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">Laravel</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2021/03 - 2021/05</td>
+                            <td><span class="scale-badge scale-medium">7人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-service">サービス</span></td>
+                            <td>メンタルヘルスケア</td>
+                            <td class="employee-count">442名</td>
+                            <td class="system-type">販売管理システム機能追加</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2017/12 - 2018/03</td>
+                            <td><span class="scale-badge scale-medium">6人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-other">その他</span></td>
+                            <td>中古車流通業</td>
+                            <td class="employee-count">75名</td>
+                            <td class="system-type">顧客管理CRM</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">Laravel</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2020/08 - 2020/10</td>
+                            <td><span class="scale-badge scale-medium">6人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-service">サービス</span></td>
+                            <td>メンタルヘルスケア</td>
+                            <td class="employee-count">442名</td>
+                            <td class="system-type">生活サポート事業システム</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2022/04 - 2022/07</td>
+                            <td><span class="scale-badge scale-medium">5人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-other">その他</span></td>
+                            <td>中古車流通業</td>
+                            <td class="employee-count">75名</td>
+                            <td class="system-type">取引先管理システム</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">Laravel</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2020/11 - 2021/02</td>
+                            <td><span class="scale-badge scale-medium">5人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-service">サービス</span></td>
+                            <td>メンタルヘルスケア</td>
+                            <td class="employee-count">442名</td>
+                            <td class="system-type">ストレスチェックシステム</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2016/10 - 2016/12</td>
+                            <td><span class="scale-badge scale-medium">5人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-service">サービス</span></td>
+                            <td>メンタルヘルスケア</td>
+                            <td class="employee-count">442名</td>
+                            <td class="system-type">健康管理システム機能追加</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2016/04 - 2016/06</td>
+                            <td><span class="scale-badge scale-medium">5人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-service">サービス</span></td>
+                            <td>メンタルヘルスケア</td>
+                            <td class="employee-count">442名</td>
+                            <td class="system-type">メンタルヘルスケアシステム</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2014/07 - 2014/09</td>
+                            <td><span class="scale-badge scale-medium">5人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-other">その他</span></td>
+                            <td>中古車流通業</td>
+                            <td class="employee-count">75名</td>
+                            <td class="system-type">画像共有システム</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">Laravel</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2020/03 - 2020/04</td>
+                            <td><span class="scale-badge scale-small">4人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-other">その他</span></td>
+                            <td>中古車流通業</td>
+                            <td class="employee-count">75名</td>
+                            <td class="system-type">業務フォーム</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">Laravel</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2021/02 - 2021/03</td>
+                            <td><span class="scale-badge scale-small">4人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-it">IT</span></td>
+                            <td>ブログ・SNS運営</td>
+                            <td class="employee-count">18名</td>
+                            <td class="system-type">案件管理システム</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">Laravel</span>
+                                    <span class="tech-badge">PostgreSQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2019/10 - 2019/11</td>
+                            <td><span class="scale-badge scale-small">4人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-service">サービス</span></td>
+                            <td>メンタルヘルスケア</td>
+                            <td class="employee-count">442名</td>
+                            <td class="system-type">売上計上システム機能追加</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2019/02 - 2019/03</td>
+                            <td><span class="scale-badge scale-small">4人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-service">サービス</span></td>
+                            <td>メンタルヘルスケア</td>
+                            <td class="employee-count">442名</td>
+                            <td class="system-type">定期発送申込管理システム</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2016/01 - 2016/03</td>
+                            <td><span class="scale-badge scale-small">4人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-other">その他</span></td>
+                            <td>中古車流通業</td>
+                            <td class="employee-count">75名</td>
+                            <td class="system-type">顧客接点情報入力システム</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">Laravel</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2021/11 - 2021/12</td>
+                            <td><span class="scale-badge scale-small">3人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-service">サービス</span></td>
+                            <td>マンション総合管理</td>
+                            <td class="employee-count">5,750名</td>
+                            <td class="system-type">入札管理システム調査</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">オンプレ</span>
+                                    <span class="tech-badge">Java</span>
+                                    <span class="tech-badge">Oracle</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2017/12 - 2018/01</td>
+                            <td><span class="scale-badge scale-small">3人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-other">その他</span></td>
+                            <td>中古車流通業</td>
+                            <td class="employee-count">75名</td>
+                            <td class="system-type">仕入れ業者管理システム</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">Laravel</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2020/01 - 2020/02</td>
+                            <td><span class="scale-badge scale-small">3人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-it">IT</span></td>
+                            <td>Web制作、デジタルコンテンツ制作</td>
+                            <td class="employee-count">46名</td>
+                            <td class="system-type">予約サイト構築、データ連携</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">Laravel</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2022/06 - 2022/09</td>
+                            <td><span class="scale-badge scale-small">3人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-other">その他</span></td>
+                            <td>中古車流通業</td>
+                            <td class="employee-count">75名</td>
+                            <td class="system-type">車両情報連携ツール</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">Laravel</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2020/11 - 2020/11</td>
+                            <td><span class="scale-badge scale-small">2人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-other">その他</span></td>
+                            <td>中古車流通業</td>
+                            <td class="employee-count">75名</td>
+                            <td class="system-type">複数条件検索</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">Laravel</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2021/02 - 2021/02</td>
+                            <td><span class="scale-badge scale-small">2人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-service">サービス</span></td>
+                            <td>メンタルヘルスケア</td>
+                            <td class="employee-count">442名</td>
+                            <td class="system-type">集団分析システム開発</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2014/10 - 2014/10</td>
+                            <td><span class="scale-badge scale-small">2人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-service">サービス</span></td>
+                            <td>メンタルヘルスケア</td>
+                            <td class="employee-count">442名</td>
+                            <td class="system-type">産業医管理システム</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2014/12 - 2015/01</td>
+                            <td><span class="scale-badge scale-small">2人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-service">サービス</span></td>
+                            <td>メンタルヘルスケア</td>
+                            <td class="employee-count">442名</td>
+                            <td class="system-type">ストレスチェック管理システム2020</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2020/08 - 2020/08</td>
+                            <td><span class="scale-badge scale-small">1人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-service">サービス</span></td>
+                            <td>メンタルヘルスケア</td>
+                            <td class="employee-count">442名</td>
+                            <td class="system-type">メンタルヘルスケアシステム</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2015/09 - 2015/09</td>
+                            <td><span class="scale-badge scale-small">1人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-service">サービス</span></td>
+                            <td>メンタルヘルスケア</td>
+                            <td class="employee-count">442名</td>
+                            <td class="system-type">健康チェックシステム</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2015/04 - 2015/04</td>
+                            <td><span class="scale-badge scale-small">1人月</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Webサービス・アプリケーション -->
+        <div class="category-card mb-8">
+            <div class="category-header">
+                <h2 class="text-lg font-semibold">Webサービス・アプリケーション</h2>
+                <span class="category-count">8件 / 16人月</span>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 90px;">業界</th>
+                            <th style="width: 140px;">業種</th>
+                            <th style="width: 80px;">従業員規模</th>
+                            <th style="width: 240px;">システム種別</th>
+                            <th style="width: 180px;">技術スタック</th>
+                            <th style="width: 130px;">プロジェクト期間</th>
+                            <th style="width: 70px;">規模</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="industry-badge industry-it">IT</span></td>
+                            <td>Web制作、デジタルコンテンツ制作</td>
+                            <td class="employee-count">46名</td>
+                            <td class="system-type">キャンペーンサイト</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">Laravel</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2023/02 - 2023/05</td>
+                            <td><span class="scale-badge scale-small">2人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-it">IT</span></td>
+                            <td>Web制作、デジタルコンテンツ制作</td>
+                            <td class="employee-count">46名</td>
+                            <td class="system-type">Webサービス（動画連携・配信）</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">Nuxt.js</span>
+                                    <span class="tech-badge">Laravel</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2022/05 - 2023/06</td>
+                            <td><span class="scale-badge scale-small">2人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-it">IT</span></td>
+                            <td>Web制作、デジタルコンテンツ制作</td>
+                            <td class="employee-count">46名</td>
+                            <td class="system-type">サービス利用管理サイト</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">Laravel</span>
+                                    <span class="tech-badge">React</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2021/02 - 2021/02</td>
+                            <td><span class="scale-badge scale-small">2人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-it">IT</span></td>
+                            <td>Web制作、デジタルコンテンツ制作</td>
+                            <td class="employee-count">46名</td>
+                            <td class="system-type">ガチャシステム/エンタメサービス</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">Laravel</span>
+                                    <span class="tech-badge">Nuxt.js</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2021/08 - 2023/06</td>
+                            <td><span class="scale-badge scale-small">2人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-real-estate">不動産</span></td>
+                            <td>戸建住宅分譲事業</td>
+                            <td class="employee-count">797名</td>
+                            <td class="system-type">物件検索ポータルサイト</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">Laravel</span>
+                                    <span class="tech-badge">React</span>
+                                    <span class="tech-badge">PostgreSQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2024/02 - 2024/02</td>
+                            <td><span class="scale-badge scale-small">1人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-service">サービス</span></td>
+                            <td>メンタルヘルスケア</td>
+                            <td class="employee-count">442名</td>
+                            <td class="system-type">メンタルヘルスケアポータルサイト</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">Laravel</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2024/01 - 2024/01</td>
+                            <td><span class="scale-badge scale-small">1人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-it">IT</span></td>
+                            <td>Web制作、デジタルコンテンツ制作</td>
+                            <td class="employee-count">46名</td>
+                            <td class="system-type">抽選番号管理・発表Webサービス</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2018/06 - 2018/06</td>
+                            <td><span class="scale-badge scale-small">1人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-it">IT</span></td>
+                            <td>Web制作、デジタルコンテンツ制作</td>
+                            <td class="employee-count">46名</td>
+                            <td class="system-type">デジタルプロモーションWebサービス</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">Laravel</span>
+                                    <span class="tech-badge">React</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2023/05 - 2023/05</td>
+                            <td><span class="scale-badge scale-small">1人月</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- インフラ・開発支援 -->
+        <div class="category-card mb-8">
+            <div class="category-header">
+                <h2 class="text-lg font-semibold">インフラ・開発支援</h2>
+                <span class="category-count">3件 / 6人月</span>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 90px;">業界</th>
+                            <th style="width: 140px;">業種</th>
+                            <th style="width: 80px;">従業員規模</th>
+                            <th style="width: 240px;">システム種別</th>
+                            <th style="width: 180px;">技術スタック</th>
+                            <th style="width: 130px;">プロジェクト期間</th>
+                            <th style="width: 70px;">規模</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="industry-badge industry-service">サービス</span></td>
+                            <td>メンタルヘルスケア</td>
+                            <td class="employee-count">442名</td>
+                            <td class="system-type">サーバー移行・インフラ構築</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">AlmaLinux</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2021/12 - 2021/12</td>
+                            <td><span class="scale-badge scale-small">3人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-it">IT</span></td>
+                            <td>Web制作、デジタルコンテンツ制作</td>
+                            <td class="employee-count">46名</td>
+                            <td class="system-type">バックエンド開発支援システム</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">Node.js</span>
+                                    <span class="tech-badge">PostgreSQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2023/05 - 2025/01</td>
+                            <td><span class="scale-badge scale-small">2人月</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="industry-badge industry-service">サービス</span></td>
+                            <td>メンタルヘルスケア</td>
+                            <td class="employee-count">442名</td>
+                            <td class="system-type">SAP導入支援・開発支援</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">SAP</span>
+                                    <span class="tech-badge">EAI</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2020/07 - 2020/07</td>
+                            <td><span class="scale-badge scale-small">1人月</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Webサイト制作 -->
+        <div class="category-card mb-8">
+            <div class="category-header">
+                <h2 class="text-lg font-semibold">Webサイト制作</h2>
+                <span class="category-count">1件 / 3人月</span>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 90px;">業界</th>
+                            <th style="width: 140px;">業種</th>
+                            <th style="width: 80px;">従業員規模</th>
+                            <th style="width: 240px;">システム種別</th>
+                            <th style="width: 180px;">技術スタック</th>
+                            <th style="width: 130px;">プロジェクト期間</th>
+                            <th style="width: 70px;">規模</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="industry-badge industry-manufacturing">製造業</span></td>
+                            <td>化粧品、石鹸の製造卸</td>
+                            <td class="employee-count">社員35名<br>パート70名</td>
+                            <td class="system-type">化粧品通販ブランドサイト</td>
+                            <td>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">AWS</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                            </td>
+                            <td class="date-range">2019/02 - 2021/05</td>
+                            <td><span class="scale-badge scale-small">3人月</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Note Section -->
+        <div class="note-section">
+            <h3>技術スタックについて</h3>
+            <p>表記されている技術スタックは各プロジェクトで主に使用した技術です。プロジェクトの規模や要件に応じて、最適な技術の組み合わせをご提案いたします。</p>
+        </div>
+    </div>
+
+    <!-- Footer (from value.html) -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">株式会社TWB</h4>
+                    <p class="text-gray-300 text-sm leading-relaxed">お客様の「事業の成果」を実現するシステム会社</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">会社情報</h4>
+                    <div class="text-gray-300 text-sm space-y-2">
+                        <p>〒333-0862<br>埼玉県川口市北園町2－9<br>北園サンハイム2　201</p>
+                        <p>TEL: 048-423-9832</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">サービス</h4>
+                    <div class="text-gray-300 text-sm space-y-2">
+                        <a href="value.html" class="block hover:text-white transition-colors">TWBの強み</a>
+                        <a href="policy.html" class="block hover:text-white transition-colors">開発ポリシー</a>
+                        <a href="whyus.html" class="block hover:text-white transition-colors">選ばれる理由</a>
+                        <a href="service.html" class="block hover:text-white transition-colors">サービス内容</a>
+                        <a href="cases.html" class="block hover:text-white transition-colors">プロジェクト実績</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">企業情報</h4>
+                    <div class="text-gray-300 text-sm space-y-2">
+                        <a href="company.html" class="block hover:text-white transition-colors">会社概要</a>
+                        <a href="reqruite.html" class="block hover:text-white transition-colors">人材募集</a>
+                        <a href="contact.html" class="block hover:text-white transition-colors">お問合わせ</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400 text-sm">© 2024 株式会社TWB. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+            const btn = document.getElementById('mobileMenuButton');
+            if (btn) {
+                const expanded = btn.getAttribute('aria-expanded') === 'true';
+                btn.setAttribute('aria-expanded', (!expanded).toString());
+            }
+        }
+    </script>
+</body>
+</html>

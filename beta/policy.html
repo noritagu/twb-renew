@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="light" style=""><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プロジェクトの不安を解消する、TWBの開発ポリシー | 株式会社TWB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap');
+
+      body {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 14px;
+        color: #334155;
+      }
+
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+
+      .card-hover:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.8s ease forwards;
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .nav-link {
+        position: relative;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link:hover {
+        color: #334155;
+      }
+
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #334155;
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .policy-card {
+        background: white;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e5e7eb;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 2rem;
+      }
+
+      .policy-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        background: #334155;
+        color: white;
+        font-size: 1.5rem;
+      }
+
+      .benefit-item {
+        background: #f8fafc;
+        border-radius: 8px;
+        padding: 1rem;
+        border-left: 4px solid #334155;
+        margin-bottom: 0.75rem;
+      }
+
+      .policy-summary {
+        background: #f8fafc;
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        border-left: 4px solid #334155;
+      }
+
+      .policy-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .policy-list li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #e5e7eb;
+        color: #334155;
+        font-weight: 500;
+      }
+
+      .policy-list li:last-child {
+        border-bottom: none;
+      }
+
+      .policy-list li::before {
+        content: '✓';
+        color: #334155;
+        font-weight: bold;
+        margin-right: 0.5rem;
+      }
+
+      .next-steps-card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e5e7eb;
+        text-align: center;
+      }
+
+      .next-steps-card h4 {
+        color: #334155;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        font-size: 1.125rem;
+      }
+
+      .next-steps-card p {
+        color: #64748b;
+        margin-bottom: 1rem;
+      }
+
+      .next-steps-card a {
+        color: #334155;
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .next-steps-card a:hover {
+        color: #1e293b;
+      }
+
+      .hero-bg {
+        position: relative;
+        background: url('images/page/policy/policy_bg.jpg') center center/cover no-repeat;
+        min-height: 220px;
+      }
+      .hero-bg::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.7);
+      }
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+      }
+      @media (min-width: 1024px) {
+        .hero-content {
+          padding-top: 2.5rem;
+          padding-bottom: 2.5rem;
+        }
+      }
+    </style>
+  <style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0}.sticky{position:sticky}.top-0{top:0px}.z-50{z-index:50}.mx-2{margin-left:0.5rem;margin-right:0.5rem}.mx-auto{margin-left:auto;margin-right:auto}.my-4{margin-top:1rem;margin-bottom:1rem}.mb-1{margin-bottom:0.25rem}.mb-10{margin-bottom:2.5rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mr-2{margin-right:0.5rem}.mr-3{margin-right:0.75rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-12{height:3rem}.h-6{height:1.5rem}.w-10{width:2.5rem}.w-12{width:3rem}.w-6{width:1.5rem}.w-full{width:100%}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.max-w-5xl{max-width:64rem}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.gap-3{gap:0.75rem}.space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-gray-700{--tw-border-opacity:1;border-color:rgb(55 65 81 / var(--tw-border-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity, 1))}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.p-2{padding:0.5rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-4{padding-bottom:1rem}.pt-6{padding-top:1.5rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.opacity-90{opacity:0.9}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.drop-shadow{--tw-drop-shadow:drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.hover\:text-slate-800:hover{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}@media (min-width: 640px){.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:text-2xl{font-size:1.5rem;line-height:2rem}.lg\:text-base{font-size:1rem;line-height:1.5rem}}</style><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0}.sticky{position:sticky}.top-0{top:0px}.z-50{z-index:50}.mx-2{margin-left:0.5rem;margin-right:0.5rem}.mx-auto{margin-left:auto;margin-right:auto}.my-4{margin-top:1rem;margin-bottom:1rem}.mb-1{margin-bottom:0.25rem}.mb-10{margin-bottom:2.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-6{margin-top:1.5rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-12{height:3rem}.h-6{height:1.5rem}.w-12{width:3rem}.w-6{width:1.5rem}.w-full{width:100%}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-3{gap:0.75rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-gray-700{--tw-border-opacity:1;border-color:rgb(55 65 81 / var(--tw-border-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity, 1))}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.p-2{padding:0.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-4{padding-bottom:1rem}.pt-6{padding-top:1.5rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}@media (min-width: 640px){.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:text-2xl{font-size:1.5rem;line-height:2rem}}</style></head>
+  <body class="bg-gray-50" style="">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center">
+            <a href="index.html" class="block"><img src="images/common/pc_twb_logo.png" alt="株式会社TWBロゴ" class="h-10" data-height-listener-added="true"></a>
+          </div>
+
+               <!-- Navigation -->
+                <nav class="hidden lg:flex space-x-8">
+                    <a href="case_list.html" class="nav-link text-gray-700 font-medium">開発実績</a>
+                    <a href="value.html" class="nav-link text-gray-700 font-medium">提供する価値</a>
+                    <a href="policy.html" class="nav-link text-blue-600 font-medium">開発ポリシー</a>
+                    <a href="whyus.html" class="nav-link text-gray-700 font-medium">選ばれる理由</a>
+                    <a href="service.html" class="nav-link text-gray-700 font-medium">サービス内容</a>
+                    <a href="cases.html" class="nav-link text-gray-700 font-medium">プロジェクト事例</a>
+                    <a href="company.html" class="nav-link text-gray-700 font-medium">会社概要</a>
+                    <a href="contact.html" class="nav-link text-gray-700 font-medium">お問合わせ</a>
+                </nav>
+                
+                <!-- Mobile menu button -->
+                <button id="mobileMenuButton" class="lg:hidden p-2" type="button" onclick="toggleMobileMenu()" aria-label="メニュー" title="メニュー" aria-controls="mobileMenu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <span class="sr-only">メニュー</span>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobileMenu" class="lg:hidden hidden pb-4">
+                <div class="flex flex-col space-y-2">
+                    <a href="case_list.html" class="text-gray-700 py-2 border-b border-gray-200">開発実績</a>
+                    <a href="value.html" class="text-gray-700 py-2 border-b border-gray-200">提供する価値</a>
+                    <a href="policy.html" class="text-blue-600 py-2 border-b border-gray-200 font-medium">開発ポリシー</a>
+                    <a href="why-choose.html" class="text-gray-700 py-2 border-b border-gray-200">WHY CHOOSE TWB</a>
+                    <a href="service.html" class="text-gray-700 py-2 border-b border-gray-200">サービス内容</a>
+                    <a href="cases.html" class="text-gray-700 py-2 border-b border-gray-200">プロジェクト事例</a>
+                    <a href="company.html" class="text-gray-700 py-2 border-b border-gray-200">会社概要</a>
+                    <a href="contact.html" class="text-gray-700 py-2">お問合わせ</a>
+                </div>
+            </div>
+ 
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-gray-800">
+      <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <div class="fade-in">
+            <h1 class="text-xl lg:text-2xl font-bold leading-snug mb-4">
+              <span class="text-slate-800">TWBの開発ポリシー</span>
+            </h1>
+            <div class="max-w-4xl mx-auto">
+              <p class="text-base text-gray-700 leading-relaxed">
+                多くのお客様から選ばれ、長く信頼され続ける理由。<br>
+                それは、私たちが実践している5つの開発ポリシーにあります。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- パンくずリスト -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-sm text-gray-600 my-4" aria-label="パンくずリスト">
+        <ol class="list-reset flex">
+          <li>
+            <a href="index.html" class="hover:underline text-slate-600">ホーム</a>
+          </li>
+          <li><span class="mx-2">/</span></li>
+          <li class="text-gray-500">開発ポリシー</li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- ポリシー紹介 -->
+    <section class="py-10 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">
+            <span class="text-slate-700">TWBの開発ポリシー</span>
+          </h2>
+          <p class="text-base text-gray-700 max-w-3xl mx-auto">私たちは、以下の5つを開発の基本ポリシーとしています。</p>
+        </div>
+
+        <!-- ポリシー1: ビジネスモデル・事業戦略の深い理解 -->
+        <div class="policy-card">
+          <div class="flex items-center mb-6">
+            <div class="policy-icon">🎯</div>
+            <h3 class="text-xl font-bold text-gray-900">1. ビジネスモデル・事業戦略の深い理解から始める</h3>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-8 items-start">
+            <div>
+              <img src="images/page/policy/policy_img01_1.png" alt="ビジネスモデル・事業戦略の深い理解" class="w-full rounded-lg shadow-md" data-height-listener-added="true">
+            </div>
+            <div>
+              <div class="text-base text-gray-700 leading-relaxed space-y-3">
+                <p>
+                  新しいシステム開発を検討するとき、多くの企業は「どの機能を作るか」から議論を始めがちです。しかし、私たちは違います。
+                </p>
+                <p>
+                  まず、お客様の事業モデル、業務フロー、組織構造、将来ビジョンを深く理解することから始めます。「なぜこのシステムが必要なのか」、「事業戦略の中でどのような位置づけなのか」、「将来どのように成長していきたいのか」。こうした本質的な問いに向き合うことで、表面的な要件の奥にある真の課題が見えてきます。
+                </p>
+                <p class="font-semibold text-slate-800">
+                  目の前の仕様ではなく、事業そのものを正しく理解し、その言葉を「技術」に翻訳する。TWBが目指すのは、短期的なシステム導入ではなく、事業の進化を支える土台を共に築くことです。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <h4 class="text-lg font-bold text-gray-900 mb-3">お客様にとってのメリット</h4>
+            <div class="grid md:grid-cols-3 gap-3">
+              <div class="benefit-item">
+                <p class="font-semibold text-slate-800 mb-1">投資の集中</p>
+                <p class="text-gray-600 text-sm">本当に必要な機能だけに投資を集中できる</p>
+              </div>
+              <div class="benefit-item">
+                <p class="font-semibold text-slate-800 mb-1">投資対効果の最大化</p>
+                <p class="text-gray-600 text-sm">事業戦略とシステムが整合し、投資対効果が最大化する</p>
+              </div>
+              <div class="benefit-item">
+                <p class="font-semibold text-slate-800 mb-1">柔軟な設計</p>
+                <p class="text-gray-600 text-sm">将来の事業変化にも対応できる、柔軟な設計が実現する</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ポリシー2: スモールスタート&クイックウィン -->
+        <div class="policy-card">
+          <div class="flex items-center mb-6">
+            <div class="policy-icon">🚀</div>
+            <h3 class="text-xl font-bold text-gray-900">2. スモールスタート&amp;クイックウィン</h3>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-8 items-start">
+            <div>
+              <div class="text-base text-gray-700 leading-relaxed space-y-3">
+                <p>
+                  大規模な初期投資でリスクを取るのではなく、小さく始めて成果を確認しながら拡張していく。これが、TWBが推奨する開発アプローチです。
+                </p>
+                <p>
+                  最小限の機能でまず効果を実感していただき、そこから段階的に機能を追加していく。この方法なら、予算・期間のリスクを最小化しながら、確実に成果を積み上げられます。また、実際に使ってみて初めて分かる改善点や新たなニーズにも、柔軟に対応できます。
+                </p>
+                <p class="font-semibold text-slate-800">
+                  「完璧なシステムを最初から作る」のではなく、「お客様と一緒に育てていく」。この姿勢が、多くのプロジェクトを成功に導いてきました。
+                </p>
+              </div>
+            </div>
+            <div>
+              <img src="images/page/policy/policy_img02_2.png" alt="スモールスタート&amp;クイックウィン" class="w-full rounded-lg shadow-md" data-height-listener-added="true">
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <h4 class="text-lg font-bold text-gray-900 mb-3">お客様にとってのメリット</h4>
+            <div class="grid md:grid-cols-3 gap-3">
+              <div class="benefit-item">
+                <p class="font-semibold text-slate-800 mb-1">早期効果実感</p>
+                <p class="text-gray-600 text-sm">初期投資を抑えながら、早期に効果を実感できる</p>
+              </div>
+              <div class="benefit-item">
+                <p class="font-semibold text-slate-800 mb-1">低リスク</p>
+                <p class="text-gray-600 text-sm">実際に使いながら改善できるため、失敗リスクが低い</p>
+              </div>
+              <div class="benefit-item">
+                <p class="font-semibold text-slate-800 mb-1">柔軟な調整</p>
+                <p class="text-gray-600 text-sm">予算・スケジュールの状況に応じて、柔軟に優先順位を調整できる</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ポリシー3: 拡張性の高いシステム設計 -->
+        <div class="policy-card">
+          <div class="flex items-center mb-6">
+            <div class="policy-icon">🔧</div>
+            <h3 class="text-xl font-bold text-gray-900">3. 拡張性の高いシステム設計</h3>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-8 items-start">
+            <div>
+              <img src="images/page/policy/policy_img03_3.png" alt="拡張性の高いシステム設計" class="w-full rounded-lg shadow-md" data-height-listener-added="true">
+            </div>
+            <div>
+              <div class="text-base text-gray-700 leading-relaxed space-y-3">
+                <p>
+                  お客様の事業は成長し、変化していきます。従業員が増え、取引先が増え、新しいサービスが生まれる。そのとき、システムが足かせになってしまっては本末転倒です。
+                </p>
+                <p class="font-semibold text-slate-800">
+                  私たちは、将来の事業拡大や要件変更に柔軟に対応できる拡張性を重視した設計を行います。「今、必要な機能」だけでなく、「将来、必要になるかもしれない変更」も視野に入れた設計を行うことで、後から大幅な作り直しが必要になるリスクを回避します。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <h4 class="text-lg font-bold text-gray-900 mb-3">お客様にとってのメリット</h4>
+            <div class="grid md:grid-cols-3 gap-3">
+              <div class="benefit-item">
+                <p class="font-semibold text-slate-800 mb-1">システム成長</p>
+                <p class="text-gray-600 text-sm">事業拡大に合わせてシステムも成長させられる</p>
+              </div>
+              <div class="benefit-item">
+                <p class="font-semibold text-slate-800 mb-1">作り直し不要</p>
+                <p class="text-gray-600 text-sm">新しい要件が出てきても、大幅な作り直しが不要</p>
+              </div>
+              <div class="benefit-item">
+                <p class="font-semibold text-slate-800 mb-1">費用対効果最大化</p>
+                <p class="text-gray-600 text-sm">長期的な視点で、システム投資の費用対効果を最大化できる</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ポリシー4: ベンダーロックインを作らない -->
+        <div class="policy-card">
+          <div class="flex items-center mb-6">
+            <div class="policy-icon">🔓</div>
+            <h3 class="text-xl font-bold text-gray-900">4. ベンダーロックインを作らない、透明性の高い設計</h3>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-8 items-start">
+            <div>
+              <div class="text-base text-gray-700 leading-relaxed space-y-3">
+                <p>
+                  私たちは、お客様が将来、他のベンダーに移行することも可能なよう、システムの仕様書・設計書は詳細に残し、透明な情報提供を行います。
+                </p>
+                <p>
+                  特定のベンダーにしかメンテナンスできないブラックボックス化したシステムや、独自技術で固められた脱出不可能な構成は作りません。標準的な技術・オープンな設計により、お客様が選択の自由を維持できるよう配慮します。
+                </p>
+                <p class="font-semibold text-slate-800">
+                  技術的な情報を包み隠さず共有し、システムの内部構造も明確にドキュメント化する。この透明性が、お客様の将来の選択肢を広げます。
+                </p>
+              </div>
+            </div>
+            <div>
+              <img src="images/page/policy/policy_img04_4.png" alt="ベンダーロックインを作らない、透明性の高い設計" class="w-full rounded-lg shadow-md" data-height-listener-added="true">
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <h4 class="text-lg font-bold text-gray-900 mb-3">お客様にとってのメリット</h4>
+            <div class="grid md:grid-cols-3 gap-3">
+              <div class="benefit-item">
+                <p class="font-semibold text-slate-800 mb-1">選択の自由</p>
+                <p class="text-gray-600 text-sm">将来、他のベンダーへの移行も選択肢として残せる</p>
+              </div>
+              <div class="benefit-item">
+                <p class="font-semibold text-slate-800 mb-1">長期保守性</p>
+                <p class="text-gray-600 text-sm">システムのブラックボックス化を回避し、長期的な保守性を確保できる</p>
+              </div>
+              <div class="benefit-item">
+                <p class="font-semibold text-slate-800 mb-1">安心感</p>
+                <p class="text-gray-600 text-sm">透明性の高い情報提供により、安心してプロジェクトを進められる</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ポリシー5: 長期パートナーシップ -->
+        <div class="policy-card">
+          <div class="flex items-center mb-6">
+            <div class="policy-icon">🤝</div>
+            <h3 class="text-xl font-bold text-gray-900">5. お客様の自走支援を見据えた、長期パートナーシップ</h3>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-8 items-start">
+            <div>
+              <img src="images/page/policy/policy_img05_5.png" alt="お客様の自走支援を見据えた、長期パートナーシップ" class="w-full rounded-lg shadow-md" data-height-listener-added="true">
+            </div>
+            <div>
+              <div class="text-base text-gray-700 leading-relaxed space-y-3">
+                <p>
+                  私たちが目指すのは、単なる受託開発ではありません。お客様のビジネスに深く寄り添い、共に成長していく「真のパートナーシップ」です。
+                </p>
+                <p>
+                  システム導入後も、運用・改善・拡張を継続的にサポートします。そして同時に、お客様自身がシステムを理解し、自走できるよう支援していきます。必要な知識の移転、運用ノウハウの共有、技術的な判断基準の伝達。これらを通じて、お客様の自立を促します。
+                </p>
+                <p>
+                  依存関係を作るのではなく、信頼関係を築く。お客様が「TWBに任せたい」と思っていただけるよう、誠実な対応を心がけます。そして、いつか「自分たちでできる」と思っていただける日まで、全力でサポートし続けます。
+                </p>
+                <p>
+                  お客様の事業が成長し、新たな課題が出てくれば、それに応じたシステムの進化を提案します。プロジェクトの進捗・課題・リスクは包み隠さず共有し、透明性の高いコミュニケーションを徹底します。
+                </p>
+                <p class="font-semibold text-slate-800">
+                  長期的な関係を築くからこそ、お客様の事業を深く理解でき、より的確な提案ができる。この好循環が、TWBと多くのお客様との10年以上にわたる継続的な関係を生み出しています。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <h4 class="text-lg font-bold text-gray-900 mb-3">お客様にとってのメリット</h4>
+            <div class="grid md:grid-cols-2 gap-3">
+              <div class="benefit-item">
+                <p class="font-semibold text-slate-800 mb-1">自社コントロール力向上</p>
+                <p class="text-gray-600 text-sm">システムの運用・保守を自社でコントロールできる力が身につく</p>
+              </div>
+              <div class="benefit-item">
+                <p class="font-semibold text-slate-800 mb-1">健全な依存関係</p>
+                <p class="text-gray-600 text-sm">ベンダーへの依存度を下げながら、必要な時にサポートを受けられる</p>
+              </div>
+              <div class="benefit-item">
+                <p class="font-semibold text-slate-800 mb-1">継続的進化</p>
+                <p class="text-gray-600 text-sm">事業の成長に合わせた、継続的なシステム進化が可能</p>
+              </div>
+              <div class="benefit-item">
+                <p class="font-semibold text-slate-800 mb-1">健全なパートナーシップ</p>
+                <p class="text-gray-600 text-sm">信頼によって選ばれ続ける、健全なパートナーシップを構築できる</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- まとめセクション -->
+    <section class="py-10 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">
+            <span class="text-slate-700">TWBがお約束できること</span>
+          </h2>
+          <p class="text-base text-gray-700 max-w-4xl mx-auto mb-6">
+            TWBは、お客様にとって「安心してシステム開発を任せられるパートナー」であることを第一に考えています。
+          </p>
+          <p class="text-base text-gray-700 max-w-4xl mx-auto">
+            技術的な優秀さだけでなく、お客様の立場に立った誠実な対応で、本当に事業の役に立つシステムをお作りします。
+          </p>
+        </div>
+
+        <div class="policy-summary max-w-5xl mx-auto">
+          <h3 class="text-xl font-bold text-slate-800 mb-4 text-center">私たちの開発ポリシー</h3>
+          <ul class="policy-list">
+            <li>事業の本質を理解することから始める、深いヒアリング</li>
+            <li>小さく始めて成果を確認しながら拡張する、段階的なアプローチ</li>
+            <li>将来の変化に柔軟に対応できる、拡張性の高い設計</li>
+            <li>ベンダーロックインを作らない、透明性の高い情報共有</li>
+            <li>お客様の自走支援を見据えた、長期的なパートナーシップ</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Steps -->
+    <section class="py-10 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">TWBの実績をご確認ください</h3>
+          <p class="text-base text-gray-700">
+            私たちのポリシーが実際にどのような成果を生んでいるか、<br>
+            具体的な数字と事例でご紹介しています。
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="next-steps-card card-hover">
+            <div class="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h4>選ばれる理由</h4>
+            <p>なぜ多くの企業がTWBを選ぶのか、その理由を詳しくご紹介します。</p>
+            <a href="whyus.html">詳しく見る →</a>
+          </div>
+
+          <div class="next-steps-card card-hover">
+            <div class="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h4>TWBの強み</h4>
+            <p>事業成果を実現する、TWBの3つの力をご紹介します。</p>
+            <a href="value.html">詳しく見る →</a>
+          </div>
+
+          <div class="next-steps-card card-hover">
+            <div class="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+              </svg>
+            </div>
+            <h4>プロジェクト実績</h4>
+            <p>具体的な成果と数字で、実績をご紹介します。</p>
+            <a href="cases.html">詳しく見る →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-10 bg-slate-700 text-center">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h3 class="text-2xl font-bold mb-4 text-white">システム開発のご相談は、お気軽にどうぞ</h3>
+        <p class="text-base mb-6 text-white">
+          お客様の事業課題を、じっくりお伺いします。<br>
+          まずは無料相談から、お気軽にお問い合わせください。
+        </p>
+        <a href="contact.html" class="inline-block bg-white text-slate-700 px-6 py-2.5 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
+          無料相談を申し込む
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div>
+            <h4 class="text-base font-semibold mb-3">株式会社TWB</h4>
+            <p class="text-gray-300 text-sm leading-relaxed">お客様の「事業の成果」を実現するシステム会社</p>
+          </div>
+
+          <div>
+            <h4 class="text-base font-semibold mb-3">会社情報</h4>
+            <div class="text-gray-300 text-sm space-y-2">
+              <p>〒333-0862<br>埼玉県川口市北園町2‐9<br>北園サンハイム2　201</p>
+              <p>TEL: 048-423-9832</p>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-base font-semibold mb-3">サービス</h4>
+            <div class="text-gray-300 text-sm space-y-2">
+              <a href="value.html" class="block hover:text-white transition-colors">TWBの強み</a>
+              <a href="policy.html" class="block hover:text-white transition-colors">開発ポリシー</a>
+              <a href="whyus.html" class="block hover:text-white transition-colors">選ばれる理由</a>
+              <a href="service.html" class="block hover:text-white transition-colors">サービス内容</a>
+              <a href="cases.html" class="block hover:text-white transition-colors">プロジェクト実績</a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-base font-semibold mb-3">企業情報</h4>
+            <div class="text-gray-300 text-sm space-y-2">
+              <a href="company.html" class="block hover:text-white transition-colors">会社概要</a>
+              <a href="reqruite.html" class="block hover:text-white transition-colors">人材募集</a>
+              <a href="contact.html" class="block hover:text-white transition-colors">お問合わせ</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-6 pt-6 text-center">
+          <p class="text-gray-400 text-sm">© 2024 株式会社TWB. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMobileMenu() {
+        const menu = document.getElementById('mobileMenu');
+        menu.classList.toggle('hidden');
+        const btn = document.getElementById('mobileMenuButton');
+        if (btn) {
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', (!expanded).toString());
+        }
+      }
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+            });
+          }
+
+          // Close mobile menu if open
+          const mobileMenu = document.getElementById('mobileMenu');
+          if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+            const btn = document.getElementById('mobileMenuButton');
+            if (btn) btn.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+
+      // Add fade-in animation on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px',
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationDelay = Math.random() * 0.3 + 's';
+            entry.target.classList.add('fade-in');
+          }
+        });
+      }, observerOptions);
+
+      // Observe elements for animation
+      document.querySelectorAll('.policy-card, .next-steps-card').forEach((el) => {
+        observer.observe(el);
+      });
+    </script>
+  
+
+</body></html>

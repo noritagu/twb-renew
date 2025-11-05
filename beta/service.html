@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="light" style=""><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>提供サービスと技術力 | 株式会社TWB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap');
+
+      body {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 14px;
+        color: #334155;
+      }
+
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+
+      .card-hover:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.8s ease forwards;
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .nav-link {
+        position: relative;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link:hover {
+        color: #334155;
+      }
+
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #334155;
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .phase-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 1.5rem;
+        background: #334155;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .service-card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e5e7eb;
+        height: 100%;
+      }
+
+      .industry-card {
+        background: white;
+        border-radius: 12px;
+        padding: 0.5rem 0.5rem 1rem 0.5rem;
+        border: 1px solid #e5e7eb;
+        min-width: 0;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 0.95rem;
+      }
+
+      .hero-bg {
+        position: relative;
+        background: url('images/page/service/service_bg.jpg') center center/cover no-repeat;
+        min-height: 220px;
+      }
+
+      .hero-bg::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.7);
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+      }
+
+      @media (min-width: 1024px) {
+        .hero-content {
+          padding-top: 2.5rem;
+          padding-bottom: 2.5rem;
+        }
+      }
+    </style>
+  <style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0}.sticky{position:sticky}.top-0{top:0px}.z-50{z-index:50}.mx-2{margin-left:0.5rem;margin-right:0.5rem}.mx-auto{margin-left:auto;margin-right:auto}.my-4{margin-top:1rem;margin-bottom:1rem}.mb-10{margin-bottom:2.5rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mr-3{margin-right:0.75rem}.mr-4{margin-right:1rem}.mt-2{margin-top:0.5rem}.mb-8{margin-bottom:2rem}.mt-8{margin-top:2rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-12{height:3rem}.h-16{height:4rem}.h-2{height:0.5rem}.h-6{height:1.5rem}.h-8{height:2rem}.min-h-\[260px\]{min-height:260px}.w-10{width:2.5rem}.w-12{width:3rem}.w-16{width:4rem}.w-2{width:0.5rem}.w-6{width:1.5rem}.w-8{width:2rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.flex-shrink-0{flex-shrink:0}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.items-stretch{align-items:stretch}.justify-start{justify-content:flex-start}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-12{gap:3rem}.gap-2{gap:0.5rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.rounded{border-radius:0.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-gray-700{--tw-border-opacity:1;border-color:rgb(55 65 81 / var(--tw-border-opacity, 1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-slate-600{--tw-bg-opacity:1;background-color:rgb(71 85 105 / var(--tw-bg-opacity, 1))}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity, 1))}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-4{padding-left:1rem;padding-right:1rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-8{padding-left:2rem;padding-right:2rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.pb-4{padding-bottom:1rem}.pt-8{padding-top:2rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.leading-snug{line-height:1.375}.leading-relaxed{line-height:1.625}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.drop-shadow{--tw-drop-shadow:drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-800:hover{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}@media (min-width: 640px){.sm\:px-4{padding-left:1rem;padding-right:1rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}@media (min-width: 768px){.md\:col-span-1{grid-column:span 1 / span 1}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:px-6{padding-left:1.5rem;padding-right:1.5rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:text-2xl{font-size:1.5rem;line-height:2rem}.lg\:text-3xl{font-size:1.875rem;line-height:2.25rem}.lg\:text-4xl{font-size:2.25rem;line-height:2.5rem}.lg\:text-base{font-size:1rem;line-height:1.5rem}}</style><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0}.sticky{position:sticky}.top-0{top:0px}.z-50{z-index:50}.mx-2{margin-left:0.5rem;margin-right:0.5rem}.mx-auto{margin-left:auto;margin-right:auto}.my-4{margin-top:1rem;margin-bottom:1rem}.mb-10{margin-bottom:2.5rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mr-3{margin-right:0.75rem}.mr-4{margin-right:1rem}.mt-2{margin-top:0.5rem}.mt-8{margin-top:2rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-12{height:3rem}.h-16{height:4rem}.h-2{height:0.5rem}.h-6{height:1.5rem}.h-8{height:2rem}.min-h-\[260px\]{min-height:260px}.w-10{width:2.5rem}.w-12{width:3rem}.w-16{width:4rem}.w-2{width:0.5rem}.w-6{width:1.5rem}.w-8{width:2rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.flex-shrink-0{flex-shrink:0}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.items-stretch{align-items:stretch}.justify-start{justify-content:flex-start}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-12{gap:3rem}.gap-2{gap:0.5rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.rounded{border-radius:0.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-gray-700{--tw-border-opacity:1;border-color:rgb(55 65 81 / var(--tw-border-opacity, 1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity, 1))}.bg-slate-600{--tw-bg-opacity:1;background-color:rgb(71 85 105 / var(--tw-bg-opacity, 1))}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-8{padding-left:2rem;padding-right:2rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-4{padding-bottom:1rem}.pt-8{padding-top:2rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.drop-shadow{--tw-drop-shadow:drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-800:hover{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}@media (min-width: 640px){.sm\:px-4{padding-left:1rem;padding-right:1rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}@media (min-width: 768px){.md\:col-span-1{grid-column:span 1 / span 1}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:px-6{padding-left:1.5rem;padding-right:1.5rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:text-2xl{font-size:1.5rem;line-height:2rem}.lg\:text-3xl{font-size:1.875rem;line-height:2.25rem}.lg\:text-4xl{font-size:2.25rem;line-height:2.5rem}.lg\:text-base{font-size:1rem;line-height:1.5rem}}</style></head>
+  <body class="bg-gray-50" style="">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center">
+            <a href="index.html" class="block"><img src="images/common/pc_twb_logo.png" alt="株式会社TWBロゴ" class="h-10" data-height-listener-added="true"></a>
+          </div>
+
+               <!-- Navigation -->
+                <nav class="hidden lg:flex space-x-8">
+                    <a href="case_list.html" class="nav-link text-gray-700 font-medium">開発実績</a>
+                    <a href="value.html" class="nav-link text-gray-700 font-medium">提供する価値</a>
+                    <a href="policy.html" class="nav-link text-gray-700 font-medium">開発ポリシー</a>
+                    <a href="whyus.html" class="nav-link text-gray-700 font-medium">選ばれる理由</a>
+                    <a href="service.html" class="nav-link text-gray-700 font-medium">サービス内容</a>
+                    <a href="cases.html" class="nav-link text-blue-600 font-medium">プロジェクト事例</a>
+                    <a href="company.html" class="nav-link text-gray-700 font-medium">会社概要</a>
+<!--
+                    <a href="reqruite.html" class="nav-link text-gray-700 font-medium">人材募集</a>
+-->
+                    <a href="reqruite.html" class="nav-link text-gray-700 font-medium">人材募集</a>
+                    <a href="contact.html" class="nav-link text-gray-700 font-medium">お問合わせ</a>
+                </nav>
+                
+                <!-- Mobile menu button -->
+                <button id="mobileMenuButton" class="lg:hidden p-2" type="button" onclick="toggleMobileMenu()" aria-label="メニュー" title="メニュー" aria-controls="mobileMenu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <span class="sr-only">メニュー</span>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobileMenu" class="lg:hidden hidden pb-4">
+                <div class="flex flex-col space-y-2">
+                    <a href="case_list.html" class="text-gray-700 py-2 border-b border-gray-200">開発実績</a>
+                    <a href="value.html" class="text-gray-700 py-2 border-b border-gray-200">提供する価値</a>
+                    <a href="policy.html" class="text-gray-700 py-2 border-b border-gray-200">開発ポリシー</a>
+                    <a href="why-choose.html" class="text-gray-700 py-2 border-b border-gray-200">WHY CHOOSE TWB</a>
+                    <a href="service.html" class="text-gray-700 py-2 border-b border-gray-200">サービス内容</a>
+                    <a href="cases.html" class="text-blue-600 py-2 border-b border-gray-200 font-medium">プロジェクト事例</a>
+                    <a href="company.html" class="text-gray-700 py-2 border-b border-gray-200">会社概要</a>
+                    <a href="contact.html" class="text-gray-700 py-2">お問合わせ</a>
+                </div>
+            </div>
+ 
+ 
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-gray-800">
+      <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <div class="fade-in">
+            <h1 class="text-xl lg:text-2xl font-bold leading-snug mb-2 drop-shadow">
+              <span class="text-slate-800">事業課題の解決を支える<br><span class="text-slate-600">サービスと技術</span></span>
+            </h1>
+            <div class="max-w-4xl mx-auto">
+              <p class="text-sm lg:text-base mb-4 text-gray-700 max-w-3xl mx-auto drop-shadow">
+                TWBは、お客様の事業フェーズと課題に合わせて、最適なサービスを提供します。<br>
+                構想段階から運用・改善まで、一貫したサポートが可能です。<br>
+                また、モダンで安定性の高い技術スタックにより、将来の拡張性と保守性を確保したシステムを構築いたします。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- パンくずリスト -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-sm text-gray-600 my-4" aria-label="パンくずリスト">
+        <ol class="list-reset flex">
+          <li>
+            <a href="index.html" class="hover:underline text-slate-700">ホーム</a>
+          </li>
+          <li><span class="mx-2">/</span></li>
+          <li class="text-gray-500">サービス内容</li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- 事業フェーズ別サービス -->
+    <section class="py-10 bg-white">
+      <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">お客様の事業ステージに応じた最適なサポート</h2>
+          <p class="text-base text-gray-700 max-w-3xl mx-auto">
+            構想から運用まで、各フェーズで必要なサービスを包括的に提供します
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-6">
+          <!-- フェーズ1: 構想・計画段階 -->
+          <div class="service-card card-hover">
+            <div class="text-center mb-6">
+              <div class="phase-icon">
+                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">フェーズ1</h3>
+              <h4 class="text-xl font-semibold text-slate-700 mb-4">構想・計画段階</h4>
+              <p class="text-gray-700 font-medium">何をシステム化すべきかを一緒に考える</p>
+            </div>
+
+            <div class="mb-6">
+              <h5 class="font-bold text-gray-900 mb-3">提供サービス</h5>
+              <ul class="space-y-2 text-sm text-gray-700">
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong>DXコンサルティング</strong>: 現状業務の分析と改善提案</div>
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong>業務分析・業務設計</strong>: 効率化ポイントの特定と業務フロー再設計</div>
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong>要件定義支援</strong>: お客様の要望を具体的なシステム要件に整理</div>
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong>UI/UX設計</strong>: ユーザビリティを重視したインターフェース設計</div>
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong>システム化構想策定</strong>: 段階的な導入計画とROI試算</div>
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong>RFP作成支援</strong>: 他社との比較検討用の提案依頼書作成サポート</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-4">
+              <h5 class="font-bold text-gray-900 mb-2">対応できる課題例</h5>
+              <ul class="space-y-1 text-xs text-gray-700">
+                <li>「Excel管理から脱却したいが、何から始めればよいか分からない」</li>
+                <li>「DXを推進したいが、どの業務をシステム化すべきか迷っている」</li>
+                <li>「現在の業務フローに問題があるが、改善方法が見えない」</li>
+                <li>「システム化の予算取りのため、効果を数値化したい」</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- フェーズ2: 開発・構築段階 -->
+          <div class="service-card card-hover">
+            <div class="text-center mb-6">
+              <div class="phase-icon">
+                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">フェーズ2</h3>
+              <h4 class="text-xl font-semibold text-slate-700 mb-4">開発・構築段階</h4>
+              <p class="text-gray-700 font-medium">最適な技術で確実にシステムを構築する</p>
+            </div>
+
+            <div class="mb-6">
+              <h5 class="font-bold text-gray-900 mb-3">提供サービス</h5>
+              <ul class="space-y-2 text-sm text-gray-700">
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong>Webアプリケーション開発</strong>: SPAからMPAまで対応</div>
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong>業務システム開発</strong>: 基幹システム、販売管理、顧客管理、在庫管理等</div>
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong>SaaS・パッケージカスタマイズ</strong>: 既存システムの改修・機能追加</div>
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong>API開発・システム連携</strong>: 既存システムとの連携、外部サービス連携</div>
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong>クラウドインフラ構築</strong>: AWS、Azure、GCPでのスケーラブルな基盤構築</div>
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong>既存システム刷新</strong>: レガシーシステムのモダナイゼーション</div>
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong>セキュリティ対策</strong>: 情報セキュリティ要件に準拠した堅牢な設計</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-4">
+              <h5 class="font-bold text-gray-900 mb-2">対応できる課題例</h5>
+              <ul class="space-y-1 text-xs text-gray-700">
+                <li>「既存のシステムが古くなり、保守が困難になっている」</li>
+                <li>「複数のシステムがバラバラで、データ連携ができていない」</li>
+                <li>「クラウド移行したいが、技術的な知見がない」</li>
+                <li>「セキュリティ要件を満たしたシステムを構築したい」</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- フェーズ3: 運用・改善段階 -->
+          <div class="service-card card-hover">
+            <div class="text-center mb-6">
+              <div class="phase-icon">
+                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">フェーズ3</h3>
+              <h4 class="text-xl font-semibold text-slate-700 mb-4">運用・改善段階</h4>
+              <p class="text-gray-700 font-medium">システムを事業と共に成長させる</p>
+            </div>
+
+            <div class="mb-6">
+              <h5 class="font-bold text-gray-900 mb-3">提供サービス</h5>
+              <ul class="space-y-2 text-sm text-gray-700">
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong>システム保守・運用</strong>: 24時間365日監視、障害対応、定期メンテナンス</div>
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong>継続的改善提案</strong>: 運用データ分析に基づく機能改善・追加提案</div>
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong>データ活用支援</strong>: 蓄積されたデータの分析・可視化・BI構築</div>
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong>パフォーマンス最適化</strong>: システム速度改善、データベース最適化</div>
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong>セキュリティアップデート</strong>: 最新の脅威に対応したセキュリティ強化</div>
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong>ユーザー教育・サポート</strong>: 操作研修、マニュアル作成、ヘルプデスク</div>
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <div><strong>機能拡張・追加開発</strong>: 事業拡大に合わせた新機能追加</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-4">
+              <h5 class="font-bold text-gray-900 mb-2">対応できる課題例</h5>
+              <ul class="space-y-1 text-xs text-gray-700">
+                <li>「システムは完成したが、運用体制に不安がある」</li>
+                <li>「蓄積されたデータを事業に活かしたい」</li>
+                <li>「事業が拡大して、システムの処理能力が不足してきた」</li>
+                <li>「新しい機能を追加したいが、既存システムに影響がないか心配」</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TWBの遂行能力 -->
+    <section class="py-10 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">確実なプロジェクト遂行を支える3つの能力</h2>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-8">
+          <!-- 上流工程の深い理解と提案力 -->
+          <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
+            <div class="text-center mb-6">
+              <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900">上流工程の深い理解と提案力</h3>
+            </div>
+
+            <ul class="space-y-3 text-sm text-gray-700">
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <div><strong>10年以上の豊富なPM経験</strong>: 要件定義から運用保守まで一貫したプロジェクト管理</div>
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <div><strong>業界知見に基づく提案</strong>: 製造業、建設業、流通業での専門的なコンサルティング</div>
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <div><strong>暗黙知の発見力</strong>: 「当たり前すぎて伝え忘れる要件」を経験から予測・発見</div>
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <div><strong>Fit&amp;Gap分析</strong>: SaaS・パッケージ・スクラッチ開発の最適な組み合わせ提案</div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 属人性を排した高品質な標準体制 -->
+          <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
+            <div class="text-center mb-6">
+              <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900">属人性を排した高品質な標準体制</h3>
+            </div>
+
+            <ul class="space-y-3 text-sm text-gray-700">
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <div><strong>コードレビュー体制</strong>: 複数名でのコード品質チェック</div>
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <div><strong>テスト自動化</strong>: CI/CDパイプラインによる継続的な品質保証</div>
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <div><strong>ドキュメント整備</strong>: 後任者でも保守可能な詳細な設計書・運用手順書作成</div>
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <div><strong>ナレッジ共有</strong>: チーム内での技術情報・プロジェクト知見の共有体制</div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 透明性の高いプロジェクト管理 -->
+          <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
+            <div class="text-center mb-6">
+              <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900">透明性の高いプロジェクト管理</h3>
+            </div>
+
+            <ul class="space-y-3 text-sm text-gray-700">
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <div><strong>進捗の可視化</strong>: リアルタイムでの作業状況・課題・リスクの共有</div>
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <div><strong>定期的なコミュニケーション</strong>: 週次・月次での詳細な進捗報告</div>
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <div><strong>変更管理</strong>: 仕様変更・スケジュール調整の影響を事前に分析・報告</div>
+              </li>
+              <li class="flex items-start">
+                <span class="w-2 h-2 bg-slate-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <div><strong>品質管理</strong>: テスト結果・バグ修正状況の透明な共有</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 技術スタック詳細 -->
+    <section class="py-10 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+            モダンで安定性の高い技術による堅牢なシステム構築
+          </h2>
+          <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+            最新技術と実績のある安定技術を適切に組み合わせ、将来の拡張性と保守性を確保したシステムを構築します
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 mb-10">
+          <!-- フロントエンド技術 -->
+          <div class="bg-white rounded-xl p-6 border border-gray-200">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center mr-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900">フロントエンド技術</h3>
+            </div>
+
+            <div class="space-y-6">
+              <div>
+                <h4 class="font-bold text-gray-900 mb-3">JavaScript フレームワーク</h4>
+                <div class="space-y-3 text-sm">
+                  <div class="bg-gray-50 rounded-lg p-4">
+                    <div class="font-semibold text-slate-700 mb-2">Vue.js 3.x</div>
+                    <ul class="text-gray-700 space-y-1">
+                      <li>• Composition API によるメンテナブルな設計</li>
+                      <li>• Vue Router、Pinia による状態管理</li>
+                      <li>• TypeScript対応による型安全性確保</li>
+                    </ul>
+                  </div>
+                  <div class="bg-gray-50 rounded-lg p-4">
+                    <div class="font-semibold text-slate-700 mb-2">React 18.x</div>
+                    <ul class="text-gray-700 space-y-1">
+                      <li>• React Hooks による関数コンポーネント設計</li>
+                      <li>• Next.js によるSSR/SSG対応</li>
+                      <li>• Redux Toolkit による効率的な状態管理</li>
+                    </ul>
+                  </div>
+                  <div class="bg-gray-50 rounded-lg p-4">
+                    <div class="font-semibold text-slate-700 mb-2">Nuxt.js 3.x</div>
+                    <ul class="text-gray-700 space-y-1">
+                      <li>• サーバーサイドレンダリング（SSR）</li>
+                      <li>• 静的サイト生成（SSG）による高速化</li>
+                      <li>• TypeScript標準対応</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="font-bold text-gray-900 mb-3">スタイリング・UI</h4>
+                <div class="grid grid-cols-2 gap-2 text-sm">
+                  <div class="bg-gray-50 rounded p-3">
+                    <div class="font-semibold text-slate-700">Tailwind CSS</div>
+                    <div class="text-xs text-gray-600">効率的なスタイリング</div>
+                  </div>
+                  <div class="bg-gray-50 rounded p-3">
+                    <div class="font-semibold text-slate-700">Bootstrap 5.x</div>
+                    <div class="text-xs text-gray-600">レスポンシブ対応</div>
+                  </div>
+                  <div class="bg-gray-50 rounded p-3">
+                    <div class="font-semibold text-slate-700">Sass/SCSS</div>
+                    <div class="text-xs text-gray-600">メンテナブルCSS</div>
+                  </div>
+                  <div class="bg-gray-50 rounded p-3">
+                    <div class="font-semibold text-slate-700">PostCSS</div>
+                    <div class="text-xs text-gray-600">最新CSS機能</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- バックエンド技術 -->
+          <div class="bg-white rounded-xl p-6 border border-gray-200">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center mr-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900">バックエンド技術</h3>
+            </div>
+
+            <div class="space-y-6">
+              <div>
+                <h4 class="font-bold text-gray-900 mb-3">PHP</h4>
+                <div class="space-y-3 text-sm">
+                  <div class="bg-gray-50 rounded-lg p-4">
+                    <div class="font-semibold text-slate-700 mb-2">Laravel 10.x</div>
+                    <ul class="text-gray-700 space-y-1">
+                      <li>• Eloquent ORM による効率的DB操作</li>
+                      <li>• Laravel Sanctum による認証・認可</li>
+                      <li>• Queue システムによる非同期処理</li>
+                    </ul>
+                  </div>
+                  <div class="bg-gray-50 rounded-lg p-4">
+                    <div class="font-semibold text-slate-700 mb-2">Symfony 6.x</div>
+                    <ul class="text-gray-700 space-y-1">
+                      <li>• 大規模アプリケーション向け堅牢設計</li>
+                      <li>• Doctrine ORM による高度なDB操作</li>
+                      <li>• API Platform によるREST/GraphQL API</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="font-bold text-gray-900 mb-3">Node.js / Python</h4>
+                <div class="grid grid-cols-1 gap-2 text-sm">
+                  <div class="bg-gray-50 rounded p-3">
+                    <div class="font-semibold text-slate-700">Express.js / NestJS</div>
+                    <div class="text-xs text-gray-600">軽量〜企業レベルWebアプリ</div>
+                  </div>
+                  <div class="bg-gray-50 rounded p-3">
+                    <div class="font-semibold text-slate-700">Django / FastAPI</div>
+                    <div class="text-xs text-gray-600">フルスタック〜高性能API</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12">
+          <!-- データベース技術 -->
+          <div class="bg-white rounded-xl p-6 border border-gray-200">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center mr-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900">データベース技術</h3>
+            </div>
+
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-bold text-gray-900 mb-3">リレーショナルDB</h4>
+                <div class="space-y-2 text-sm">
+                  <div class="bg-gray-50 rounded p-3">
+                    <div class="font-semibold text-slate-700">MySQL 8.x</div>
+                    <div class="text-xs text-gray-600">ACID準拠、JSON型サポート</div>
+                  </div>
+                  <div class="bg-gray-50 rounded p-3">
+                    <div class="font-semibold text-slate-700">PostgreSQL 15.x</div>
+                    <div class="text-xs text-gray-600">高度なSQL機能、PostGIS対応</div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="font-bold text-gray-900 mb-3">NoSQL・その他</h4>
+                <div class="space-y-2 text-sm">
+                  <div class="bg-gray-50 rounded p-3">
+                    <div class="font-semibold text-slate-700">Redis</div>
+                    <div class="text-xs text-gray-600">インメモリ、キャッシュ</div>
+                  </div>
+                  <div class="bg-gray-50 rounded p-3">
+                    <div class="font-semibold text-slate-700">MongoDB</div>
+                    <div class="text-xs text-gray-600">ドキュメント指向DB</div>
+                  </div>
+                  <div class="bg-gray-50 rounded p-3">
+                    <div class="font-semibold text-slate-700">Elasticsearch</div>
+                    <div class="text-xs text-gray-600">全文検索・ログ解析</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- クラウド・インフラ技術 -->
+          <div class="bg-white rounded-xl p-6 border border-gray-200">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center mr-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900">クラウド・インフラ</h3>
+            </div>
+
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-bold text-gray-900 mb-3">Amazon Web Services</h4>
+                <div class="space-y-2 text-sm">
+                  <div class="bg-gray-50 rounded p-3">
+                    <div class="font-semibold text-slate-700">EC2 / Lambda</div>
+                    <div class="text-xs text-gray-600">仮想サーバー・サーバーレス</div>
+                  </div>
+                  <div class="bg-gray-50 rounded p-3">
+                    <div class="font-semibold text-slate-700">S3 / RDS</div>
+                    <div class="text-xs text-gray-600">ストレージ・マネージドDB</div>
+                  </div>
+                  <div class="bg-gray-50 rounded p-3">
+                    <div class="font-semibold text-slate-700">CloudFront / WAF</div>
+                    <div class="text-xs text-gray-600">CDN・セキュリティ</div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="font-bold text-gray-900 mb-3">Azure / GCP</h4>
+                <div class="space-y-2 text-sm">
+                  <div class="bg-gray-50 rounded p-3">
+                    <div class="font-semibold text-slate-700">App Service / App Engine</div>
+                    <div class="text-xs text-gray-600">フルマネージド実行環境</div>
+                  </div>
+                  <div class="bg-gray-50 rounded p-3">
+                    <div class="font-semibold text-slate-700">Azure DevOps / BigQuery</div>
+                    <div class="text-xs text-gray-600">CI/CD・データ分析基盤</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 開発・運用ツール -->
+    <section class="py-10 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">効率的な開発・運用を支えるツール群</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="font-bold text-gray-900 mb-4">バージョン管理・CI/CD</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><strong>Git</strong>: 分散バージョン管理</li>
+              <li><strong>GitHub</strong>: Actions による自動化</li>
+              <li><strong>GitLab</strong>: DevOps統合環境</li>
+              <li><strong>Jenkins</strong>: 継続的インテグレーション</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="font-bold text-gray-900 mb-4">コンテナ・監視</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><strong>Docker</strong>: アプリケーションコンテナ化</li>
+              <li><strong>Kubernetes</strong>: コンテナオーケストレーション</li>
+              <li><strong>CloudWatch</strong>: AWS環境監視</li>
+              <li><strong>New Relic</strong>: アプリケーション性能監視</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="font-bold text-gray-900 mb-4">ログ管理・分析</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><strong>ELK Stack</strong>: ログ収集・分析・可視化</li>
+              <li><strong>Datadog</strong>: 統合監視プラットフォーム</li>
+              <li><strong>Grafana</strong>: メトリクス可視化</li>
+              <li><strong>Prometheus</strong>: メトリクス収集</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <h3 class="font-bold text-gray-900 mb-4">プロジェクト管理</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><strong>Jira</strong>: 課題追跡・プロジェクト管理</li>
+              <li><strong>Confluence</strong>: ドキュメント管理</li>
+              <li><strong>Slack</strong>: チームコミュニケーション</li>
+              <li><strong>Backlog</strong>: 国産プロジェクト管理</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- セキュリティ・品質管理 -->
+    <section class="py-10 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">企業レベルのセキュリティと品質を保証</h2>
+          <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+            情報セキュリティ要件に準拠し、継続的な品質向上を実現する体制を整備しています
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12">
+          <!-- セキュリティ対策 -->
+          <div class="bg-white rounded-xl p-6 border border-gray-200">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center mr-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900">セキュリティ対策</h3>
+            </div>
+
+            <div class="space-y-4">
+              <div class="bg-gray-50 rounded-lg p-4">
+                <h4 class="font-bold text-slate-700 mb-2">通信・認証セキュリティ</h4>
+                <ul class="text-sm text-gray-700 space-y-1">
+                  <li>• HTTPS通信の標準化（SSL/TLS証明書）</li>
+                  <li>• OAuth 2.0、SAML、多要素認証対応</li>
+                  <li>• ロールベースアクセス制御（RBAC）</li>
+                </ul>
+              </div>
+
+              <div class="bg-gray-50 rounded-lg p-4">
+                <h4 class="font-bold text-slate-700 mb-2">データ保護・攻撃対策</h4>
+                <ul class="text-sm text-gray-700 space-y-1">
+                  <li>• 保存時・転送時のデータ暗号化</li>
+                  <li>• XSS、CSRF攻撃に対する防御</li>
+                  <li>• WAF（Webアプリケーションファイアウォール）</li>
+                </ul>
+              </div>
+
+              <div class="bg-gray-50 rounded-lg p-4">
+                <h4 class="font-bold text-slate-700 mb-2">継続的セキュリティ</h4>
+                <ul class="text-sm text-gray-700 space-y-1">
+                  <li>• 定期的な脆弱性診断・ペネトレーションテスト</li>
+                  <li>• セキュリティパッチの迅速な適用</li>
+                  <li>• セキュリティインシデント対応体制</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- 品質管理体制 -->
+          <div class="bg-white rounded-xl p-6 border border-gray-200">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center mr-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900">品質管理体制</h3>
+            </div>
+
+            <div class="space-y-4">
+              <div class="bg-gray-50 rounded-lg p-4">
+                <h4 class="font-bold text-slate-700 mb-2">コード品質管理</h4>
+                <ul class="text-sm text-gray-700 space-y-1">
+                  <li>• Pull Request による全コードレビュー</li>
+                  <li>• 静的解析による品質・脆弱性チェック</li>
+                  <li>• コーディング規約の統一・自動チェック</li>
+                </ul>
+              </div>
+
+              <div class="bg-gray-50 rounded-lg p-4">
+                <h4 class="font-bold text-slate-700 mb-2">テスト・検証体制</h4>
+                <ul class="text-sm text-gray-700 space-y-1">
+                  <li>• Unit Test、Integration Test、E2E Test</li>
+                  <li>• 負荷テストによる性能・安定性検証</li>
+                  <li>• ユーザビリティテストの実施</li>
+                </ul>
+              </div>
+
+              <div class="bg-gray-50 rounded-lg p-4">
+                <h4 class="font-bold text-slate-700 mb-2">継続的改善</h4>
+                <ul class="text-sm text-gray-700 space-y-1">
+                  <li>• CI/CDパイプラインによる自動化</li>
+                  <li>• 運用データに基づく性能最適化</li>
+                  <li>• 定期的な技術的負債の解消</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 得意分野・対応業界 -->
+    <section class="py-10 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">深い業界知見に基づく専門的支援</h2>
+          <p class="text-lg text-gray-700 max-w-3xl mx-auto">各業界の特性を理解した、実践的なシステム構築をご提供します</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+          <!-- 製造業 -->
+          <div class="industry-card md:col-span-1 min-h-[260px] flex flex-col justify-start">
+            <div class="text-center mb-4">
+              <div class="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900">製造業</h3>
+            </div>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><strong>生産管理システム</strong>: 工程管理、品質管理、トレーサビリティ</li>
+              <li><strong>在庫・物流管理</strong>: 倉庫管理（WMS）、配送最適化</li>
+              <li><strong>受注・販売管理</strong>: 見積もり、受注、請求までの一元管理</li>
+              <li><strong>IoT・データ活用</strong>: 設備データ収集・分析、予知保全</li>
+            </ul>
+          </div>
+
+          <!-- 建設・不動産業 -->
+          <div class="industry-card md:col-span-1 min-h-[260px] flex flex-col justify-start">
+            <div class="text-center mb-4">
+              <div class="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900">建設・不動産業</h3>
+            </div>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><strong>施工管理システム</strong>: 工程管理、品質管理、安全管理</li>
+              <li><strong>BIM連携システム</strong>: 3Dモデルデータとの連携、図面管理</li>
+              <li><strong>見積・積算システム</strong>: 自動見積もり、原価管理</li>
+              <li><strong>顧客・物件管理</strong>: CRM、物件情報管理</li>
+            </ul>
+          </div>
+
+          <!-- 小売・流通業 -->
+          <div class="industry-card md:col-span-1 min-h-[260px] flex flex-col justify-start">
+            <div class="text-center mb-4">
+              <div class="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900">小売・流通業</h3>
+            </div>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><strong>ECサイト構築</strong>: B2C、B2B両対応、マルチチャネル対応</li>
+              <li><strong>在庫管理システム</strong>: 複数店舗・倉庫の在庫一元管理</li>
+              <li><strong>顧客管理（CRM）</strong>: 会員管理、ポイント管理、マーケティング支援</li>
+              <li><strong>POS連携</strong>: 実店舗とECの在庫・顧客情報統合</li>
+            </ul>
+          </div>
+
+          <!-- 中古車流通業 -->
+          <div class="industry-card md:col-span-1 min-h-[260px] flex flex-col justify-start">
+            <div class="text-center mb-4">
+              <div class="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900">中古車流通業</h3>
+            </div>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><strong>車両管理システム</strong>: 仕入れ、査定、販売、配送までの一元管理</li>
+              <li><strong>オークション連携</strong>: 業界標準システムとのAPI連携</li>
+              <li><strong>SaaS型業務支援</strong>: 複数事業者での情報共有システム</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Steps Section -->
+    <section class="py-10 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">具体的な技術力を事例でご確認ください</h3>
+        <p class="text-lg text-gray-700 mb-8">
+          これらの技術力と経験を活かして、実際にどのような成果を上げているか、<br>
+          具体的な開発事例をご紹介しています。
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <a href="#cases" class="block bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors duration-300 shadow-sm">
+            <h4 class="font-semibold text-gray-900 mb-2">成功事例を詳しく見る</h4>
+            <p class="text-sm text-gray-600">→ SUCCESS STORIES</p>
+          </a>
+          <a href="#why-choose" class="block bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors duration-300 shadow-sm">
+            <h4 class="font-semibold text-gray-900 mb-2">なぜTWBが選ばれるのかを知る</h4>
+            <p class="text-sm text-gray-600">→ WHY CHOOSE TWB</p>
+          </a>
+          <a href="#policy" class="block bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors duration-300 shadow-sm">
+            <h4 class="font-semibold text-gray-900 mb-2">お客様にとってのメリットを確認する</h4>
+            <p class="text-sm text-gray-600">→ OUR POLICY</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-10 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">技術的なご相談もお気軽に</h3>
+        <p class="text-lg text-gray-700 mb-8">
+          現在お使いのシステムの技術的な課題や、新規開発での技術選定について、<br>
+          お気軽にご相談ください。お客様の要件に最適な技術構成をご提案いたします。
+        </p>
+        <a href="#contact" class="inline-block bg-slate-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-slate-800 transition-colors duration-300">
+          技術相談・お問い合わせ
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <h4 class="text-lg font-semibold mb-4">株式会社TWB</h4>
+            <p class="text-gray-300 text-sm leading-relaxed">お客様の「事業の成果」を実現するシステム会社</p>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4">会社情報</h4>
+            <div class="text-gray-300 text-sm space-y-2">
+              <p>〒333-0862<br>埼玉県川口市北園町2－9<br>北園サンハイム2　201</p>
+              <p>TEL: 048-423-9832</p>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4">サービス</h4>
+            <div class="text-gray-300 text-sm space-y-2">
+              <a href="value.html" class="block hover:text-white transition-colors">TWBの強み</a>
+              <a href="policy.html" class="block hover:text-white transition-colors">開発ポリシー</a>
+              <a href="whyus.html" class="block hover:text-white transition-colors">WHY CHOOSE TWB</a>
+              <a href="service.html" class="block hover:text-white transition-colors">サービス内容</a>
+              <a href="cases.html" class="block hover:text-white transition-colors">プロジェクト実績</a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4">企業情報</h4>
+            <div class="text-gray-300 text-sm space-y-2">
+              <a href="#company" class="block hover:text-white transition-colors">COMPANY</a>
+              <a href="#recruit" class="block hover:text-white transition-colors">RECRUIT</a>
+              <a href="#contact" class="block hover:text-white transition-colors">CONTACT</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+          <p class="text-gray-400 text-sm">© 2024 株式会社TWB. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMobileMenu() {
+        const menu = document.getElementById('mobileMenu');
+        menu.classList.toggle('hidden');
+        const btn = document.getElementById('mobileMenuButton');
+        if (btn) {
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', (!expanded).toString());
+        }
+      }
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+            });
+          }
+
+          // Close mobile menu if open
+          const mobileMenu = document.getElementById('mobileMenu');
+          if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+            const btn = document.getElementById('mobileMenuButton');
+            if (btn) btn.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+
+      // Add fade-in animation on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px',
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationDelay = '0.2s';
+            entry.target.classList.add('fade-in');
+          }
+        });
+      }, observerOptions);
+
+      // Observe elements for animation
+      document.querySelectorAll('.card-hover').forEach((el) => {
+        observer.observe(el);
+      });
+    </script>
+
+  
+
+</body></html>
