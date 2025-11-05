@@ -1,3 +1,6 @@
 *.md
 
-old/
+# Ignore specific directories at repo root
+/old/
+/md/
+/旧HP/
