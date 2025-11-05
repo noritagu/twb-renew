@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="light" style=""><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事業成果を実現する、TWBの3つの力 | 株式会社TWB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap');
+
+      body {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 14px;
+        color: #334155;
+      }
+
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+
+      .card-hover:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.8s ease forwards;
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .nav-link {
+        position: relative;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link:hover {
+        color: #334155;
+      }
+
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #334155;
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .power-card {
+        background: white;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e5e7eb;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .power-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        background: #334155;
+        color: white;
+        font-size: 2rem;
+      }
+
+      .approach-item {
+        background: white;
+        border-radius: 8px;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e5e7eb;
+      }
+
+      .approach-item h4 {
+        color: #334155;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .stat-card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e5e7eb;
+      }
+
+      .stat-number {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #334155;
+      }
+
+      .stat-icon {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .case-card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e5e7eb;
+        position: relative;
+      }
+
+      .intro-section {
+        background: #f8fafc;
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        border-left: 4px solid #334155;
+      }
+
+      .tacit-knowledge-section {
+        background: #f8fafc;
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        border-left: 4px solid #334155;
+      }
+
+      .communication-highlight {
+        background: #f8fafc;
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        border-left: 4px solid #334155;
+      }
+
+      .twb-approach-section {
+        background: #f8fafc;
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        border-left: 4px solid #334155;
+      }
+
+      .power-overview-card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e5e7eb;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+
+      .power-overview-card h4 {
+        color: #334155;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+      }
+
+      .power-overview-card p {
+        color: #64748b;
+        line-height: 1.6;
+      }
+
+      .hero-bg {
+        position: relative;
+        background: url('images/page/guide/guide_bg.jpg') center center/cover no-repeat;
+        min-height: 220px;
+      }
+      .hero-bg::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.7);
+      }
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+      }
+      @media (min-width: 1024px) {
+        .hero-content {
+          padding-top: 2.5rem;
+          padding-bottom: 2.5rem;
+        }
+      }
+    </style>
+  <style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0}.sticky{position:sticky}.top-0{top:0px}.z-50{z-index:50}.mx-2{margin-left:0.5rem;margin-right:0.5rem}.mx-auto{margin-left:auto;margin-right:auto}.my-4{margin-top:1rem;margin-bottom:1rem}.mb-1{margin-bottom:0.25rem}.mb-10{margin-bottom:2.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-6{margin-top:1.5rem}.mb-2{margin-bottom:0.5rem}.mr-3{margin-right:0.75rem}.mt-4{margin-top:1rem}.mt-8{margin-top:2rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-12{height:3rem}.h-6{height:1.5rem}.w-12{width:3rem}.w-6{width:1.5rem}.w-full{width:100%}.w-10{width:2.5rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-3{gap:0.75rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.gap-4{gap:1rem}.space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-12 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(3rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(3rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-gray-700{--tw-border-opacity:1;border-color:rgb(55 65 81 / var(--tw-border-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity, 1))}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.p-2{padding:0.5rem}.p-4{padding:1rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-4{padding-bottom:1rem}.pt-6{padding-top:1.5rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.drop-shadow{--tw-drop-shadow:drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-800:hover{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:text-slate-800:hover{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}@media (min-width: 640px){.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:text-2xl{font-size:1.5rem;line-height:2rem}}</style><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0}.sticky{position:sticky}.top-0{top:0px}.z-50{z-index:50}.mx-2{margin-left:0.5rem;margin-right:0.5rem}.mx-auto{margin-left:auto;margin-right:auto}.my-4{margin-top:1rem;margin-bottom:1rem}.mb-10{margin-bottom:2.5rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mr-3{margin-right:0.75rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-12{height:3rem}.h-6{height:1.5rem}.w-10{width:2.5rem}.w-12{width:3rem}.w-6{width:1.5rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-12 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(3rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(3rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-gray-700{--tw-border-opacity:1;border-color:rgb(55 65 81 / var(--tw-border-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity, 1))}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.p-2{padding:0.5rem}.p-4{padding:1rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-4{padding-bottom:1rem}.pt-6{padding-top:1.5rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.drop-shadow{--tw-drop-shadow:drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:bg-slate-800:hover{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.hover\:text-slate-800:hover{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}@media (min-width: 640px){.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}@media (min-width: 768px){.md\:grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:text-2xl{font-size:1.5rem;line-height:2rem}}</style></head>
+  <body class="bg-gray-50" style="">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center">
+            <a href="index.html" class="block"><img src="images/common/pc_twb_logo.png" alt="株式会社TWBロゴ" class="h-10" data-height-listener-added="true"></a>
+          </div>
+
+               <!-- Navigation -->
+                <nav class="hidden lg:flex space-x-8">
+                    <a href="case_list.html" class="nav-link text-gray-700 font-medium">開発実績</a>
+                    <a href="value.html" class="nav-link text-gray-700 font-medium">提供する価値</a>
+                    <a href="policy.html" class="nav-link text-gray-700 font-medium">開発ポリシー</a>
+                    <a href="whyus.html" class="nav-link text-gray-700 font-medium">選ばれる理由</a>
+                    <a href="service.html" class="nav-link text-gray-700 font-medium">サービス内容</a>
+                    <a href="cases.html" class="nav-link text-blue-600 font-medium">プロジェクト事例</a>
+                    <a href="company.html" class="nav-link text-gray-700 font-medium">会社概要</a>
+<!--
+                    <a href="reqruite.html" class="nav-link text-gray-700 font-medium">人材募集</a>
+-->
+                    <a href="reqruite.html" class="nav-link text-gray-700 font-medium">人材募集</a>
+                    <a href="contact.html" class="nav-link text-gray-700 font-medium">お問合わせ</a>
+                </nav>
+                
+                <!-- Mobile menu button -->
+                <button id="mobileMenuButton" class="lg:hidden p-2" type="button" onclick="toggleMobileMenu()" aria-label="メニュー" title="メニュー" aria-controls="mobileMenu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <span class="sr-only">メニュー</span>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobileMenu" class="lg:hidden hidden pb-4">
+                <div class="flex flex-col space-y-2">
+                    <a href="case_list.html" class="text-gray-700 py-2 border-b border-gray-200">開発実績</a>
+                    <a href="value.html" class="text-gray-700 py-2 border-b border-gray-200">提供する価値</a>
+                    <a href="policy.html" class="text-gray-700 py-2 border-b border-gray-200">開発ポリシー</a>
+                    <a href="why-choose.html" class="text-gray-700 py-2 border-b border-gray-200">WHY CHOOSE TWB</a>
+                    <a href="service.html" class="text-gray-700 py-2 border-b border-gray-200">サービス内容</a>
+                    <a href="cases.html" class="text-blue-600 py-2 border-b border-gray-200 font-medium">プロジェクト事例</a>
+                    <a href="company.html" class="text-gray-700 py-2 border-b border-gray-200">会社概要</a>
+<!--
+                    <a href="reqruite.html" class="text-gray-700 py-2 border-b border-gray-200">人材募集</a>
+-->
+                    <a href="reqruite.html" class="text-gray-700 py-2 border-b border-gray-200">人材募集</a>
+                    <a href="contact.html" class="text-gray-700 py-2">お問合わせ</a>
+                </div>
+            </div>
+ 
+ 
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-gray-800">
+      <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <div class="fade-in">
+            <h1 class="text-xl lg:text-2xl font-bold leading-snug mb-2 drop-shadow">
+              事業成果を実現する、<br>
+              <span class="text-slate-700">TWBの3つの力</span>
+            </h1>
+            <div class="max-w-4xl mx-auto">
+              <p class="text-base mb-4 text-gray-700 max-w-3xl mx-auto drop-shadow">
+                お客様から「また頼みたい」「知り合いにも紹介したい」と言われる理由。<br>
+                それは、TWBが持つ3つの力にあります。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- パンくずリスト -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="text-sm text-gray-600 my-4" aria-label="パンくずリスト">
+        <ol class="list-reset flex">
+          <li>
+            <a href="index.html" class="hover:underline text-slate-600">ホーム</a>
+          </li>
+          <li><span class="mx-2">/</span></li>
+          <li class="text-gray-500">TWBの強み</li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- イントロダクション -->
+    <section class="py-10 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">
+            TWBの3つの力が生まれた背景<br>
+            <span class="text-slate-700">技術力だけでは届かないシステム開発の本質</span>
+          </h2>
+        </div>
+
+        <div class="intro-section max-w-5xl mx-auto">
+          <div class="text-base text-gray-700 leading-relaxed space-y-4">
+            <p>
+              TWBは長年の経験から、一つの確信を得ています。それは<strong>「本当に成果につながるシステム開発」</strong>を実現するためには、技術力だけでは足りないということです。
+            </p>
+            <p>
+              最も重要なのは、お客様とベンダが共に<strong>「暗黙知」</strong>と向き合うことです。「当然わかっているはず」「言わなくても通じるはず」という領域にこそ、システムの真の価値を生み出すヒントが隠されているからです。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 暗黙知の重要性 -->
+    <section class="py-10 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">
+            システム開発において、最も価値のある情報は<br>
+            <span class="text-slate-700">言葉になっていない知識の中にある</span>
+          </h2>
+        </div>
+
+        <div class="tacit-knowledge-section max-w-5xl mx-auto">
+          <div class="text-base text-gray-700 leading-relaxed space-y-4">
+            <p>システム開発において最も価値のある情報は、実は言葉になっていない領域に潜んでいます。</p>
+            <p>
+              長年の業務の中で「当たり前」になっている判断基準。部門間で少しずつ異なる運用のルール。経験豊富な担当者が無意識に行っている例外対応。将来の事業拡大に向けた漠然とした構想。
+            </p>
+            <p>
+              こうした<strong>暗黙知を丁寧に引き出し、システムに反映させること</strong>が、本当に事業に役立つシステムを作る鍵となります。
+            </p>
+            <p>
+              同時に、ベンダ側にも暗黙知があります。技術的な制約、一般的な運用方法、標準的な仕様。これらを「当然理解しているはず」と前提にしてしまうと、認識のずれが生まれます。
+            </p>
+            <p class="font-semibold text-slate-800">
+              お客様とベンダ、双方の「当たり前」を共有し、理解し合う。この対話のプロセスこそが、成功するシステム開発の土台です。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 開発手法の限界 -->
+    <section class="py-10 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">
+            <span class="text-slate-700">様々な開発手法が生まれてきた背景</span>
+          </h2>
+          <p class="text-base text-gray-700 max-w-4xl mx-auto">
+            暗黙知によるリスクを軽減するため、業界では様々な開発手法が生まれてきました。
+          </p>
+          <p class="text-base text-gray-700 max-w-4xl mx-auto mt-4">
+            <strong>ウォーターフォール</strong>は綿密な計画でリスクを管理し、大規模プロジェクトに適しています。<strong>アジャイル</strong>は短期間での反復で柔軟性を確保し、変化に強い開発を実現します。<strong>スパイラル</strong>は段階的な開発でリスクを最小化し、着実な進行を可能にします。
+          </p>
+          <p class="text-base text-gray-700 max-w-4xl mx-auto mt-4">
+            それぞれに特徴があり、プロジェクトの性質に応じて最適な手法を選ぶことが重要です。しかし、どの手法を選んでも、100%リスクを排除することはできません。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- コミュニケーションの重要性 -->
+    <section class="py-10 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">
+            どのような手法も、結局は<br>
+            <span class="text-slate-700">「人と人とのコミュニケーション」が成否を分ける</span>
+          </h2>
+        </div>
+
+        <div class="communication-highlight max-w-5xl mx-auto">
+          <div class="text-base text-gray-700 leading-relaxed space-y-4">
+            <p>
+              技術や手法は確かに重要です。しかし、どれだけ優れたフレームワークを使っても、最終的にプロジェクトの成否を分けるのは<strong>「当事者意識を共有した密なコミュニケーション」</strong>です。
+            </p>
+            <p>
+              お客様とベンダの垣根を越えて、一つのチームとして課題に向き合う。お互いの「当たり前」を理解し合い、暗黙知を顕在化していく。そのプロセスこそが、真の成果につながるのです。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TWBのアプローチ -->
+    <section class="py-10 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">
+            だからこそ、TWBは<br>
+            <span class="text-slate-700">「暗黙知の存在」を前提とした開発を行います</span>
+          </h2>
+        </div>
+
+        <div class="twb-approach-section max-w-5xl mx-auto">
+          <div class="text-base text-gray-700 leading-relaxed space-y-4 mb-6">
+            <p>私たちは、要件は<strong>対話を通じて進化していくもの</strong>だと考えています。</p>
+            <p>
+              プロジェクトが進むにつれて、新たな気づきが生まれます。実際に動くシステムを見ることで、より良いアイデアが浮かびます。事業環境の変化に応じて、必要な機能も変わっていきます。
+            </p>
+            <p class="font-semibold text-slate-800">
+              重要なのは、この変化を前提とした体制と心構えで、お客様と共に最適解を探し続けることです。
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="text-lg font-bold text-slate-700 mb-3">当事者意識の共有</h4>
+              <p class="text-gray-700">
+                外部ベンダーとしてではなく、<strong>「外部IT部門」</strong>として。<br>
+                お客様と同じ目線で課題に向き合い、一緒に解決していきます。
+              </p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="text-lg font-bold text-slate-700 mb-3">経験に基づく予測</h4>
+              <p class="text-gray-700">
+                長年の実績から培った「よくある落とし穴」の知見で、<br>
+                潜在的な課題を事前に発見・対策します。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3つの力の紹介 -->
+    <section class="py-10 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">
+            この考え方を支えるのが、<br>
+            <span class="text-slate-700">TWBの「3つの力」です</span>
+          </h2>
+          <p class="text-base text-gray-700 max-w-4xl mx-auto">
+            暗黙知リスクを乗り越え、お客様の事業成功を実現するために。<br>
+            私たちが長年の経験から培ってきた、3つの力をご紹介いたします。
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mb-8">
+          <div class="power-overview-card">
+            <div class="text-3xl mb-3">👂</div>
+            <h4>1. 傾聴力</h4>
+            <p>「言わなくても分かるはず」の領域まで踏み込んで、課題の本質を見抜く力</p>
+          </div>
+
+          <div class="power-overview-card">
+            <div class="text-3xl mb-3">💡</div>
+            <h4>2. 提案力</h4>
+            <p>複数の選択肢を公平に比較し、お客様にとって最適な解を導き出す力</p>
+          </div>
+
+          <div class="power-overview-card">
+            <div class="text-3xl mb-3">🎯</div>
+            <h4>3. 完遂力</h4>
+            <p>変化や新たな発見も含めて、最後まで責任を持ってやり抜く力</p>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-base text-gray-700 font-semibold">
+            これらの力こそが、TWBが多くの企業様から信頼され続ける理由であり、<br>
+            プロジェクトを確実に成功に導く原動力なのです。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3つの力の詳細 -->
+    <section class="py-10 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="space-y-12">
+          <!-- 1. 傾聴力 -->
+          <div class="power-card">
+            <div class="grid lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <div class="power-icon">👂</div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">
+                  傾聴力<br>
+                  <span class="text-slate-700 text-lg">言語化が難しい課題も引き出す</span>
+                </h3>
+              </div>
+              <div>
+                <div class="text-base text-gray-700 leading-relaxed space-y-3">
+                  <p>
+                    お客様が抱える真の課題は、必ずしも言葉になっているわけではありません。複雑な業務フローの中に潜む非効率、明確化されていない事業戦略上の課題、将来の事業拡大に向けた漠然とした構想。
+                  </p>
+                  <p class="font-semibold text-slate-800">
+                    さらに重要なのは、「これは言わなくても分かるだろう」「知っていて当然である」という認識から漏れてしまう<strong>暗黙知の領域</strong>です。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <p class="text-base text-gray-700 leading-relaxed mb-6">
+                私たちは親身になってお客様の立場に立ち、粘り強いコミュニケーションを通じてそれらを丁寧に引き出します。長年の経験から、どれだけ丁寧にヒアリングを行っても、暗黙知によるディスコミュニケーションは「存在するもの」として捉えています。
+              </p>
+              <p class="text-base text-gray-700 leading-relaxed mb-6">
+                だからこそ、ベンダー側の常識や既存の枠組みを押し付けることなく、お客様の業務に寄り添いながら、表面化していない課題を継続的に探り続けます。対話を重ねることで要件を進化させ、事業の本質を理解することから真の成果へとつなげていきます。
+              </p>
+
+              <div class="grid md:grid-cols-1 gap-4 mb-6">
+                <div>
+                  <h4 class="text-lg font-bold text-gray-900 mb-3">具体的な取り組み</h4>
+                  <div class="grid md:grid-cols-2 gap-3">
+                    <div class="approach-item">
+                      <h4>暗黙知を前提としたヒアリング</h4>
+                      <p class="text-gray-600 text-sm">「言わなくても分かるだろう」の領域まで踏み込んだ深い業務理解</p>
+                    </div>
+                    <div class="approach-item">
+                      <h4>複数部門・複数担当者との対話</h4>
+                      <p class="text-gray-600 text-sm">部門を超えた業務知識の言語化支援</p>
+                    </div>
+                    <div class="approach-item">
+                      <h4>継続的な要件発見プロセス</h4>
+                      <p class="text-gray-600 text-sm">プロジェクト進行中も新たな要件・課題を発見し続ける体制</p>
+                    </div>
+                    <div class="approach-item">
+                      <h4>経験に基づく潜在課題の予測</h4>
+                      <p class="text-gray-600 text-sm">
+                        長年の実績から、業界・業務特有の「見落としがちなポイント」を事前に確認
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. 提案力 -->
+          <div class="power-card">
+            <div class="grid lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <div class="power-icon">💡</div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">
+                  提案力<br>
+                  <span class="text-slate-700 text-lg">公平な選択肢で最適解を導く</span>
+                </h3>
+              </div>
+              <div>
+                <div class="text-base text-gray-700 leading-relaxed space-y-3">
+                  <p>SaaS、クラウド、スクラッチ開発。技術的な選択肢は多様ですが、正解は企業ごとに異なります。</p>
+                  <p class="font-semibold text-slate-800">
+                    私たちは、ベンダー有利な答えを押し付けることはしません。常に複数の選択肢を用意し、それぞれのメリット・デメリット・コスト・リスクを包み隠さずお伝えします。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <p class="text-base text-gray-700 leading-relaxed mb-6">
+                最終的な判断はお客様に委ね、私たちは公平で透明なプロジェクト進行を通じて、納得できる最適解の実現をサポートします。
+              </p>
+
+              <div class="grid md:grid-cols-1 gap-4 mb-6">
+                <div>
+                  <h4 class="text-lg font-bold text-gray-900 mb-3">具体的な取り組み</h4>
+                  <div class="grid md:grid-cols-2 gap-3">
+                    <div class="approach-item">
+                      <h4>Fit &amp; Gap分析による最適解の抽出</h4>
+                      <p class="text-gray-600 text-sm">
+                        SaaS・既製品・スクラッチ開発を組み合わせたハイブリッドな構成の提案
+                      </p>
+                    </div>
+                    <div class="approach-item">
+                      <h4>複数選択肢の公平な比較</h4>
+                      <p class="text-gray-600 text-sm">費用・期間・リスクを含めた客観的な比較資料作成</p>
+                    </div>
+                    <div class="approach-item">
+                      <h4>透明性の高い情報共有</h4>
+                      <p class="text-gray-600 text-sm">技術的な制約や将来のリスクも正直にお伝え</p>
+                    </div>
+                    <div class="approach-item">
+                      <h4>お客様主体の意思決定支援</h4>
+                      <p class="text-gray-600 text-sm">押し付けではなく、判断材料の提供と相談相手としてのサポート</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. 完遂力 -->
+          <div class="power-card">
+            <div class="grid lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <div class="power-icon">🎯</div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">
+                  完遂力<br>
+                  <span class="text-slate-700 text-lg">どんな状況でも最後までやり切る</span>
+                </h3>
+              </div>
+              <div>
+                <div class="text-base text-gray-700 leading-relaxed space-y-3">
+                  <p>
+                    プロジェクトには予期せぬ事態がつきものです。技術的な課題、要件の変更、スケジュール調整。そして何より、途中で発見される新たな暗黙知。
+                  </p>
+                  <p class="font-semibold text-slate-800">
+                    私たちは、こうした変化や発見を「プロジェクトの自然な進化」として捉えています。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <p class="text-base text-gray-700 leading-relaxed mb-6">
+                変化を前提とした体制で、粘り強く課題を解決し、透明性を保ちながら、最後まで共に走り切ります。「外部IT部門」として当事者意識を持ち、お客様と同じ目線で課題解決に取り組む。それがTWBの完遂力です。
+              </p>
+
+              <div class="grid md:grid-cols-1 gap-4 mb-6">
+                <div>
+                  <h4 class="text-lg font-bold text-gray-900 mb-3">具体的な取り組み</h4>
+                  <div class="grid md:grid-cols-2 gap-3">
+                    <div class="approach-item">
+                      <h4>変化を前提とした体制構築</h4>
+                      <p class="text-gray-600 text-sm">新たな要件や課題が発見されても冷静に対応する組織文化</p>
+                    </div>
+                    <div class="approach-item">
+                      <h4>暗黙知発見のための継続的対話</h4>
+                      <p class="text-gray-600 text-sm">プロジェクト進行中も新たな要件や課題を発見し続ける仕組み</p>
+                    </div>
+                    <div class="approach-item">
+                      <h4>透明性の高い問題解決プロセス</h4>
+                      <p class="text-gray-600 text-sm">発生した課題・原因・対策を包み隠さず共有</p>
+                    </div>
+                    <div class="approach-item">
+                      <h4>長期的なパートナーシップ</h4>
+                      <p class="text-gray-600 text-sm">「完璧な最初の設計」ではなく「継続的な改善」による価値提供</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 実績が証明する価値 -->
+    <section class="py-10 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">
+            3つの力が生み出す、<br>
+            <span class="text-slate-700">具体的な成果</span>
+          </h2>
+          <p class="text-base text-gray-700 max-w-3xl mx-auto">
+            私たちが語る3つの力は、実際にお客様の成果として現れています。
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mb-8">
+          <div class="stat-card">
+            <div class="stat-icon">📊</div>
+            <div class="stat-number">90%</div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">継続率</h3>
+            <p class="text-gray-600">初回プロジェクト後も継続してご依頼いただく確率</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">📅</div>
+            <div class="stat-number">12年</div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">継続</h3>
+            <p class="text-gray-600">最長のお取引先は12年間の継続関係</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">🤝</div>
+            <div class="stat-number text-base">信頼</div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">同業他社からの信頼</h3>
+            <p class="text-gray-600">困ったプロジェクトのヘルプ要請を受ける実績</p>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-base text-gray-700 mb-4">
+            これらの数字は、TWBの3つの力が実際にお客様の成果につながっている証拠です。
+          </p>
+          <p class="text-gray-600">詳しい実績や事例については、以下のページでご確認いただけます。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 事例紹介 -->
+    <section class="py-10 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">具体的な<span class="text-slate-700">成果事例</span></h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- 事例1 -->
+          <div class="case-card">
+            <div class="flex items-center mb-3">
+              <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                1
+              </div>
+              <h3 class="text-lg font-bold text-gray-900">製造業</h3>
+            </div>
+            <h4 class="text-base font-semibold text-slate-700 mb-2">
+              Excel管理からの脱却により工場3拠点への拡大を実現
+            </h4>
+            <p class="text-gray-700">
+              システム化によって、工場3拠点に拡大が可能になった。資材破棄ロスの減少、納品ミスの防止を実現。
+            </p>
+          </div>
+
+          <!-- 事例2 -->
+          <div class="case-card">
+            <div class="flex items-center mb-3">
+              <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                2
+              </div>
+              <h3 class="text-lg font-bold text-gray-900">化学・食品メーカー</h3>
+            </div>
+            <h4 class="text-base font-semibold text-slate-700 mb-2">
+              5年間の伴走により複数チャネルの受注一元管理を達成
+            </h4>
+            <p class="text-gray-700">
+              ECとアナログ受注の一元管理により、手作業による転記ミスや確認作業が撲滅。物流倉庫との連携も自動化。
+            </p>
+          </div>
+
+          <!-- 事例3 -->
+          <div class="case-card">
+            <div class="flex items-center mb-3">
+              <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                3
+              </div>
+              <h3 class="text-lg font-bold text-gray-900">アパレルメーカー</h3>
+            </div>
+            <h4 class="text-base font-semibold text-slate-700 mb-2">部分最適から全社DXへ導く一大プロジェクトを成功</h4>
+            <p class="text-gray-700">
+              5年越しの提案が実を結び、会社全体の業務を再設計する一大DXプロジェクトへと発展。複数ベンダーの中心的役割を担当。
+            </p>
+          </div>
+
+          <!-- 事例4 -->
+          <div class="case-card">
+            <div class="flex items-center mb-3">
+              <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                4
+              </div>
+              <h3 class="text-lg font-bold text-gray-900">ギフトサービス</h3>
+            </div>
+            <h4 class="text-base font-semibold text-slate-700 mb-2">クラウド化によりコロナ禍での事業継続性を確保</h4>
+            <p class="text-gray-700">
+              クラウド型システムだったおかげで、コロナ禍の影響を業務において全く受けることなく、業務を継続することができた。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Steps -->
+    <section class="py-10 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">TWBの価値をより深く知る</h3>
+          <p class="text-base text-gray-700">
+            私たちがどのような考え方でプロジェクトに取り組んでいるか、<br>
+            具体的なアプローチ方法について、さらに詳しくご紹介いたします。
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white p-4 rounded-lg shadow-sm text-center card-hover">
+            <div class="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-gray-900 mb-2">選ばれる理由を確認する</h4>
+            <p class="text-gray-600 mb-3">なぜ多くの企業から信頼され続けているのか</p>
+            <a href="whyus.html" class="text-slate-700 font-semibold hover:text-slate-800">詳しく見る →</a>
+          </div>
+
+          <div class="bg-white p-4 rounded-lg shadow-sm text-center card-hover">
+            <div class="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-gray-900 mb-2">開発ポリシーを確認する</h4>
+            <p class="text-gray-600 mb-3">品質と信頼性を支える開発方針</p>
+            <a href="policy.html" class="text-slate-700 font-semibold hover:text-slate-800">詳しく見る →</a>
+          </div>
+
+          <div class="bg-white p-4 rounded-lg shadow-sm text-center card-hover">
+            <div class="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-gray-900 mb-2">具体的な成功事例を見る</h4>
+            <p class="text-gray-600 mb-3">実際のプロジェクト事例と成果</p>
+            <a href="cases.html" class="text-slate-700 font-semibold hover:text-slate-800">詳しく見る →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-10 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h3 class="text-xl font-bold text-gray-900 mb-4">まずはお気軽にご相談ください</h3>
+        <p class="text-base mb-6">
+          システム開発に関するご相談、お見積もり、技術的なご質問など、どのようなことでもお聞かせください。<br>
+          お客様の状況に合わせた最適なアプローチをご提案いたします。
+        </p>
+        <a href="contact.html" class="inline-block bg-slate-700 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-slate-800 transition-colors duration-300">
+          無料相談を申し込む
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div>
+            <h4 class="text-base font-semibold mb-3">株式会社TWB</h4>
+            <p class="text-gray-300 text-sm leading-relaxed">お客様の「事業の成果」を実現するシステム会社</p>
+          </div>
+
+          <div>
+            <h4 class="text-base font-semibold mb-3">会社情報</h4>
+            <div class="text-gray-300 text-sm space-y-2">
+              <p>〒333-0862<br>埼玉県川口市北園町2－9<br>北園サンハイム2　201</p>
+              <p>TEL: 048-423-9832</p>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-base font-semibold mb-3">サービス</h4>
+            <div class="text-gray-300 text-sm space-y-2">
+              <a href="value.html" class="block hover:text-white transition-colors">TWBの強み</a>
+              <a href="policy.html" class="block hover:text-white transition-colors">開発ポリシー</a>
+              <a href="whyus.html" class="block hover:text-white transition-colors">選ばれる理由</a>
+              <a href="service.html" class="block hover:text-white transition-colors">サービス内容</a>
+              <a href="cases.html" class="block hover:text-white transition-colors">プロジェクト実績</a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-base font-semibold mb-3">企業情報</h4>
+            <div class="text-gray-300 text-sm space-y-2">
+              <a href="company.html" class="block hover:text-white transition-colors">会社概要</a>
+              <a href="reqruite.html" class="block hover:text-white transition-colors">人材募集</a>
+              <a href="contact.html" class="block hover:text-white transition-colors">お問合わせ</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-6 pt-6 text-center">
+          <p class="text-gray-400 text-sm">© 2024 株式会社TWB. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMobileMenu() {
+        const menu = document.getElementById('mobileMenu');
+        menu.classList.toggle('hidden');
+        const btn = document.getElementById('mobileMenuButton');
+        if (btn) {
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', (!expanded).toString());
+        }
+      }
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+            });
+          }
+
+          // Close mobile menu if open
+          const mobileMenu = document.getElementById('mobileMenu');
+          if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+            const btn = document.getElementById('mobileMenuButton');
+            if (btn) btn.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+
+      // Add fade-in animation on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px',
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationDelay = Math.random() * 0.3 + 's';
+            entry.target.classList.add('fade-in');
+          }
+        });
+      }, observerOptions);
+
+      // Observe elements for animation
+      document.querySelectorAll('.power-card, .case-card, .stat-card').forEach((el) => {
+        observer.observe(el);
+      });
+    </script>
+  
+
+</body></html>
