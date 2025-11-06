@@ -76,6 +76,9 @@
             position: relative;
             overflow: hidden;
             margin-bottom: 2rem;
+            max-width: 960px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .policy-card::before {
@@ -209,6 +212,16 @@
             color: #4f46e5;
         }
         
+        /* Smaller images inside policy cards */
+        .policy-image {
+            max-width: 75%;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
         .hero-bg {
             position: relative;
             background: url('images/page/policy/policy_bg.jpg') center center/cover no-repeat;
@@ -332,7 +345,7 @@
 
                 <div class="grid lg:grid-cols-2 gap-8 items-start">
                     <div>
-                        <img src="images/page/policy/policy_img01_1.png" alt="ビジネスモデル・事業戦略の深い理解" class="w-full rounded-lg shadow-md">
+                        <img src="images/page/policy/policy_img01_1.png" alt="ビジネスモデル・事業戦略の深い理解" class="w-full rounded-lg shadow-md policy-image">
                     </div>
                     <div>
                         <div class="text-base text-gray-700 leading-relaxed space-y-3">
@@ -390,7 +403,7 @@
                         </div>
                     </div>
                     <div>
-                        <img src="images/page/policy/policy_img02_2.png" alt="スモールスタート&クイックウィン" class="w-full rounded-lg shadow-md">
+                        <img src="images/page/policy/policy_img02_2.png" alt="スモールスタート&クイックウィン" class="w-full rounded-lg shadow-md policy-image">
                     </div>
                 </div>
                 
@@ -422,7 +435,7 @@
 
                 <div class="grid lg:grid-cols-2 gap-8 items-start">
                     <div>
-                        <img src="images/page/policy/policy_img03_3.png" alt="拡張性の高いシステム設計" class="w-full rounded-lg shadow-md">
+                        <img src="images/page/policy/policy_img03_3.png" alt="拡張性の高いシステム設計" class="w-full rounded-lg shadow-md policy-image">
                     </div>
                     <div>
                         <div class="text-base text-gray-700 leading-relaxed space-y-3">
@@ -477,7 +490,7 @@
                         </div>
                     </div>
                     <div>
-                        <img src="images/page/policy/policy_img04_4.png" alt="ベンダーロックインを作らない、透明性の高い設計" class="w-full rounded-lg shadow-md">
+                        <img src="images/page/policy/policy_img04_4.png" alt="ベンダーロックインを作らない、透明性の高い設計" class="w-full rounded-lg shadow-md policy-image">
                     </div>
                 </div>
                
