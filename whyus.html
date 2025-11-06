@@ -11,6 +11,7 @@
         body {
             box-sizing: border-box;
             font-family: 'Noto Sans JP', sans-serif;
+            font-size: 14px;
         }
         
         .gradient-bg {
@@ -70,7 +71,7 @@
         .stat-card {
             background: white;
             border-radius: 16px;
-            padding: 2rem;
+            padding: 1.5rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             border: 1px solid #e5e7eb;
             text-align: center;
@@ -89,7 +90,7 @@
         }
         
         .stat-number {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: bold;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
@@ -100,7 +101,7 @@
         .testimonial-card {
             background: white;
             border-radius: 16px;
-            padding: 2rem;
+            padding: 1.5rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             border-left: 4px solid #667eea;
             position: relative;
@@ -119,7 +120,7 @@
         .case-study-card {
             background: white;
             border-radius: 16px;
-            padding: 2rem;
+            padding: 1.5rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             border: 1px solid #e5e7eb;
         }
@@ -128,7 +129,7 @@
             background: #e5e7eb;
             border-radius: 10px;
             overflow: hidden;
-            height: 20px;
+            height: 16px;
         }
         
         .progress-fill {
@@ -141,12 +142,12 @@
             justify-content: center;
             color: white;
             font-weight: bold;
-            font-size: 0.875rem;
+            font-size: 0.75rem;
         }
         
         .icon-circle {
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -196,7 +197,7 @@
         .hero-bg {
             position: relative;
             background: url('images/page/reason/reason_bg.jpg') center center/cover no-repeat;
-            min-height: 340px;
+            min-height: 220px;
         }
         .hero-bg::before {
             content: '';
@@ -207,13 +208,13 @@
         .hero-content {
             position: relative;
             z-index: 1;
-            padding-top: 4rem;
-            padding-bottom: 4rem;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
         }
         @media (min-width: 1024px) {
             .hero-content {
-                padding-top: 6rem;
-                padding-bottom: 6rem;
+                padding-top: 2.5rem;
+                padding-bottom: 2.5rem;
             }
         }
     </style>
@@ -271,11 +272,11 @@
                 <div class="fade-in">
                     <!-- ここに元のヒーローセクションのタイトル・説明文をそのまま配置 -->
                     <!-- 例: -->
-                    <h1 class="text-2xl lg:text-3xl font-bold leading-snug mb-2 drop-shadow">
+                    <h1 class="text-xl lg:text-2xl font-bold leading-snug mb-2 drop-shadow">
                         <span class="text-blue-600">選ばれる理由</span>
                     </h1>
                     <div class="max-w-4xl mx-auto">
-                        <p class="text-base lg:text-lg mb-4 text-gray-700 max-w-3xl mx-auto drop-shadow">
+                        <p class="text-sm lg:text-base text-gray-700 max-w-3xl mx-auto drop-shadow">
                             なぜ多くの企業がTWBを選び続けてくださるのか。<br>
                             実績と信頼の理由をご紹介します。
                         </p>
@@ -301,7 +302,7 @@
     <!-- 導入セクション追加 -->
     <section class="py-10 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-lg text-gray-700 leading-relaxed">
+            <p class="text-base text-gray-700 leading-relaxed">
                 私たちTWBは、特別な営業活動を行っているわけではありません。<br>
                 案件の9割が既存のお客様やパートナー企業からのご紹介です。<br>
                 主要なお取引先とは10年以上にわたって継続的な関係を維持しています。
@@ -310,33 +311,33 @@
     </section>
 
     <!-- 案件の9割が紹介・リピート -->
-    <section class="py-20 bg-white">
+    <section class="py-10 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">
                     案件の9割が紹介・リピート<br>
                     <span class="text-blue-600">数字が証明する信頼性</span>
                 </h2>
             </div>
             
-            <div class="grid lg:grid-cols-2 gap-12 mb-16">
+            <div class="grid lg:grid-cols-2 gap-8 mb-10">
                 <!-- TWBの案件獲得内訳 -->
                 <div class="stat-card">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-8">📊 TWBの案件獲得内訳</h3>
-                    <div class="space-y-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">📊 TWBの案件獲得内訳</h3>
+                    <section class="py-10 bg-gray-50">
                         <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-gray-700">既存顧客からのリピート案件</span>
+                            <div class="text-center mb-10">
+                                <h2 class="text-2xl font-bold text-gray-900 mb-4">
                                 <span class="font-bold text-blue-600">60%</span>
                             </div>
                             <div class="progress-bar">
                                 <div class="progress-fill" style="width: 60%;">60%</div>
                             </div>
-                        </div>
+                            <div class="grid lg:grid-cols-3 gap-6">
                         <div>
                             <div class="flex justify-between items-center mb-2">
                                 <span class="text-gray-700">パートナー企業からの紹介</span>
-                                <span class="font-bold text-blue-600">30%</span>
+                                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white mr-3">
                             </div>
                             <div class="progress-bar">
                                 <div class="progress-fill" style="width: 30%;">30%</div>
@@ -351,13 +352,13 @@
                                 <div class="progress-fill" style="width: 10%; background: #9ca3af;">10%</div>
                             </div>
                         </div>
-                    </div>
+                                        <div class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white mr-3">
                 </div>
                 
                 <!-- 顧客との関係継続年数 -->
                 <div class="stat-card">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-8">📈 顧客との関係継続年数</h3>
-                    <div class="space-y-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">📈 顧客との関係継続年数</h3>
+                    <div class="space-y-4">
                         <div>
                             <div class="flex justify-between items-center mb-2">
                                 <span class="text-gray-700">10年以上継続</span>
@@ -366,7 +367,7 @@
                             <div class="progress-bar">
                                 <div class="progress-fill" style="width: 40%;">40%</div>
                             </div>
-                        </div>
+                                        <div class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white mr-3">
                         <div>
                             <div class="flex justify-between items-center mb-2">
                                 <span class="text-gray-700">5年以上継続</span>
@@ -399,10 +400,10 @@
             </div>
             
             <div class="max-w-4xl mx-auto text-center">
-                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                <p class="text-base text-gray-700 leading-relaxed mb-4">
                     この数字が意味することは明確です。TWBと仕事をされたお客様やパートナー企業の方々が、私たちの仕事に満足し、「また頼みたい」「知り合いにも紹介したい」と思ってくださっているということです。
                 </p>
-                <p class="text-lg text-gray-700 leading-relaxed">
+                <p class="text-base text-gray-700 leading-relaxed">
                     特に印象的なのは、初回の開発プロジェクト完了後、継続的な保守・運用や追加開発をご依頼いただくケースが非常に多いことです。これは、「作って終わり」ではなく、長期的なパートナーとしての価値を認めていただいている証拠だと考えています。
                 </p>
             </div>
@@ -410,29 +411,29 @@
     </section>
 
     <!-- 10年以上のお付き合い -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-10 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">
                     10年以上のお付き合い<br>
                     <span class="text-blue-600">継続される理由</span>
                 </h2>
             </div>
             
-            <div class="grid lg:grid-cols-2 gap-8 mb-16">
+            <div class="grid lg:grid-cols-2 gap-8 mb-10">
                 <!-- 事例1 -->
                 <div class="case-study-card">
                     <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
                             1
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-gray-900">教育関連団体様</h3>
+                            <h3 class="text-lg font-bold text-gray-900">教育関連団体様</h3>
                             <p class="text-blue-600 font-semibold">継続期間: 12年（2013年〜現在）</p>
                         </div>
                     </div>
                     <div class="mb-4">
-                        <h4 class="font-semibold text-gray-900 mb-2">プロジェクト</h4>
+                        <h4 class="font-semibold text-gray-900 mb-1">プロジェクト</h4>
                         <p class="text-gray-700">学生向け就職支援サービスの開発・運用</p>
                     </div>
                     <p class="text-gray-700">
@@ -443,16 +444,16 @@
                 <!-- 事例2 -->
                 <div class="case-study-card">
                     <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                        <div class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
                             2
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-gray-900">化粧品・日用品メーカー様</h3>
+                            <h3 class="text-lg font-bold text-gray-900">化粧品・日用品メーカー様</h3>
                             <p class="text-purple-600 font-semibold">継続期間: 6年（2018年〜現在）</p>
                         </div>
                     </div>
                     <div class="mb-4">
-                        <h4 class="font-semibold text-gray-900 mb-2">プロジェクト</h4>
+                        <h4 class="font-semibold text-gray-900 mb-1">プロジェクト</h4>
                         <p class="text-gray-700">ECサイト・基幹システムの段階的構築</p>
                     </div>
                     <p class="text-gray-700">
@@ -462,29 +463,29 @@
             </div>
             
             <div class="max-w-4xl mx-auto">
-                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">なぜ長期継続されるのか</h3>
-                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">なぜ長期継続されるのか</h3>
+                <p class="text-base text-gray-700 leading-relaxed mb-4">
                     お客様の事業は成長し、変化します。その変化に合わせて、システムも進化させる必要があります。
                 </p>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-white p-6 rounded-lg shadow-sm">
-                        <h4 class="font-semibold text-gray-900 mb-3">🚀 事業成長への対応</h4>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <h4 class="font-semibold text-gray-900 mb-2">🚀 事業成長への対応</h4>
                         <p class="text-gray-700 text-sm">お客様の事業拡大に合わせた段階的な成長支援を行います。</p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-sm">
-                        <h4 class="font-semibold text-gray-900 mb-3">⚡ 迅速な変化対応</h4>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <h4 class="font-semibold text-gray-900 mb-2">⚡ 迅速な変化対応</h4>
                         <p class="text-gray-700 text-sm">事業環境の変化に応じた機能追加・修正にも迅速に対応します。</p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-sm">
-                        <h4 class="font-semibold text-gray-900 mb-3">💬 透明性の高いコミュニケーション</h4>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <h4 class="font-semibold text-gray-900 mb-2">💬 透明性の高いコミュニケーション</h4>
                         <p class="text-gray-700 text-sm">技術的な制約やリスクも包み隠さず共有する透明性を徹底しています。</p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-sm">
-                        <h4 class="font-semibold text-gray-900 mb-3">💰 持続可能な価格設定</h4>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <h4 class="font-semibold text-gray-900 mb-2">💰 持続可能な価格設定</h4>
                         <p class="text-gray-700 text-sm">長期的な関係を重視した合理的な価格設定により、持続可能なパートナーシップを実現しています。</p>
                     </div>
                 </div>
-                <p class="text-lg text-gray-700 leading-relaxed mt-6 text-center">
+                <p class="text-base text-gray-700 leading-relaxed mt-4 text-center">
                     このような姿勢が、10年以上にわたる長期継続関係につながっています。
                 </p>
             </div>
@@ -492,28 +493,28 @@
     </section>
 
     <!-- 「やり切る」姿勢 -->
-    <section class="py-20 bg-white">
+    <section class="py-10 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">
                     『やり切る』姿勢が生む<br>
                     <span class="text-blue-600">信頼の連鎖</span>
                 </h2>
             </div>
             
-            <div class="max-w-4xl mx-auto text-center mb-12">
-                <p class="text-xl text-gray-700 leading-relaxed mb-8">
+            <div class="max-w-4xl mx-auto text-center mb-8">
+                <p class="text-base text-gray-700 leading-relaxed mb-6">
                     私たちは、目の前のプロジェクトを確実に完遂し、お客様に満足していただくことが最大の営業活動だと考えています。
                 </p>
-                <p class="text-lg text-gray-700 leading-relaxed">
+                <p class="text-base text-gray-700 leading-relaxed">
                     その結果として、お客様から新しいお客様をご紹介いただき、パートナー企業から継続的にお声がけをいただく。この好循環こそが、TWBが持続的に成長できている理由です。
                 </p>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div class="text-center">
                     <div class="icon-circle">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
@@ -523,7 +524,7 @@
                 
                 <div class="text-center">
                     <div class="icon-circle">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
                         </svg>
                     </div>
@@ -533,7 +534,7 @@
                 
                 <div class="text-center">
                     <div class="icon-circle">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                         </svg>
                     </div>
@@ -543,7 +544,7 @@
                 
                 <div class="text-center">
                     <div class="icon-circle">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                         </svg>
                     </div>
@@ -552,8 +553,8 @@
                 </div>
             </div>
             
-            <div class="text-center mt-12">
-                <p class="text-lg text-gray-700">
+            <div class="text-center mt-8">
+                <p class="text-base text-gray-700">
                     この姿勢が、お客様からの信頼につながっています。
                 </p>
             </div>
@@ -561,25 +562,25 @@
     </section>
 
     <!-- 業界からの評価 -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-10 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">
                     同業他社からも頼られる<br>
                     <span class="text-blue-600">技術力と対応力</span>
                 </h2>
             </div>
             
-            <div class="grid lg:grid-cols-2 gap-12">
+            <div class="grid lg:grid-cols-2 gap-8">
                 <!-- パートナー企業からのヘルプ要請 -->
-                <div class="bg-white p-8 rounded-lg shadow-sm">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">🤝 パートナー企業からのヘルプ要請</h3>
-                    <p class="text-gray-700 leading-relaxed mb-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">🤝 パートナー企業からのヘルプ要請</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
                         制作会社やSIerの方々から、進捗の遅れたプロジェクトや、お客様との要件調整に難航しているプロジェクトのサポートをご依頼いただくことがあります。
                     </p>
-                    <div class="bg-blue-50 p-6 rounded-lg">
-                        <h4 class="font-semibold text-blue-900 mb-4">よくいただくお声</h4>
-                        <div class="space-y-3 text-sm text-blue-800">
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-blue-900 mb-3">よくいただくお声</h4>
+                        <div class="space-y-2 text-sm text-blue-800">
                             <div class="flex items-start">
                                 <span class="text-blue-600 mr-2">•</span>
                                 <span>「TWBさんなら最後までやり遂げてくれるから」</span>
@@ -594,20 +595,20 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-700 leading-relaxed mt-6">
+                    <p class="text-gray-700 leading-relaxed mt-4">
                         こうしたお声をいただけることは、技術力だけでなく、プロジェクト管理能力、顧客対応力、そして何より「信頼性」を認められている証拠だと考えています。
                     </p>
                 </div>
                 
                 <!-- セカンドオピニオンとしての相談 -->
-                <div class="bg-white p-8 rounded-lg shadow-sm">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">💡 セカンドオピニオンとしての相談</h3>
-                    <p class="text-gray-700 leading-relaxed mb-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">💡 セカンドオピニオンとしての相談</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
                         他社での見積もりや提案に納得できないお客様から、セカンドオピニオンとしてご相談をいただくケースも増えています。
                     </p>
-                    <div class="bg-green-50 p-6 rounded-lg">
-                        <h4 class="font-semibold text-green-900 mb-4">選ばれる理由</h4>
-                        <div class="space-y-3 text-sm text-green-800">
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-green-900 mb-3">選ばれる理由</h4>
+                        <div class="space-y-2 text-sm text-green-800">
                             <div class="flex items-start">
                                 <span class="text-green-600 mr-2">•</span>
                                 <span>「TWBさんなら私たちの話をよく聞いてくれる」</span>
@@ -622,7 +623,7 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-700 leading-relaxed mt-6">
+                    <p class="text-gray-700 leading-relaxed mt-4">
                         同業他社から頼られ、お客様からセカンドオピニオンを求められるということは、業界内でも確かな信頼を得ている証拠だと自負しています。
                     </p>
                 </div>
@@ -631,24 +632,24 @@
     </section>
 
     <!-- 数字が示す価値 -->
-    <section class="py-20 bg-white">
+    <section class="py-10 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">
                     数字と評価が示す<br>
                     <span class="text-blue-600">TWBの価値</span>
                 </h2>
             </div>
             
-            <div class="grid lg:grid-cols-3 gap-8">
+            <div class="grid lg:grid-cols-3 gap-6">
                 <!-- 紹介・リピート率 -->
                 <div class="stat-card">
-                    <div class="icon-circle mb-6">
-                        <span class="text-2xl">📊</span>
+                    <div class="icon-circle mb-4">
+                        <span class="text-lg">📊</span>
                     </div>
                     <div class="stat-number mb-4">90%</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">紹介・リピート率</h3>
-                    <p class="text-gray-700 mb-4">案件の90%が既存顧客・パートナーからのご依頼</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">紹介・リピート率</h3>
+                    <p class="text-gray-700 mb-3">案件の90%が既存顧客・パートナーからのご依頼</p>
                     <p class="text-sm text-gray-600">
                         営業活動をほとんど行わなくても、お客様やパートナー企業から継続的にご依頼をいただける。これは、プロジェクトでの成果と誠実な対応が評価されている証拠です。
                     </p>
@@ -656,12 +657,12 @@
                 
                 <!-- 長期継続率 -->
                 <div class="stat-card">
-                    <div class="icon-circle mb-6">
-                        <span class="text-2xl">🤝</span>
+                    <div class="icon-circle mb-4">
+                        <span class="text-lg">🤝</span>
                     </div>
                     <div class="stat-number mb-4">40%</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">長期継続率</h3>
-                    <p class="text-gray-700 mb-4">主要取引先の40%が10年以上の継続関係</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">長期継続率</h3>
+                    <p class="text-gray-700 mb-3">主要取引先の40%が10年以上の継続関係</p>
                     <p class="text-sm text-gray-600">
                         一度きりの取引ではなく、お客様の事業成長に寄り添い続ける長期的なパートナーシップを実現しています。
                     </p>
@@ -669,12 +670,12 @@
                 
                 <!-- 顧客満足度 -->
                 <div class="stat-card">
-                    <div class="icon-circle mb-6">
-                        <span class="text-2xl">⭐</span>
+                    <div class="icon-circle mb-4">
+                        <span class="text-lg">⭐</span>
                     </div>
                     <div class="stat-number mb-4">95%</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">顧客満足度</h3>
-                    <p class="text-gray-700 mb-4">初回プロジェクト後の継続率95%以上</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">顧客満足度</h3>
+                    <p class="text-gray-700 mb-3">初回プロジェクト後の継続率95%以上</p>
                     <p class="text-sm text-gray-600">
                         初めてTWBにご依頼いただいたお客様のほぼ全員が、その後も継続的にご依頼をくださっています。
                     </p>
@@ -743,17 +744,17 @@
     </section>
 
     <!-- まとめ -->
-    <section class="py-20 bg-white">
+    <section class="py-10 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">
                 選ばれる理由は、<br>
                 <span class="text-blue-600">結果が証明しています</span>
             </h2>
-            <div class="text-lg text-gray-700 leading-relaxed mb-8">
-                <p class="mb-6">
+            <div class="text-base text-gray-700 leading-relaxed mb-6">
+                <p class="mb-4">
                     TWBが多くの企業から選ばれ、信頼され続ける理由。それは、言葉ではなく「結果」が証明しています。
                 </p>
-                <p class="mb-6">
+                <p class="mb-4">
                     9割の紹介・リピート率。10年以上の継続取引。業界からの信頼とヘルプ要請。セカンドオピニオンとしての相談。
                 </p>
                 <p>
@@ -764,48 +765,48 @@
     </section>
 
     <!-- Next Steps -->
-    <section class="py-20 bg-blue-50">
+    <section class="py-10 bg-blue-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
+            <div class="text-center mb-8">
+                <h3 class="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
                     TWBをもっと詳しく知る
                 </h3>
-                <p class="text-lg text-gray-700">
+                <p class="text-base text-gray-700">
                     私たちがどのような能力と方針でプロジェクトに取り組んでいるか、さらに詳しくご紹介しています。
                 </p>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-sm text-center card-hover">
-                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center card-hover">
+                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                         </svg>
                     </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-3">TWBの強みを詳しく知る</h4>
-                    <p class="text-gray-600 mb-4">私たちの技術力と対応力の詳細をご紹介</p>
+                    <h4 class="text-lg font-bold text-gray-900 mb-2">TWBの強みを詳しく知る</h4>
+                    <p class="text-gray-600 mb-3">私たちの技術力と対応力の詳細をご紹介</p>
                     <a href="#value" class="text-blue-600 font-semibold hover:text-blue-700">詳しく見る →</a>
                 </div>
                 
-                <div class="bg-white p-6 rounded-lg shadow-sm text-center card-hover">
-                    <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center card-hover">
+                    <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-3">開発ポリシーを確認する</h4>
-                    <p class="text-gray-600 mb-4">品質と信頼性を支える開発方針</p>
+                    <h4 class="text-lg font-bold text-gray-900 mb-2">開発ポリシーを確認する</h4>
+                    <p class="text-gray-600 mb-3">品質と信頼性を支える開発方針</p>
                     <a href="#policy" class="text-green-600 font-semibold hover:text-green-700">詳しく見る →</a>
                 </div>
                 
-                <div class="bg-white p-6 rounded-lg shadow-sm text-center card-hover">
-                    <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center card-hover">
+                    <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
                         </svg>
                     </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-3">具体的な成功事例を見る</h4>
-                    <p class="text-gray-600 mb-4">実際のプロジェクト事例と成果</p>
+                    <h4 class="text-lg font-bold text-gray-900 mb-2">具体的な成功事例を見る</h4>
+                    <p class="text-gray-600 mb-3">実際のプロジェクト事例と成果</p>
                     <a href="#cases" class="text-purple-600 font-semibold hover:text-purple-700">詳しく見る →</a>
                 </div>
             </div>
@@ -813,16 +814,16 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section py-20">
+    <section class="cta-section py-10">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h3 class="text-2xl lg:text-3xl font-bold mb-6">
+            <h3 class="text-xl lg:text-2xl font-bold mb-4">
                 まずはお気軽にご相談ください
             </h3>
-            <p class="text-xl mb-8 opacity-90">
+            <p class="text-base mb-6 opacity-90">
                 多くのお客様・パートナー企業から信頼をいただいているTWBに、安心してお任せください。<br>
                 あなたの事業課題の解決と成長を、全力でサポートいたします。
             </p>
-            <a href="#contact" class="cta-button inline-block px-8 py-4 rounded-lg font-semibold text-lg">
+            <a href="#contact" class="cta-button inline-block px-6 py-2.5 rounded-lg font-semibold text-base">
                 無料相談を申し込む
             </a>
         </div>
